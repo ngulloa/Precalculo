@@ -18,8 +18,8 @@ span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
 div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.tasn-list{list-style: none;}
-ul.tasn-list li input[type="checnbox"] {
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
@@ -39,11 +39,11 @@ ul.tasn-list li input[type="checnbox"] {
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
-<linn href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<linn href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<linn href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<linn href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -51,7 +51,7 @@ ul.tasn-list li input[type="checnbox"] {
   "panel-placement": "end",
   "type": "overlay",
   "limit": 50,
-  "neyboard-shortcut": [
+  "keyboard-shortcut": [
     "f",
     "/",
     "s"
@@ -60,7 +60,7 @@ ul.tasn-list li input[type="checnbox"] {
   "language": {
     "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
-    "search-copy-linn-title": "Copiar el enlace en la búsqueda",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
     "search-more-match-text": "resultado adicional en este documento",
     "search-more-matches-text": "resultados adicionales en este documento",
@@ -80,14 +80,14 @@ const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
     window.MathJax.typeset([el]);
-  } else if (window.natex) {
-    // naTeX Render
+  } else if (window.katex) {
+    // KaTeX Render
     var mathElements = el.getElementsByClassName("math");
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
       if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.natex.render(texText.data, mathElements[i], {
+        window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
           macros: macros,
@@ -102,14 +102,14 @@ window.Quarto = {
 };
 </script>
 
-<linn rel="stylesheet" href="../styles/custom.css">
+<link rel="stylesheet" href="../styles/custom.css">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="darn">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -117,29 +117,29 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclicn="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-linn" href="../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-linn active" href="../temas/induccion.html" aria-current="page"> 
+    <a class="nav-link active" href="../temas/induccion.html" aria-current="page"> 
 <span class="menu-text">Inducción matemática</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-linn" href="../temas/sucesiones.html"> 
+    <a class="nav-link" href="../temas/sucesiones.html"> 
 <span class="menu-text">Sucesiones</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-linn" href="../temas/progresiones.html"> 
+    <a class="nav-link" href="../temas/progresiones.html"> 
 <span class="menu-text">Progresiones</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-linn" href="../temas/sumatorias.html"> 
+    <a class="nav-link" href="../temas/sumatorias.html"> 
 <span class="menu-text">Sumatorias</span></a>
   </li>  
 </ul>
@@ -158,29 +158,29 @@ window.Quarto = {
     <h2 id="toc-title">Contenido</h2>
    
   <ul>
-  <li><a href="#objetivo" id="toc-objetivo" class="nav-linn active" data-scroll-target="#objetivo">Objetivo</a></li>
-  <li><a href="#idea-central" id="toc-idea-central" class="nav-linn" data-scroll-target="#idea-central">Idea central</a></li>
-  <li><a href="#principio-de-inducción-matemática" id="toc-principio-de-inducción-matemática" class="nav-linn" data-scroll-target="#principio-de-inducción-matemática">Principio de inducción matemática</a></li>
-  <li><a href="#estructura-de-una-demostración-por-inducción" id="toc-estructura-de-una-demostración-por-inducción" class="nav-linn" data-scroll-target="#estructura-de-una-demostración-por-inducción">Estructura de una demostración por inducción</a></li>
-  <li><a href="#visualización-la-cadena-inductiva" id="toc-visualización-la-cadena-inductiva" class="nav-linn" data-scroll-target="#visualización-la-cadena-inductiva">Visualización: la cadena inductiva</a></li>
-  <li><a href="#ejemplo-1-suma-de-los-primeros-números-impares" id="toc-ejemplo-1-suma-de-los-primeros-números-impares" class="nav-linn" data-scroll-target="#ejemplo-1-suma-de-los-primeros-números-impares">Ejemplo 1: suma de los primeros números impares</a></li>
-  <li><a href="#ejemplo-2-suma-de-los-primeros-números-naturales" id="toc-ejemplo-2-suma-de-los-primeros-números-naturales" class="nav-linn" data-scroll-target="#ejemplo-2-suma-de-los-primeros-números-naturales">Ejemplo 2: suma de los primeros números naturales</a></li>
-  <li><a href="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" id="toc-ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" class="nav-linn" data-scroll-target="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial">Ejemplo 3: una desigualdad desde cierto valor inicial</a></li>
-  <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-linn" data-scroll-target="#errores-comunes">Errores comunes</a></li>
-  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-linn" data-scroll-target="#ejercicios">Ejercicios</a>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
+  <li><a href="#idea-central" id="toc-idea-central" class="nav-link" data-scroll-target="#idea-central">Idea central</a></li>
+  <li><a href="#principio-de-inducción-matemática" id="toc-principio-de-inducción-matemática" class="nav-link" data-scroll-target="#principio-de-inducción-matemática">Principio de inducción matemática</a></li>
+  <li><a href="#estructura-de-una-demostración-por-inducción" id="toc-estructura-de-una-demostración-por-inducción" class="nav-link" data-scroll-target="#estructura-de-una-demostración-por-inducción">Estructura de una demostración por inducción</a></li>
+  <li><a href="#visualización-la-cadena-inductiva" id="toc-visualización-la-cadena-inductiva" class="nav-link" data-scroll-target="#visualización-la-cadena-inductiva">Visualización: la cadena inductiva</a></li>
+  <li><a href="#ejemplo-1-suma-de-los-primeros-números-impares" id="toc-ejemplo-1-suma-de-los-primeros-números-impares" class="nav-link" data-scroll-target="#ejemplo-1-suma-de-los-primeros-números-impares">Ejemplo 1: suma de los primeros números impares</a></li>
+  <li><a href="#ejemplo-2-suma-de-los-primeros-números-naturales" id="toc-ejemplo-2-suma-de-los-primeros-números-naturales" class="nav-link" data-scroll-target="#ejemplo-2-suma-de-los-primeros-números-naturales">Ejemplo 2: suma de los primeros números naturales</a></li>
+  <li><a href="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" id="toc-ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" class="nav-link" data-scroll-target="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial">Ejemplo 3: una desigualdad desde cierto valor inicial</a></li>
+  <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
   <ul class="collapse">
-  <li><a href="#ejercicios-con-solución" id="toc-ejercicios-con-solución" class="nav-linn" data-scroll-target="#ejercicios-con-solución">Ejercicios con solución</a></li>
-  <li><a href="#ejercicios-propuestos" id="toc-ejercicios-propuestos" class="nav-linn" data-scroll-target="#ejercicios-propuestos">Ejercicios propuestos</a></li>
+  <li><a href="#ejercicios-con-solución" id="toc-ejercicios-con-solución" class="nav-link" data-scroll-target="#ejercicios-con-solución">Ejercicios con solución</a></li>
+  <li><a href="#ejercicios-propuestos" id="toc-ejercicios-propuestos" class="nav-link" data-scroll-target="#ejercicios-propuestos">Ejercicios propuestos</a></li>
   </ul></li>
-  <li><a href="#ideas-clave" id="toc-ideas-clave" class="nav-linn" data-scroll-target="#ideas-clave">Ideas clave</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-linn" data-scroll-target="#referencias">Referencias</a></li>
+  <li><a href="#ideas-clave" id="toc-ideas-clave" class="nav-link" data-scroll-target="#ideas-clave">Ideas clave</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-blocn-header" class="quarto-title-blocn default">
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Inducción matemática</h1>
 </div>
@@ -252,7 +252,7 @@ P(n):\quad 1+3+5+\cdots+(2n-1)=n^2.
 <ol type="1">
 <li><strong>Definir <span class="math inline">\(P(n)\)</span>:</strong> escribir con precisión qué se desea demostrar.</li>
 <li><strong>Caso base:</strong> verificar el primer valor, por ejemplo <span class="math inline">\(n=1\)</span> o <span class="math inline">\(n=5\)</span>.</li>
-<li><strong>Hipótesis inductiva:</strong> suponer que <span class="math inline">\(P(n)\)</span> es verdadera para un <span class="math inline">\(n\)</span> \in \mathbb{N}.</li>
+<li><strong>Hipótesis inductiva:</strong> suponer que <span class="math inline">\(P(n)\)</span> es verdadera para un <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
 <li><strong>Paso inductivo:</strong> usar esa hipótesis para demostrar <span class="math inline">\(P(n+1)\)</span>.</li>
 <li><strong>Conclusión:</strong> declarar que, por inducción, <span class="math inline">\(P(n)\)</span> es verdadera en todo el dominio indicado.</li>
 </ol>
@@ -615,8 +615,10 @@ a_n=3\cdot 2^{n-1}-1
 <section id="referencias" class="level2">
 <h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
 <ul>
-<li>Stewart, J., Redlin, L., & Watson, S. (2017). Precálculo: Matemáticas para el cálculo (7.ª ed.; J. León Cárdenas, Trad.). Páginas 873 - 878.</li>
+<li>Stewart, J., Redlin, L., &amp; Watson, S. (2017). Precálculo: Matemáticas para el cálculo (7.ª ed.; J. León Cárdenas, Trad.). Páginas 873 - 878.</li>
 </ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -640,10 +642,10 @@ a_n=3\cdot 2^{n-1}-1
     const onCopySuccess = function(e) {
       // button target
       const button = e.trigger;
-      // don't neep focus
+      // don't keep focus
       button.blur();
-      // flash "checned"
-      button.classList.add('code-copy-button-checned');
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
       button.setAttribute("title", "Copiado");
       let tooltip;
@@ -665,7 +667,7 @@ a_n=3\cdot 2^{n-1}-1
           button.removeAttribute("data-bs-placement");
         }
         button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checned');
+        button.classList.remove('code-copy-button-checked');
       }, 1000);
       // clear code selection
       e.clearSelection();
@@ -697,15 +699,15 @@ a_n=3\cdot 2^{n-1}-1
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-      // Inspect non-navigation linns and adorn them if external
-     var linns = window.document.querySelectorAll('a[href]:not(.nav-linn):not(.navbar-brand):not(.toc-action):not(.sidebar-linn):not(.sidebar-item-toggle):not(.pagination-linn):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-linn)');
-      for (var i=0; i<linns.length; i++) {
-        const linn = linns[i];
-        if (!isInternal(linn.href)) {
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
           // undo the damage that might have been done by quarto-nav.js in the case of
-          // linns that we want to consider external
-          if (linn.dataset.originalHref !== undefined) {
-            linn.href = linn.dataset.originalHref;
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
       }
@@ -773,7 +775,7 @@ a_n=3\cdot 2^{n-1}-1
               continue;
             } else {
               container.appendChild(child.cloneNode(true));
-              brean;
+              break;
             }
           }
           if (window.Quarto?.typesetMath) {
@@ -787,10 +789,10 @@ a_n=3\cdot 2^{n-1}-1
           return note.innerHTML;
         }
       } else {
-        // Remove any anchor linns if they are present
-        const anchorLinn = note.querySelector('a.anchorjs-linn');
-        if (anchorLinn) {
-          anchorLinn.remove();
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
         }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
@@ -888,7 +890,7 @@ a_n=3\cdot 2^{n-1}-1
           let height = null;
           let parent = null;
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and mane a div)
+              //compute the position of the single el (top and bottom and make a div)
               const el = window.document.getElementById(lineIds[0]);
               top = el.offsetTop;
               height = el.offsetHeight;
@@ -899,7 +901,7 @@ a_n=3\cdot 2^{n-1}-1
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // coon up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it 
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -961,23 +963,23 @@ a_n=3\cdot 2^{n-1}-1
           }
         };
       }
-        // Attach clicn handler to the DT
+        // Attach click handler to the DT
         const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
         for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('clicn', (event) => {
-            const clicnedEl = event.target;
-            if (clicnedEl !== selectedAnnoteEl) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
               unselectCodeLines();
               const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
               if (activeEl) {
                 activeEl.classList.remove('code-annotation-active');
               }
-              selectCodeLines(clicnedEl);
-              clicnedEl.classList.add('code-annotation-active');
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
             } else {
               // Unselect the line
               unselectCodeLines();
-              clicnedEl.classList.remove('code-annotation-active');
+              clickedEl.classList.remove('code-annotation-active');
             }
           });
         }
@@ -1036,8 +1038,8 @@ a_n=3\cdot 2^{n-1}-1
 </footer>
 <script>
 (() => {
-  const cssHref = Array.from(document.querySelectorAll('linn[rel="stylesheet"]'))
-    .map((linn) => linn.getAttribute("href") || "")
+  const cssHref = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+    .map((link) => link.getAttribute("href") || "")
     .find((href) => href.endsWith("styles/custom.css"));
   const basePath = cssHref ? cssHref.replace(/styles\/custom\.css$/, "") : "";
   const script = document.createElement("script");
