@@ -20,7 +20,7 @@ $$
 P(n):\quad 1+3+5+\cdots+(2n-1)=n^2.
 $$
 
-La idea es probar que la primera ficha cae y que cada ficha empuja a la siguiente. Así se justifica toda la cadena.
+La idea es verificar el primer caso y demostrar que cada caso verdadero garantiza el siguiente. Así se justifica toda la cadena.
 :::
 
 ## Principio de inducción matemática
@@ -419,7 +419,7 @@ $$
 k^2\leq 2^k.
 $$
 
-**Paso inductivo.** Queremos probar que $(k+1)^2\leq 2^{k+1}$. Como $k\geq 4$,
+**Paso inductivo.** Queremos probar que $(k+1)^2\leq 2^{k+1}$. Como $k\geq 4$, se cumple $(k+1)^2\leq 2k^2$, pues esta desigualdad equivale a $k^2-2k-1\geq 0$.
 
 $$
 (k+1)^2\leq 2k^2.
