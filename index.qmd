@@ -1,0 +1,42 @@
+---
+title: "Inicio"
+description: "Compendio de consulta rápida para la asignatura de Precálculo."
+---
+
+Este sitio es un compendio de consulta rápida de Precálculo. Reúne definiciones, ideas centrales, ejemplos mínimos y advertencias frecuentes para apoyar el estudio autónomo y la preparación de ejercicios.
+
+## Temas
+
+::: {.topic-grid}
+::: {.topic-card .is-available}
+<p class="topic-status">Disponible</p>
+
+### [Inducción matemática](temas/induccion.qmd)
+
+Demostraciones para proposiciones indexadas por números naturales.
+:::
+
+::: {.topic-card .is-prep}
+<p class="topic-status">En preparación</p>
+
+### [Sucesiones](temas/sucesiones.qmd)
+
+Lenguaje básico para describir listas ordenadas de términos.
+:::
+
+::: {.topic-card .is-prep}
+<p class="topic-status">En preparación</p>
+
+### [Progresiones](temas/progresiones.qmd)
+
+Patrones aritméticos y geométricos de uso frecuente.
+:::
+
+::: {.topic-card .is-prep}
+<p class="topic-status">En preparación</p>
+
+### [Sumatorias](temas/sumatorias.qmd)
+
+Notación sigma y técnicas elementales para sumar términos.
+:::
+:::

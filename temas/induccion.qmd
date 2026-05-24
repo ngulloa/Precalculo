@@ -5,12 +5,15 @@ description: "Método de demostración para proposiciones definidas sobre los n�
 
 ## Objetivo
 
+::: {.concept-box}
 Comprender la inducción matemática como una técnica para demostrar afirmaciones que dependen de un número natural $n$. La meta es reconocer sus partes, escribirlas con claridad y aplicarlas en fórmulas, divisibilidad y desigualdades.
+:::
 
 ## Idea central
 
 Verificar muchos casos particulares puede sugerir una regularidad, pero no demuestra una afirmación general. Aunque una propiedad funcione para $n=1,2,3,\ldots,1000$, todavía podría fallar después.
 
+::: {.concept-box}
 En inducción trabajamos con una proposición $P(n)$, es decir, un enunciado matemático que depende de $n$. Por ejemplo:
 
 $$
@@ -18,6 +21,7 @@ P(n):\quad 1+3+5+\cdots+(2n-1)=n^2.
 $$
 
 La idea es probar que la primera ficha cae y que cada ficha empuja a la siguiente. Así se justifica toda la cadena.
+:::
 
 ## Principio de inducción matemática
 
@@ -32,15 +36,19 @@ Si se cumplen estas dos condiciones:
 Entonces $P(n)$ es verdadera para todo $n \in \mathbb{N}$.
 :::
 
+::: {.warning-box}
 El caso base no siempre empieza en $1$. Si la afirmación solo se plantea para $n \geq 5$, se prueba primero $P(5)$ y luego se demuestra que $P(k) \Rightarrow P(k+1)$ para todo $k \geq 5$.
+:::
 
 ## Estructura de una demostración por inducción
 
+::: {.method-box .step-list}
 1. **Definir $P(n)$:** escribir con precisión qué se desea demostrar.
 2. **Caso base:** verificar el primer valor permitido, por ejemplo $n=1$ o $n=5$.
 3. **Hipótesis inductiva:** suponer que $P(k)$ es verdadera para un $k$ permitido.
 4. **Paso inductivo:** usar esa hipótesis para demostrar $P(k+1)$.
 5. **Conclusión:** declarar que, por inducción, $P(n)$ es verdadera en todo el dominio indicado.
+:::
 
 ::: {.callout-tip title="Idea importante"}
 En el paso inductivo no se demuestra directamente que $P(k)$ sea verdadera. Se demuestra la implicación:
@@ -52,6 +60,7 @@ $$
 
 ## Ejemplo 1: suma de los primeros números impares
 
+::: {.example-box}
 Demostremos que, para todo $n \in \mathbb{N}$,
 
 $$
@@ -102,9 +111,11 @@ $$
 $$
 
 para todo $n \in \mathbb{N}$.
+:::
 
 ## Ejemplo 2: suma de los primeros números naturales
 
+::: {.example-box}
 Demostremos que, para todo $n \in \mathbb{N}$,
 
 $$
@@ -156,9 +167,11 @@ $$
 $$
 
 para todo $n \in \mathbb{N}$.
+:::
 
 ## Ejemplo 3: una desigualdad desde cierto valor inicial
 
+::: {.example-box}
 Demostremos que
 
 $$
@@ -213,6 +226,7 @@ $$
 $$
 
 para todo $n\geq 5$.
+:::
 
 ## Errores comunes
 
@@ -228,6 +242,7 @@ para todo $n\geq 5$.
 
 ### Ejercicios con solución
 
+::: {.exercise-box}
 #### Ejercicio 1
 
 Demuestra por inducción que, para todo $n \in \mathbb{N}$,
@@ -236,7 +251,8 @@ $$
 2+4+6+\cdots+2n=n(n+1).
 $$
 
-::: {.callout-tip title="Solución"}
+**Solución.**
+
 Sea
 
 $$
@@ -270,11 +286,13 @@ $$
 Por inducción, la fórmula es válida para todo $n \in \mathbb{N}$.
 :::
 
+::: {.exercise-box}
 #### Ejercicio 2
 
 Demuestra que $5^n-1$ es divisible por $4$ para todo $n \in \mathbb{N}$.
 
-::: {.callout-tip title="Solución"}
+**Solución.**
+
 Sea
 
 $$
@@ -304,6 +322,7 @@ $$
 Por lo tanto, $4 \mid (5^{k+1}-1)$. Por inducción, $5^n-1$ es divisible por $4$ para todo $n \in \mathbb{N}$.
 :::
 
+::: {.exercise-box}
 #### Ejercicio 3
 
 Demuestra que, para todo $n\geq 4$,
@@ -312,7 +331,8 @@ $$
 n^2\leq 2^n.
 $$
 
-::: {.callout-tip title="Solución"}
+**Solución.**
+
 Sea
 
 $$
@@ -348,6 +368,7 @@ Por inducción, $n^2\leq 2^n$ para todo $n\geq 4$.
 
 ### Ejercicios propuestos
 
+::: {.proposed-box}
 #### Ejercicio 4
 
 Demuestra que, para todo $n \in \mathbb{N}$,
@@ -355,11 +376,15 @@ Demuestra que, para todo $n \in \mathbb{N}$,
 $$
 2+5+8+\cdots+(3n-1)=\frac{n(3n+1)}{2}.
 $$
+:::
 
+::: {.proposed-box}
 #### Ejercicio 5
 
 Demuestra que $7^n-1$ es divisible por $6$ para todo $n \in \mathbb{N}$.
+:::
 
+::: {.proposed-box}
 #### Ejercicio 6
 
 Demuestra que, para todo $n \in \mathbb{N}$,
@@ -367,7 +392,9 @@ Demuestra que, para todo $n \in \mathbb{N}$,
 $$
 1^2+2^2+3^2+\cdots+n^2=\frac{n(n+1)(2n+1)}{6}.
 $$
+:::
 
+::: {.proposed-box}
 #### Ejercicio 7
 
 Demuestra que, para todo $n\geq 4$,
@@ -375,7 +402,9 @@ Demuestra que, para todo $n\geq 4$,
 $$
 3n+1\leq 2^n.
 $$
+:::
 
+::: {.proposed-box}
 #### Ejercicio 8
 
 Sea la sucesión definida por $a_1=2$ y
@@ -391,17 +420,19 @@ a_n=3\cdot 2^{n-1}-1
 $$
 
 para todo $n \in \mathbb{N}$.
+:::
 
 ## Ideas clave
 
+::: {.concept-box}
 - La inducción sirve para demostrar proposiciones $P(n)$ sobre números naturales.
 - El caso base inicia la cadena de implicaciones.
 - La hipótesis inductiva es una suposición temporal: se usa para probar el siguiente caso.
 - El paso inductivo debe demostrar $P(k+1)$, no repetir $P(k)$.
 - Si la afirmación comienza en $n\geq a$, el caso base debe ser $P(a)$.
+:::
 
 ## Referencias
 
 - Contenido elaborado a partir del extracto entregado por el usuario de Stewart, sección sobre inducción matemática.
 - El archivo `referencias.bib` no contiene datos bibliográficos completos para esta fuente; por eso se deja esta referencia como nota manual.
-

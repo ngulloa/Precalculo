@@ -1,0 +1,32 @@
+---
+title: "Sucesiones"
+description: "Página base para estudiar sucesiones numéricas en Precálculo."
+---
+
+::: {.advertencia}
+Contenido en preparación
+:::
+
+## Objetivo
+
+Pendiente de desarrollo.
+
+## Idea central
+
+Pendiente de desarrollo.
+
+## Definición
+
+Pendiente de desarrollo.
+
+## Ejemplo mínimo
+
+Pendiente de desarrollo.
+
+## Errores comunes
+
+Pendiente de desarrollo.
+
+## Ideas clave
+
+Pendiente de desarrollo.

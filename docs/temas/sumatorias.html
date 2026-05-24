@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Método de demostración para proposiciones definidas sobre los números naturales">
+<meta name="description" content="Página base para estudiar notación sigma y sumatorias en Precálculo.">
 
-<title>Inducción matemática – Precálculo</title>
+<title>Sumatorias – Precálculo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles/custom.css">
 </head>
@@ -127,7 +98,7 @@ window.Quarto = {
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../temas/induccion.html" aria-current="page"> 
+    <a class="nav-link" href="../temas/induccion.html"> 
 <span class="menu-text">Inducción matemática</span></a>
   </li>  
   <li class="nav-item">
@@ -139,7 +110,7 @@ window.Quarto = {
 <span class="menu-text">Progresiones</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../temas/sumatorias.html"> 
+    <a class="nav-link active" href="../temas/sumatorias.html" aria-current="page"> 
 <span class="menu-text">Sumatorias</span></a>
   </li>  
 </ul>
@@ -160,19 +131,10 @@ window.Quarto = {
   <ul>
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#idea-central" id="toc-idea-central" class="nav-link" data-scroll-target="#idea-central">Idea central</a></li>
-  <li><a href="#principio-de-inducción-matemática" id="toc-principio-de-inducción-matemática" class="nav-link" data-scroll-target="#principio-de-inducción-matemática">Principio de inducción matemática</a></li>
-  <li><a href="#estructura-de-una-demostración-por-inducción" id="toc-estructura-de-una-demostración-por-inducción" class="nav-link" data-scroll-target="#estructura-de-una-demostración-por-inducción">Estructura de una demostración por inducción</a></li>
-  <li><a href="#ejemplo-1-suma-de-los-primeros-números-impares" id="toc-ejemplo-1-suma-de-los-primeros-números-impares" class="nav-link" data-scroll-target="#ejemplo-1-suma-de-los-primeros-números-impares">Ejemplo 1: suma de los primeros números impares</a></li>
-  <li><a href="#ejemplo-2-suma-de-los-primeros-números-naturales" id="toc-ejemplo-2-suma-de-los-primeros-números-naturales" class="nav-link" data-scroll-target="#ejemplo-2-suma-de-los-primeros-números-naturales">Ejemplo 2: suma de los primeros números naturales</a></li>
-  <li><a href="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" id="toc-ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" class="nav-link" data-scroll-target="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial">Ejemplo 3: una desigualdad desde cierto valor inicial</a></li>
+  <li><a href="#definición" id="toc-definición" class="nav-link" data-scroll-target="#definición">Definición</a></li>
+  <li><a href="#ejemplo-mínimo" id="toc-ejemplo-mínimo" class="nav-link" data-scroll-target="#ejemplo-mínimo">Ejemplo mínimo</a></li>
   <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
-  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
-  <ul class="collapse">
-  <li><a href="#ejercicios-con-solución" id="toc-ejercicios-con-solución" class="nav-link" data-scroll-target="#ejercicios-con-solución">Ejercicios con solución</a></li>
-  <li><a href="#ejercicios-propuestos" id="toc-ejercicios-propuestos" class="nav-link" data-scroll-target="#ejercicios-propuestos">Ejercicios propuestos</a></li>
-  </ul></li>
   <li><a href="#ideas-clave" id="toc-ideas-clave" class="nav-link" data-scroll-target="#ideas-clave">Ideas clave</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
 </nav>
     </div>
@@ -181,12 +143,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Inducción matemática</h1>
+<h1 class="title">Sumatorias</h1>
 </div>
 
 <div>
   <div class="description">
-    Método de demostración para proposiciones definidas sobre los números naturales
+    Página base para estudiar notación sigma y sumatorias en Precálculo.
   </div>
 </div>
 
@@ -203,370 +165,32 @@ window.Quarto = {
 </header>
 
 
+<div class="advertencia">
+<p>Contenido en preparación</p>
+</div>
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<div class="concept-box">
-<p>Comprender la inducción matemática como una técnica para demostrar afirmaciones que dependen de un número natural <span class="math inline">\(n\)</span>. La meta es reconocer sus partes, escribirlas con claridad y aplicarlas en fórmulas, divisibilidad y desigualdades.</p>
-</div>
+<p>Pendiente de desarrollo.</p>
 </section>
 <section id="idea-central" class="level2">
 <h2 class="anchored" data-anchor-id="idea-central">Idea central</h2>
-<p>Verificar muchos casos particulares puede sugerir una regularidad, pero no demuestra una afirmación general. Aunque una propiedad funcione para <span class="math inline">\(n=1,2,3,\ldots,1000\)</span>, todavía podría fallar después.</p>
-<div class="concept-box">
-<p>En inducción trabajamos con una proposición <span class="math inline">\(P(n)\)</span>, es decir, un enunciado matemático que depende de <span class="math inline">\(n\)</span>. Por ejemplo:</p>
-<p><span class="math display">\[
-P(n):\quad 1+3+5+\cdots+(2n-1)=n^2.
-\]</span></p>
-<p>La idea es probar que la primera ficha cae y que cada ficha empuja a la siguiente. Así se justifica toda la cadena.</p>
-</div>
+<p>Pendiente de desarrollo.</p>
 </section>
-<section id="principio-de-inducción-matemática" class="level2">
-<h2 class="anchored" data-anchor-id="principio-de-inducción-matemática">Principio de inducción matemática</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Principio de inducción matemática">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Principio de inducción matemática
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(P(n)\)</span> una proposición definida para los números naturales.</p>
-<p>Si se cumplen estas dos condiciones:</p>
-<ol type="1">
-<li><span class="math inline">\(P(1)\)</span> es verdadera.</li>
-<li>Para todo <span class="math inline">\(k \in \mathbb{N}\)</span>, si <span class="math inline">\(P(k)\)</span> es verdadera, entonces <span class="math inline">\(P(k+1)\)</span> es verdadera.</li>
-</ol>
-<p>Entonces <span class="math inline">\(P(n)\)</span> es verdadera para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</div>
-</div>
-<div class="warning-box">
-<p>El caso base no siempre empieza en <span class="math inline">\(1\)</span>. Si la afirmación solo se plantea para <span class="math inline">\(n \geq 5\)</span>, se prueba primero <span class="math inline">\(P(5)\)</span> y luego se demuestra que <span class="math inline">\(P(k) \Rightarrow P(k+1)\)</span> para todo <span class="math inline">\(k \geq 5\)</span>.</p>
-</div>
+<section id="definición" class="level2">
+<h2 class="anchored" data-anchor-id="definición">Definición</h2>
+<p>Pendiente de desarrollo.</p>
 </section>
-<section id="estructura-de-una-demostración-por-inducción" class="level2">
-<h2 class="anchored" data-anchor-id="estructura-de-una-demostración-por-inducción">Estructura de una demostración por inducción</h2>
-<div class="method-box step-list">
-<ol type="1">
-<li><strong>Definir <span class="math inline">\(P(n)\)</span>:</strong> escribir con precisión qué se desea demostrar.</li>
-<li><strong>Caso base:</strong> verificar el primer valor permitido, por ejemplo <span class="math inline">\(n=1\)</span> o <span class="math inline">\(n=5\)</span>.</li>
-<li><strong>Hipótesis inductiva:</strong> suponer que <span class="math inline">\(P(k)\)</span> es verdadera para un <span class="math inline">\(k\)</span> permitido.</li>
-<li><strong>Paso inductivo:</strong> usar esa hipótesis para demostrar <span class="math inline">\(P(k+1)\)</span>.</li>
-<li><strong>Conclusión:</strong> declarar que, por inducción, <span class="math inline">\(P(n)\)</span> es verdadera en todo el dominio indicado.</li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Idea importante">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Idea importante
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>En el paso inductivo no se demuestra directamente que <span class="math inline">\(P(k)\)</span> sea verdadera. Se demuestra la implicación:</p>
-<p><span class="math display">\[
-P(k) \Rightarrow P(k+1).
-\]</span></p>
-</div>
-</div>
-</section>
-<section id="ejemplo-1-suma-de-los-primeros-números-impares" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo-1-suma-de-los-primeros-números-impares">Ejemplo 1: suma de los primeros números impares</h2>
-<div class="example-box">
-<p>Demostremos que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-1+3+5+\cdots+(2n-1)=n^2.
-\]</span></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad \sum_{i=1}^{n}(2i-1)=n^2.
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=1\)</span>:</p>
-<p><span class="math display">\[
-1=1^2.
-\]</span></p>
-<p>Luego <span class="math inline">\(P(1)\)</span> es verdadera.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que <span class="math inline">\(P(k)\)</span> es verdadera:</p>
-<p><span class="math display">\[
-1+3+5+\cdots+(2k-1)=k^2.
-\]</span></p>
-<p><strong>Paso inductivo.</strong> Queremos probar <span class="math inline">\(P(k+1)\)</span>:</p>
-<p><span class="math display">\[
-1+3+5+\cdots+(2k-1)+\bigl(2(k+1)-1\bigr)=(k+1)^2.
-\]</span></p>
-<p>Usamos la hipótesis inductiva:</p>
-<p><span class="math display">\[
-\begin{aligned}
-1+3+\cdots+(2k-1)+\bigl(2(k+1)-1\bigr)
-&amp;= k^2+(2k+1)\\
-&amp;= k^2+2k+1\\
-&amp;= (k+1)^2.
-\end{aligned}
-\]</span></p>
-<p><strong>Conclusión.</strong> Por inducción matemática,</p>
-<p><span class="math display">\[
-1+3+5+\cdots+(2n-1)=n^2
-\]</span></p>
-<p>para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</div>
-</section>
-<section id="ejemplo-2-suma-de-los-primeros-números-naturales" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo-2-suma-de-los-primeros-números-naturales">Ejemplo 2: suma de los primeros números naturales</h2>
-<div class="example-box">
-<p>Demostremos que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-1+2+3+\cdots+n=\frac{n(n+1)}{2}.
-\]</span></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad \sum_{i=1}^{n} i=\frac{n(n+1)}{2}.
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=1\)</span>:</p>
-<p><span class="math display">\[
-1=\frac{1(1+1)}{2}=1.
-\]</span></p>
-<p>Luego <span class="math inline">\(P(1)\)</span> es verdadera.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que <span class="math inline">\(P(k)\)</span> es verdadera:</p>
-<p><span class="math display">\[
-1+2+3+\cdots+k=\frac{k(k+1)}{2}.
-\]</span></p>
-<p><strong>Paso inductivo.</strong> Debemos demostrar <span class="math inline">\(P(k+1)\)</span>:</p>
-<p><span class="math display">\[
-1+2+\cdots+k+(k+1)=\frac{(k+1)(k+2)}{2}.
-\]</span></p>
-<p>Usando la hipótesis inductiva:</p>
-<p><span class="math display">\[
-\begin{aligned}
-1+2+\cdots+k+(k+1)
-&amp;= \frac{k(k+1)}{2}+(k+1)\\
-&amp;= (k+1)\left(\frac{k}{2}+1\right)\\
-&amp;= (k+1)\left(\frac{k+2}{2}\right)\\
-&amp;= \frac{(k+1)(k+2)}{2}.
-\end{aligned}
-\]</span></p>
-<p><strong>Conclusión.</strong> Por inducción,</p>
-<p><span class="math display">\[
-1+2+3+\cdots+n=\frac{n(n+1)}{2}
-\]</span></p>
-<p>para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</div>
-</section>
-<section id="ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo-3-una-desigualdad-desde-cierto-valor-inicial">Ejemplo 3: una desigualdad desde cierto valor inicial</h2>
-<div class="example-box">
-<p>Demostremos que</p>
-<p><span class="math display">\[
-4n&lt;2^n
-\]</span></p>
-<p>para todo <span class="math inline">\(n \geq 5\)</span>.</p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad 4n&lt;2^n.
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=5\)</span>:</p>
-<p><span class="math display">\[
-4\cdot 5=20&lt;32=2^5.
-\]</span></p>
-<p>Luego <span class="math inline">\(P(5)\)</span> es verdadera.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que <span class="math inline">\(P(k)\)</span> es verdadera para algún <span class="math inline">\(k\geq 5\)</span>:</p>
-<p><span class="math display">\[
-4k&lt;2^k.
-\]</span></p>
-<p><strong>Paso inductivo.</strong> Queremos demostrar <span class="math inline">\(P(k+1)\)</span>:</p>
-<p><span class="math display">\[
-4(k+1)&lt;2^{k+1}.
-\]</span></p>
-<p>Como <span class="math inline">\(k\geq 5\)</span>, se tiene <span class="math inline">\(4&lt;4k\)</span>. Además, por la hipótesis inductiva, <span class="math inline">\(4k&lt;2^k\)</span>. Por lo tanto, <span class="math inline">\(4&lt;2^k\)</span>. Entonces:</p>
-<p><span class="math display">\[
-\begin{aligned}
-4(k+1)
-&amp;=4k+4\\
-&amp;&lt;2^k+4\\
-&amp;&lt;2^k+2^k\\
-&amp;=2\cdot 2^k\\
-&amp;=2^{k+1}.
-\end{aligned}
-\]</span></p>
-<p><strong>Conclusión.</strong> Por inducción matemática,</p>
-<p><span class="math display">\[
-4n&lt;2^n
-\]</span></p>
-<p>para todo <span class="math inline">\(n\geq 5\)</span>.</p>
-</div>
+<section id="ejemplo-mínimo" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-mínimo">Ejemplo mínimo</h2>
+<p>Pendiente de desarrollo.</p>
 </section>
 <section id="errores-comunes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
-<div class="callout callout-style-default callout-warning callout-titled" title="Antes de cerrar una inducción, revisa esto">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Advertencia</span>Antes de cerrar una inducción, revisa esto
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Olvidar el caso base.</li>
-<li>Asumir directamente lo que se quiere demostrar.</li>
-<li>No usar la hipótesis inductiva en el paso inductivo.</li>
-<li>Confundir <span class="math inline">\(P(k)\)</span> con <span class="math inline">\(P(k+1)\)</span>.</li>
-<li>No revisar desde qué valor inicial comienza la afirmación.</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="ejercicios" class="level2">
-<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
-<section id="ejercicios-con-solución" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicios-con-solución">Ejercicios con solución</h3>
-<section id="ejercicio-1" class="level4 exercise-box">
-<h4 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h4>
-<p>Demuestra por inducción que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-2+4+6+\cdots+2n=n(n+1).
-\]</span></p>
-<p><strong>Solución.</strong></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad \sum_{i=1}^{n}2i=n(n+1).
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=1\)</span>, <span class="math inline">\(2=1(1+1)=2\)</span>.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que</p>
-<p><span class="math display">\[
-2+4+\cdots+2k=k(k+1).
-\]</span></p>
-<p><strong>Paso inductivo.</strong></p>
-<p><span class="math display">\[
-\begin{aligned}
-2+4+\cdots+2k+2(k+1)
-&amp;=k(k+1)+2(k+1)\\
-&amp;=(k+1)(k+2).
-\end{aligned}
-\]</span></p>
-<p>Esto es <span class="math inline">\(P(k+1)\)</span>, pues</p>
-<p><span class="math display">\[
-(k+1)\bigl((k+1)+1\bigr)=(k+1)(k+2).
-\]</span></p>
-<p>Por inducción, la fórmula es válida para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</section>
-<section id="ejercicio-2" class="level4 exercise-box">
-<h4 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h4>
-<p>Demuestra que <span class="math inline">\(5^n-1\)</span> es divisible por <span class="math inline">\(4\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-<p><strong>Solución.</strong></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad 4 \mid (5^n-1).
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=1\)</span>, <span class="math inline">\(5^1-1=4\)</span>, que es divisible por <span class="math inline">\(4\)</span>.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que <span class="math inline">\(4 \mid (5^k-1)\)</span>. Entonces existe un entero <span class="math inline">\(m\)</span> tal que</p>
-<p><span class="math display">\[
-5^k-1=4m.
-\]</span></p>
-<p><strong>Paso inductivo.</strong></p>
-<p><span class="math display">\[
-\begin{aligned}
-5^{k+1}-1
-&amp;=5\cdot 5^k-1\\
-&amp;=5(5^k-1)+4\\
-&amp;=5(4m)+4\\
-&amp;=4(5m+1).
-\end{aligned}
-\]</span></p>
-<p>Por lo tanto, <span class="math inline">\(4 \mid (5^{k+1}-1)\)</span>. Por inducción, <span class="math inline">\(5^n-1\)</span> es divisible por <span class="math inline">\(4\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</section>
-<section id="ejercicio-3" class="level4 exercise-box">
-<h4 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h4>
-<p>Demuestra que, para todo <span class="math inline">\(n\geq 4\)</span>,</p>
-<p><span class="math display">\[
-n^2\leq 2^n.
-\]</span></p>
-<p><strong>Solución.</strong></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad n^2\leq 2^n,\qquad n\geq 4.
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=4\)</span>:</p>
-<p><span class="math display">\[
-4^2=16=2^4.
-\]</span></p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que, para algún <span class="math inline">\(k\geq 4\)</span>,</p>
-<p><span class="math display">\[
-k^2\leq 2^k.
-\]</span></p>
-<p><strong>Paso inductivo.</strong> Queremos probar que <span class="math inline">\((k+1)^2\leq 2^{k+1}\)</span>. Como <span class="math inline">\(k\geq 4\)</span>,</p>
-<p><span class="math display">\[
-(k+1)^2\leq 2k^2.
-\]</span></p>
-<p>Usando la hipótesis inductiva:</p>
-<p><span class="math display">\[
-(k+1)^2\leq 2k^2\leq 2\cdot 2^k=2^{k+1}.
-\]</span></p>
-<p>Por inducción, <span class="math inline">\(n^2\leq 2^n\)</span> para todo <span class="math inline">\(n\geq 4\)</span>.</p>
-</section>
-</section>
-<section id="ejercicios-propuestos" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicios-propuestos">Ejercicios propuestos</h3>
-<section id="ejercicio-4" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h4>
-<p>Demuestra que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-2+5+8+\cdots+(3n-1)=\frac{n(3n+1)}{2}.
-\]</span></p>
-</section>
-<section id="ejercicio-5" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-5">Ejercicio 5</h4>
-<p>Demuestra que <span class="math inline">\(7^n-1\)</span> es divisible por <span class="math inline">\(6\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</section>
-<section id="ejercicio-6" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-6">Ejercicio 6</h4>
-<p>Demuestra que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-1^2+2^2+3^2+\cdots+n^2=\frac{n(n+1)(2n+1)}{6}.
-\]</span></p>
-</section>
-<section id="ejercicio-7" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-7">Ejercicio 7</h4>
-<p>Demuestra que, para todo <span class="math inline">\(n\geq 4\)</span>,</p>
-<p><span class="math display">\[
-3n+1\leq 2^n.
-\]</span></p>
-</section>
-<section id="ejercicio-8" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-8">Ejercicio 8</h4>
-<p>Sea la sucesión definida por <span class="math inline">\(a_1=2\)</span> y</p>
-<p><span class="math display">\[
-a_{n+1}=2a_n+1.
-\]</span></p>
-<p>Demuestra que</p>
-<p><span class="math display">\[
-a_n=3\cdot 2^{n-1}-1
-\]</span></p>
-<p>para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</section>
-</section>
+<p>Pendiente de desarrollo.</p>
 </section>
 <section id="ideas-clave" class="level2">
 <h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
-<div class="concept-box">
-<ul>
-<li>La inducción sirve para demostrar proposiciones <span class="math inline">\(P(n)\)</span> sobre números naturales.</li>
-<li>El caso base inicia la cadena de implicaciones.</li>
-<li>La hipótesis inductiva es una suposición temporal: se usa para probar el siguiente caso.</li>
-<li>El paso inductivo debe demostrar <span class="math inline">\(P(k+1)\)</span>, no repetir <span class="math inline">\(P(k)\)</span>.</li>
-<li>Si la afirmación comienza en <span class="math inline">\(n\geq a\)</span>, el caso base debe ser <span class="math inline">\(P(a)\)</span>.</li>
-</ul>
-</div>
-</section>
-<section id="referencias" class="level2">
-<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
-<ul>
-<li>Contenido elaborado a partir del extracto entregado por el usuario de Stewart, sección sobre inducción matemática.</li>
-<li>El archivo <code>referencias.bib</code> no contiene datos bibliográficos completos para esta fuente; por eso se deja esta referencia como nota manual.</li>
-</ul>
+<p>Pendiente de desarrollo.</p>
 
 
 </section>
