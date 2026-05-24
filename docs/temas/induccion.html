@@ -162,6 +162,7 @@ window.Quarto = {
   <li><a href="#idea-central" id="toc-idea-central" class="nav-link" data-scroll-target="#idea-central">Idea central</a></li>
   <li><a href="#principio-de-inducción-matemática" id="toc-principio-de-inducción-matemática" class="nav-link" data-scroll-target="#principio-de-inducción-matemática">Principio de inducción matemática</a></li>
   <li><a href="#estructura-de-una-demostración-por-inducción" id="toc-estructura-de-una-demostración-por-inducción" class="nav-link" data-scroll-target="#estructura-de-una-demostración-por-inducción">Estructura de una demostración por inducción</a></li>
+  <li><a href="#visualización-la-cadena-inductiva" id="toc-visualización-la-cadena-inductiva" class="nav-link" data-scroll-target="#visualización-la-cadena-inductiva">Visualización: la cadena inductiva</a></li>
   <li><a href="#ejemplo-1-suma-de-los-primeros-números-impares" id="toc-ejemplo-1-suma-de-los-primeros-números-impares" class="nav-link" data-scroll-target="#ejemplo-1-suma-de-los-primeros-números-impares">Ejemplo 1: suma de los primeros números impares</a></li>
   <li><a href="#ejemplo-2-suma-de-los-primeros-números-naturales" id="toc-ejemplo-2-suma-de-los-primeros-números-naturales" class="nav-link" data-scroll-target="#ejemplo-2-suma-de-los-primeros-números-naturales">Ejemplo 2: suma de los primeros números naturales</a></li>
   <li><a href="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" id="toc-ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" class="nav-link" data-scroll-target="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial">Ejemplo 3: una desigualdad desde cierto valor inicial</a></li>
@@ -272,6 +273,56 @@ P(k) \Rightarrow P(k+1).
 \]</span></p>
 </div>
 </div>
+</section>
+<section id="visualización-la-cadena-inductiva" class="level2">
+<h2 class="anchored" data-anchor-id="visualización-la-cadena-inductiva">Visualización: la cadena inductiva</h2>
+<div class="induction-chain" data-induction-chain="">
+<div class="induction-chain__principles">
+<div class="induction-chain__principle">
+<p><strong>Caso base</strong></p>
+<p>P(1) inicia la cadena.</p>
+</div>
+<div class="induction-chain__principle">
+<p><strong>Paso inductivo</strong></p>
+<p>Si P(k) es verdadera, entonces P(k+1) también lo es.</p>
+</div>
+</div>
+<div class="induction-chain__steps" role="list" aria-label="Cadena de proposiciones desde P(1) hasta P(8)">
+<div class="induction-chain__step is-base" data-chain-step="" role="listitem">
+<p><span class="induction-chain__symbol">P(1)</span> <small>base</small></p>
+</div>
+<div class="induction-chain__step" data-chain-step="" role="listitem">
+<p><span class="induction-chain__symbol">P(2)</span> <small>siguiente</small></p>
+</div>
+<div class="induction-chain__step" data-chain-step="" role="listitem">
+<p><span class="induction-chain__symbol">P(3)</span> <small>siguiente</small></p>
+</div>
+<div class="induction-chain__step" data-chain-step="" role="listitem">
+<p><span class="induction-chain__symbol">P(4)</span> <small>siguiente</small></p>
+</div>
+<div class="induction-chain__step" data-chain-step="" role="listitem">
+<p><span class="induction-chain__symbol">P(5)</span> <small>siguiente</small></p>
+</div>
+<div class="induction-chain__step" data-chain-step="" role="listitem">
+<p><span class="induction-chain__symbol">P(6)</span> <small>siguiente</small></p>
+</div>
+<div class="induction-chain__step" data-chain-step="" role="listitem">
+<p><span class="induction-chain__symbol">P(7)</span> <small>siguiente</small></p>
+</div>
+<div class="induction-chain__step" data-chain-step="" role="listitem">
+<p><span class="induction-chain__symbol">P(8)</span> <small>siguiente</small></p>
+</div>
+</div>
+<div class="induction-chain__controls">
+<button class="btn btn-primary induction-chain__button" type="button" data-chain-start="">
+Activar cadena inductiva
+</button>
+<p class="induction-chain__status" data-chain-status="" aria-live="polite">
+Primero se verifica P(1). Luego el paso inductivo permite avanzar.
+</p>
+</div>
+</div>
+<script src="../scripts/induccion-cadena.js" defer=""></script>
 </section>
 <section id="ejemplo-1-suma-de-los-primeros-números-impares" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo-1-suma-de-los-primeros-números-impares">Ejemplo 1: suma de los primeros números impares</h2>

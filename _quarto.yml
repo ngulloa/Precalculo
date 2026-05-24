@@ -5,6 +5,7 @@ project:
     - .nojekyll
     - assets/
     - scripts/main.js
+    - scripts/induccion-cadena.js
 
 title: "Precálculo"
 

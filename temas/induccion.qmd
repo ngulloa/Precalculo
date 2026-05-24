@@ -58,6 +58,74 @@ P(k) \Rightarrow P(k+1).
 $$
 :::
 
+## Visualización: la cadena inductiva
+
+::: {.induction-chain data-induction-chain=""}
+::: {.induction-chain__principles}
+::: {.induction-chain__principle}
+**Caso base**
+
+P(1) inicia la cadena.
+:::
+
+::: {.induction-chain__principle}
+**Paso inductivo**
+
+Si P(k) es verdadera, entonces P(k+1) también lo es.
+:::
+:::
+
+::: {.induction-chain__steps role="list" aria-label="Cadena de proposiciones desde P(1) hasta P(8)"}
+::: {.induction-chain__step .is-base data-chain-step="" role="listitem"}
+<span class="induction-chain__symbol">P(1)</span>
+<small>base</small>
+:::
+
+::: {.induction-chain__step data-chain-step="" role="listitem"}
+<span class="induction-chain__symbol">P(2)</span>
+<small>siguiente</small>
+:::
+
+::: {.induction-chain__step data-chain-step="" role="listitem"}
+<span class="induction-chain__symbol">P(3)</span>
+<small>siguiente</small>
+:::
+
+::: {.induction-chain__step data-chain-step="" role="listitem"}
+<span class="induction-chain__symbol">P(4)</span>
+<small>siguiente</small>
+:::
+
+::: {.induction-chain__step data-chain-step="" role="listitem"}
+<span class="induction-chain__symbol">P(5)</span>
+<small>siguiente</small>
+:::
+
+::: {.induction-chain__step data-chain-step="" role="listitem"}
+<span class="induction-chain__symbol">P(6)</span>
+<small>siguiente</small>
+:::
+
+::: {.induction-chain__step data-chain-step="" role="listitem"}
+<span class="induction-chain__symbol">P(7)</span>
+<small>siguiente</small>
+:::
+
+::: {.induction-chain__step data-chain-step="" role="listitem"}
+<span class="induction-chain__symbol">P(8)</span>
+<small>siguiente</small>
+:::
+:::
+
+::: {.induction-chain__controls}
+<button class="btn btn-primary induction-chain__button" type="button" data-chain-start>Activar cadena inductiva</button>
+
+<p class="induction-chain__status" data-chain-status aria-live="polite">Primero se verifica P(1). Luego el paso inductivo permite avanzar.</p>
+:::
+:::
+
+<script src="../scripts/induccion-cadena.js" defer></script>
+
 ## Ejemplo 1: suma de los primeros números impares
 
 ::: {.example-box}

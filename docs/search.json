@@ -147,6 +147,13 @@
     "text": "Estructura de una demostración por inducción\n\n\nDefinir \\(P(n)\\): escribir con precisión qué se desea demostrar.\nCaso base: verificar el primer valor permitido, por ejemplo \\(n=1\\) o \\(n=5\\).\nHipótesis inductiva: suponer que \\(P(k)\\) es verdadera para un \\(k\\) permitido.\nPaso inductivo: usar esa hipótesis para demostrar \\(P(k+1)\\).\nConclusión: declarar que, por inducción, \\(P(n)\\) es verdadera en todo el dominio indicado.\n\n\n\n\n\n\n\n\nTipIdea importante\n\n\n\nEn el paso inductivo no se demuestra directamente que \\(P(k)\\) sea verdadera. Se demuestra la implicación:\n\\[\nP(k) \\Rightarrow P(k+1).\n\\]"
   },
   {
+    "objectID": "temas/induccion.html#visualización-la-cadena-inductiva",
+    "href": "temas/induccion.html#visualización-la-cadena-inductiva",
+    "title": "Inducción matemática",
+    "section": "Visualización: la cadena inductiva",
+    "text": "Visualización: la cadena inductiva\n\n\n\nCaso base\nP(1) inicia la cadena.\n\n\nPaso inductivo\nSi P(k) es verdadera, entonces P(k+1) también lo es.\n\n\n\n\nP(1) base\n\n\nP(2) siguiente\n\n\nP(3) siguiente\n\n\nP(4) siguiente\n\n\nP(5) siguiente\n\n\nP(6) siguiente\n\n\nP(7) siguiente\n\n\nP(8) siguiente\n\n\n\n\nActivar cadena inductiva\n\n\nPrimero se verifica P(1). Luego el paso inductivo permite avanzar."
+  },
+  {
     "objectID": "temas/induccion.html#ejemplo-1-suma-de-los-primeros-números-impares",
     "href": "temas/induccion.html#ejemplo-1-suma-de-los-primeros-números-impares",
     "title": "Inducción matemática",
