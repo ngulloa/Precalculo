@@ -1,36 +1,348 @@
 ---
 title: "Sucesiones y sumatorias"
-description: "Página base para estudiar sucesiones numéricas, notación sigma y sumatorias en Precálculo."
+description: "Notación, fórmulas básicas y lectura intuitiva de sucesiones y sumas finitas"
 ---
-
-::: {.advertencia}
-Contenido en preparación
-:::
 
 ## Objetivo
 
-Pendiente de desarrollo.
+Reconocer sucesiones como listas ordenadas de números, describirlas mediante términos generales o reglas recursivas, y usar la notación sigma para escribir y calcular sumas finitas de manera compacta.
 
 ## Idea central
 
-Pendiente de desarrollo.
+Una sucesión organiza números por posición: primero, segundo, tercero, y así sucesivamente. Una sumatoria agrega varios términos de una sucesión siguiendo límites definidos. Por eso conviene distinguir siempre entre el término individual $a_n$ y una suma parcial $S_n$.
+
+::: {.callout-note title="Lectura básica"}
+En una sucesión se mira qué valor ocupa cada posición. En una sumatoria se acumulan varios valores de acuerdo con una regla y un rango de índices.
+:::
 
 ## Sucesiones
 
-Pendiente de desarrollo.
+Una sucesión es una función cuyo dominio son los números naturales. En lugar de escribir $a(n)$, normalmente se escribe $a_n$, donde $n$ indica la posición del término.
+
+$$
+a_1,\ a_2,\ a_3,\ \dots,\ a_n,\ \dots
+$$
+
+El símbolo $a_n$ se llama término general o término $n$-ésimo. Permite calcular el valor de la sucesión en la posición $n$, cuando existe una regla explícita.
+
+::: {.example-box}
+Si $a_n=2n$, entonces los primeros términos son
+
+$$
+a_1=2,\quad a_2=4,\quad a_3=6,\quad a_4=8.
+$$
+
+El término en la posición 103 es $a_{103}=2(103)=206$.
+:::
+
+Una sucesión puede presentarse de varias formas:
+
+- Por sus primeros términos: $5,10,15,20,\dots$.
+- Por una fórmula explícita: $a_n=5n$.
+- Por una regla recursiva: se entrega uno o más términos iniciales y una regla para obtener los siguientes.
+
+::: {.example-box}
+La regla recursiva
+
+$$
+a_1=5,\qquad a_n=a_{n-1}+5\quad (n\ge 2)
+$$
+
+produce la sucesión $5,10,15,20,\dots$. Para calcular $a_4$, primero se necesitan los términos anteriores.
+:::
+
+::: {.warning-box}
+Ver algunos términos ayuda a proponer una regla, pero no basta para justificar que esa regla sea la única posible. Distintas sucesiones pueden compartir los mismos primeros términos.
+:::
+
+## Fórmulas rápidas de sucesiones
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-title">Término general</div>
+<div class="formula-expression">
+
+$$
+a_n=a(n),\qquad n=1,2,3,\dots
+$$
+
+</div>
+<div class="formula-note">
+Usa esta forma cuando una fórmula permite calcular directamente el término en la posición $n$.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Sucesión aritmética</div>
+<div class="formula-expression">
+
+$$
+a_n=a+(n-1)d
+$$
+
+</div>
+<div class="formula-note">
+$a$ es el primer término y $d$ es la diferencia común entre términos consecutivos.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Sucesión geométrica</div>
+<div class="formula-expression">
+
+$$
+a_n=ar^{\,n-1}
+$$
+
+</div>
+<div class="formula-note">
+$a$ es el primer término y $r$ es la razón común entre términos consecutivos.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Regla recursiva básica</div>
+<div class="formula-expression">
+
+$$
+a_1\ \text{dado},\qquad a_n=F(a_{n-1})
+$$
+
+</div>
+<div class="formula-note">
+Se usa cuando cada término depende de uno anterior. Para llegar a $a_n$, normalmente se calculan los previos.
+</div>
+:::
+
+:::
 
 ## Sumatorias
 
-Pendiente de desarrollo.
+La notación sigma permite escribir una suma finita sin repetir todos sus términos. En la expresión
 
-## Ejemplo mínimo
+$$
+\sum_{k=1}^{n} a_k=a_1+a_2+a_3+\cdots+a_n,
+$$
 
-Pendiente de desarrollo.
+el símbolo $\sum$ indica que se deben sumar términos. La letra $k$ es el índice de suma; el número inferior indica dónde empieza el índice y el número superior indica dónde termina. La expresión $a_k$ es el término general que se evalúa para cada valor entero de $k$ dentro de esos límites.
+
+::: {.example-box}
+Al expandir la suma
+
+$$
+\sum_{k=1}^{5} k^2
+$$
+
+se obtiene
+
+$$
+1^2+2^2+3^2+4^2+5^2=55.
+$$
+:::
+
+Las sumas parciales se denotan usualmente por $S_n$. Para una sucesión $a_1,a_2,a_3,\dots$, la suma parcial $n$-ésima es
+
+$$
+S_n=a_1+a_2+a_3+\cdots+a_n.
+$$
+
+::: {.example-box}
+Si $a_n=\dfrac{1}{2^n}$, entonces
+
+$$
+S_1=\frac12,\quad
+S_2=\frac34,\quad
+S_3=\frac78,\quad
+S_4=\frac{15}{16}.
+$$
+
+En general,
+
+$$
+S_n=1-\frac{1}{2^n}.
+$$
+:::
+
+## Fórmulas rápidas de sumatorias
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-title">Suma de constantes</div>
+<div class="formula-expression">
+
+$$
+\sum_{k=1}^{n}1=n
+$$
+
+</div>
+<div class="formula-note">
+Cuenta cuántos términos hay cuando se suma $1$ desde $1$ hasta $n$.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Primeros enteros positivos</div>
+<div class="formula-expression">
+
+$$
+\sum_{k=1}^{n}k=\frac{n(n+1)}{2}
+$$
+
+</div>
+<div class="formula-note">
+Resume la suma $1+2+3+\cdots+n$.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Suma de cuadrados</div>
+<div class="formula-expression">
+
+$$
+\sum_{k=1}^{n}k^2=\frac{n(n+1)(2n+1)}{6}
+$$
+
+</div>
+<div class="formula-note">
+Útil cuando el término general de la suma es cuadrático.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Suma de cubos</div>
+<div class="formula-expression">
+
+$$
+\sum_{k=1}^{n}k^3=\left[\frac{n(n+1)}{2}\right]^2
+$$
+
+</div>
+<div class="formula-note">
+La suma de cubos es el cuadrado de la suma de los primeros enteros positivos.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Linealidad</div>
+<div class="formula-expression">
+
+$$
+\sum_{k=1}^{n}(ca_k+b_k)
+=c\sum_{k=1}^{n}a_k+\sum_{k=1}^{n}b_k
+$$
+
+</div>
+<div class="formula-note">
+Permite separar sumas y sacar factores constantes.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Suma aritmética</div>
+<div class="formula-expression">
+
+$$
+S_n=\frac{n}{2}(a+a_n)
+$$
+
+</div>
+<div class="formula-note">
+Suma los primeros $n$ términos de una sucesión aritmética.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Suma aritmética con diferencia común</div>
+<div class="formula-expression">
+
+$$
+S_n=\frac{n}{2}\,[2a+(n-1)d]
+$$
+
+</div>
+<div class="formula-note">
+Úsala cuando conoces el primer término $a$, la diferencia común $d$ y el número de términos.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-title">Suma geométrica finita</div>
+<div class="formula-expression">
+
+$$
+S_n=a\,\frac{1-r^n}{1-r},\qquad r\ne 1
+$$
+
+</div>
+<div class="formula-note">
+Suma los primeros $n$ términos de $a,ar,ar^2,\dots$. Revisa que la razón común sea $r\ne 1$.
+</div>
+:::
+
+:::
+
+::: {.example-box}
+Los primeros 50 números impares forman una sucesión aritmética con $a=1$, $d=2$ y $a_{50}=99$. Por tanto,
+
+$$
+S_{50}=\frac{50}{2}(1+99)=2500.
+$$
+:::
+
+::: {.example-box}
+La suma geométrica
+
+$$
+1+4+16+\cdots+4096
+$$
+
+tiene $a=1$, $r=4$ y $n=7$, porque $4096=4^6$. Así,
+
+$$
+S_7=1\cdot\frac{1-4^7}{1-4}=5461.
+$$
+:::
+
+## Visualización: términos que se acercan a un valor
+
+Como una sucesión solo está definida para posiciones naturales, su gráfica se representa con puntos aislados. Esto ayuda a observar si los términos se acercan a un valor o si cambian de manera alternada.
+
+Consideremos
+
+$$
+a_n=\frac{n}{n+1}.
+$$
+
+| $n$ | $a_n$ | Aproximación decimal |
+|---:|---:|---:|
+| 1 | $\frac12$ | 0.500 |
+| 2 | $\frac23$ | 0.667 |
+| 3 | $\frac34$ | 0.750 |
+| 4 | $\frac45$ | 0.800 |
+| 5 | $\frac56$ | 0.833 |
+| 10 | $\frac{10}{11}$ | 0.909 |
+
+Los valores se aproximan progresivamente a $1$, aunque ningún término de esta sucesión es exactamente $1$.
 
 ## Errores comunes
 
-Pendiente de desarrollo.
+- Confundir $a_n$, que es un término individual, con $S_n$, que es una suma parcial.
+- Tratar el índice de suma como si fuera el resultado de la sumatoria.
+- Omitir el límite inferior o superior de una sumatoria.
+- Aplicar una fórmula sin revisar sus condiciones, por ejemplo usar la suma geométrica finita sin identificar bien $a$, $r$ y $n$.
+- Creer que algunos términos iniciales bastan para demostrar una regla general.
+- Olvidar que en una suma como $\sum_{k=3}^{7} a_k$, el índice empieza en $3$, no necesariamente en $1$.
 
 ## Ideas clave
 
-Pendiente de desarrollo.
+- Una sucesión es una lista ordenada de números y se escribe $a_1,a_2,a_3,\dots$.
+- El término general $a_n$ describe el valor ubicado en la posición $n$.
+- Una regla recursiva necesita condiciones iniciales.
+- La notación sigma resume sumas finitas mediante un índice, límites y un término general.
+- Las fórmulas de sumas aritméticas y geométricas ahorran trabajo cuando la estructura de la suma coincide con sus condiciones.
+
+## Referencias
+
+- Archivo fuente entregado por el usuario: fragmento en PDF de Stewart, Watson y Redlin, *Precálculo: matemáticas para el cálculo* (2017), páginas sobre sucesiones, notación de sumatoria, sucesiones aritméticas y sucesiones geométricas.

@@ -4,56 +4,77 @@
     "href": "temas/sucesiones-sumatorias.html",
     "title": "Sucesiones y sumatorias",
     "section": "",
-    "text": "Contenido en preparación"
+    "text": "Reconocer sucesiones como listas ordenadas de números, describirlas mediante términos generales o reglas recursivas, y usar la notación sigma para escribir y calcular sumas finitas de manera compacta."
   },
   {
     "objectID": "temas/sucesiones-sumatorias.html#objetivo",
     "href": "temas/sucesiones-sumatorias.html#objetivo",
     "title": "Sucesiones y sumatorias",
-    "section": "Objetivo",
-    "text": "Objetivo\nPendiente de desarrollo."
+    "section": "",
+    "text": "Reconocer sucesiones como listas ordenadas de números, describirlas mediante términos generales o reglas recursivas, y usar la notación sigma para escribir y calcular sumas finitas de manera compacta."
   },
   {
     "objectID": "temas/sucesiones-sumatorias.html#idea-central",
     "href": "temas/sucesiones-sumatorias.html#idea-central",
     "title": "Sucesiones y sumatorias",
     "section": "Idea central",
-    "text": "Idea central\nPendiente de desarrollo."
+    "text": "Idea central\nUna sucesión organiza números por posición: primero, segundo, tercero, y así sucesivamente. Una sumatoria agrega varios términos de una sucesión siguiendo límites definidos. Por eso conviene distinguir siempre entre el término individual \\(a_n\\) y una suma parcial \\(S_n\\).\n\n\n\n\n\n\nNotaLectura básica\n\n\n\nEn una sucesión se mira qué valor ocupa cada posición. En una sumatoria se acumulan varios valores de acuerdo con una regla y un rango de índices."
   },
   {
     "objectID": "temas/sucesiones-sumatorias.html#sucesiones",
     "href": "temas/sucesiones-sumatorias.html#sucesiones",
     "title": "Sucesiones y sumatorias",
     "section": "Sucesiones",
-    "text": "Sucesiones\nPendiente de desarrollo."
+    "text": "Sucesiones\nUna sucesión es una función cuyo dominio son los números naturales. En lugar de escribir \\(a(n)\\), normalmente se escribe \\(a_n\\), donde \\(n\\) indica la posición del término.\n\\[\na_1,\\ a_2,\\ a_3,\\ \\dots,\\ a_n,\\ \\dots\n\\]\nEl símbolo \\(a_n\\) se llama término general o término \\(n\\)-ésimo. Permite calcular el valor de la sucesión en la posición \\(n\\), cuando existe una regla explícita.\n\nSi \\(a_n=2n\\), entonces los primeros términos son\n\\[\na_1=2,\\quad a_2=4,\\quad a_3=6,\\quad a_4=8.\n\\]\nEl término en la posición 103 es \\(a_{103}=2(103)=206\\).\n\nUna sucesión puede presentarse de varias formas:\n\nPor sus primeros términos: \\(5,10,15,20,\\dots\\).\nPor una fórmula explícita: \\(a_n=5n\\).\nPor una regla recursiva: se entrega uno o más términos iniciales y una regla para obtener los siguientes.\n\n\nLa regla recursiva\n\\[\na_1=5,\\qquad a_n=a_{n-1}+5\\quad (n\\ge 2)\n\\]\nproduce la sucesión \\(5,10,15,20,\\dots\\). Para calcular \\(a_4\\), primero se necesitan los términos anteriores.\n\n\nVer algunos términos ayuda a proponer una regla, pero no basta para justificar que esa regla sea la única posible. Distintas sucesiones pueden compartir los mismos primeros términos."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#fórmulas-rápidas-de-sucesiones",
+    "href": "temas/sucesiones-sumatorias.html#fórmulas-rápidas-de-sucesiones",
+    "title": "Sucesiones y sumatorias",
+    "section": "Fórmulas rápidas de sucesiones",
+    "text": "Fórmulas rápidas de sucesiones\n\n\n\nTérmino general\n\n\n\\[\na_n=a(n),\\qquad n=1,2,3,\\dots\n\\]\n\n\nUsa esta forma cuando una fórmula permite calcular directamente el término en la posición \\(n\\).\n\n\n\n\nSucesión aritmética\n\n\n\\[\na_n=a+(n-1)d\n\\]\n\n\n\\(a\\) es el primer término y \\(d\\) es la diferencia común entre términos consecutivos.\n\n\n\n\nSucesión geométrica\n\n\n\\[\na_n=ar^{\\,n-1}\n\\]\n\n\n\\(a\\) es el primer término y \\(r\\) es la razón común entre términos consecutivos.\n\n\n\n\nRegla recursiva básica\n\n\n\\[\na_1\\ \\text{dado},\\qquad a_n=F(a_{n-1})\n\\]\n\n\nSe usa cuando cada término depende de uno anterior. Para llegar a \\(a_n\\), normalmente se calculan los previos."
   },
   {
     "objectID": "temas/sucesiones-sumatorias.html#sumatorias",
     "href": "temas/sucesiones-sumatorias.html#sumatorias",
     "title": "Sucesiones y sumatorias",
     "section": "Sumatorias",
-    "text": "Sumatorias\nPendiente de desarrollo."
+    "text": "Sumatorias\nLa notación sigma permite escribir una suma finita sin repetir todos sus términos. En la expresión\n\\[\n\\sum_{k=1}^{n} a_k=a_1+a_2+a_3+\\cdots+a_n,\n\\]\nel símbolo \\(\\sum\\) indica que se deben sumar términos. La letra \\(k\\) es el índice de suma; el número inferior indica dónde empieza el índice y el número superior indica dónde termina. La expresión \\(a_k\\) es el término general que se evalúa para cada valor entero de \\(k\\) dentro de esos límites.\n\nAl expandir la suma\n\\[\n\\sum_{k=1}^{5} k^2\n\\]\nse obtiene\n\\[\n1^2+2^2+3^2+4^2+5^2=55.\n\\]\n\nLas sumas parciales se denotan usualmente por \\(S_n\\). Para una sucesión \\(a_1,a_2,a_3,\\dots\\), la suma parcial \\(n\\)-ésima es\n\\[\nS_n=a_1+a_2+a_3+\\cdots+a_n.\n\\]\n\nSi \\(a_n=\\dfrac{1}{2^n}\\), entonces\n\\[\nS_1=\\frac12,\\quad\nS_2=\\frac34,\\quad\nS_3=\\frac78,\\quad\nS_4=\\frac{15}{16}.\n\\]\nEn general,\n\\[\nS_n=1-\\frac{1}{2^n}.\n\\]"
   },
   {
-    "objectID": "temas/sucesiones-sumatorias.html#ejemplo-mínimo",
-    "href": "temas/sucesiones-sumatorias.html#ejemplo-mínimo",
+    "objectID": "temas/sucesiones-sumatorias.html#fórmulas-rápidas-de-sumatorias",
+    "href": "temas/sucesiones-sumatorias.html#fórmulas-rápidas-de-sumatorias",
     "title": "Sucesiones y sumatorias",
-    "section": "Ejemplo mínimo",
-    "text": "Ejemplo mínimo\nPendiente de desarrollo."
+    "section": "Fórmulas rápidas de sumatorias",
+    "text": "Fórmulas rápidas de sumatorias\n\n\n\nSuma de constantes\n\n\n\\[\n\\sum_{k=1}^{n}1=n\n\\]\n\n\nCuenta cuántos términos hay cuando se suma \\(1\\) desde \\(1\\) hasta \\(n\\).\n\n\n\n\nPrimeros enteros positivos\n\n\n\\[\n\\sum_{k=1}^{n}k=\\frac{n(n+1)}{2}\n\\]\n\n\nResume la suma \\(1+2+3+\\cdots+n\\).\n\n\n\n\nSuma de cuadrados\n\n\n\\[\n\\sum_{k=1}^{n}k^2=\\frac{n(n+1)(2n+1)}{6}\n\\]\n\n\nÚtil cuando el término general de la suma es cuadrático.\n\n\n\n\nSuma de cubos\n\n\n\\[\n\\sum_{k=1}^{n}k^3=\\left[\\frac{n(n+1)}{2}\\right]^2\n\\]\n\n\nLa suma de cubos es el cuadrado de la suma de los primeros enteros positivos.\n\n\n\n\nLinealidad\n\n\n\\[\n\\sum_{k=1}^{n}(ca_k+b_k)\n=c\\sum_{k=1}^{n}a_k+\\sum_{k=1}^{n}b_k\n\\]\n\n\nPermite separar sumas y sacar factores constantes.\n\n\n\n\nSuma aritmética\n\n\n\\[\nS_n=\\frac{n}{2}(a+a_n)\n\\]\n\n\nSuma los primeros \\(n\\) términos de una sucesión aritmética.\n\n\n\n\nSuma aritmética con diferencia común\n\n\n\\[\nS_n=\\frac{n}{2}\\,[2a+(n-1)d]\n\\]\n\n\nÚsala cuando conoces el primer término \\(a\\), la diferencia común \\(d\\) y el número de términos.\n\n\n\n\nSuma geométrica finita\n\n\n\\[\nS_n=a\\,\\frac{1-r^n}{1-r},\\qquad r\\ne 1\n\\]\n\n\nSuma los primeros \\(n\\) términos de \\(a,ar,ar^2,\\dots\\). Revisa que la razón común sea \\(r\\ne 1\\).\n\n\n\n\nLos primeros 50 números impares forman una sucesión aritmética con \\(a=1\\), \\(d=2\\) y \\(a_{50}=99\\). Por tanto,\n\\[\nS_{50}=\\frac{50}{2}(1+99)=2500.\n\\]\n\n\nLa suma geométrica\n\\[\n1+4+16+\\cdots+4096\n\\]\ntiene \\(a=1\\), \\(r=4\\) y \\(n=7\\), porque \\(4096=4^6\\). Así,\n\\[\nS_7=1\\cdot\\frac{1-4^7}{1-4}=5461.\n\\]"
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#visualización-términos-que-se-acercan-a-un-valor",
+    "href": "temas/sucesiones-sumatorias.html#visualización-términos-que-se-acercan-a-un-valor",
+    "title": "Sucesiones y sumatorias",
+    "section": "Visualización: términos que se acercan a un valor",
+    "text": "Visualización: términos que se acercan a un valor\nComo una sucesión solo está definida para posiciones naturales, su gráfica se representa con puntos aislados. Esto ayuda a observar si los términos se acercan a un valor o si cambian de manera alternada.\nConsideremos\n\\[\na_n=\\frac{n}{n+1}.\n\\]\n\n\n\n\\(n\\)\n\\(a_n\\)\nAproximación decimal\n\n\n\n\n1\n\\(\\frac12\\)\n0.500\n\n\n2\n\\(\\frac23\\)\n0.667\n\n\n3\n\\(\\frac34\\)\n0.750\n\n\n4\n\\(\\frac45\\)\n0.800\n\n\n5\n\\(\\frac56\\)\n0.833\n\n\n10\n\\(\\frac{10}{11}\\)\n0.909\n\n\n\nLos valores se aproximan progresivamente a \\(1\\), aunque ningún término de esta sucesión es exactamente \\(1\\)."
   },
   {
     "objectID": "temas/sucesiones-sumatorias.html#errores-comunes",
     "href": "temas/sucesiones-sumatorias.html#errores-comunes",
     "title": "Sucesiones y sumatorias",
     "section": "Errores comunes",
-    "text": "Errores comunes\nPendiente de desarrollo."
+    "text": "Errores comunes\n\nConfundir \\(a_n\\), que es un término individual, con \\(S_n\\), que es una suma parcial.\nTratar el índice de suma como si fuera el resultado de la sumatoria.\nOmitir el límite inferior o superior de una sumatoria.\nAplicar una fórmula sin revisar sus condiciones, por ejemplo usar la suma geométrica finita sin identificar bien \\(a\\), \\(r\\) y \\(n\\).\nCreer que algunos términos iniciales bastan para demostrar una regla general.\nOlvidar que en una suma como \\(\\sum_{k=3}^{7} a_k\\), el índice empieza en \\(3\\), no necesariamente en \\(1\\)."
   },
   {
     "objectID": "temas/sucesiones-sumatorias.html#ideas-clave",
     "href": "temas/sucesiones-sumatorias.html#ideas-clave",
     "title": "Sucesiones y sumatorias",
     "section": "Ideas clave",
-    "text": "Ideas clave\nPendiente de desarrollo."
+    "text": "Ideas clave\n\nUna sucesión es una lista ordenada de números y se escribe \\(a_1,a_2,a_3,\\dots\\).\nEl término general \\(a_n\\) describe el valor ubicado en la posición \\(n\\).\nUna regla recursiva necesita condiciones iniciales.\nLa notación sigma resume sumas finitas mediante un índice, límites y un término general.\nLas fórmulas de sumas aritméticas y geométricas ahorran trabajo cuando la estructura de la suma coincide con sus condiciones."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#referencias",
+    "href": "temas/sucesiones-sumatorias.html#referencias",
+    "title": "Sucesiones y sumatorias",
+    "section": "Referencias",
+    "text": "Referencias\n\nArchivo fuente entregado por el usuario: fragmento en PDF de Stewart, Watson y Redlin, Precálculo: matemáticas para el cálculo (2017), páginas sobre sucesiones, notación de sumatoria, sucesiones aritméticas y sucesiones geométricas."
   },
   {
     "objectID": "temas/induccion.html",

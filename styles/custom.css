@@ -340,6 +340,51 @@ mjx-container[jax="CHTML"][display="true"] {
   background: rgba(255, 255, 255, 0.58);
 }
 
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.formula-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.75rem;
+  min-height: 190px;
+  padding: 1rem 1.05rem;
+  border: 1px solid #cbd5e1;
+  border-top: 0.28rem solid var(--pc-method);
+  border-radius: 8px;
+  background: var(--pc-white);
+  box-shadow: 0 8px 20px rgba(31, 41, 51, 0.06);
+}
+
+.formula-title {
+  color: var(--pc-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.formula-expression {
+  display: grid;
+  min-height: 4.8rem;
+  align-items: center;
+  border-radius: 6px;
+  background: var(--pc-surface);
+}
+
+.formula-expression .math.display,
+.formula-expression mjx-container[jax="CHTML"][display="true"] {
+  margin: 0.35rem auto;
+}
+
+.formula-note {
+  color: var(--pc-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .induction-chain {
   margin: 1.4rem 0;
   padding: 1.1rem;
@@ -534,6 +579,14 @@ mjx-container[jax="CHTML"][display="true"] {
 
   .induction-chain__step:not(:last-child)::after {
     display: none;
+  }
+
+  .formula-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formula-card {
+    min-height: auto;
   }
 }
 
