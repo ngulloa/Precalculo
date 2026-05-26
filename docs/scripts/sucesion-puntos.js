@@ -55,6 +55,7 @@
 
   const sequenceValue = (n) => n / (n + 1);
   const formatValue = (value) => value.toFixed(3).replace(/0+$/, "").replace(/\.$/, "");
+  const subscriptNumber = (value) => String(value).replace(/[0-9]/g, (digit) => "₀₁₂₃₄₅₆₇₈₉"[Number(digit)]);
   const xScale = (n, total) => {
     if (total === 1) return margin.left + plotWidth / 2;
     return margin.left + ((n - 1) / (total - 1)) * plotWidth;
@@ -144,7 +145,7 @@
       y: height - 14,
       "text-anchor": "end",
     });
-    appendText(layer, "a_n", {
+    appendText(layer, "aₙ", {
       class: "sequence-sim__axis-label",
       x: 22,
       y: margin.top + 12,
@@ -175,7 +176,7 @@
         r: point.n === total ? 5.8 : 4.6,
       });
       const title = makeSvg("title");
-      title.textContent = `n = ${point.n}, a_n = ${formatValue(point.value)}`;
+      title.textContent = `n = ${point.n}, a${subscriptNumber(point.n)} = ${formatValue(point.value)}`;
       circle.appendChild(title);
       layer.appendChild(circle);
     });
@@ -184,8 +185,15 @@
 
     const lastValue = sequenceValue(total);
     countLabel.textContent = String(total);
-    summary.textContent = `Se están mostrando los primeros ${total} términos de la sucesión a_n = n/(n + 1).`;
-    detail.textContent = `El último punto mostrado es a_${total} = ${formatValue(lastValue)}; los términos se acercan a 1 al aumentar n.`;
+    summary.innerHTML = `Se están mostrando los primeros ${total} términos de la sucesión \\(a_n=\\frac{n}{n+1}\\).`;
+    detail.innerHTML = `El último punto mostrado es \\(a_{${total}}=${formatValue(lastValue)}\\); los términos se acercan a \\(1\\) al aumentar \\(n\\).`;
+
+    if (window.MathJax?.typesetClear) {
+      window.MathJax.typesetClear([summary, detail]);
+    }
+    if (window.MathJax?.typesetPromise) {
+      window.MathJax.typesetPromise([summary, detail]).catch(() => {});
+    }
   };
 
   input.addEventListener("input", () => draw(Number(input.value)));

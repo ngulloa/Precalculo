@@ -16,8 +16,8 @@ Este sitio es un compendio de consulta rápida de Precálculo. Reúne definicion
 Demostraciones para proposiciones indexadas por números naturales.
 :::
 
-::: {.topic-card .is-prep}
-<p class="topic-status">En preparación</p>
+::: {.topic-card .is-available}
+<p class="topic-status">Disponible</p>
 
 ### [Sucesiones y sumatorias](temas/sucesiones-sumatorias.qmd)
 
