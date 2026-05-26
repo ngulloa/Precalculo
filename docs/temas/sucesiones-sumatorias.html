@@ -471,6 +471,9 @@ S_7=1\cdot\frac{1-4^7}{1-4}=5461.
 <p><span class="math display">\[
 a_n=\frac{n}{n+1}.
 \]</span></p>
+<div id="sucesion-puntos-app">
+
+</div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -540,6 +543,18 @@ a_n=\frac{n}{n+1}.
 <ul>
 <li>Archivo fuente entregado por el usuario: fragmento en PDF de Stewart, Watson y Redlin, <em>Precálculo: matemáticas para el cálculo</em> (2017), páginas sobre sucesiones, notación de sumatoria, sucesiones aritméticas y sucesiones geométricas.</li>
 </ul>
+<script>
+(() => {
+  const cssHref = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+    .map((link) => link.getAttribute("href") || "")
+    .find((href) => href.endsWith("styles/custom.css"));
+  const basePath = cssHref ? cssHref.replace(/styles\/custom\.css$/, "") : "";
+  const script = document.createElement("script");
+  script.src = `${basePath}scripts/sucesion-puntos.js`;
+  script.defer = true;
+  document.body.appendChild(script);
+})();
+</script>
 
 
 </section>

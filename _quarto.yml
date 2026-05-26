@@ -6,6 +6,7 @@ project:
     - assets/
     - scripts/main.js
     - scripts/induccion-cadena.js
+    - scripts/sucesion-puntos.js
 
 title: "Precálculo"
 

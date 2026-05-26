@@ -53,7 +53,7 @@
     "href": "temas/sucesiones-sumatorias.html#visualización-términos-que-se-acercan-a-un-valor",
     "title": "Sucesiones y sumatorias",
     "section": "Visualización: términos que se acercan a un valor",
-    "text": "Visualización: términos que se acercan a un valor\nComo una sucesión solo está definida para posiciones naturales, su gráfica se representa con puntos aislados. Esto ayuda a observar si los términos se acercan a un valor o si cambian de manera alternada.\nConsideremos\n\\[\na_n=\\frac{n}{n+1}.\n\\]\n\n\n\n\\(n\\)\n\\(a_n\\)\nAproximación decimal\n\n\n\n\n1\n\\(\\frac12\\)\n0.500\n\n\n2\n\\(\\frac23\\)\n0.667\n\n\n3\n\\(\\frac34\\)\n0.750\n\n\n4\n\\(\\frac45\\)\n0.800\n\n\n5\n\\(\\frac56\\)\n0.833\n\n\n10\n\\(\\frac{10}{11}\\)\n0.909\n\n\n\nLos valores se aproximan progresivamente a \\(1\\), aunque ningún término de esta sucesión es exactamente \\(1\\)."
+    "text": "Visualización: términos que se acercan a un valor\nComo una sucesión solo está definida para posiciones naturales, su gráfica se representa con puntos aislados. Esto ayuda a observar si los términos se acercan a un valor o si cambian de manera alternada.\nConsideremos\n\\[\na_n=\\frac{n}{n+1}.\n\\]\n\n\n\n\n\n\n\\(n\\)\n\\(a_n\\)\nAproximación decimal\n\n\n\n\n1\n\\(\\frac12\\)\n0.500\n\n\n2\n\\(\\frac23\\)\n0.667\n\n\n3\n\\(\\frac34\\)\n0.750\n\n\n4\n\\(\\frac45\\)\n0.800\n\n\n5\n\\(\\frac56\\)\n0.833\n\n\n10\n\\(\\frac{10}{11}\\)\n0.909\n\n\n\nLos valores se aproximan progresivamente a \\(1\\), aunque ningún término de esta sucesión es exactamente \\(1\\)."
   },
   {
     "objectID": "temas/sucesiones-sumatorias.html#errores-comunes",

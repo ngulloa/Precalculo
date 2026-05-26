@@ -315,6 +315,8 @@ $$
 a_n=\frac{n}{n+1}.
 $$
 
+<div id="sucesion-puntos-app"></div>
+
 | $n$ | $a_n$ | Aproximación decimal |
 |---:|---:|---:|
 | 1 | $\frac12$ | 0.500 |
@@ -346,3 +348,18 @@ Los valores se aproximan progresivamente a $1$, aunque ningún término de esta 
 ## Referencias
 
 - Archivo fuente entregado por el usuario: fragmento en PDF de Stewart, Watson y Redlin, *Precálculo: matemáticas para el cálculo* (2017), páginas sobre sucesiones, notación de sumatoria, sucesiones aritméticas y sucesiones geométricas.
+
+```{=html}
+<script>
+(() => {
+  const cssHref = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+    .map((link) => link.getAttribute("href") || "")
+    .find((href) => href.endsWith("styles/custom.css"));
+  const basePath = cssHref ? cssHref.replace(/styles\/custom\.css$/, "") : "";
+  const script = document.createElement("script");
+  script.src = `${basePath}scripts/sucesion-puntos.js`;
+  script.defer = true;
+  document.body.appendChild(script);
+})();
+</script>
+```

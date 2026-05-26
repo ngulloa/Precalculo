@@ -385,6 +385,113 @@ mjx-container[jax="CHTML"][display="true"] {
   line-height: 1.45;
 }
 
+.sequence-sim {
+  margin: 1.4rem 0;
+  padding: 1rem 1.1rem 1.1rem;
+  border: 1px solid var(--pc-border);
+  border-radius: 8px;
+  background: var(--pc-white);
+  box-shadow: 0 10px 24px rgba(31, 41, 51, 0.07);
+}
+
+.sequence-sim__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.sequence-sim h3 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+}
+
+.sequence-sim__summary,
+.sequence-sim__detail {
+  margin: 0;
+  color: var(--pc-muted);
+}
+
+.sequence-sim__control {
+  display: grid;
+  min-width: min(280px, 100%);
+  gap: 0.45rem;
+  color: var(--pc-heading);
+  font-size: 0.95rem;
+}
+
+.sequence-sim__control input[type="range"] {
+  width: 100%;
+  accent-color: var(--pc-method);
+}
+
+.sequence-sim__chart-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #d7dfeb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.sequence-sim__chart {
+  display: block;
+  width: 100%;
+  min-width: 520px;
+  height: auto;
+}
+
+.sequence-sim__axis,
+.sequence-sim__tick {
+  stroke: #607087;
+  stroke-width: 1.4;
+}
+
+.sequence-sim__grid-line {
+  stroke: #e3e9f2;
+  stroke-width: 1;
+}
+
+.sequence-sim__target-line {
+  stroke: var(--pc-warning);
+  stroke-dasharray: 7 6;
+  stroke-width: 2;
+}
+
+.sequence-sim__stem {
+  stroke: #cbd5e1;
+  stroke-width: 1;
+}
+
+.sequence-sim__point {
+  fill: var(--pc-method);
+  stroke: #ffffff;
+  stroke-width: 1.7;
+}
+
+.sequence-sim__point--last {
+  fill: var(--pc-example);
+  stroke: #ffffff;
+  stroke-width: 2;
+}
+
+.sequence-sim__tick-label,
+.sequence-sim__axis-label,
+.sequence-sim__target-label {
+  fill: var(--pc-muted);
+  font-size: 0.78rem;
+}
+
+.sequence-sim__axis-label,
+.sequence-sim__target-label {
+  font-weight: 700;
+}
+
+.sequence-sim__detail {
+  margin-top: 0.75rem;
+}
+
 .induction-chain {
   margin: 1.4rem 0;
   padding: 1.1rem;
@@ -587,6 +694,18 @@ mjx-container[jax="CHTML"][display="true"] {
 
   .formula-card {
     min-height: auto;
+  }
+
+  .sequence-sim {
+    padding: 0.95rem 1rem;
+  }
+
+  .sequence-sim__header {
+    display: grid;
+  }
+
+  .sequence-sim__chart {
+    min-width: 440px;
   }
 }
 
