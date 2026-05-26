@@ -157,9 +157,15 @@ window.Quarto = {
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#idea-central" id="toc-idea-central" class="nav-link" data-scroll-target="#idea-central">Idea central</a></li>
   <li><a href="#sucesiones" id="toc-sucesiones" class="nav-link" data-scroll-target="#sucesiones">Sucesiones</a></li>
-  <li><a href="#fórmulas-rápidas-de-sucesiones" id="toc-fórmulas-rápidas-de-sucesiones" class="nav-link" data-scroll-target="#fórmulas-rápidas-de-sucesiones">Fórmulas rápidas de sucesiones</a></li>
   <li><a href="#sumatorias" id="toc-sumatorias" class="nav-link" data-scroll-target="#sumatorias">Sumatorias</a></li>
-  <li><a href="#fórmulas-rápidas-de-sumatorias" id="toc-fórmulas-rápidas-de-sumatorias" class="nav-link" data-scroll-target="#fórmulas-rápidas-de-sumatorias">Fórmulas rápidas de sumatorias</a></li>
+  <li><a href="#fórmulas" id="toc-fórmulas" class="nav-link" data-scroll-target="#fórmulas">Fórmulas</a>
+  <ul class="collapse">
+  <li><a href="#sucesiones-1" id="toc-sucesiones-1" class="nav-link" data-scroll-target="#sucesiones-1">Sucesiones</a></li>
+  <li><a href="#progresiones" id="toc-progresiones" class="nav-link" data-scroll-target="#progresiones">Progresiones</a></li>
+  <li><a href="#sumatorias-1" id="toc-sumatorias-1" class="nav-link" data-scroll-target="#sumatorias-1">Sumatorias</a></li>
+  <li><a href="#propiedades" id="toc-propiedades" class="nav-link" data-scroll-target="#propiedades">Propiedades</a></li>
+  <li><a href="#sumas-especiales" id="toc-sumas-especiales" class="nav-link" data-scroll-target="#sumas-especiales">Sumas especiales</a></li>
+  </ul></li>
   <li><a href="#visualización-términos-que-se-acercan-a-un-valor" id="toc-visualización-términos-que-se-acercan-a-un-valor" class="nav-link" data-scroll-target="#visualización-términos-que-se-acercan-a-un-valor">Visualización: términos que se acercan a un valor</a></li>
   <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
   <li><a href="#ideas-clave" id="toc-ideas-clave" class="nav-link" data-scroll-target="#ideas-clave">Ideas clave</a></li>
@@ -246,63 +252,6 @@ a_1=5,\qquad a_n=a_{n-1}+5\quad (n\ge 2)
 <p>Ver algunos términos ayuda a proponer una regla, pero no basta para justificar que esa regla sea la única posible. Distintas sucesiones pueden compartir los mismos primeros términos.</p>
 </div>
 </section>
-<section id="fórmulas-rápidas-de-sucesiones" class="level2">
-<h2 class="anchored" data-anchor-id="fórmulas-rápidas-de-sucesiones">Fórmulas rápidas de sucesiones</h2>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-title">
-Término general
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-a_n=a(n),\qquad n=1,2,3,\dots
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Usa esta forma cuando una fórmula permite calcular directamente el término en la posición <span class="math inline">\(n\)</span>.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-title">
-Sucesión aritmética
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-a_n=a+(n-1)d
-\]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(a\)</span> es el primer término y <span class="math inline">\(d\)</span> es la diferencia común entre términos consecutivos.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-title">
-Sucesión geométrica
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-a_n=ar^{\,n-1}
-\]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(a\)</span> es el primer término y <span class="math inline">\(r\)</span> es la razón común entre términos consecutivos.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-title">
-Regla recursiva básica
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-a_1\ \text{dado},\qquad a_n=F(a_{n-1})
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Se usa cuando cada término depende de uno anterior. Para llegar a <span class="math inline">\(a_n\)</span>, normalmente se calculan los previos.</p>
-</div>
-</div>
-</div>
-</section>
 <section id="sumatorias" class="level2">
 <h2 class="anchored" data-anchor-id="sumatorias">Sumatorias</h2>
 <p>La notación sigma permite escribir una suma finita sin repetir todos sus términos. En la expresión</p>
@@ -338,23 +287,212 @@ S_n=1-\frac{1}{2^n}.
 \]</span></p>
 </div>
 </section>
-<section id="fórmulas-rápidas-de-sumatorias" class="level2">
-<h2 class="anchored" data-anchor-id="fórmulas-rápidas-de-sumatorias">Fórmulas rápidas de sumatorias</h2>
+<section id="fórmulas" class="level2">
+<h2 class="anchored" data-anchor-id="fórmulas">Fórmulas</h2>
+<section id="sucesiones-1" class="level3">
+<h3 class="anchored" data-anchor-id="sucesiones-1">Sucesiones</h3>
 <div class="formula-grid">
 <div class="formula-card">
+<div class="formula-tag">
+Sucesiones
+</div>
 <div class="formula-title">
-Suma de constantes
+Término general
 </div>
 <div class="formula-expression">
 <p><span class="math display">\[
-\sum_{k=1}^{n}1=n
+a_n=a(n),\qquad n \in \mathbb{N}
 \]</span></p>
 </div>
 <div class="formula-note">
-<p>Cuenta cuántos términos hay cuando se suma <span class="math inline">\(1\)</span> desde <span class="math inline">\(1\)</span> hasta <span class="math inline">\(n\)</span>.</p>
+<p>Calcula directamente el término en la posición <span class="math inline">\(n\)</span>.</p>
 </div>
 </div>
 <div class="formula-card">
+<div class="formula-tag">
+Sucesiones
+</div>
+<div class="formula-title">
+Regla recursiva
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+a_1\ \text{dado},\qquad a_n=F(a_{n-1}),\quad n\ge 2
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Requiere condición inicial; para llegar a <span class="math inline">\(a_n\)</span> se calculan términos previos.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="progresiones" class="level3">
+<h3 class="anchored" data-anchor-id="progresiones">Progresiones</h3>
+<div class="formula-grid">
+<div class="formula-card">
+<div class="formula-tag">
+Progresiones
+</div>
+<div class="formula-title">
+Término aritmético
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+a_n=a+(n-1)d
+\]</span></p>
+</div>
+<div class="formula-note">
+<p><span class="math inline">\(a\)</span> es el primer término y <span class="math inline">\(d\)</span> la diferencia común.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Progresiones
+</div>
+<div class="formula-title">
+Término geométrico
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+a_n=ar^{\,n-1}
+\]</span></p>
+</div>
+<div class="formula-note">
+<p><span class="math inline">\(a\)</span> es el primer término y <span class="math inline">\(r\)</span> la razón común.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Progresiones
+</div>
+<div class="formula-title">
+Suma aritmética
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+S_n=\frac{n}{2}(a+a_n)
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Suma los primeros <span class="math inline">\(n\)</span> términos de una progresión aritmética.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Progresiones
+</div>
+<div class="formula-title">
+Suma aritmética con diferencia
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+S_n=\frac{n}{2}\,[2a+(n-1)d]
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Úsala cuando conoces <span class="math inline">\(a\)</span>, <span class="math inline">\(d\)</span> y el número de términos.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Progresiones
+</div>
+<div class="formula-title">
+Suma geométrica finita
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+S_n=a\,\frac{1-r^n}{1-r},\qquad r\ne 1
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Condición: <span class="math inline">\(r\ne 1\)</span>. Válida para sumas finitas.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sumatorias-1" class="level3">
+<h3 class="anchored" data-anchor-id="sumatorias-1">Sumatorias</h3>
+<div class="formula-grid">
+<div class="formula-card">
+<div class="formula-tag">
+Sumatorias
+</div>
+<div class="formula-title">
+Notación sigma
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\sum_{k=1}^{n} a_k=a_1+a_2+\cdots+a_n
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Expande una suma finita desde <span class="math inline">\(k=1\)</span> hasta <span class="math inline">\(k=n\)</span>.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Sumatorias
+</div>
+<div class="formula-title">
+Suma parcial
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+S_n=\sum_{k=1}^{n}a_k
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Acumula los primeros <span class="math inline">\(n\)</span> términos de una sucesión.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="propiedades" class="level3">
+<h3 class="anchored" data-anchor-id="propiedades">Propiedades</h3>
+<div class="formula-grid">
+<div class="formula-card">
+<div class="formula-tag">
+Propiedades
+</div>
+<div class="formula-title">
+Linealidad
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\sum_{k=1}^{n}(ca_k+b_k)
+=c\sum_{k=1}^{n}a_k+\sum_{k=1}^{n}b_k
+\]</span></p>
+</div>
+<div class="formula-note">
+<p><span class="math inline">\(c\)</span> es constante; válida para sumas finitas.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Propiedades
+</div>
+<div class="formula-title">
+Suma de una constante
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\sum_{k=1}^{n}c=nc
+\]</span></p>
+</div>
+<div class="formula-note">
+<p><span class="math inline">\(c\)</span> no depende de <span class="math inline">\(k\)</span>. Si <span class="math inline">\(c=1\)</span>, la suma es <span class="math inline">\(n\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="sumas-especiales" class="level3">
+<h3 class="anchored" data-anchor-id="sumas-especiales">Sumas especiales</h3>
+<div class="formula-grid">
+<div class="formula-card">
+<div class="formula-tag">
+Sumas especiales
+</div>
 <div class="formula-title">
 Primeros enteros positivos
 </div>
@@ -364,10 +502,13 @@ Primeros enteros positivos
 \]</span></p>
 </div>
 <div class="formula-note">
-<p>Resume la suma <span class="math inline">\(1+2+3+\cdots+n\)</span>.</p>
+<p>Resume <span class="math inline">\(1+2+3+\cdots+n\)</span>, con <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 </div>
 </div>
 <div class="formula-card">
+<div class="formula-tag">
+Sumas especiales
+</div>
 <div class="formula-title">
 Suma de cuadrados
 </div>
@@ -381,6 +522,9 @@ Suma de cuadrados
 </div>
 </div>
 <div class="formula-card">
+<div class="formula-tag">
+Sumas especiales
+</div>
 <div class="formula-title">
 Suma de cubos
 </div>
@@ -390,60 +534,7 @@ Suma de cubos
 \]</span></p>
 </div>
 <div class="formula-note">
-<p>La suma de cubos es el cuadrado de la suma de los primeros enteros positivos.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-title">
-Linealidad
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}(ca_k+b_k)
-=c\sum_{k=1}^{n}a_k+\sum_{k=1}^{n}b_k
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Permite separar sumas y sacar factores constantes.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-title">
-Suma aritmética
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=\frac{n}{2}(a+a_n)
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Suma los primeros <span class="math inline">\(n\)</span> términos de una sucesión aritmética.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-title">
-Suma aritmética con diferencia común
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=\frac{n}{2}\,[2a+(n-1)d]
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Úsala cuando conoces el primer término <span class="math inline">\(a\)</span>, la diferencia común <span class="math inline">\(d\)</span> y el número de términos.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-title">
-Suma geométrica finita
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=a\,\frac{1-r^n}{1-r},\qquad r\ne 1
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Suma los primeros <span class="math inline">\(n\)</span> términos de <span class="math inline">\(a,ar,ar^2,\dots\)</span>. Revisa que la razón común sea <span class="math inline">\(r\ne 1\)</span>.</p>
+<p>Equivale al cuadrado de la suma de los primeros enteros.</p>
 </div>
 </div>
 </div>
@@ -463,6 +554,7 @@ S_{50}=\frac{50}{2}(1+99)=2500.
 S_7=1\cdot\frac{1-4^7}{1-4}=5461.
 \]</span></p>
 </div>
+</section>
 </section>
 <section id="visualización-términos-que-se-acercan-a-un-valor" class="level2">
 <h2 class="anchored" data-anchor-id="visualización-términos-que-se-acercan-a-un-valor">Visualización: términos que se acercan a un valor</h2>

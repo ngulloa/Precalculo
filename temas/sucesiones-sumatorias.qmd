@@ -55,68 +55,6 @@ produce la sucesión $5,10,15,20,\dots$. Para calcular $a_4$, primero se necesit
 Ver algunos términos ayuda a proponer una regla, pero no basta para justificar que esa regla sea la única posible. Distintas sucesiones pueden compartir los mismos primeros términos.
 :::
 
-## Fórmulas rápidas de sucesiones
-
-::: {.formula-grid}
-
-::: {.formula-card}
-<div class="formula-title">Término general</div>
-<div class="formula-expression">
-
-$$
-a_n=a(n),\qquad n=1,2,3,\dots
-$$
-
-</div>
-<div class="formula-note">
-Usa esta forma cuando una fórmula permite calcular directamente el término en la posición $n$.
-</div>
-:::
-
-::: {.formula-card}
-<div class="formula-title">Sucesión aritmética</div>
-<div class="formula-expression">
-
-$$
-a_n=a+(n-1)d
-$$
-
-</div>
-<div class="formula-note">
-$a$ es el primer término y $d$ es la diferencia común entre términos consecutivos.
-</div>
-:::
-
-::: {.formula-card}
-<div class="formula-title">Sucesión geométrica</div>
-<div class="formula-expression">
-
-$$
-a_n=ar^{\,n-1}
-$$
-
-</div>
-<div class="formula-note">
-$a$ es el primer término y $r$ es la razón común entre términos consecutivos.
-</div>
-:::
-
-::: {.formula-card}
-<div class="formula-title">Regla recursiva básica</div>
-<div class="formula-expression">
-
-$$
-a_1\ \text{dado},\qquad a_n=F(a_{n-1})
-$$
-
-</div>
-<div class="formula-note">
-Se usa cuando cada término depende de uno anterior. Para llegar a $a_n$, normalmente se calculan los previos.
-</div>
-:::
-
-:::
-
 ## Sumatorias
 
 La notación sigma permite escribir una suma finita sin repetir todos sus términos. En la expresión
@@ -164,25 +102,204 @@ S_n=1-\frac{1}{2^n}.
 $$
 :::
 
-## Fórmulas rápidas de sumatorias
+## Fórmulas
+
+### Sucesiones
 
 ::: {.formula-grid}
 
 ::: {.formula-card}
-<div class="formula-title">Suma de constantes</div>
+<div class="formula-tag">Sucesiones</div>
+<div class="formula-title">Término general</div>
 <div class="formula-expression">
 
 $$
-\sum_{k=1}^{n}1=n
+a_n=a(n),\qquad n \in \mathbb{N}
 $$
 
 </div>
 <div class="formula-note">
-Cuenta cuántos términos hay cuando se suma $1$ desde $1$ hasta $n$.
+Calcula directamente el término en la posición $n$.
 </div>
 :::
 
 ::: {.formula-card}
+<div class="formula-tag">Sucesiones</div>
+<div class="formula-title">Regla recursiva</div>
+<div class="formula-expression">
+
+$$
+a_1\ \text{dado},\qquad a_n=F(a_{n-1}),\quad n\ge 2
+$$
+
+</div>
+<div class="formula-note">
+Requiere condición inicial; para llegar a $a_n$ se calculan términos previos.
+</div>
+:::
+
+:::
+
+### Progresiones
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Progresiones</div>
+<div class="formula-title">Término aritmético</div>
+<div class="formula-expression">
+
+$$
+a_n=a+(n-1)d
+$$
+
+</div>
+<div class="formula-note">
+$a$ es el primer término y $d$ la diferencia común.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Progresiones</div>
+<div class="formula-title">Término geométrico</div>
+<div class="formula-expression">
+
+$$
+a_n=ar^{\,n-1}
+$$
+
+</div>
+<div class="formula-note">
+$a$ es el primer término y $r$ la razón común.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Progresiones</div>
+<div class="formula-title">Suma aritmética</div>
+<div class="formula-expression">
+
+$$
+S_n=\frac{n}{2}(a+a_n)
+$$
+
+</div>
+<div class="formula-note">
+Suma los primeros $n$ términos de una progresión aritmética.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Progresiones</div>
+<div class="formula-title">Suma aritmética con diferencia</div>
+<div class="formula-expression">
+
+$$
+S_n=\frac{n}{2}\,[2a+(n-1)d]
+$$
+
+</div>
+<div class="formula-note">
+Úsala cuando conoces $a$, $d$ y el número de términos.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Progresiones</div>
+<div class="formula-title">Suma geométrica finita</div>
+<div class="formula-expression">
+
+$$
+S_n=a\,\frac{1-r^n}{1-r},\qquad r\ne 1
+$$
+
+</div>
+<div class="formula-note">
+Condición: $r\ne 1$. Válida para sumas finitas.
+</div>
+:::
+
+:::
+
+### Sumatorias
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Sumatorias</div>
+<div class="formula-title">Notación sigma</div>
+<div class="formula-expression">
+
+$$
+\sum_{k=1}^{n} a_k=a_1+a_2+\cdots+a_n
+$$
+
+</div>
+<div class="formula-note">
+Expande una suma finita desde $k=1$ hasta $k=n$.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Sumatorias</div>
+<div class="formula-title">Suma parcial</div>
+<div class="formula-expression">
+
+$$
+S_n=\sum_{k=1}^{n}a_k
+$$
+
+</div>
+<div class="formula-note">
+Acumula los primeros $n$ términos de una sucesión.
+</div>
+:::
+
+:::
+
+### Propiedades
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Propiedades</div>
+<div class="formula-title">Linealidad</div>
+<div class="formula-expression">
+
+$$
+\sum_{k=1}^{n}(ca_k+b_k)
+=c\sum_{k=1}^{n}a_k+\sum_{k=1}^{n}b_k
+$$
+
+</div>
+<div class="formula-note">
+$c$ es constante; válida para sumas finitas.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Propiedades</div>
+<div class="formula-title">Suma de una constante</div>
+<div class="formula-expression">
+
+$$
+\sum_{k=1}^{n}c=nc
+$$
+
+</div>
+<div class="formula-note">
+$c$ no depende de $k$. Si $c=1$, la suma es $n$.
+</div>
+:::
+
+:::
+
+### Sumas especiales
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Sumas especiales</div>
 <div class="formula-title">Primeros enteros positivos</div>
 <div class="formula-expression">
 
@@ -192,11 +309,12 @@ $$
 
 </div>
 <div class="formula-note">
-Resume la suma $1+2+3+\cdots+n$.
+Resume $1+2+3+\cdots+n$, con $n \in \mathbb{N}$.
 </div>
 :::
 
 ::: {.formula-card}
+<div class="formula-tag">Sumas especiales</div>
 <div class="formula-title">Suma de cuadrados</div>
 <div class="formula-expression">
 
@@ -211,6 +329,7 @@ $$
 :::
 
 ::: {.formula-card}
+<div class="formula-tag">Sumas especiales</div>
 <div class="formula-title">Suma de cubos</div>
 <div class="formula-expression">
 
@@ -220,64 +339,7 @@ $$
 
 </div>
 <div class="formula-note">
-La suma de cubos es el cuadrado de la suma de los primeros enteros positivos.
-</div>
-:::
-
-::: {.formula-card}
-<div class="formula-title">Linealidad</div>
-<div class="formula-expression">
-
-$$
-\sum_{k=1}^{n}(ca_k+b_k)
-=c\sum_{k=1}^{n}a_k+\sum_{k=1}^{n}b_k
-$$
-
-</div>
-<div class="formula-note">
-Permite separar sumas y sacar factores constantes.
-</div>
-:::
-
-::: {.formula-card}
-<div class="formula-title">Suma aritmética</div>
-<div class="formula-expression">
-
-$$
-S_n=\frac{n}{2}(a+a_n)
-$$
-
-</div>
-<div class="formula-note">
-Suma los primeros $n$ términos de una sucesión aritmética.
-</div>
-:::
-
-::: {.formula-card}
-<div class="formula-title">Suma aritmética con diferencia común</div>
-<div class="formula-expression">
-
-$$
-S_n=\frac{n}{2}\,[2a+(n-1)d]
-$$
-
-</div>
-<div class="formula-note">
-Úsala cuando conoces el primer término $a$, la diferencia común $d$ y el número de términos.
-</div>
-:::
-
-::: {.formula-card}
-<div class="formula-title">Suma geométrica finita</div>
-<div class="formula-expression">
-
-$$
-S_n=a\,\frac{1-r^n}{1-r},\qquad r\ne 1
-$$
-
-</div>
-<div class="formula-note">
-Suma los primeros $n$ términos de $a,ar,ar^2,\dots$. Revisa que la razón común sea $r\ne 1$.
+Equivale al cuadrado de la suma de los primeros enteros.
 </div>
 :::
 
