@@ -1,115 +1,59 @@
 [
   {
-    "objectID": "temas/sumatorias.html",
-    "href": "temas/sumatorias.html",
-    "title": "Sumatorias",
+    "objectID": "temas/sucesiones-sumatorias.html",
+    "href": "temas/sucesiones-sumatorias.html",
+    "title": "Sucesiones y sumatorias",
     "section": "",
     "text": "Contenido en preparación"
   },
   {
-    "objectID": "temas/sumatorias.html#objetivo",
-    "href": "temas/sumatorias.html#objetivo",
-    "title": "Sumatorias",
+    "objectID": "temas/sucesiones-sumatorias.html#objetivo",
+    "href": "temas/sucesiones-sumatorias.html#objetivo",
+    "title": "Sucesiones y sumatorias",
     "section": "Objetivo",
     "text": "Objetivo\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sumatorias.html#idea-central",
-    "href": "temas/sumatorias.html#idea-central",
-    "title": "Sumatorias",
+    "objectID": "temas/sucesiones-sumatorias.html#idea-central",
+    "href": "temas/sucesiones-sumatorias.html#idea-central",
+    "title": "Sucesiones y sumatorias",
     "section": "Idea central",
     "text": "Idea central\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sumatorias.html#definición",
-    "href": "temas/sumatorias.html#definición",
-    "title": "Sumatorias",
-    "section": "Definición",
-    "text": "Definición\nPendiente de desarrollo."
+    "objectID": "temas/sucesiones-sumatorias.html#sucesiones",
+    "href": "temas/sucesiones-sumatorias.html#sucesiones",
+    "title": "Sucesiones y sumatorias",
+    "section": "Sucesiones",
+    "text": "Sucesiones\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sumatorias.html#ejemplo-mínimo",
-    "href": "temas/sumatorias.html#ejemplo-mínimo",
-    "title": "Sumatorias",
+    "objectID": "temas/sucesiones-sumatorias.html#sumatorias",
+    "href": "temas/sucesiones-sumatorias.html#sumatorias",
+    "title": "Sucesiones y sumatorias",
+    "section": "Sumatorias",
+    "text": "Sumatorias\nPendiente de desarrollo."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#ejemplo-mínimo",
+    "href": "temas/sucesiones-sumatorias.html#ejemplo-mínimo",
+    "title": "Sucesiones y sumatorias",
     "section": "Ejemplo mínimo",
     "text": "Ejemplo mínimo\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sumatorias.html#errores-comunes",
-    "href": "temas/sumatorias.html#errores-comunes",
-    "title": "Sumatorias",
+    "objectID": "temas/sucesiones-sumatorias.html#errores-comunes",
+    "href": "temas/sucesiones-sumatorias.html#errores-comunes",
+    "title": "Sucesiones y sumatorias",
     "section": "Errores comunes",
     "text": "Errores comunes\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sumatorias.html#ideas-clave",
-    "href": "temas/sumatorias.html#ideas-clave",
-    "title": "Sumatorias",
+    "objectID": "temas/sucesiones-sumatorias.html#ideas-clave",
+    "href": "temas/sucesiones-sumatorias.html#ideas-clave",
+    "title": "Sucesiones y sumatorias",
     "section": "Ideas clave",
     "text": "Ideas clave\nPendiente de desarrollo."
-  },
-  {
-    "objectID": "temas/progresiones.html",
-    "href": "temas/progresiones.html",
-    "title": "Progresiones",
-    "section": "",
-    "text": "Contenido en preparación"
-  },
-  {
-    "objectID": "temas/progresiones.html#objetivo",
-    "href": "temas/progresiones.html#objetivo",
-    "title": "Progresiones",
-    "section": "Objetivo",
-    "text": "Objetivo\nPendiente de desarrollo."
-  },
-  {
-    "objectID": "temas/progresiones.html#idea-central",
-    "href": "temas/progresiones.html#idea-central",
-    "title": "Progresiones",
-    "section": "Idea central",
-    "text": "Idea central\nPendiente de desarrollo."
-  },
-  {
-    "objectID": "temas/progresiones.html#definición",
-    "href": "temas/progresiones.html#definición",
-    "title": "Progresiones",
-    "section": "Definición",
-    "text": "Definición\nPendiente de desarrollo."
-  },
-  {
-    "objectID": "temas/progresiones.html#ejemplo-mínimo",
-    "href": "temas/progresiones.html#ejemplo-mínimo",
-    "title": "Progresiones",
-    "section": "Ejemplo mínimo",
-    "text": "Ejemplo mínimo\nPendiente de desarrollo."
-  },
-  {
-    "objectID": "temas/progresiones.html#errores-comunes",
-    "href": "temas/progresiones.html#errores-comunes",
-    "title": "Progresiones",
-    "section": "Errores comunes",
-    "text": "Errores comunes\nPendiente de desarrollo."
-  },
-  {
-    "objectID": "temas/progresiones.html#ideas-clave",
-    "href": "temas/progresiones.html#ideas-clave",
-    "title": "Progresiones",
-    "section": "Ideas clave",
-    "text": "Ideas clave\nPendiente de desarrollo."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Inicio",
-    "section": "",
-    "text": "Este sitio es un compendio de consulta rápida de Precálculo. Reúne definiciones, ideas centrales, ejemplos mínimos y advertencias frecuentes para apoyar el estudio autónomo y la preparación de ejercicios."
-  },
-  {
-    "objectID": "index.html#temas",
-    "href": "index.html#temas",
-    "title": "Inicio",
-    "section": "Temas",
-    "text": "Temas\n\n\n\nDisponible\n\n\nInducción matemática\nDemostraciones para proposiciones indexadas por números naturales.\n\n\n\n\nEn preparación\n\n\nSucesiones\nLenguaje básico para describir listas ordenadas de términos.\n\n\n\n\nEn preparación\n\n\nProgresiones\nPatrones aritméticos y geométricos de uso frecuente.\n\n\n\n\nEn preparación\n\n\nSumatorias\nNotación sigma y técnicas elementales para sumar términos."
   },
   {
     "objectID": "temas/induccion.html",
@@ -203,51 +147,65 @@
     "text": "Referencias\n\nStewart, J., Redlin, L., & Watson, S. (2017). Precálculo: Matemáticas para el cálculo (7.ª ed.; J. León Cárdenas, Trad.). Páginas 873 - 878."
   },
   {
-    "objectID": "temas/sucesiones.html",
-    "href": "temas/sucesiones.html",
-    "title": "Sucesiones",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Inicio",
+    "section": "",
+    "text": "Este sitio es un compendio de consulta rápida de Precálculo. Reúne definiciones, ideas centrales, ejemplos mínimos y advertencias frecuentes para apoyar el estudio autónomo y la preparación de ejercicios."
+  },
+  {
+    "objectID": "index.html#temas",
+    "href": "index.html#temas",
+    "title": "Inicio",
+    "section": "Temas",
+    "text": "Temas\n\n\n\nDisponible\n\n\nInducción matemática\nDemostraciones para proposiciones indexadas por números naturales.\n\n\n\n\nEn preparación\n\n\nSucesiones y sumatorias\nLenguaje básico para describir listas ordenadas de términos y notación sigma.\n\n\n\n\nEn preparación\n\n\nProgresiones\nPatrones aritméticos y geométricos de uso frecuente."
+  },
+  {
+    "objectID": "temas/progresiones.html",
+    "href": "temas/progresiones.html",
+    "title": "Progresiones",
     "section": "",
     "text": "Contenido en preparación"
   },
   {
-    "objectID": "temas/sucesiones.html#objetivo",
-    "href": "temas/sucesiones.html#objetivo",
-    "title": "Sucesiones",
+    "objectID": "temas/progresiones.html#objetivo",
+    "href": "temas/progresiones.html#objetivo",
+    "title": "Progresiones",
     "section": "Objetivo",
     "text": "Objetivo\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sucesiones.html#idea-central",
-    "href": "temas/sucesiones.html#idea-central",
-    "title": "Sucesiones",
+    "objectID": "temas/progresiones.html#idea-central",
+    "href": "temas/progresiones.html#idea-central",
+    "title": "Progresiones",
     "section": "Idea central",
     "text": "Idea central\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sucesiones.html#definición",
-    "href": "temas/sucesiones.html#definición",
-    "title": "Sucesiones",
+    "objectID": "temas/progresiones.html#definición",
+    "href": "temas/progresiones.html#definición",
+    "title": "Progresiones",
     "section": "Definición",
     "text": "Definición\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sucesiones.html#ejemplo-mínimo",
-    "href": "temas/sucesiones.html#ejemplo-mínimo",
-    "title": "Sucesiones",
+    "objectID": "temas/progresiones.html#ejemplo-mínimo",
+    "href": "temas/progresiones.html#ejemplo-mínimo",
+    "title": "Progresiones",
     "section": "Ejemplo mínimo",
     "text": "Ejemplo mínimo\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sucesiones.html#errores-comunes",
-    "href": "temas/sucesiones.html#errores-comunes",
-    "title": "Sucesiones",
+    "objectID": "temas/progresiones.html#errores-comunes",
+    "href": "temas/progresiones.html#errores-comunes",
+    "title": "Progresiones",
     "section": "Errores comunes",
     "text": "Errores comunes\nPendiente de desarrollo."
   },
   {
-    "objectID": "temas/sucesiones.html#ideas-clave",
-    "href": "temas/sucesiones.html#ideas-clave",
-    "title": "Sucesiones",
+    "objectID": "temas/progresiones.html#ideas-clave",
+    "href": "temas/progresiones.html#ideas-clave",
+    "title": "Progresiones",
     "section": "Ideas clave",
     "text": "Ideas clave\nPendiente de desarrollo."
   }

@@ -1,6 +1,6 @@
 ---
-title: "Sumatorias"
-description: "Página base para estudiar notación sigma y sumatorias en Precálculo."
+title: "Sucesiones y sumatorias"
+description: "Página base para estudiar sucesiones numéricas, notación sigma y sumatorias en Precálculo."
 ---
 
 ::: {.advertencia}
@@ -15,7 +15,11 @@ Pendiente de desarrollo.
 
 Pendiente de desarrollo.
 
-## Definición
+## Sucesiones
+
+Pendiente de desarrollo.
+
+## Sumatorias
 
 Pendiente de desarrollo.
 

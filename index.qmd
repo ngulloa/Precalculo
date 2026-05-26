@@ -19,9 +19,9 @@ Demostraciones para proposiciones indexadas por números naturales.
 ::: {.topic-card .is-prep}
 <p class="topic-status">En preparación</p>
 
-### [Sucesiones](temas/sucesiones.qmd)
+### [Sucesiones y sumatorias](temas/sucesiones-sumatorias.qmd)
 
-Lenguaje básico para describir listas ordenadas de términos.
+Lenguaje básico para describir listas ordenadas de términos y notación sigma.
 :::
 
 ::: {.topic-card .is-prep}
@@ -30,13 +30,5 @@ Lenguaje básico para describir listas ordenadas de términos.
 ### [Progresiones](temas/progresiones.qmd)
 
 Patrones aritméticos y geométricos de uso frecuente.
-:::
-
-::: {.topic-card .is-prep}
-<p class="topic-status">En preparación</p>
-
-### [Sumatorias](temas/sumatorias.qmd)
-
-Notación sigma y técnicas elementales para sumar términos.
 :::
 :::

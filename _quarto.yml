@@ -17,12 +17,10 @@ website:
         href: index.qmd
       - text: "Inducción matemática"
         href: temas/induccion.qmd
-      - text: "Sucesiones"
-        href: temas/sucesiones.qmd
+      - text: "Sucesiones y sumatorias"
+        href: temas/sucesiones-sumatorias.qmd
       - text: "Progresiones"
         href: temas/progresiones.qmd
-      - text: "Sumatorias"
-        href: temas/sumatorias.qmd
   page-footer:
     left: "Precálculo"
     right: "Sitio académico generado con Quarto"
