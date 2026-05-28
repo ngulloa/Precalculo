@@ -784,3 +784,97 @@ mjx-container[jax="CHTML"][display="true"] {
     transition: none;
   }
 }
+
+.pascal-sim__row-label {
+  margin: 0;
+  color: var(--pc-muted);
+}
+
+.pascal-sim__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(17rem, 0.75fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.pascal-sim__triangle-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7dfeb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.pascal-sim__triangle {
+  display: grid;
+  min-width: 520px;
+  gap: 0.32rem;
+  padding: 1rem;
+}
+
+.pascal-sim__row {
+  display: flex;
+  justify-content: center;
+  gap: 0.32rem;
+  padding: 0.18rem 0.25rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.pascal-sim__row.is-selected {
+  border-color: #c7d2fe;
+  background: var(--pc-method-bg);
+}
+
+.pascal-sim__cell {
+  display: grid;
+  min-width: 2.25rem;
+  min-height: 2rem;
+  place-items: center;
+  padding: 0.15rem 0.35rem;
+  border: 1px solid #d7dfeb;
+  border-radius: 6px;
+  background: var(--pc-surface);
+  color: var(--pc-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.pascal-sim__row.is-selected .pascal-sim__cell {
+  border-color: var(--pc-method);
+  background: var(--pc-white);
+  color: var(--pc-method);
+}
+
+.pascal-sim__result {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 0.9rem;
+  border: 1px solid #d7dfeb;
+  border-radius: 8px;
+  background: var(--pc-surface);
+}
+
+.pascal-sim__expansion {
+  min-width: 0;
+  overflow-x: auto;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.pascal-sim__expansion p {
+  max-width: none;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .pascal-sim__body {
+    grid-template-columns: 1fr;
+  }
+
+  .pascal-sim__triangle {
+    min-width: 440px;
+  }
+}

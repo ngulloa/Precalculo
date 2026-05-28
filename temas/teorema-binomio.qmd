@@ -1,0 +1,167 @@
+---
+title: "Teorema del Binomio"
+description: "Desarrollo de potencias de binomios usando coeficientes binomiales y el triángulo de Pascal."
+---
+
+## Objetivo
+
+Comprender cómo desarrollar potencias de un binomio sin multiplicar todos los factores uno por uno, usando el triángulo de Pascal, los coeficientes binomiales y el término general del desarrollo.
+
+## Idea central
+
+Un binomio es una expresión formada por la suma o resta de dos términos, como $a+b$, $x-y$ o $2x+3$. El teorema del binomio resuelve el problema de expandir potencias como $(a+b)^n$ cuando $n$ es un entero no negativo.
+
+::: {.concept-box}
+En el desarrollo de $(a+b)^n$ aparecen $n+1$ términos. Las potencias de $a$ bajan desde $n$ hasta $0$, las potencias de $b$ suben desde $0$ hasta $n$, y los coeficientes se leen en el renglón $n$ del triángulo de Pascal.
+:::
+
+Los primeros desarrollos muestran el patrón:
+
+$$
+(a+b)^2=a^2+2ab+b^2
+$$
+
+$$
+(a+b)^3=a^3+3a^2b+3ab^2+b^3
+$$
+
+$$
+(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4
+$$
+
+En cada término, la suma de los exponentes de $a$ y $b$ es igual a la potencia original.
+
+## Definición
+
+El factorial de un entero no negativo $n$ se escribe $n!$ y representa el producto
+
+$$
+n!=1\cdot 2\cdot 3\cdots n,
+\qquad 0!=1.
+$$
+
+Con factoriales se define el coeficiente binomial:
+
+$$
+\binom{n}{r}=\frac{n!}{r!(n-r)!},
+\qquad 0\le r\le n.
+$$
+
+Este número indica el coeficiente que acompaña al término con $a^{n-r}b^r$ en el desarrollo de $(a+b)^n$.
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Teorema</div>
+<div class="formula-title">Teorema del binomio</div>
+<div class="formula-expression">
+
+$$
+(a+b)^n=\sum_{r=0}^{n}\binom{n}{r}a^{n-r}b^r
+$$
+
+</div>
+<div class="formula-note">
+Permite escribir el desarrollo completo de una potencia de binomio.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Término</div>
+<div class="formula-title">Término general</div>
+<div class="formula-expression">
+
+$$
+T_{r+1}=\binom{n}{r}a^{n-r}b^r
+$$
+
+</div>
+<div class="formula-note">
+El índice de suma es $r$. Como el primer término ocurre cuando $r=0$, se nombra $T_{r+1}$.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Pascal</div>
+<div class="formula-title">Identidad clave</div>
+<div class="formula-expression">
+
+$$
+\binom{k}{r-1}+\binom{k}{r}=\binom{k+1}{r}
+$$
+
+</div>
+<div class="formula-note">
+Cada entrada interior del triángulo se obtiene sumando las dos entradas superiores vecinas.
+</div>
+:::
+
+:::
+
+## Ejemplo mínimo
+
+::: {.example-box}
+Desarrollemos $(x+y)^4$.
+
+El renglón $4$ del triángulo de Pascal es
+
+$$
+1,\ 4,\ 6,\ 4,\ 1.
+$$
+
+Por tanto,
+
+$$
+(x+y)^4=x^4+4x^3y+6x^2y^2+4xy^3+y^4.
+$$
+:::
+
+::: {.example-box}
+Para encontrar un término particular no hace falta expandir todo el binomio. Por ejemplo, busquemos el término con $x^3y^2$ en $(x+y)^5$.
+
+En el término general
+
+$$
+T_{r+1}=\binom{5}{r}x^{5-r}y^r,
+$$
+
+queremos que el exponente de $y$ sea $2$. Por tanto $r=2$, y ese es el tercer término:
+
+$$
+T_3=\binom{5}{2}x^3y^2=10x^3y^2.
+$$
+:::
+
+## Visualización o simulación
+
+El siguiente interactivo muestra cómo el renglón elegido del triángulo de Pascal entrega los coeficientes del desarrollo de $(a+b)^n$.
+
+<div id="binomio-pascal-app"></div>
+
+## Errores comunes
+
+::: {.warning-box}
+- Usar el renglón equivocado del triángulo de Pascal: para $(a+b)^n$ se usa el renglón $n$, contando desde $0$.
+- Olvidar que el desarrollo tiene $n+1$ términos, no $n$ términos.
+- Mantener fijo un exponente: el exponente de $a$ baja y el de $b$ sube.
+- Confundir el índice $r$ con el número del término: cuando $r=0$ se obtiene el primer término.
+- Aplicar la fórmula a una resta sin considerar el signo. Por ejemplo, $(a-b)^n$ se trata como $(a+(-b))^n$.
+:::
+
+## Ideas clave
+
+::: {.concept-box}
+- Un binomio tiene dos términos algebraicos.
+- El teorema del binomio permite desarrollar $(a+b)^n$ de manera directa.
+- Los coeficientes del desarrollo son coeficientes binomiales.
+- El triángulo de Pascal organiza esos coeficientes por renglones.
+- El término general permite encontrar un término específico sin escribir el desarrollo completo.
+:::
+
+## Referencias
+
+- Stewart, James; Redlin, Lothar; Watson, Saleem. *Precálculo: Matemáticas para el cálculo*. Cengage Learning, 2017. Sección 12.6: “El teorema del binomio”.
+
+```{=html}
+<script src="../scripts/binomio-pascal.js" defer></script>
+```

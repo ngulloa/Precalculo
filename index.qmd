@@ -24,11 +24,11 @@ Demostraciones para proposiciones indexadas por números naturales.
 Lenguaje básico para describir listas ordenadas de términos y notación sigma.
 :::
 
-::: {.topic-card .is-prep}
-<p class="topic-status">En preparación</p>
+::: {.topic-card .is-available}
+<p class="topic-status">Disponible</p>
 
-### [Progresiones](temas/progresiones.qmd)
+### [Teorema del Binomio](temas/teorema-binomio.qmd)
 
-Patrones aritméticos y geométricos de uso frecuente.
+Desarrollo de potencias de binomios mediante coeficientes binomiales y el triángulo de Pascal.
 :::
 :::

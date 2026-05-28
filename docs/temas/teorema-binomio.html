@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Página base para estudiar progresiones aritméticas y geométricas en Precálculo.">
+<meta name="description" content="Desarrollo de potencias de binomios usando coeficientes binomiales y el triángulo de Pascal.">
 
-<title>Progresiones – Precálculo</title>
+<title>Teorema del Binomio – Precálculo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles/custom.css">
 </head>
@@ -106,8 +135,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Sucesiones y sumatorias</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../temas/progresiones.html" aria-current="page"> 
-<span class="menu-text">Progresiones</span></a>
+    <a class="nav-link active" href="../temas/teorema-binomio.html" aria-current="page"> 
+<span class="menu-text">Teorema del Binomio</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -129,8 +158,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#idea-central" id="toc-idea-central" class="nav-link" data-scroll-target="#idea-central">Idea central</a></li>
   <li><a href="#definición" id="toc-definición" class="nav-link" data-scroll-target="#definición">Definición</a></li>
   <li><a href="#ejemplo-mínimo" id="toc-ejemplo-mínimo" class="nav-link" data-scroll-target="#ejemplo-mínimo">Ejemplo mínimo</a></li>
+  <li><a href="#visualización-o-simulación" id="toc-visualización-o-simulación" class="nav-link" data-scroll-target="#visualización-o-simulación">Visualización o simulación</a></li>
   <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
   <li><a href="#ideas-clave" id="toc-ideas-clave" class="nav-link" data-scroll-target="#ideas-clave">Ideas clave</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
 </nav>
     </div>
@@ -139,12 +170,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Progresiones</h1>
+<h1 class="title">Teorema del Binomio</h1>
 </div>
 
 <div>
   <div class="description">
-    Página base para estudiar progresiones aritméticas y geométricas en Precálculo.
+    Desarrollo de potencias de binomios usando coeficientes binomiales y el triángulo de Pascal.
   </div>
 </div>
 
@@ -161,32 +192,154 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="advertencia">
-<p>Contenido en preparación</p>
-</div>
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>Pendiente de desarrollo.</p>
+<p>Comprender cómo desarrollar potencias de un binomio sin multiplicar todos los factores uno por uno, usando el triángulo de Pascal, los coeficientes binomiales y el término general del desarrollo.</p>
 </section>
 <section id="idea-central" class="level2">
 <h2 class="anchored" data-anchor-id="idea-central">Idea central</h2>
-<p>Pendiente de desarrollo.</p>
+<p>Un binomio es una expresión formada por la suma o resta de dos términos, como <span class="math inline">\(a+b\)</span>, <span class="math inline">\(x-y\)</span> o <span class="math inline">\(2x+3\)</span>. El teorema del binomio resuelve el problema de expandir potencias como <span class="math inline">\((a+b)^n\)</span> cuando <span class="math inline">\(n\)</span> es un entero no negativo.</p>
+<div class="concept-box">
+<p>En el desarrollo de <span class="math inline">\((a+b)^n\)</span> aparecen <span class="math inline">\(n+1\)</span> términos. Las potencias de <span class="math inline">\(a\)</span> bajan desde <span class="math inline">\(n\)</span> hasta <span class="math inline">\(0\)</span>, las potencias de <span class="math inline">\(b\)</span> suben desde <span class="math inline">\(0\)</span> hasta <span class="math inline">\(n\)</span>, y los coeficientes se leen en el renglón <span class="math inline">\(n\)</span> del triángulo de Pascal.</p>
+</div>
+<p>Los primeros desarrollos muestran el patrón:</p>
+<p><span class="math display">\[
+(a+b)^2=a^2+2ab+b^2
+\]</span></p>
+<p><span class="math display">\[
+(a+b)^3=a^3+3a^2b+3ab^2+b^3
+\]</span></p>
+<p><span class="math display">\[
+(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4
+\]</span></p>
+<p>En cada término, la suma de los exponentes de <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> es igual a la potencia original.</p>
 </section>
 <section id="definición" class="level2">
 <h2 class="anchored" data-anchor-id="definición">Definición</h2>
-<p>Pendiente de desarrollo.</p>
+<p>El factorial de un entero no negativo <span class="math inline">\(n\)</span> se escribe <span class="math inline">\(n!\)</span> y representa el producto</p>
+<p><span class="math display">\[
+n!=1\cdot 2\cdot 3\cdots n,
+\qquad 0!=1.
+\]</span></p>
+<p>Con factoriales se define el coeficiente binomial:</p>
+<p><span class="math display">\[
+\binom{n}{r}=\frac{n!}{r!(n-r)!},
+\qquad 0\le r\le n.
+\]</span></p>
+<p>Este número indica el coeficiente que acompaña al término con <span class="math inline">\(a^{n-r}b^r\)</span> en el desarrollo de <span class="math inline">\((a+b)^n\)</span>.</p>
+<div class="formula-grid">
+<div class="formula-card">
+<div class="formula-tag">
+Teorema
+</div>
+<div class="formula-title">
+Teorema del binomio
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+(a+b)^n=\sum_{r=0}^{n}\binom{n}{r}a^{n-r}b^r
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Permite escribir el desarrollo completo de una potencia de binomio.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Término
+</div>
+<div class="formula-title">
+Término general
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+T_{r+1}=\binom{n}{r}a^{n-r}b^r
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>El índice de suma es <span class="math inline">\(r\)</span>. Como el primer término ocurre cuando <span class="math inline">\(r=0\)</span>, se nombra <span class="math inline">\(T_{r+1}\)</span>.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Pascal
+</div>
+<div class="formula-title">
+Identidad clave
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\binom{k}{r-1}+\binom{k}{r}=\binom{k+1}{r}
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Cada entrada interior del triángulo se obtiene sumando las dos entradas superiores vecinas.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="ejemplo-mínimo" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo-mínimo">Ejemplo mínimo</h2>
-<p>Pendiente de desarrollo.</p>
+<div class="example-box">
+<p>Desarrollemos <span class="math inline">\((x+y)^4\)</span>.</p>
+<p>El renglón <span class="math inline">\(4\)</span> del triángulo de Pascal es</p>
+<p><span class="math display">\[
+1,\ 4,\ 6,\ 4,\ 1.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+(x+y)^4=x^4+4x^3y+6x^2y^2+4xy^3+y^4.
+\]</span></p>
+</div>
+<div class="example-box">
+<p>Para encontrar un término particular no hace falta expandir todo el binomio. Por ejemplo, busquemos el término con <span class="math inline">\(x^3y^2\)</span> en <span class="math inline">\((x+y)^5\)</span>.</p>
+<p>En el término general</p>
+<p><span class="math display">\[
+T_{r+1}=\binom{5}{r}x^{5-r}y^r,
+\]</span></p>
+<p>queremos que el exponente de <span class="math inline">\(y\)</span> sea <span class="math inline">\(2\)</span>. Por tanto <span class="math inline">\(r=2\)</span>, y ese es el tercer término:</p>
+<p><span class="math display">\[
+T_3=\binom{5}{2}x^3y^2=10x^3y^2.
+\]</span></p>
+</div>
+</section>
+<section id="visualización-o-simulación" class="level2">
+<h2 class="anchored" data-anchor-id="visualización-o-simulación">Visualización o simulación</h2>
+<p>El siguiente interactivo muestra cómo el renglón elegido del triángulo de Pascal entrega los coeficientes del desarrollo de <span class="math inline">\((a+b)^n\)</span>.</p>
+<div id="binomio-pascal-app">
+
+</div>
 </section>
 <section id="errores-comunes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
-<p>Pendiente de desarrollo.</p>
+<div class="warning-box">
+<ul>
+<li>Usar el renglón equivocado del triángulo de Pascal: para <span class="math inline">\((a+b)^n\)</span> se usa el renglón <span class="math inline">\(n\)</span>, contando desde <span class="math inline">\(0\)</span>.</li>
+<li>Olvidar que el desarrollo tiene <span class="math inline">\(n+1\)</span> términos, no <span class="math inline">\(n\)</span> términos.</li>
+<li>Mantener fijo un exponente: el exponente de <span class="math inline">\(a\)</span> baja y el de <span class="math inline">\(b\)</span> sube.</li>
+<li>Confundir el índice <span class="math inline">\(r\)</span> con el número del término: cuando <span class="math inline">\(r=0\)</span> se obtiene el primer término.</li>
+<li>Aplicar la fórmula a una resta sin considerar el signo. Por ejemplo, <span class="math inline">\((a-b)^n\)</span> se trata como <span class="math inline">\((a+(-b))^n\)</span>.</li>
+</ul>
+</div>
 </section>
 <section id="ideas-clave" class="level2">
 <h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
-<p>Pendiente de desarrollo.</p>
+<div class="concept-box">
+<ul>
+<li>Un binomio tiene dos términos algebraicos.</li>
+<li>El teorema del binomio permite desarrollar <span class="math inline">\((a+b)^n\)</span> de manera directa.</li>
+<li>Los coeficientes del desarrollo son coeficientes binomiales.</li>
+<li>El triángulo de Pascal organiza esos coeficientes por renglones.</li>
+<li>El término general permite encontrar un término específico sin escribir el desarrollo completo.</li>
+</ul>
+</div>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<ul>
+<li>Stewart, James; Redlin, Lothar; Watson, Saleem. <em>Precálculo: Matemáticas para el cálculo</em>. Cengage Learning, 2017. Sección 12.6: “El teorema del binomio”.</li>
+</ul>
+<script src="../scripts/binomio-pascal.js" defer=""></script>
 
 
 </section>
