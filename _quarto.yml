@@ -8,6 +8,7 @@ project:
     - scripts/induccion-cadena.js
     - scripts/sucesion-puntos.js
     - scripts/binomio-pascal.js
+    - scripts/circulo-unitario.js
 
 title: "Precálculo"
 
@@ -23,6 +24,8 @@ website:
         href: temas/sucesiones-sumatorias.qmd
       - text: "Teorema del Binomio"
         href: temas/teorema-binomio.qmd
+      - text: "Trigonometría"
+        href: temas/trigonometria.qmd
   page-footer:
     left: "Precálculo"
     right: "Sitio académico generado con Quarto"

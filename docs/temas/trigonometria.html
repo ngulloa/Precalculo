@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Notación, fórmulas básicas y lectura intuitiva de sucesiones y sumas finitas">
+<meta name="description" content="Medición angular, razones trigonométricas, círculo unitario e identidades básicas.">
 
-<title>Sucesiones y sumatorias – Precálculo</title>
+<title>Trigonometría – Precálculo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -131,7 +131,7 @@ window.Quarto = {
 <span class="menu-text">Inducción matemática</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../temas/sucesiones-sumatorias.html" aria-current="page"> 
+    <a class="nav-link" href="../temas/sucesiones-sumatorias.html"> 
 <span class="menu-text">Sucesiones y sumatorias</span></a>
   </li>  
   <li class="nav-item">
@@ -139,7 +139,7 @@ window.Quarto = {
 <span class="menu-text">Teorema del Binomio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../temas/trigonometria.html"> 
+    <a class="nav-link active" href="../temas/trigonometria.html" aria-current="page"> 
 <span class="menu-text">Trigonometría</span></a>
   </li>  
 </ul>
@@ -160,18 +160,19 @@ window.Quarto = {
   <ul>
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#idea-central" id="toc-idea-central" class="nav-link" data-scroll-target="#idea-central">Idea central</a></li>
-  <li><a href="#sucesiones" id="toc-sucesiones" class="nav-link" data-scroll-target="#sucesiones">Sucesiones</a></li>
-  <li><a href="#sumatorias" id="toc-sumatorias" class="nav-link" data-scroll-target="#sumatorias">Sumatorias</a></li>
-  <li><a href="#fórmulas" id="toc-fórmulas" class="nav-link" data-scroll-target="#fórmulas">Fórmulas</a>
-  <ul class="collapse">
-  <li><a href="#sucesiones-1" id="toc-sucesiones-1" class="nav-link" data-scroll-target="#sucesiones-1">Sucesiones</a></li>
-  <li><a href="#progresiones" id="toc-progresiones" class="nav-link" data-scroll-target="#progresiones">Progresiones</a></li>
-  <li><a href="#sumatorias-1" id="toc-sumatorias-1" class="nav-link" data-scroll-target="#sumatorias-1">Sumatorias</a></li>
-  <li><a href="#propiedades" id="toc-propiedades" class="nav-link" data-scroll-target="#propiedades">Propiedades</a></li>
-  <li><a href="#sumas-especiales" id="toc-sumas-especiales" class="nav-link" data-scroll-target="#sumas-especiales">Sumas especiales</a></li>
-  </ul></li>
-  <li><a href="#visualización-términos-que-se-acercan-a-un-valor" id="toc-visualización-términos-que-se-acercan-a-un-valor" class="nav-link" data-scroll-target="#visualización-términos-que-se-acercan-a-un-valor">Visualización: términos que se acercan a un valor</a></li>
+  <li><a href="#medición-angular" id="toc-medición-angular" class="nav-link" data-scroll-target="#medición-angular">Medición angular</a></li>
+  <li><a href="#razones-trigonométricas" id="toc-razones-trigonométricas" class="nav-link" data-scroll-target="#razones-trigonométricas">Razones trigonométricas</a></li>
+  <li><a href="#círculo-unitario" id="toc-círculo-unitario" class="nav-link" data-scroll-target="#círculo-unitario">Círculo unitario</a></li>
+  <li><a href="#valores-notables" id="toc-valores-notables" class="nav-link" data-scroll-target="#valores-notables">Valores notables</a></li>
+  <li><a href="#identidades-básicas" id="toc-identidades-básicas" class="nav-link" data-scroll-target="#identidades-básicas">Identidades básicas</a></li>
+  <li><a href="#ejemplo-mínimo" id="toc-ejemplo-mínimo" class="nav-link" data-scroll-target="#ejemplo-mínimo">Ejemplo mínimo</a></li>
+  <li><a href="#visualización-interactiva" id="toc-visualización-interactiva" class="nav-link" data-scroll-target="#visualización-interactiva">Visualización interactiva</a></li>
   <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
+  <ul class="collapse">
+  <li><a href="#ejercicios-con-solución" id="toc-ejercicios-con-solución" class="nav-link" data-scroll-target="#ejercicios-con-solución">Ejercicios con solución</a></li>
+  <li><a href="#ejercicios-propuestos" id="toc-ejercicios-propuestos" class="nav-link" data-scroll-target="#ejercicios-propuestos">Ejercicios propuestos</a></li>
+  </ul></li>
   <li><a href="#ideas-clave" id="toc-ideas-clave" class="nav-link" data-scroll-target="#ideas-clave">Ideas clave</a></li>
   <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
@@ -182,12 +183,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sucesiones y sumatorias</h1>
+<h1 class="title">Trigonometría</h1>
 </div>
 
 <div>
   <div class="description">
-    Notación, fórmulas básicas y lectura intuitiva de sucesiones y sumas finitas
+    Medición angular, razones trigonométricas, círculo unitario e identidades básicas.
   </div>
 </div>
 
@@ -206,439 +207,299 @@ window.Quarto = {
 
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>Reconocer sucesiones como listas ordenadas de números, describirlas mediante términos generales o reglas recursivas, y usar la notación sigma para escribir y calcular sumas finitas de manera compacta.</p>
+<div class="concept-box">
+<p>Comprender las razones trigonométricas como relaciones geométricas asociadas a un ángulo. La meta es leer ángulos en grados y radianes, ubicar puntos en el círculo unitario y usar identidades básicas sin perder su interpretación visual.</p>
+</div>
 </section>
 <section id="idea-central" class="level2">
 <h2 class="anchored" data-anchor-id="idea-central">Idea central</h2>
-<p>Una sucesión organiza números por posición: primero, segundo, tercero, y así sucesivamente. Una sumatoria agrega varios términos de una sucesión siguiendo límites definidos. Por eso conviene distinguir siempre entre el término individual <span class="math inline">\(a_n\)</span> y una suma parcial <span class="math inline">\(S_n\)</span>.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Lectura básica">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>La trigonometría estudia cómo se relacionan los ángulos con longitudes y coordenadas. En un triángulo rectángulo, un ángulo determina razones entre lados. En el círculo unitario, el mismo ángulo determina un punto del plano.</p>
+<div class="concept-box">
+<p>Si un punto gira alrededor del origen sobre una circunferencia de radio <span class="math inline">\(1\)</span>, su posición queda determinada por un ángulo <span class="math inline">\(\theta\)</span>. Las coordenadas de ese punto son</p>
+<p><span class="math display">\[
+(\cos \theta,\ \sin \theta).
+\]</span></p>
+<p>Por eso el coseno se interpreta como coordenada horizontal y el seno como coordenada vertical.</p>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Lectura básica
+</section>
+<section id="medición-angular" class="level2">
+<h2 class="anchored" data-anchor-id="medición-angular">Medición angular</h2>
+<p>Un ángulo puede entenderse como una rotación desde un rayo inicial hasta un rayo final. En el plano cartesiano, se toma como lado inicial el eje <span class="math inline">\(x\)</span> positivo y se consideran positivos los giros en sentido antihorario.</p>
+<p>En radianes, el ángulo se mide comparando la longitud de arco <span class="math inline">\(s\)</span> con el radio <span class="math inline">\(r\)</span>:</p>
+<p><span class="math display">\[
+\theta=\frac{s}{r}.
+\]</span></p>
+<div class="formula-grid">
+<div class="formula-card">
+<div class="formula-tag">
+Grados
+</div>
+<div class="formula-title">
+Vuelta completa
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+360^\circ
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Divide una vuelta completa en 360 partes iguales.</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>En una sucesión se mira qué valor ocupa cada posición. En una sumatoria se acumulan varios valores de acuerdo con una regla y un rango de índices.</p>
+<div class="formula-card">
+<div class="formula-tag">
+Radianes
+</div>
+<div class="formula-title">
+Vuelta completa
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+2\pi\ \text{rad}
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Mide el ángulo mediante longitud de arco respecto del radio.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Conversión
+</div>
+<div class="formula-title">
+Relación básica
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+180^\circ=\pi\ \text{rad}
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Permite pasar entre grados y radianes multiplicando por el factor adecuado.</p>
+</div>
+</div>
+</div>
+<p>Para convertir:</p>
+<p><span class="math display">\[
+\theta_{\text{rad}}=\theta_{\text{deg}}\cdot \frac{\pi}{180},
+\qquad
+\theta_{\text{deg}}=\theta_{\text{rad}}\cdot \frac{180}{\pi}.
+\]</span></p>
+</section>
+<section id="razones-trigonométricas" class="level2">
+<h2 class="anchored" data-anchor-id="razones-trigonométricas">Razones trigonométricas</h2>
+<p>En un triángulo rectángulo, respecto de un ángulo agudo <span class="math inline">\(\theta\)</span>, se distinguen el cateto opuesto, el cateto adyacente y la hipotenusa.</p>
+<div class="formula-grid">
+<div class="formula-card">
+<div class="formula-tag">
+Seno
+</div>
+<div class="formula-title">
+Cateto opuesto
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\sin \theta=\frac{\text{opuesto}}{\text{hipotenusa}}
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Relaciona el cateto opuesto con la hipotenusa.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Coseno
+</div>
+<div class="formula-title">
+Cateto adyacente
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\cos \theta=\frac{\text{adyacente}}{\text{hipotenusa}}
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Relaciona el cateto adyacente con la hipotenusa.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Tangente
+</div>
+<div class="formula-title">
+Razón entre catetos
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\tan \theta=\frac{\text{opuesto}}{\text{adyacente}}
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>También se obtiene como <span class="math inline">\(\tan \theta=\dfrac{\sin\theta}{\cos\theta}\)</span> cuando <span class="math inline">\(\cos\theta\ne 0\)</span>.</p>
+</div>
 </div>
 </div>
 </section>
-<section id="sucesiones" class="level2">
-<h2 class="anchored" data-anchor-id="sucesiones">Sucesiones</h2>
-<p>Una sucesión es una función cuyo dominio son los números naturales. En lugar de escribir <span class="math inline">\(a(n)\)</span>, normalmente se escribe <span class="math inline">\(a_n\)</span>, donde <span class="math inline">\(n\)</span> indica la posición del término.</p>
+<section id="círculo-unitario" class="level2">
+<h2 class="anchored" data-anchor-id="círculo-unitario">Círculo unitario</h2>
+<p>El círculo unitario es la circunferencia de radio <span class="math inline">\(1\)</span> centrada en el origen. Si el ángulo <span class="math inline">\(\theta\)</span> determina el punto <span class="math inline">\(P\)</span> sobre esa circunferencia, entonces:</p>
 <p><span class="math display">\[
-a_1,\ a_2,\ a_3,\ \dots,\ a_n,\ \dots
+P=(x,y)=(\cos\theta,\sin\theta).
 \]</span></p>
-<p>El símbolo <span class="math inline">\(a_n\)</span> se llama término general o término <span class="math inline">\(n\)</span>-ésimo. Permite calcular el valor de la sucesión en la posición <span class="math inline">\(n\)</span>, cuando existe una regla explícita.</p>
-<div class="example-box">
-<p>Si <span class="math inline">\(a_n=2n\)</span>, entonces los primeros términos son</p>
-<p><span class="math display">\[
-a_1=2,\quad a_2=4,\quad a_3=6,\quad a_4=8.
-\]</span></p>
-<p>El término en la posición 103 es <span class="math inline">\(a_{103}=2(103)=206\)</span>.</p>
-</div>
-<p>Una sucesión puede presentarse de varias formas:</p>
+<div class="method-box">
+<p>Para leer el signo de las razones trigonométricas, basta mirar el cuadrante:</p>
 <ul>
-<li>Por sus primeros términos: <span class="math inline">\(5,10,15,20,\dots\)</span>.</li>
-<li>Por una fórmula explícita: <span class="math inline">\(a_n=5n\)</span>.</li>
-<li>Por una regla recursiva: se entrega uno o más términos iniciales y una regla para obtener los siguientes.</li>
+<li>En el cuadrante I, <span class="math inline">\(\sin\theta\)</span> y <span class="math inline">\(\cos\theta\)</span> son positivos.</li>
+<li>En el cuadrante II, <span class="math inline">\(\sin\theta\)</span> es positivo y <span class="math inline">\(\cos\theta\)</span> es negativo.</li>
+<li>En el cuadrante III, ambos son negativos.</li>
+<li>En el cuadrante IV, <span class="math inline">\(\sin\theta\)</span> es negativo y <span class="math inline">\(\cos\theta\)</span> es positivo.</li>
 </ul>
-<div class="example-box">
-<p>La regla recursiva</p>
-<p><span class="math display">\[
-a_1=5,\qquad a_n=a_{n-1}+5\quad (n\ge 2)
-\]</span></p>
-<p>produce la sucesión <span class="math inline">\(5,10,15,20,\dots\)</span>. Para calcular <span class="math inline">\(a_4\)</span>, primero se necesitan los términos anteriores.</p>
-</div>
-<div class="warning-box">
-<p>Ver algunos términos ayuda a proponer una regla, pero no basta para justificar que esa regla sea la única posible. Distintas sucesiones pueden compartir los mismos primeros términos.</p>
 </div>
 </section>
-<section id="sumatorias" class="level2">
-<h2 class="anchored" data-anchor-id="sumatorias">Sumatorias</h2>
-<p>La notación sigma permite escribir una suma finita sin repetir todos sus términos. En la expresión</p>
-<p><span class="math display">\[
-\sum_{k=1}^{n} a_k=a_1+a_2+a_3+\cdots+a_n,
-\]</span></p>
-<p>el símbolo <span class="math inline">\(\sum\)</span> indica que se deben sumar términos. La letra <span class="math inline">\(k\)</span> es el índice de suma; el número inferior indica dónde empieza el índice y el número superior indica dónde termina. La expresión <span class="math inline">\(a_k\)</span> es el término general que se evalúa para cada valor entero de <span class="math inline">\(k\)</span> dentro de esos límites.</p>
-<div class="example-box">
-<p>Al expandir la suma</p>
-<p><span class="math display">\[
-\sum_{k=1}^{5} k^2
-\]</span></p>
-<p>se obtiene</p>
-<p><span class="math display">\[
-1^2+2^2+3^2+4^2+5^2=55.
-\]</span></p>
-</div>
-<p>Las sumas parciales se denotan usualmente por <span class="math inline">\(S_n\)</span>. Para una sucesión <span class="math inline">\(a_1,a_2,a_3,\dots\)</span>, la suma parcial <span class="math inline">\(n\)</span>-ésima es</p>
-<p><span class="math display">\[
-S_n=a_1+a_2+a_3+\cdots+a_n.
-\]</span></p>
-<div class="example-box">
-<p>Si <span class="math inline">\(a_n=\dfrac{1}{2^n}\)</span>, entonces</p>
-<p><span class="math display">\[
-S_1=\frac12,\quad
-S_2=\frac34,\quad
-S_3=\frac78,\quad
-S_4=\frac{15}{16}.
-\]</span></p>
-<p>En general,</p>
-<p><span class="math display">\[
-S_n=1-\frac{1}{2^n}.
-\]</span></p>
-</div>
-</section>
-<section id="fórmulas" class="level2">
-<h2 class="anchored" data-anchor-id="fórmulas">Fórmulas</h2>
-<section id="sucesiones-1" class="level3">
-<h3 class="anchored" data-anchor-id="sucesiones-1">Sucesiones</h3>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Sucesiones
-</div>
-<div class="formula-title">
-Término general
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-a_n=a(n),\qquad n \in \mathbb{N}
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Calcula directamente el término en la posición <span class="math inline">\(n\)</span>.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Sucesiones
-</div>
-<div class="formula-title">
-Regla recursiva
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-a_1\ \text{dado},\qquad a_n=F(a_{n-1}),\quad n\ge 2
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Requiere condición inicial; para llegar a <span class="math inline">\(a_n\)</span> se calculan términos previos.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="progresiones" class="level3">
-<h3 class="anchored" data-anchor-id="progresiones">Progresiones</h3>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Término aritmético
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-a_n=a+(n-1)d
-\]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(a\)</span> es el primer término y <span class="math inline">\(d\)</span> la diferencia común.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Término geométrico
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-a_n=ar^{\,n-1}
-\]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(a\)</span> es el primer término y <span class="math inline">\(r\)</span> la razón común.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Suma aritmética
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=\frac{n}{2}(a+a_n)
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Suma los primeros <span class="math inline">\(n\)</span> términos de una progresión aritmética.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Suma aritmética con diferencia
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=\frac{n}{2}\,[2a+(n-1)d]
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Úsala cuando conoces <span class="math inline">\(a\)</span>, <span class="math inline">\(d\)</span> y el número de términos.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Suma geométrica finita
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=a\,\frac{1-r^n}{1-r},\qquad r\ne 1
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Condición: <span class="math inline">\(r\ne 1\)</span>. Válida para sumas finitas.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="sumatorias-1" class="level3">
-<h3 class="anchored" data-anchor-id="sumatorias-1">Sumatorias</h3>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Sumatorias
-</div>
-<div class="formula-title">
-Notación sigma
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n} a_k=a_1+a_2+\cdots+a_n
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Expande una suma finita desde <span class="math inline">\(k=1\)</span> hasta <span class="math inline">\(k=n\)</span>.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Sumatorias
-</div>
-<div class="formula-title">
-Suma parcial
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=\sum_{k=1}^{n}a_k
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Acumula los primeros <span class="math inline">\(n\)</span> términos de una sucesión.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="propiedades" class="level3">
-<h3 class="anchored" data-anchor-id="propiedades">Propiedades</h3>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Propiedades
-</div>
-<div class="formula-title">
-Linealidad
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}(ca_k+b_k)
-=c\sum_{k=1}^{n}a_k+\sum_{k=1}^{n}b_k
-\]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(c\)</span> es constante; válida para sumas finitas.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Propiedades
-</div>
-<div class="formula-title">
-Suma de una constante
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}c=nc
-\]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(c\)</span> no depende de <span class="math inline">\(k\)</span>. Si <span class="math inline">\(c=1\)</span>, la suma es <span class="math inline">\(n\)</span>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="sumas-especiales" class="level3">
-<h3 class="anchored" data-anchor-id="sumas-especiales">Sumas especiales</h3>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Sumas especiales
-</div>
-<div class="formula-title">
-Primeros enteros positivos
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}k=\frac{n(n+1)}{2}
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Resume <span class="math inline">\(1+2+3+\cdots+n\)</span>, con <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Sumas especiales
-</div>
-<div class="formula-title">
-Suma de cuadrados
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}k^2=\frac{n(n+1)(2n+1)}{6}
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Útil cuando el término general de la suma es cuadrático.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Sumas especiales
-</div>
-<div class="formula-title">
-Suma de cubos
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}k^3=\left[\frac{n(n+1)}{2}\right]^2
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Equivale al cuadrado de la suma de los primeros enteros.</p>
-</div>
-</div>
-</div>
-<div class="example-box">
-<p>Los primeros 50 números impares forman una sucesión aritmética con <span class="math inline">\(a=1\)</span>, <span class="math inline">\(d=2\)</span> y <span class="math inline">\(a_{50}=99\)</span>. Por tanto,</p>
-<p><span class="math display">\[
-S_{50}=\frac{50}{2}(1+99)=2500.
-\]</span></p>
-</div>
-<div class="example-box">
-<p>La suma geométrica</p>
-<p><span class="math display">\[
-1+4+16+\cdots+4096
-\]</span></p>
-<p>tiene <span class="math inline">\(a=1\)</span>, <span class="math inline">\(r=4\)</span> y <span class="math inline">\(n=7\)</span>, porque <span class="math inline">\(4096=4^6\)</span>. Así,</p>
-<p><span class="math display">\[
-S_7=1\cdot\frac{1-4^7}{1-4}=5461.
-\]</span></p>
-</div>
-</section>
-</section>
-<section id="visualización-términos-que-se-acercan-a-un-valor" class="level2">
-<h2 class="anchored" data-anchor-id="visualización-términos-que-se-acercan-a-un-valor">Visualización: términos que se acercan a un valor</h2>
-<p>Como una sucesión solo está definida para posiciones naturales, su gráfica se representa con puntos aislados. Esto ayuda a observar si los términos se acercan a un valor o si cambian de manera alternada.</p>
-<p>Consideremos</p>
-<p><span class="math display">\[
-a_n=\frac{n}{n+1}.
-\]</span></p>
-<div id="sucesion-puntos-app">
-
-</div>
+<section id="valores-notables" class="level2">
+<h2 class="anchored" data-anchor-id="valores-notables">Valores notables</h2>
+<p>Los valores notables se obtienen desde triángulos especiales y luego se extienden al círculo unitario mediante simetrías.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;"><span class="math inline">\(n\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(a_n\)</span></th>
-<th style="text-align: right;">Aproximación decimal</th>
+<th style="text-align: right;">Radianes</th>
+<th style="text-align: right;"><span class="math inline">\(0\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\frac{\pi}{6}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\frac{\pi}{4}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\frac{\pi}{3}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\frac{\pi}{2}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">Grados</td>
+<td style="text-align: right;"><span class="math inline">\(0^\circ\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(30^\circ\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(45^\circ\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(60^\circ\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(90^\circ\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(\sin\theta\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
 <td style="text-align: right;"><span class="math inline">\(\frac12\)</span></td>
-<td style="text-align: right;">0.500</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;"><span class="math inline">\(\frac23\)</span></td>
-<td style="text-align: right;">0.667</td>
+<td style="text-align: right;"><span class="math inline">\(\frac{\sqrt2}{2}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\frac{\sqrt3}{2}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;"><span class="math inline">\(\frac34\)</span></td>
-<td style="text-align: right;">0.750</td>
+<td style="text-align: right;"><span class="math inline">\(\cos\theta\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\frac{\sqrt3}{2}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\frac{\sqrt2}{2}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\frac12\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;"><span class="math inline">\(\frac45\)</span></td>
-<td style="text-align: right;">0.800</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5</td>
-<td style="text-align: right;"><span class="math inline">\(\frac56\)</span></td>
-<td style="text-align: right;">0.833</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">10</td>
-<td style="text-align: right;"><span class="math inline">\(\frac{10}{11}\)</span></td>
-<td style="text-align: right;">0.909</td>
+<td style="text-align: right;"><span class="math inline">\(\tan\theta\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\frac{\sqrt3}{3}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(\sqrt3\)</span></td>
+<td style="text-align: right;">No definida</td>
 </tr>
 </tbody>
 </table>
-<p>Los valores se aproximan progresivamente a <span class="math inline">\(1\)</span>, aunque ningún término de esta sucesión es exactamente <span class="math inline">\(1\)</span>.</p>
+<div class="warning-box">
+<p>La tabla no reemplaza la interpretación geométrica. Primero se identifica el ángulo de referencia y el cuadrante; después se asignan los signos.</p>
+</div>
 </section>
-<section id="errores-comunes" class="level2">
-<h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
-<ul>
-<li>Confundir <span class="math inline">\(a_n\)</span>, que es un término individual, con <span class="math inline">\(S_n\)</span>, que es una suma parcial.</li>
-<li>Tratar el índice de suma como si fuera el resultado de la sumatoria.</li>
-<li>Omitir el límite inferior o superior de una sumatoria.</li>
-<li>Aplicar una fórmula sin revisar sus condiciones, por ejemplo usar la suma geométrica finita sin identificar bien <span class="math inline">\(a\)</span>, <span class="math inline">\(r\)</span> y <span class="math inline">\(n\)</span>.</li>
-<li>Creer que algunos términos iniciales bastan para demostrar una regla general.</li>
-<li>Olvidar que en una suma como <span class="math inline">\(\sum_{k=3}^{7} a_k\)</span>, el índice empieza en <span class="math inline">\(3\)</span>, no necesariamente en <span class="math inline">\(1\)</span>.</li>
-</ul>
+<section id="identidades-básicas" class="level2">
+<h2 class="anchored" data-anchor-id="identidades-básicas">Identidades básicas</h2>
+<p>Las identidades son igualdades válidas para los ángulos donde las expresiones están definidas. La más importante se obtiene del círculo unitario: si <span class="math inline">\(x=\cos\theta\)</span> e <span class="math inline">\(y=\sin\theta\)</span>, entonces <span class="math inline">\(x^2+y^2=1\)</span>.</p>
+<div class="formula-grid">
+<div class="formula-card">
+<div class="formula-tag">
+Pitagórica
+</div>
+<div class="formula-title">
+Círculo unitario
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\sin^2\theta+\cos^2\theta=1
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Proviene de <span class="math inline">\(x^2+y^2=1\)</span> con <span class="math inline">\(x=\cos\theta\)</span> e <span class="math inline">\(y=\sin\theta\)</span>.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Cociente
+</div>
+<div class="formula-title">
+Tangente
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\tan\theta=\frac{\sin\theta}{\cos\theta}
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Se usa solo cuando <span class="math inline">\(\cos\theta\ne 0\)</span>.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+Simetría
+</div>
+<div class="formula-title">
+Ángulos opuestos
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+\sin(-\theta)=-\sin\theta,\qquad
+\cos(-\theta)=\cos\theta
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>El seno cambia de signo; el coseno conserva su valor.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="ideas-clave" class="level2">
-<h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
-<ul>
-<li>Una sucesión es una lista ordenada de números y se escribe <span class="math inline">\(a_1,a_2,a_3,\dots\)</span>.</li>
-<li>El término general <span class="math inline">\(a_n\)</span> describe el valor ubicado en la posición <span class="math inline">\(n\)</span>.</li>
-<li>Una regla recursiva necesita condiciones iniciales.</li>
-<li>La notación sigma resume sumas finitas mediante un índice, límites y un término general.</li>
-<li>Las fórmulas de sumas aritméticas y geométricas ahorran trabajo cuando la estructura de la suma coincide con sus condiciones.</li>
-</ul>
+<section id="ejemplo-mínimo" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-mínimo">Ejemplo mínimo</h2>
+<div class="example-box">
+<p>Calculemos <span class="math inline">\(\sin 150^\circ\)</span>, <span class="math inline">\(\cos 150^\circ\)</span> y <span class="math inline">\(\tan 150^\circ\)</span>.</p>
+<p>El ángulo <span class="math inline">\(150^\circ\)</span> está en el cuadrante II y su ángulo de referencia es</p>
+<p><span class="math display">\[
+180^\circ-150^\circ=30^\circ.
+\]</span></p>
+<p>En el cuadrante II, el seno es positivo y el coseno es negativo. Como para <span class="math inline">\(30^\circ\)</span> se tiene <span class="math inline">\(\sin 30^\circ=\frac12\)</span> y <span class="math inline">\(\cos 30^\circ=\frac{\sqrt3}{2}\)</span>, resulta:</p>
+<p><span class="math display">\[
+\sin 150^\circ=\frac12,\qquad
+\cos 150^\circ=-\frac{\sqrt3}{2}.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+\tan 150^\circ
+=\frac{\sin 150^\circ}{\cos 150^\circ}
+=\frac{1/2}{-\sqrt3/2}
+=-\frac{\sqrt3}{3}.
+\]</span></p>
+</div>
 </section>
-<section id="referencias" class="level2">
-<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
-<ul>
-<li>Archivo fuente entregado por el usuario: fragmento en PDF de Stewart, Watson y Redlin, <em>Precálculo: matemáticas para el cálculo</em> (2017), páginas sobre sucesiones, notación de sumatoria, sucesiones aritméticas y sucesiones geométricas.</li>
-</ul>
+<section id="visualización-interactiva" class="level2">
+<h2 class="anchored" data-anchor-id="visualización-interactiva">Visualización interactiva</h2>
+<p>Mueve el deslizador para observar cómo un ángulo determina un punto del círculo unitario. Las proyecciones sobre los ejes muestran directamente el coseno y el seno.</p>
+<div id="circulo-unitario-app">
+
+</div>
 <script>
 (() => {
   const cssHref = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
@@ -646,11 +507,93 @@ a_n=\frac{n}{n+1}.
     .find((href) => href.endsWith("styles/custom.css"));
   const basePath = cssHref ? cssHref.replace(/styles\/custom\.css$/, "") : "";
   const script = document.createElement("script");
-  script.src = `${basePath}scripts/sucesion-puntos.js`;
+  script.src = `${basePath}scripts/circulo-unitario.js`;
   script.defer = true;
   document.body.appendChild(script);
 })();
 </script>
+</section>
+<section id="errores-comunes" class="level2">
+<h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
+<div class="warning-box">
+<ul>
+<li>Confundir grados y radianes dentro de un mismo cálculo.</li>
+<li>Memorizar signos sin ubicar primero el cuadrante.</li>
+<li>Pensar que <span class="math inline">\(\sin\theta\)</span> es siempre positivo porque representa una longitud; en el círculo unitario es una coordenada.</li>
+<li>Usar <span class="math inline">\(\tan\theta\)</span> cuando <span class="math inline">\(\cos\theta=0\)</span>.</li>
+<li>Aplicar una identidad sin revisar sus condiciones de definición.</li>
+</ul>
+</div>
+</section>
+<section id="ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<section id="ejercicios-con-solución" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicios-con-solución">Ejercicios con solución</h3>
+<section id="ejercicio-1" class="level4 exercise-box">
+<h4 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h4>
+<p>Convierte <span class="math inline">\(225^\circ\)</span> a radianes y determina el cuadrante.</p>
+<p><strong>Solución.</strong></p>
+<p><span class="math display">\[
+225^\circ\cdot \frac{\pi}{180^\circ}
+=\frac{225\pi}{180}
+=\frac{5\pi}{4}.
+\]</span></p>
+<p>Como <span class="math inline">\(225^\circ\)</span> está entre <span class="math inline">\(180^\circ\)</span> y <span class="math inline">\(270^\circ\)</span>, pertenece al cuadrante III.</p>
+</section>
+<section id="ejercicio-2" class="level4 exercise-box">
+<h4 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h4>
+<p>Calcula <span class="math inline">\(\sin 240^\circ\)</span>, <span class="math inline">\(\cos 240^\circ\)</span> y <span class="math inline">\(\tan 240^\circ\)</span>.</p>
+<p><strong>Solución.</strong></p>
+<p>El ángulo <span class="math inline">\(240^\circ\)</span> está en el cuadrante III y su ángulo de referencia es <span class="math inline">\(60^\circ\)</span>. En el cuadrante III, seno y coseno son negativos:</p>
+<p><span class="math display">\[
+\sin 240^\circ=-\frac{\sqrt3}{2},\qquad
+\cos 240^\circ=-\frac12.
+\]</span></p>
+<p>Entonces</p>
+<p><span class="math display">\[
+\tan 240^\circ
+=\frac{-\sqrt3/2}{-1/2}
+=\sqrt3.
+\]</span></p>
+</section>
+</section>
+<section id="ejercicios-propuestos" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicios-propuestos">Ejercicios propuestos</h3>
+<section id="ejercicio-3" class="level4 proposed-box">
+<h4 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h4>
+<p>Convierte <span class="math inline">\(\frac{7\pi}{6}\)</span> a grados e identifica el cuadrante.</p>
+</section>
+<section id="ejercicio-4" class="level4 proposed-box">
+<h4 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h4>
+<p>Determina <span class="math inline">\(\sin 315^\circ\)</span>, <span class="math inline">\(\cos 315^\circ\)</span> y <span class="math inline">\(\tan 315^\circ\)</span>.</p>
+</section>
+<section id="ejercicio-5" class="level4 proposed-box">
+<h4 class="anchored" data-anchor-id="ejercicio-5">Ejercicio 5</h4>
+<p>Verifica que <span class="math inline">\(\sin^2 60^\circ+\cos^2 60^\circ=1\)</span>.</p>
+</section>
+<section id="ejercicio-6" class="level4 proposed-box">
+<h4 class="anchored" data-anchor-id="ejercicio-6">Ejercicio 6</h4>
+<p>En un triángulo rectángulo, respecto de un ángulo <span class="math inline">\(\theta\)</span>, el cateto opuesto mide <span class="math inline">\(5\)</span> y la hipotenusa mide <span class="math inline">\(13\)</span>. Calcula <span class="math inline">\(\sin\theta\)</span> y encuentra el cateto adyacente.</p>
+</section>
+</section>
+</section>
+<section id="ideas-clave" class="level2">
+<h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
+<div class="concept-box">
+<ul>
+<li>Un ángulo puede medirse en grados o radianes.</li>
+<li>En un triángulo rectángulo, seno, coseno y tangente son razones entre lados.</li>
+<li>En el círculo unitario, <span class="math inline">\(\cos\theta\)</span> es la coordenada <span class="math inline">\(x\)</span> y <span class="math inline">\(\sin\theta\)</span> es la coordenada <span class="math inline">\(y\)</span>.</li>
+<li>Los signos dependen del cuadrante.</li>
+<li>La identidad <span class="math inline">\(\sin^2\theta+\cos^2\theta=1\)</span> proviene de la ecuación del círculo unitario.</li>
+</ul>
+</div>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<ul>
+<li>No se entregó una fuente bibliográfica específica para esta página; el contenido se presenta como síntesis general de curso sobre trigonometría básica.</li>
+</ul>
 
 
 </section>

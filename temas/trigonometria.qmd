@@ -1,0 +1,372 @@
+---
+title: "Trigonometría"
+description: "Medición angular, razones trigonométricas, círculo unitario e identidades básicas."
+---
+
+## Objetivo
+
+::: {.concept-box}
+Comprender las razones trigonométricas como relaciones geométricas asociadas a un ángulo. La meta es leer ángulos en grados y radianes, ubicar puntos en el círculo unitario y usar identidades básicas sin perder su interpretación visual.
+:::
+
+## Idea central
+
+La trigonometría estudia cómo se relacionan los ángulos con longitudes y coordenadas. En un triángulo rectángulo, un ángulo determina razones entre lados. En el círculo unitario, el mismo ángulo determina un punto del plano.
+
+::: {.concept-box}
+Si un punto gira alrededor del origen sobre una circunferencia de radio $1$, su posición queda determinada por un ángulo $\theta$. Las coordenadas de ese punto son
+
+$$
+(\cos \theta,\ \sin \theta).
+$$
+
+Por eso el coseno se interpreta como coordenada horizontal y el seno como coordenada vertical.
+:::
+
+## Medición angular
+
+Un ángulo puede entenderse como una rotación desde un rayo inicial hasta un rayo final. En el plano cartesiano, se toma como lado inicial el eje $x$ positivo y se consideran positivos los giros en sentido antihorario.
+
+En radianes, el ángulo se mide comparando la longitud de arco $s$ con el radio $r$:
+
+$$
+\theta=\frac{s}{r}.
+$$
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Grados</div>
+<div class="formula-title">Vuelta completa</div>
+<div class="formula-expression">
+
+$$
+360^\circ
+$$
+
+</div>
+<div class="formula-note">
+Divide una vuelta completa en 360 partes iguales.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Radianes</div>
+<div class="formula-title">Vuelta completa</div>
+<div class="formula-expression">
+
+$$
+2\pi\ \text{rad}
+$$
+
+</div>
+<div class="formula-note">
+Mide el ángulo mediante longitud de arco respecto del radio.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Conversión</div>
+<div class="formula-title">Relación básica</div>
+<div class="formula-expression">
+
+$$
+180^\circ=\pi\ \text{rad}
+$$
+
+</div>
+<div class="formula-note">
+Permite pasar entre grados y radianes multiplicando por el factor adecuado.
+</div>
+:::
+
+:::
+
+Para convertir:
+
+$$
+\theta_{\text{rad}}=\theta_{\text{deg}}\cdot \frac{\pi}{180},
+\qquad
+\theta_{\text{deg}}=\theta_{\text{rad}}\cdot \frac{180}{\pi}.
+$$
+
+## Razones trigonométricas
+
+En un triángulo rectángulo, respecto de un ángulo agudo $\theta$, se distinguen el cateto opuesto, el cateto adyacente y la hipotenusa.
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Seno</div>
+<div class="formula-title">Cateto opuesto</div>
+<div class="formula-expression">
+
+$$
+\sin \theta=\frac{\text{opuesto}}{\text{hipotenusa}}
+$$
+
+</div>
+<div class="formula-note">
+Relaciona el cateto opuesto con la hipotenusa.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Coseno</div>
+<div class="formula-title">Cateto adyacente</div>
+<div class="formula-expression">
+
+$$
+\cos \theta=\frac{\text{adyacente}}{\text{hipotenusa}}
+$$
+
+</div>
+<div class="formula-note">
+Relaciona el cateto adyacente con la hipotenusa.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Tangente</div>
+<div class="formula-title">Razón entre catetos</div>
+<div class="formula-expression">
+
+$$
+\tan \theta=\frac{\text{opuesto}}{\text{adyacente}}
+$$
+
+</div>
+<div class="formula-note">
+También se obtiene como $\tan \theta=\dfrac{\sin\theta}{\cos\theta}$ cuando $\cos\theta\ne 0$.
+</div>
+:::
+
+:::
+
+## Círculo unitario
+
+El círculo unitario es la circunferencia de radio $1$ centrada en el origen. Si el ángulo $\theta$ determina el punto $P$ sobre esa circunferencia, entonces:
+
+$$
+P=(x,y)=(\cos\theta,\sin\theta).
+$$
+
+::: {.method-box}
+Para leer el signo de las razones trigonométricas, basta mirar el cuadrante:
+
+- En el cuadrante I, $\sin\theta$ y $\cos\theta$ son positivos.
+- En el cuadrante II, $\sin\theta$ es positivo y $\cos\theta$ es negativo.
+- En el cuadrante III, ambos son negativos.
+- En el cuadrante IV, $\sin\theta$ es negativo y $\cos\theta$ es positivo.
+:::
+
+## Valores notables
+
+Los valores notables se obtienen desde triángulos especiales y luego se extienden al círculo unitario mediante simetrías.
+
+| Radianes | $0$ | $\frac{\pi}{6}$ | $\frac{\pi}{4}$ | $\frac{\pi}{3}$ | $\frac{\pi}{2}$ |
+|---:|---:|---:|---:|---:|---:|
+| Grados | $0^\circ$ | $30^\circ$ | $45^\circ$ | $60^\circ$ | $90^\circ$ |
+| $\sin\theta$ | $0$ | $\frac12$ | $\frac{\sqrt2}{2}$ | $\frac{\sqrt3}{2}$ | $1$ |
+| $\cos\theta$ | $1$ | $\frac{\sqrt3}{2}$ | $\frac{\sqrt2}{2}$ | $\frac12$ | $0$ |
+| $\tan\theta$ | $0$ | $\frac{\sqrt3}{3}$ | $1$ | $\sqrt3$ | No definida |
+
+::: {.warning-box}
+La tabla no reemplaza la interpretación geométrica. Primero se identifica el ángulo de referencia y el cuadrante; después se asignan los signos.
+:::
+
+## Identidades básicas
+
+Las identidades son igualdades válidas para los ángulos donde las expresiones están definidas. La más importante se obtiene del círculo unitario: si $x=\cos\theta$ e $y=\sin\theta$, entonces $x^2+y^2=1$.
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Pitagórica</div>
+<div class="formula-title">Círculo unitario</div>
+<div class="formula-expression">
+
+$$
+\sin^2\theta+\cos^2\theta=1
+$$
+
+</div>
+<div class="formula-note">
+Proviene de $x^2+y^2=1$ con $x=\cos\theta$ e $y=\sin\theta$.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Cociente</div>
+<div class="formula-title">Tangente</div>
+<div class="formula-expression">
+
+$$
+\tan\theta=\frac{\sin\theta}{\cos\theta}
+$$
+
+</div>
+<div class="formula-note">
+Se usa solo cuando $\cos\theta\ne 0$.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Simetría</div>
+<div class="formula-title">Ángulos opuestos</div>
+<div class="formula-expression">
+
+$$
+\sin(-\theta)=-\sin\theta,\qquad
+\cos(-\theta)=\cos\theta
+$$
+
+</div>
+<div class="formula-note">
+El seno cambia de signo; el coseno conserva su valor.
+</div>
+:::
+
+:::
+
+## Ejemplo mínimo
+
+::: {.example-box}
+Calculemos $\sin 150^\circ$, $\cos 150^\circ$ y $\tan 150^\circ$.
+
+El ángulo $150^\circ$ está en el cuadrante II y su ángulo de referencia es
+
+$$
+180^\circ-150^\circ=30^\circ.
+$$
+
+En el cuadrante II, el seno es positivo y el coseno es negativo. Como para $30^\circ$ se tiene $\sin 30^\circ=\frac12$ y $\cos 30^\circ=\frac{\sqrt3}{2}$, resulta:
+
+$$
+\sin 150^\circ=\frac12,\qquad
+\cos 150^\circ=-\frac{\sqrt3}{2}.
+$$
+
+Por tanto,
+
+$$
+\tan 150^\circ
+=\frac{\sin 150^\circ}{\cos 150^\circ}
+=\frac{1/2}{-\sqrt3/2}
+=-\frac{\sqrt3}{3}.
+$$
+:::
+
+## Visualización interactiva
+
+Mueve el deslizador para observar cómo un ángulo determina un punto del círculo unitario. Las proyecciones sobre los ejes muestran directamente el coseno y el seno.
+
+<div id="circulo-unitario-app"></div>
+
+```{=html}
+<script>
+(() => {
+  const cssHref = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+    .map((link) => link.getAttribute("href") || "")
+    .find((href) => href.endsWith("styles/custom.css"));
+  const basePath = cssHref ? cssHref.replace(/styles\/custom\.css$/, "") : "";
+  const script = document.createElement("script");
+  script.src = `${basePath}scripts/circulo-unitario.js`;
+  script.defer = true;
+  document.body.appendChild(script);
+})();
+</script>
+```
+
+## Errores comunes
+
+::: {.warning-box}
+- Confundir grados y radianes dentro de un mismo cálculo.
+- Memorizar signos sin ubicar primero el cuadrante.
+- Pensar que $\sin\theta$ es siempre positivo porque representa una longitud; en el círculo unitario es una coordenada.
+- Usar $\tan\theta$ cuando $\cos\theta=0$.
+- Aplicar una identidad sin revisar sus condiciones de definición.
+:::
+
+## Ejercicios
+
+### Ejercicios con solución
+
+::: {.exercise-box}
+#### Ejercicio 1
+
+Convierte $225^\circ$ a radianes y determina el cuadrante.
+
+**Solución.**
+
+$$
+225^\circ\cdot \frac{\pi}{180^\circ}
+=\frac{225\pi}{180}
+=\frac{5\pi}{4}.
+$$
+
+Como $225^\circ$ está entre $180^\circ$ y $270^\circ$, pertenece al cuadrante III.
+:::
+
+::: {.exercise-box}
+#### Ejercicio 2
+
+Calcula $\sin 240^\circ$, $\cos 240^\circ$ y $\tan 240^\circ$.
+
+**Solución.**
+
+El ángulo $240^\circ$ está en el cuadrante III y su ángulo de referencia es $60^\circ$. En el cuadrante III, seno y coseno son negativos:
+
+$$
+\sin 240^\circ=-\frac{\sqrt3}{2},\qquad
+\cos 240^\circ=-\frac12.
+$$
+
+Entonces
+
+$$
+\tan 240^\circ
+=\frac{-\sqrt3/2}{-1/2}
+=\sqrt3.
+$$
+:::
+
+### Ejercicios propuestos
+
+::: {.proposed-box}
+#### Ejercicio 3
+
+Convierte $\frac{7\pi}{6}$ a grados e identifica el cuadrante.
+:::
+
+::: {.proposed-box}
+#### Ejercicio 4
+
+Determina $\sin 315^\circ$, $\cos 315^\circ$ y $\tan 315^\circ$.
+:::
+
+::: {.proposed-box}
+#### Ejercicio 5
+
+Verifica que $\sin^2 60^\circ+\cos^2 60^\circ=1$.
+:::
+
+::: {.proposed-box}
+#### Ejercicio 6
+
+En un triángulo rectángulo, respecto de un ángulo $\theta$, el cateto opuesto mide $5$ y la hipotenusa mide $13$. Calcula $\sin\theta$ y encuentra el cateto adyacente.
+:::
+
+## Ideas clave
+
+::: {.concept-box}
+- Un ángulo puede medirse en grados o radianes.
+- En un triángulo rectángulo, seno, coseno y tangente son razones entre lados.
+- En el círculo unitario, $\cos\theta$ es la coordenada $x$ y $\sin\theta$ es la coordenada $y$.
+- Los signos dependen del cuadrante.
+- La identidad $\sin^2\theta+\cos^2\theta=1$ proviene de la ecuación del círculo unitario.
+:::
+
+## Referencias
+
+- No se entregó una fuente bibliográfica específica para esta página; el contenido se presenta como síntesis general de curso sobre trigonometría básica.

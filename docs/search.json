@@ -1,66 +1,185 @@
 [
   {
-    "objectID": "temas/teorema-binomio.html",
-    "href": "temas/teorema-binomio.html",
-    "title": "Teorema del Binomio",
+    "objectID": "temas/trigonometria.html",
+    "href": "temas/trigonometria.html",
+    "title": "Trigonometría",
     "section": "",
-    "text": "Comprender cómo desarrollar potencias de un binomio sin multiplicar todos los factores uno por uno, usando el triángulo de Pascal, los coeficientes binomiales y el término general del desarrollo."
+    "text": "Comprender las razones trigonométricas como relaciones geométricas asociadas a un ángulo. La meta es leer ángulos en grados y radianes, ubicar puntos en el círculo unitario y usar identidades básicas sin perder su interpretación visual."
   },
   {
-    "objectID": "temas/teorema-binomio.html#objetivo",
-    "href": "temas/teorema-binomio.html#objetivo",
-    "title": "Teorema del Binomio",
+    "objectID": "temas/trigonometria.html#objetivo",
+    "href": "temas/trigonometria.html#objetivo",
+    "title": "Trigonometría",
     "section": "",
-    "text": "Comprender cómo desarrollar potencias de un binomio sin multiplicar todos los factores uno por uno, usando el triángulo de Pascal, los coeficientes binomiales y el término general del desarrollo."
+    "text": "Comprender las razones trigonométricas como relaciones geométricas asociadas a un ángulo. La meta es leer ángulos en grados y radianes, ubicar puntos en el círculo unitario y usar identidades básicas sin perder su interpretación visual."
   },
   {
-    "objectID": "temas/teorema-binomio.html#idea-central",
-    "href": "temas/teorema-binomio.html#idea-central",
-    "title": "Teorema del Binomio",
+    "objectID": "temas/trigonometria.html#idea-central",
+    "href": "temas/trigonometria.html#idea-central",
+    "title": "Trigonometría",
     "section": "Idea central",
-    "text": "Idea central\nUn binomio es una expresión formada por la suma o resta de dos términos, como \\(a+b\\), \\(x-y\\) o \\(2x+3\\). El teorema del binomio resuelve el problema de expandir potencias como \\((a+b)^n\\) cuando \\(n\\) es un entero no negativo.\n\nEn el desarrollo de \\((a+b)^n\\) aparecen \\(n+1\\) términos. Las potencias de \\(a\\) bajan desde \\(n\\) hasta \\(0\\), las potencias de \\(b\\) suben desde \\(0\\) hasta \\(n\\), y los coeficientes se leen en el renglón \\(n\\) del triángulo de Pascal.\n\nLos primeros desarrollos muestran el patrón:\n\\[\n(a+b)^2=a^2+2ab+b^2\n\\]\n\\[\n(a+b)^3=a^3+3a^2b+3ab^2+b^3\n\\]\n\\[\n(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4\n\\]\nEn cada término, la suma de los exponentes de \\(a\\) y \\(b\\) es igual a la potencia original."
+    "text": "Idea central\nLa trigonometría estudia cómo se relacionan los ángulos con longitudes y coordenadas. En un triángulo rectángulo, un ángulo determina razones entre lados. En el círculo unitario, el mismo ángulo determina un punto del plano.\n\nSi un punto gira alrededor del origen sobre una circunferencia de radio \\(1\\), su posición queda determinada por un ángulo \\(\\theta\\). Las coordenadas de ese punto son\n\\[\n(\\cos \\theta,\\ \\sin \\theta).\n\\]\nPor eso el coseno se interpreta como coordenada horizontal y el seno como coordenada vertical."
   },
   {
-    "objectID": "temas/teorema-binomio.html#definición",
-    "href": "temas/teorema-binomio.html#definición",
-    "title": "Teorema del Binomio",
-    "section": "Definición",
-    "text": "Definición\nEl factorial de un entero no negativo \\(n\\) se escribe \\(n!\\) y representa el producto\n\\[\nn!=1\\cdot 2\\cdot 3\\cdots n,\n\\qquad 0!=1.\n\\]\nCon factoriales se define el coeficiente binomial:\n\\[\n\\binom{n}{r}=\\frac{n!}{r!(n-r)!},\n\\qquad 0\\le r\\le n.\n\\]\nEste número indica el coeficiente que acompaña al término con \\(a^{n-r}b^r\\) en el desarrollo de \\((a+b)^n\\).\n\n\n\nTeorema\n\n\nTeorema del binomio\n\n\n\\[\n(a+b)^n=\\sum_{r=0}^{n}\\binom{n}{r}a^{n-r}b^r\n\\]\n\n\nPermite escribir el desarrollo completo de una potencia de binomio.\n\n\n\n\nTérmino\n\n\nTérmino general\n\n\n\\[\nT_{r+1}=\\binom{n}{r}a^{n-r}b^r\n\\]\n\n\nEl índice de suma es \\(r\\). Como el primer término ocurre cuando \\(r=0\\), se nombra \\(T_{r+1}\\).\n\n\n\n\nPascal\n\n\nIdentidad clave\n\n\n\\[\n\\binom{k}{r-1}+\\binom{k}{r}=\\binom{k+1}{r}\n\\]\n\n\nCada entrada interior del triángulo se obtiene sumando las dos entradas superiores vecinas."
+    "objectID": "temas/trigonometria.html#medición-angular",
+    "href": "temas/trigonometria.html#medición-angular",
+    "title": "Trigonometría",
+    "section": "Medición angular",
+    "text": "Medición angular\nUn ángulo puede entenderse como una rotación desde un rayo inicial hasta un rayo final. En el plano cartesiano, se toma como lado inicial el eje \\(x\\) positivo y se consideran positivos los giros en sentido antihorario.\nEn radianes, el ángulo se mide comparando la longitud de arco \\(s\\) con el radio \\(r\\):\n\\[\n\\theta=\\frac{s}{r}.\n\\]\n\n\n\nGrados\n\n\nVuelta completa\n\n\n\\[\n360^\\circ\n\\]\n\n\nDivide una vuelta completa en 360 partes iguales.\n\n\n\n\nRadianes\n\n\nVuelta completa\n\n\n\\[\n2\\pi\\ \\text{rad}\n\\]\n\n\nMide el ángulo mediante longitud de arco respecto del radio.\n\n\n\n\nConversión\n\n\nRelación básica\n\n\n\\[\n180^\\circ=\\pi\\ \\text{rad}\n\\]\n\n\nPermite pasar entre grados y radianes multiplicando por el factor adecuado.\n\n\n\nPara convertir:\n\\[\n\\theta_{\\text{rad}}=\\theta_{\\text{deg}}\\cdot \\frac{\\pi}{180},\n\\qquad\n\\theta_{\\text{deg}}=\\theta_{\\text{rad}}\\cdot \\frac{180}{\\pi}.\n\\]"
   },
   {
-    "objectID": "temas/teorema-binomio.html#ejemplo-mínimo",
-    "href": "temas/teorema-binomio.html#ejemplo-mínimo",
-    "title": "Teorema del Binomio",
+    "objectID": "temas/trigonometria.html#razones-trigonométricas",
+    "href": "temas/trigonometria.html#razones-trigonométricas",
+    "title": "Trigonometría",
+    "section": "Razones trigonométricas",
+    "text": "Razones trigonométricas\nEn un triángulo rectángulo, respecto de un ángulo agudo \\(\\theta\\), se distinguen el cateto opuesto, el cateto adyacente y la hipotenusa.\n\n\n\nSeno\n\n\nCateto opuesto\n\n\n\\[\n\\sin \\theta=\\frac{\\text{opuesto}}{\\text{hipotenusa}}\n\\]\n\n\nRelaciona el cateto opuesto con la hipotenusa.\n\n\n\n\nCoseno\n\n\nCateto adyacente\n\n\n\\[\n\\cos \\theta=\\frac{\\text{adyacente}}{\\text{hipotenusa}}\n\\]\n\n\nRelaciona el cateto adyacente con la hipotenusa.\n\n\n\n\nTangente\n\n\nRazón entre catetos\n\n\n\\[\n\\tan \\theta=\\frac{\\text{opuesto}}{\\text{adyacente}}\n\\]\n\n\nTambién se obtiene como \\(\\tan \\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}\\) cuando \\(\\cos\\theta\\ne 0\\)."
+  },
+  {
+    "objectID": "temas/trigonometria.html#círculo-unitario",
+    "href": "temas/trigonometria.html#círculo-unitario",
+    "title": "Trigonometría",
+    "section": "Círculo unitario",
+    "text": "Círculo unitario\nEl círculo unitario es la circunferencia de radio \\(1\\) centrada en el origen. Si el ángulo \\(\\theta\\) determina el punto \\(P\\) sobre esa circunferencia, entonces:\n\\[\nP=(x,y)=(\\cos\\theta,\\sin\\theta).\n\\]\n\nPara leer el signo de las razones trigonométricas, basta mirar el cuadrante:\n\nEn el cuadrante I, \\(\\sin\\theta\\) y \\(\\cos\\theta\\) son positivos.\nEn el cuadrante II, \\(\\sin\\theta\\) es positivo y \\(\\cos\\theta\\) es negativo.\nEn el cuadrante III, ambos son negativos.\nEn el cuadrante IV, \\(\\sin\\theta\\) es negativo y \\(\\cos\\theta\\) es positivo."
+  },
+  {
+    "objectID": "temas/trigonometria.html#valores-notables",
+    "href": "temas/trigonometria.html#valores-notables",
+    "title": "Trigonometría",
+    "section": "Valores notables",
+    "text": "Valores notables\nLos valores notables se obtienen desde triángulos especiales y luego se extienden al círculo unitario mediante simetrías.\n\n\n\n\n\n\n\n\n\n\n\nRadianes\n\\(0\\)\n\\(\\frac{\\pi}{6}\\)\n\\(\\frac{\\pi}{4}\\)\n\\(\\frac{\\pi}{3}\\)\n\\(\\frac{\\pi}{2}\\)\n\n\n\n\nGrados\n\\(0^\\circ\\)\n\\(30^\\circ\\)\n\\(45^\\circ\\)\n\\(60^\\circ\\)\n\\(90^\\circ\\)\n\n\n\\(\\sin\\theta\\)\n\\(0\\)\n\\(\\frac12\\)\n\\(\\frac{\\sqrt2}{2}\\)\n\\(\\frac{\\sqrt3}{2}\\)\n\\(1\\)\n\n\n\\(\\cos\\theta\\)\n\\(1\\)\n\\(\\frac{\\sqrt3}{2}\\)\n\\(\\frac{\\sqrt2}{2}\\)\n\\(\\frac12\\)\n\\(0\\)\n\n\n\\(\\tan\\theta\\)\n\\(0\\)\n\\(\\frac{\\sqrt3}{3}\\)\n\\(1\\)\n\\(\\sqrt3\\)\nNo definida\n\n\n\n\nLa tabla no reemplaza la interpretación geométrica. Primero se identifica el ángulo de referencia y el cuadrante; después se asignan los signos."
+  },
+  {
+    "objectID": "temas/trigonometria.html#identidades-básicas",
+    "href": "temas/trigonometria.html#identidades-básicas",
+    "title": "Trigonometría",
+    "section": "Identidades básicas",
+    "text": "Identidades básicas\nLas identidades son igualdades válidas para los ángulos donde las expresiones están definidas. La más importante se obtiene del círculo unitario: si \\(x=\\cos\\theta\\) e \\(y=\\sin\\theta\\), entonces \\(x^2+y^2=1\\).\n\n\n\nPitagórica\n\n\nCírculo unitario\n\n\n\\[\n\\sin^2\\theta+\\cos^2\\theta=1\n\\]\n\n\nProviene de \\(x^2+y^2=1\\) con \\(x=\\cos\\theta\\) e \\(y=\\sin\\theta\\).\n\n\n\n\nCociente\n\n\nTangente\n\n\n\\[\n\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}\n\\]\n\n\nSe usa solo cuando \\(\\cos\\theta\\ne 0\\).\n\n\n\n\nSimetría\n\n\nÁngulos opuestos\n\n\n\\[\n\\sin(-\\theta)=-\\sin\\theta,\\qquad\n\\cos(-\\theta)=\\cos\\theta\n\\]\n\n\nEl seno cambia de signo; el coseno conserva su valor."
+  },
+  {
+    "objectID": "temas/trigonometria.html#ejemplo-mínimo",
+    "href": "temas/trigonometria.html#ejemplo-mínimo",
+    "title": "Trigonometría",
     "section": "Ejemplo mínimo",
-    "text": "Ejemplo mínimo\n\nDesarrollemos \\((x+y)^4\\).\nEl renglón \\(4\\) del triángulo de Pascal es\n\\[\n1,\\ 4,\\ 6,\\ 4,\\ 1.\n\\]\nPor tanto,\n\\[\n(x+y)^4=x^4+4x^3y+6x^2y^2+4xy^3+y^4.\n\\]\n\n\nPara encontrar un término particular no hace falta expandir todo el binomio. Por ejemplo, busquemos el término con \\(x^3y^2\\) en \\((x+y)^5\\).\nEn el término general\n\\[\nT_{r+1}=\\binom{5}{r}x^{5-r}y^r,\n\\]\nqueremos que el exponente de \\(y\\) sea \\(2\\). Por tanto \\(r=2\\), y ese es el tercer término:\n\\[\nT_3=\\binom{5}{2}x^3y^2=10x^3y^2.\n\\]"
+    "text": "Ejemplo mínimo\n\nCalculemos \\(\\sin 150^\\circ\\), \\(\\cos 150^\\circ\\) y \\(\\tan 150^\\circ\\).\nEl ángulo \\(150^\\circ\\) está en el cuadrante II y su ángulo de referencia es\n\\[\n180^\\circ-150^\\circ=30^\\circ.\n\\]\nEn el cuadrante II, el seno es positivo y el coseno es negativo. Como para \\(30^\\circ\\) se tiene \\(\\sin 30^\\circ=\\frac12\\) y \\(\\cos 30^\\circ=\\frac{\\sqrt3}{2}\\), resulta:\n\\[\n\\sin 150^\\circ=\\frac12,\\qquad\n\\cos 150^\\circ=-\\frac{\\sqrt3}{2}.\n\\]\nPor tanto,\n\\[\n\\tan 150^\\circ\n=\\frac{\\sin 150^\\circ}{\\cos 150^\\circ}\n=\\frac{1/2}{-\\sqrt3/2}\n=-\\frac{\\sqrt3}{3}.\n\\]"
   },
   {
-    "objectID": "temas/teorema-binomio.html#visualización-o-simulación",
-    "href": "temas/teorema-binomio.html#visualización-o-simulación",
-    "title": "Teorema del Binomio",
-    "section": "Visualización o simulación",
-    "text": "Visualización o simulación\nEl siguiente interactivo muestra cómo el renglón elegido del triángulo de Pascal entrega los coeficientes del desarrollo de \\((a+b)^n\\)."
+    "objectID": "temas/trigonometria.html#visualización-interactiva",
+    "href": "temas/trigonometria.html#visualización-interactiva",
+    "title": "Trigonometría",
+    "section": "Visualización interactiva",
+    "text": "Visualización interactiva\nMueve el deslizador para observar cómo un ángulo determina un punto del círculo unitario. Las proyecciones sobre los ejes muestran directamente el coseno y el seno."
   },
   {
-    "objectID": "temas/teorema-binomio.html#errores-comunes",
-    "href": "temas/teorema-binomio.html#errores-comunes",
-    "title": "Teorema del Binomio",
+    "objectID": "temas/trigonometria.html#errores-comunes",
+    "href": "temas/trigonometria.html#errores-comunes",
+    "title": "Trigonometría",
     "section": "Errores comunes",
-    "text": "Errores comunes\n\n\nUsar el renglón equivocado del triángulo de Pascal: para \\((a+b)^n\\) se usa el renglón \\(n\\), contando desde \\(0\\).\nOlvidar que el desarrollo tiene \\(n+1\\) términos, no \\(n\\) términos.\nMantener fijo un exponente: el exponente de \\(a\\) baja y el de \\(b\\) sube.\nConfundir el índice \\(r\\) con el número del término: cuando \\(r=0\\) se obtiene el primer término.\nAplicar la fórmula a una resta sin considerar el signo. Por ejemplo, \\((a-b)^n\\) se trata como \\((a+(-b))^n\\)."
+    "text": "Errores comunes\n\n\nConfundir grados y radianes dentro de un mismo cálculo.\nMemorizar signos sin ubicar primero el cuadrante.\nPensar que \\(\\sin\\theta\\) es siempre positivo porque representa una longitud; en el círculo unitario es una coordenada.\nUsar \\(\\tan\\theta\\) cuando \\(\\cos\\theta=0\\).\nAplicar una identidad sin revisar sus condiciones de definición."
   },
   {
-    "objectID": "temas/teorema-binomio.html#ideas-clave",
-    "href": "temas/teorema-binomio.html#ideas-clave",
-    "title": "Teorema del Binomio",
+    "objectID": "temas/trigonometria.html#ejercicios",
+    "href": "temas/trigonometria.html#ejercicios",
+    "title": "Trigonometría",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nEjercicios con solución\n\nEjercicio 1\nConvierte \\(225^\\circ\\) a radianes y determina el cuadrante.\nSolución.\n\\[\n225^\\circ\\cdot \\frac{\\pi}{180^\\circ}\n=\\frac{225\\pi}{180}\n=\\frac{5\\pi}{4}.\n\\]\nComo \\(225^\\circ\\) está entre \\(180^\\circ\\) y \\(270^\\circ\\), pertenece al cuadrante III.\n\n\nEjercicio 2\nCalcula \\(\\sin 240^\\circ\\), \\(\\cos 240^\\circ\\) y \\(\\tan 240^\\circ\\).\nSolución.\nEl ángulo \\(240^\\circ\\) está en el cuadrante III y su ángulo de referencia es \\(60^\\circ\\). En el cuadrante III, seno y coseno son negativos:\n\\[\n\\sin 240^\\circ=-\\frac{\\sqrt3}{2},\\qquad\n\\cos 240^\\circ=-\\frac12.\n\\]\nEntonces\n\\[\n\\tan 240^\\circ\n=\\frac{-\\sqrt3/2}{-1/2}\n=\\sqrt3.\n\\]\n\n\n\nEjercicios propuestos\n\nEjercicio 3\nConvierte \\(\\frac{7\\pi}{6}\\) a grados e identifica el cuadrante.\n\n\nEjercicio 4\nDetermina \\(\\sin 315^\\circ\\), \\(\\cos 315^\\circ\\) y \\(\\tan 315^\\circ\\).\n\n\nEjercicio 5\nVerifica que \\(\\sin^2 60^\\circ+\\cos^2 60^\\circ=1\\).\n\n\nEjercicio 6\nEn un triángulo rectángulo, respecto de un ángulo \\(\\theta\\), el cateto opuesto mide \\(5\\) y la hipotenusa mide \\(13\\). Calcula \\(\\sin\\theta\\) y encuentra el cateto adyacente."
+  },
+  {
+    "objectID": "temas/trigonometria.html#ideas-clave",
+    "href": "temas/trigonometria.html#ideas-clave",
+    "title": "Trigonometría",
     "section": "Ideas clave",
-    "text": "Ideas clave\n\n\nUn binomio tiene dos términos algebraicos.\nEl teorema del binomio permite desarrollar \\((a+b)^n\\) de manera directa.\nLos coeficientes del desarrollo son coeficientes binomiales.\nEl triángulo de Pascal organiza esos coeficientes por renglones.\nEl término general permite encontrar un término específico sin escribir el desarrollo completo."
+    "text": "Ideas clave\n\n\nUn ángulo puede medirse en grados o radianes.\nEn un triángulo rectángulo, seno, coseno y tangente son razones entre lados.\nEn el círculo unitario, \\(\\cos\\theta\\) es la coordenada \\(x\\) y \\(\\sin\\theta\\) es la coordenada \\(y\\).\nLos signos dependen del cuadrante.\nLa identidad \\(\\sin^2\\theta+\\cos^2\\theta=1\\) proviene de la ecuación del círculo unitario."
   },
   {
-    "objectID": "temas/teorema-binomio.html#referencias",
-    "href": "temas/teorema-binomio.html#referencias",
-    "title": "Teorema del Binomio",
+    "objectID": "temas/trigonometria.html#referencias",
+    "href": "temas/trigonometria.html#referencias",
+    "title": "Trigonometría",
     "section": "Referencias",
-    "text": "Referencias\n\nStewart, James; Redlin, Lothar; Watson, Saleem. Precálculo: Matemáticas para el cálculo. Cengage Learning, 2017. Sección 12.6: “El teorema del binomio”."
+    "text": "Referencias\n\nNo se entregó una fuente bibliográfica específica para esta página; el contenido se presenta como síntesis general de curso sobre trigonometría básica."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html",
+    "href": "temas/sucesiones-sumatorias.html",
+    "title": "Sucesiones y sumatorias",
+    "section": "",
+    "text": "Reconocer sucesiones como listas ordenadas de números, describirlas mediante términos generales o reglas recursivas, y usar la notación sigma para escribir y calcular sumas finitas de manera compacta."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#objetivo",
+    "href": "temas/sucesiones-sumatorias.html#objetivo",
+    "title": "Sucesiones y sumatorias",
+    "section": "",
+    "text": "Reconocer sucesiones como listas ordenadas de números, describirlas mediante términos generales o reglas recursivas, y usar la notación sigma para escribir y calcular sumas finitas de manera compacta."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#idea-central",
+    "href": "temas/sucesiones-sumatorias.html#idea-central",
+    "title": "Sucesiones y sumatorias",
+    "section": "Idea central",
+    "text": "Idea central\nUna sucesión organiza números por posición: primero, segundo, tercero, y así sucesivamente. Una sumatoria agrega varios términos de una sucesión siguiendo límites definidos. Por eso conviene distinguir siempre entre el término individual \\(a_n\\) y una suma parcial \\(S_n\\).\n\n\n\n\n\n\nNotaLectura básica\n\n\n\nEn una sucesión se mira qué valor ocupa cada posición. En una sumatoria se acumulan varios valores de acuerdo con una regla y un rango de índices."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#sucesiones",
+    "href": "temas/sucesiones-sumatorias.html#sucesiones",
+    "title": "Sucesiones y sumatorias",
+    "section": "Sucesiones",
+    "text": "Sucesiones\nUna sucesión es una función cuyo dominio son los números naturales. En lugar de escribir \\(a(n)\\), normalmente se escribe \\(a_n\\), donde \\(n\\) indica la posición del término.\n\\[\na_1,\\ a_2,\\ a_3,\\ \\dots,\\ a_n,\\ \\dots\n\\]\nEl símbolo \\(a_n\\) se llama término general o término \\(n\\)-ésimo. Permite calcular el valor de la sucesión en la posición \\(n\\), cuando existe una regla explícita.\n\nSi \\(a_n=2n\\), entonces los primeros términos son\n\\[\na_1=2,\\quad a_2=4,\\quad a_3=6,\\quad a_4=8.\n\\]\nEl término en la posición 103 es \\(a_{103}=2(103)=206\\).\n\nUna sucesión puede presentarse de varias formas:\n\nPor sus primeros términos: \\(5,10,15,20,\\dots\\).\nPor una fórmula explícita: \\(a_n=5n\\).\nPor una regla recursiva: se entrega uno o más términos iniciales y una regla para obtener los siguientes.\n\n\nLa regla recursiva\n\\[\na_1=5,\\qquad a_n=a_{n-1}+5\\quad (n\\ge 2)\n\\]\nproduce la sucesión \\(5,10,15,20,\\dots\\). Para calcular \\(a_4\\), primero se necesitan los términos anteriores.\n\n\nVer algunos términos ayuda a proponer una regla, pero no basta para justificar que esa regla sea la única posible. Distintas sucesiones pueden compartir los mismos primeros términos."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#sumatorias",
+    "href": "temas/sucesiones-sumatorias.html#sumatorias",
+    "title": "Sucesiones y sumatorias",
+    "section": "Sumatorias",
+    "text": "Sumatorias\nLa notación sigma permite escribir una suma finita sin repetir todos sus términos. En la expresión\n\\[\n\\sum_{k=1}^{n} a_k=a_1+a_2+a_3+\\cdots+a_n,\n\\]\nel símbolo \\(\\sum\\) indica que se deben sumar términos. La letra \\(k\\) es el índice de suma; el número inferior indica dónde empieza el índice y el número superior indica dónde termina. La expresión \\(a_k\\) es el término general que se evalúa para cada valor entero de \\(k\\) dentro de esos límites.\n\nAl expandir la suma\n\\[\n\\sum_{k=1}^{5} k^2\n\\]\nse obtiene\n\\[\n1^2+2^2+3^2+4^2+5^2=55.\n\\]\n\nLas sumas parciales se denotan usualmente por \\(S_n\\). Para una sucesión \\(a_1,a_2,a_3,\\dots\\), la suma parcial \\(n\\)-ésima es\n\\[\nS_n=a_1+a_2+a_3+\\cdots+a_n.\n\\]\n\nSi \\(a_n=\\dfrac{1}{2^n}\\), entonces\n\\[\nS_1=\\frac12,\\quad\nS_2=\\frac34,\\quad\nS_3=\\frac78,\\quad\nS_4=\\frac{15}{16}.\n\\]\nEn general,\n\\[\nS_n=1-\\frac{1}{2^n}.\n\\]"
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#fórmulas",
+    "href": "temas/sucesiones-sumatorias.html#fórmulas",
+    "title": "Sucesiones y sumatorias",
+    "section": "Fórmulas",
+    "text": "Fórmulas\n\nSucesiones\n\n\n\nSucesiones\n\n\nTérmino general\n\n\n\\[\na_n=a(n),\\qquad n \\in \\mathbb{N}\n\\]\n\n\nCalcula directamente el término en la posición \\(n\\).\n\n\n\n\nSucesiones\n\n\nRegla recursiva\n\n\n\\[\na_1\\ \\text{dado},\\qquad a_n=F(a_{n-1}),\\quad n\\ge 2\n\\]\n\n\nRequiere condición inicial; para llegar a \\(a_n\\) se calculan términos previos.\n\n\n\n\n\nProgresiones\n\n\n\nProgresiones\n\n\nTérmino aritmético\n\n\n\\[\na_n=a+(n-1)d\n\\]\n\n\n\\(a\\) es el primer término y \\(d\\) la diferencia común.\n\n\n\n\nProgresiones\n\n\nTérmino geométrico\n\n\n\\[\na_n=ar^{\\,n-1}\n\\]\n\n\n\\(a\\) es el primer término y \\(r\\) la razón común.\n\n\n\n\nProgresiones\n\n\nSuma aritmética\n\n\n\\[\nS_n=\\frac{n}{2}(a+a_n)\n\\]\n\n\nSuma los primeros \\(n\\) términos de una progresión aritmética.\n\n\n\n\nProgresiones\n\n\nSuma aritmética con diferencia\n\n\n\\[\nS_n=\\frac{n}{2}\\,[2a+(n-1)d]\n\\]\n\n\nÚsala cuando conoces \\(a\\), \\(d\\) y el número de términos.\n\n\n\n\nProgresiones\n\n\nSuma geométrica finita\n\n\n\\[\nS_n=a\\,\\frac{1-r^n}{1-r},\\qquad r\\ne 1\n\\]\n\n\nCondición: \\(r\\ne 1\\). Válida para sumas finitas.\n\n\n\n\n\nSumatorias\n\n\n\nSumatorias\n\n\nNotación sigma\n\n\n\\[\n\\sum_{k=1}^{n} a_k=a_1+a_2+\\cdots+a_n\n\\]\n\n\nExpande una suma finita desde \\(k=1\\) hasta \\(k=n\\).\n\n\n\n\nSumatorias\n\n\nSuma parcial\n\n\n\\[\nS_n=\\sum_{k=1}^{n}a_k\n\\]\n\n\nAcumula los primeros \\(n\\) términos de una sucesión.\n\n\n\n\n\nPropiedades\n\n\n\nPropiedades\n\n\nLinealidad\n\n\n\\[\n\\sum_{k=1}^{n}(ca_k+b_k)\n=c\\sum_{k=1}^{n}a_k+\\sum_{k=1}^{n}b_k\n\\]\n\n\n\\(c\\) es constante; válida para sumas finitas.\n\n\n\n\nPropiedades\n\n\nSuma de una constante\n\n\n\\[\n\\sum_{k=1}^{n}c=nc\n\\]\n\n\n\\(c\\) no depende de \\(k\\). Si \\(c=1\\), la suma es \\(n\\).\n\n\n\n\n\nSumas especiales\n\n\n\nSumas especiales\n\n\nPrimeros enteros positivos\n\n\n\\[\n\\sum_{k=1}^{n}k=\\frac{n(n+1)}{2}\n\\]\n\n\nResume \\(1+2+3+\\cdots+n\\), con \\(n \\in \\mathbb{N}\\).\n\n\n\n\nSumas especiales\n\n\nSuma de cuadrados\n\n\n\\[\n\\sum_{k=1}^{n}k^2=\\frac{n(n+1)(2n+1)}{6}\n\\]\n\n\nÚtil cuando el término general de la suma es cuadrático.\n\n\n\n\nSumas especiales\n\n\nSuma de cubos\n\n\n\\[\n\\sum_{k=1}^{n}k^3=\\left[\\frac{n(n+1)}{2}\\right]^2\n\\]\n\n\nEquivale al cuadrado de la suma de los primeros enteros.\n\n\n\n\nLos primeros 50 números impares forman una sucesión aritmética con \\(a=1\\), \\(d=2\\) y \\(a_{50}=99\\). Por tanto,\n\\[\nS_{50}=\\frac{50}{2}(1+99)=2500.\n\\]\n\n\nLa suma geométrica\n\\[\n1+4+16+\\cdots+4096\n\\]\ntiene \\(a=1\\), \\(r=4\\) y \\(n=7\\), porque \\(4096=4^6\\). Así,\n\\[\nS_7=1\\cdot\\frac{1-4^7}{1-4}=5461.\n\\]"
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#visualización-términos-que-se-acercan-a-un-valor",
+    "href": "temas/sucesiones-sumatorias.html#visualización-términos-que-se-acercan-a-un-valor",
+    "title": "Sucesiones y sumatorias",
+    "section": "Visualización: términos que se acercan a un valor",
+    "text": "Visualización: términos que se acercan a un valor\nComo una sucesión solo está definida para posiciones naturales, su gráfica se representa con puntos aislados. Esto ayuda a observar si los términos se acercan a un valor o si cambian de manera alternada.\nConsideremos\n\\[\na_n=\\frac{n}{n+1}.\n\\]\n\n\n\n\n\n\n\\(n\\)\n\\(a_n\\)\nAproximación decimal\n\n\n\n\n1\n\\(\\frac12\\)\n0.500\n\n\n2\n\\(\\frac23\\)\n0.667\n\n\n3\n\\(\\frac34\\)\n0.750\n\n\n4\n\\(\\frac45\\)\n0.800\n\n\n5\n\\(\\frac56\\)\n0.833\n\n\n10\n\\(\\frac{10}{11}\\)\n0.909\n\n\n\nLos valores se aproximan progresivamente a \\(1\\), aunque ningún término de esta sucesión es exactamente \\(1\\)."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#errores-comunes",
+    "href": "temas/sucesiones-sumatorias.html#errores-comunes",
+    "title": "Sucesiones y sumatorias",
+    "section": "Errores comunes",
+    "text": "Errores comunes\n\nConfundir \\(a_n\\), que es un término individual, con \\(S_n\\), que es una suma parcial.\nTratar el índice de suma como si fuera el resultado de la sumatoria.\nOmitir el límite inferior o superior de una sumatoria.\nAplicar una fórmula sin revisar sus condiciones, por ejemplo usar la suma geométrica finita sin identificar bien \\(a\\), \\(r\\) y \\(n\\).\nCreer que algunos términos iniciales bastan para demostrar una regla general.\nOlvidar que en una suma como \\(\\sum_{k=3}^{7} a_k\\), el índice empieza en \\(3\\), no necesariamente en \\(1\\)."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#ideas-clave",
+    "href": "temas/sucesiones-sumatorias.html#ideas-clave",
+    "title": "Sucesiones y sumatorias",
+    "section": "Ideas clave",
+    "text": "Ideas clave\n\nUna sucesión es una lista ordenada de números y se escribe \\(a_1,a_2,a_3,\\dots\\).\nEl término general \\(a_n\\) describe el valor ubicado en la posición \\(n\\).\nUna regla recursiva necesita condiciones iniciales.\nLa notación sigma resume sumas finitas mediante un índice, límites y un término general.\nLas fórmulas de sumas aritméticas y geométricas ahorran trabajo cuando la estructura de la suma coincide con sus condiciones."
+  },
+  {
+    "objectID": "temas/sucesiones-sumatorias.html#referencias",
+    "href": "temas/sucesiones-sumatorias.html#referencias",
+    "title": "Sucesiones y sumatorias",
+    "section": "Referencias",
+    "text": "Referencias\n\nArchivo fuente entregado por el usuario: fragmento en PDF de Stewart, Watson y Redlin, Precálculo: matemáticas para el cálculo (2017), páginas sobre sucesiones, notación de sumatoria, sucesiones aritméticas y sucesiones geométricas."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Inicio",
+    "section": "",
+    "text": "Este sitio es un compendio de consulta rápida de Precálculo. Reúne definiciones, ideas centrales, ejemplos mínimos y advertencias frecuentes para apoyar el estudio autónomo y la preparación de ejercicios."
+  },
+  {
+    "objectID": "index.html#temas",
+    "href": "index.html#temas",
+    "title": "Inicio",
+    "section": "Temas",
+    "text": "Temas\n\n\n\nDisponible\n\n\nInducción matemática\nDemostraciones para proposiciones indexadas por números naturales.\n\n\n\n\nDisponible\n\n\nSucesiones y sumatorias\nLenguaje básico para describir listas ordenadas de términos y notación sigma.\n\n\n\n\nDisponible\n\n\nTeorema del Binomio\nDesarrollo de potencias de binomios mediante coeficientes binomiales y el triángulo de Pascal.\n\n\n\n\nDisponible\n\n\nTrigonometría\nMedición angular, razones trigonométricas, círculo unitario e identidades básicas."
   },
   {
     "objectID": "temas/induccion.html",
@@ -154,87 +273,66 @@
     "text": "Referencias\n\nStewart, J., Redlin, L., & Watson, S. (2017). Precálculo: Matemáticas para el cálculo (7.ª ed.; J. León Cárdenas, Trad.). Páginas 873 - 878."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Inicio",
+    "objectID": "temas/teorema-binomio.html",
+    "href": "temas/teorema-binomio.html",
+    "title": "Teorema del Binomio",
     "section": "",
-    "text": "Este sitio es un compendio de consulta rápida de Precálculo. Reúne definiciones, ideas centrales, ejemplos mínimos y advertencias frecuentes para apoyar el estudio autónomo y la preparación de ejercicios."
+    "text": "Comprender cómo desarrollar potencias de un binomio sin multiplicar todos los factores uno por uno, usando el triángulo de Pascal, los coeficientes binomiales y el término general del desarrollo."
   },
   {
-    "objectID": "index.html#temas",
-    "href": "index.html#temas",
-    "title": "Inicio",
-    "section": "Temas",
-    "text": "Temas\n\n\n\nDisponible\n\n\nInducción matemática\nDemostraciones para proposiciones indexadas por números naturales.\n\n\n\n\nDisponible\n\n\nSucesiones y sumatorias\nLenguaje básico para describir listas ordenadas de términos y notación sigma.\n\n\n\n\nDisponible\n\n\nTeorema del Binomio\nDesarrollo de potencias de binomios mediante coeficientes binomiales y el triángulo de Pascal."
-  },
-  {
-    "objectID": "temas/sucesiones-sumatorias.html",
-    "href": "temas/sucesiones-sumatorias.html",
-    "title": "Sucesiones y sumatorias",
+    "objectID": "temas/teorema-binomio.html#objetivo",
+    "href": "temas/teorema-binomio.html#objetivo",
+    "title": "Teorema del Binomio",
     "section": "",
-    "text": "Reconocer sucesiones como listas ordenadas de números, describirlas mediante términos generales o reglas recursivas, y usar la notación sigma para escribir y calcular sumas finitas de manera compacta."
+    "text": "Comprender cómo desarrollar potencias de un binomio sin multiplicar todos los factores uno por uno, usando el triángulo de Pascal, los coeficientes binomiales y el término general del desarrollo."
   },
   {
-    "objectID": "temas/sucesiones-sumatorias.html#objetivo",
-    "href": "temas/sucesiones-sumatorias.html#objetivo",
-    "title": "Sucesiones y sumatorias",
-    "section": "",
-    "text": "Reconocer sucesiones como listas ordenadas de números, describirlas mediante términos generales o reglas recursivas, y usar la notación sigma para escribir y calcular sumas finitas de manera compacta."
-  },
-  {
-    "objectID": "temas/sucesiones-sumatorias.html#idea-central",
-    "href": "temas/sucesiones-sumatorias.html#idea-central",
-    "title": "Sucesiones y sumatorias",
+    "objectID": "temas/teorema-binomio.html#idea-central",
+    "href": "temas/teorema-binomio.html#idea-central",
+    "title": "Teorema del Binomio",
     "section": "Idea central",
-    "text": "Idea central\nUna sucesión organiza números por posición: primero, segundo, tercero, y así sucesivamente. Una sumatoria agrega varios términos de una sucesión siguiendo límites definidos. Por eso conviene distinguir siempre entre el término individual \\(a_n\\) y una suma parcial \\(S_n\\).\n\n\n\n\n\n\nNotaLectura básica\n\n\n\nEn una sucesión se mira qué valor ocupa cada posición. En una sumatoria se acumulan varios valores de acuerdo con una regla y un rango de índices."
+    "text": "Idea central\nUn binomio es una expresión formada por la suma o resta de dos términos, como \\(a+b\\), \\(x-y\\) o \\(2x+3\\). El teorema del binomio resuelve el problema de expandir potencias como \\((a+b)^n\\) cuando \\(n\\) es un entero no negativo.\n\nEn el desarrollo de \\((a+b)^n\\) aparecen \\(n+1\\) términos. Las potencias de \\(a\\) bajan desde \\(n\\) hasta \\(0\\), las potencias de \\(b\\) suben desde \\(0\\) hasta \\(n\\), y los coeficientes se leen en el renglón \\(n\\) del triángulo de Pascal.\n\nLos primeros desarrollos muestran el patrón:\n\\[\n(a+b)^2=a^2+2ab+b^2\n\\]\n\\[\n(a+b)^3=a^3+3a^2b+3ab^2+b^3\n\\]\n\\[\n(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4\n\\]\nEn cada término, la suma de los exponentes de \\(a\\) y \\(b\\) es igual a la potencia original."
   },
   {
-    "objectID": "temas/sucesiones-sumatorias.html#sucesiones",
-    "href": "temas/sucesiones-sumatorias.html#sucesiones",
-    "title": "Sucesiones y sumatorias",
-    "section": "Sucesiones",
-    "text": "Sucesiones\nUna sucesión es una función cuyo dominio son los números naturales. En lugar de escribir \\(a(n)\\), normalmente se escribe \\(a_n\\), donde \\(n\\) indica la posición del término.\n\\[\na_1,\\ a_2,\\ a_3,\\ \\dots,\\ a_n,\\ \\dots\n\\]\nEl símbolo \\(a_n\\) se llama término general o término \\(n\\)-ésimo. Permite calcular el valor de la sucesión en la posición \\(n\\), cuando existe una regla explícita.\n\nSi \\(a_n=2n\\), entonces los primeros términos son\n\\[\na_1=2,\\quad a_2=4,\\quad a_3=6,\\quad a_4=8.\n\\]\nEl término en la posición 103 es \\(a_{103}=2(103)=206\\).\n\nUna sucesión puede presentarse de varias formas:\n\nPor sus primeros términos: \\(5,10,15,20,\\dots\\).\nPor una fórmula explícita: \\(a_n=5n\\).\nPor una regla recursiva: se entrega uno o más términos iniciales y una regla para obtener los siguientes.\n\n\nLa regla recursiva\n\\[\na_1=5,\\qquad a_n=a_{n-1}+5\\quad (n\\ge 2)\n\\]\nproduce la sucesión \\(5,10,15,20,\\dots\\). Para calcular \\(a_4\\), primero se necesitan los términos anteriores.\n\n\nVer algunos términos ayuda a proponer una regla, pero no basta para justificar que esa regla sea la única posible. Distintas sucesiones pueden compartir los mismos primeros términos."
+    "objectID": "temas/teorema-binomio.html#definición",
+    "href": "temas/teorema-binomio.html#definición",
+    "title": "Teorema del Binomio",
+    "section": "Definición",
+    "text": "Definición\nEl factorial de un entero no negativo \\(n\\) se escribe \\(n!\\) y representa el producto\n\\[\nn!=1\\cdot 2\\cdot 3\\cdots n,\n\\qquad 0!=1.\n\\]\nCon factoriales se define el coeficiente binomial:\n\\[\n\\binom{n}{r}=\\frac{n!}{r!(n-r)!},\n\\qquad 0\\le r\\le n.\n\\]\nEste número indica el coeficiente que acompaña al término con \\(a^{n-r}b^r\\) en el desarrollo de \\((a+b)^n\\).\n\n\n\nTeorema\n\n\nTeorema del binomio\n\n\n\\[\n(a+b)^n=\\sum_{r=0}^{n}\\binom{n}{r}a^{n-r}b^r\n\\]\n\n\nPermite escribir el desarrollo completo de una potencia de binomio.\n\n\n\n\nTérmino\n\n\nTérmino general\n\n\n\\[\nT_{r+1}=\\binom{n}{r}a^{n-r}b^r\n\\]\n\n\nEl índice de suma es \\(r\\). Como el primer término ocurre cuando \\(r=0\\), se nombra \\(T_{r+1}\\).\n\n\n\n\nPascal\n\n\nIdentidad clave\n\n\n\\[\n\\binom{k}{r-1}+\\binom{k}{r}=\\binom{k+1}{r}\n\\]\n\n\nCada entrada interior del triángulo se obtiene sumando las dos entradas superiores vecinas."
   },
   {
-    "objectID": "temas/sucesiones-sumatorias.html#sumatorias",
-    "href": "temas/sucesiones-sumatorias.html#sumatorias",
-    "title": "Sucesiones y sumatorias",
-    "section": "Sumatorias",
-    "text": "Sumatorias\nLa notación sigma permite escribir una suma finita sin repetir todos sus términos. En la expresión\n\\[\n\\sum_{k=1}^{n} a_k=a_1+a_2+a_3+\\cdots+a_n,\n\\]\nel símbolo \\(\\sum\\) indica que se deben sumar términos. La letra \\(k\\) es el índice de suma; el número inferior indica dónde empieza el índice y el número superior indica dónde termina. La expresión \\(a_k\\) es el término general que se evalúa para cada valor entero de \\(k\\) dentro de esos límites.\n\nAl expandir la suma\n\\[\n\\sum_{k=1}^{5} k^2\n\\]\nse obtiene\n\\[\n1^2+2^2+3^2+4^2+5^2=55.\n\\]\n\nLas sumas parciales se denotan usualmente por \\(S_n\\). Para una sucesión \\(a_1,a_2,a_3,\\dots\\), la suma parcial \\(n\\)-ésima es\n\\[\nS_n=a_1+a_2+a_3+\\cdots+a_n.\n\\]\n\nSi \\(a_n=\\dfrac{1}{2^n}\\), entonces\n\\[\nS_1=\\frac12,\\quad\nS_2=\\frac34,\\quad\nS_3=\\frac78,\\quad\nS_4=\\frac{15}{16}.\n\\]\nEn general,\n\\[\nS_n=1-\\frac{1}{2^n}.\n\\]"
+    "objectID": "temas/teorema-binomio.html#ejemplo-mínimo",
+    "href": "temas/teorema-binomio.html#ejemplo-mínimo",
+    "title": "Teorema del Binomio",
+    "section": "Ejemplo mínimo",
+    "text": "Ejemplo mínimo\n\nDesarrollemos \\((x+y)^4\\).\nEl renglón \\(4\\) del triángulo de Pascal es\n\\[\n1,\\ 4,\\ 6,\\ 4,\\ 1.\n\\]\nPor tanto,\n\\[\n(x+y)^4=x^4+4x^3y+6x^2y^2+4xy^3+y^4.\n\\]\n\n\nPara encontrar un término particular no hace falta expandir todo el binomio. Por ejemplo, busquemos el término con \\(x^3y^2\\) en \\((x+y)^5\\).\nEn el término general\n\\[\nT_{r+1}=\\binom{5}{r}x^{5-r}y^r,\n\\]\nqueremos que el exponente de \\(y\\) sea \\(2\\). Por tanto \\(r=2\\), y ese es el tercer término:\n\\[\nT_3=\\binom{5}{2}x^3y^2=10x^3y^2.\n\\]"
   },
   {
-    "objectID": "temas/sucesiones-sumatorias.html#fórmulas",
-    "href": "temas/sucesiones-sumatorias.html#fórmulas",
-    "title": "Sucesiones y sumatorias",
-    "section": "Fórmulas",
-    "text": "Fórmulas\n\nSucesiones\n\n\n\nSucesiones\n\n\nTérmino general\n\n\n\\[\na_n=a(n),\\qquad n \\in \\mathbb{N}\n\\]\n\n\nCalcula directamente el término en la posición \\(n\\).\n\n\n\n\nSucesiones\n\n\nRegla recursiva\n\n\n\\[\na_1\\ \\text{dado},\\qquad a_n=F(a_{n-1}),\\quad n\\ge 2\n\\]\n\n\nRequiere condición inicial; para llegar a \\(a_n\\) se calculan términos previos.\n\n\n\n\n\nProgresiones\n\n\n\nProgresiones\n\n\nTérmino aritmético\n\n\n\\[\na_n=a+(n-1)d\n\\]\n\n\n\\(a\\) es el primer término y \\(d\\) la diferencia común.\n\n\n\n\nProgresiones\n\n\nTérmino geométrico\n\n\n\\[\na_n=ar^{\\,n-1}\n\\]\n\n\n\\(a\\) es el primer término y \\(r\\) la razón común.\n\n\n\n\nProgresiones\n\n\nSuma aritmética\n\n\n\\[\nS_n=\\frac{n}{2}(a+a_n)\n\\]\n\n\nSuma los primeros \\(n\\) términos de una progresión aritmética.\n\n\n\n\nProgresiones\n\n\nSuma aritmética con diferencia\n\n\n\\[\nS_n=\\frac{n}{2}\\,[2a+(n-1)d]\n\\]\n\n\nÚsala cuando conoces \\(a\\), \\(d\\) y el número de términos.\n\n\n\n\nProgresiones\n\n\nSuma geométrica finita\n\n\n\\[\nS_n=a\\,\\frac{1-r^n}{1-r},\\qquad r\\ne 1\n\\]\n\n\nCondición: \\(r\\ne 1\\). Válida para sumas finitas.\n\n\n\n\n\nSumatorias\n\n\n\nSumatorias\n\n\nNotación sigma\n\n\n\\[\n\\sum_{k=1}^{n} a_k=a_1+a_2+\\cdots+a_n\n\\]\n\n\nExpande una suma finita desde \\(k=1\\) hasta \\(k=n\\).\n\n\n\n\nSumatorias\n\n\nSuma parcial\n\n\n\\[\nS_n=\\sum_{k=1}^{n}a_k\n\\]\n\n\nAcumula los primeros \\(n\\) términos de una sucesión.\n\n\n\n\n\nPropiedades\n\n\n\nPropiedades\n\n\nLinealidad\n\n\n\\[\n\\sum_{k=1}^{n}(ca_k+b_k)\n=c\\sum_{k=1}^{n}a_k+\\sum_{k=1}^{n}b_k\n\\]\n\n\n\\(c\\) es constante; válida para sumas finitas.\n\n\n\n\nPropiedades\n\n\nSuma de una constante\n\n\n\\[\n\\sum_{k=1}^{n}c=nc\n\\]\n\n\n\\(c\\) no depende de \\(k\\). Si \\(c=1\\), la suma es \\(n\\).\n\n\n\n\n\nSumas especiales\n\n\n\nSumas especiales\n\n\nPrimeros enteros positivos\n\n\n\\[\n\\sum_{k=1}^{n}k=\\frac{n(n+1)}{2}\n\\]\n\n\nResume \\(1+2+3+\\cdots+n\\), con \\(n \\in \\mathbb{N}\\).\n\n\n\n\nSumas especiales\n\n\nSuma de cuadrados\n\n\n\\[\n\\sum_{k=1}^{n}k^2=\\frac{n(n+1)(2n+1)}{6}\n\\]\n\n\nÚtil cuando el término general de la suma es cuadrático.\n\n\n\n\nSumas especiales\n\n\nSuma de cubos\n\n\n\\[\n\\sum_{k=1}^{n}k^3=\\left[\\frac{n(n+1)}{2}\\right]^2\n\\]\n\n\nEquivale al cuadrado de la suma de los primeros enteros.\n\n\n\n\nLos primeros 50 números impares forman una sucesión aritmética con \\(a=1\\), \\(d=2\\) y \\(a_{50}=99\\). Por tanto,\n\\[\nS_{50}=\\frac{50}{2}(1+99)=2500.\n\\]\n\n\nLa suma geométrica\n\\[\n1+4+16+\\cdots+4096\n\\]\ntiene \\(a=1\\), \\(r=4\\) y \\(n=7\\), porque \\(4096=4^6\\). Así,\n\\[\nS_7=1\\cdot\\frac{1-4^7}{1-4}=5461.\n\\]"
+    "objectID": "temas/teorema-binomio.html#visualización-o-simulación",
+    "href": "temas/teorema-binomio.html#visualización-o-simulación",
+    "title": "Teorema del Binomio",
+    "section": "Visualización o simulación",
+    "text": "Visualización o simulación\nEl siguiente interactivo muestra cómo el renglón elegido del triángulo de Pascal entrega los coeficientes del desarrollo de \\((a+b)^n\\)."
   },
   {
-    "objectID": "temas/sucesiones-sumatorias.html#visualización-términos-que-se-acercan-a-un-valor",
-    "href": "temas/sucesiones-sumatorias.html#visualización-términos-que-se-acercan-a-un-valor",
-    "title": "Sucesiones y sumatorias",
-    "section": "Visualización: términos que se acercan a un valor",
-    "text": "Visualización: términos que se acercan a un valor\nComo una sucesión solo está definida para posiciones naturales, su gráfica se representa con puntos aislados. Esto ayuda a observar si los términos se acercan a un valor o si cambian de manera alternada.\nConsideremos\n\\[\na_n=\\frac{n}{n+1}.\n\\]\n\n\n\n\n\n\n\\(n\\)\n\\(a_n\\)\nAproximación decimal\n\n\n\n\n1\n\\(\\frac12\\)\n0.500\n\n\n2\n\\(\\frac23\\)\n0.667\n\n\n3\n\\(\\frac34\\)\n0.750\n\n\n4\n\\(\\frac45\\)\n0.800\n\n\n5\n\\(\\frac56\\)\n0.833\n\n\n10\n\\(\\frac{10}{11}\\)\n0.909\n\n\n\nLos valores se aproximan progresivamente a \\(1\\), aunque ningún término de esta sucesión es exactamente \\(1\\)."
-  },
-  {
-    "objectID": "temas/sucesiones-sumatorias.html#errores-comunes",
-    "href": "temas/sucesiones-sumatorias.html#errores-comunes",
-    "title": "Sucesiones y sumatorias",
+    "objectID": "temas/teorema-binomio.html#errores-comunes",
+    "href": "temas/teorema-binomio.html#errores-comunes",
+    "title": "Teorema del Binomio",
     "section": "Errores comunes",
-    "text": "Errores comunes\n\nConfundir \\(a_n\\), que es un término individual, con \\(S_n\\), que es una suma parcial.\nTratar el índice de suma como si fuera el resultado de la sumatoria.\nOmitir el límite inferior o superior de una sumatoria.\nAplicar una fórmula sin revisar sus condiciones, por ejemplo usar la suma geométrica finita sin identificar bien \\(a\\), \\(r\\) y \\(n\\).\nCreer que algunos términos iniciales bastan para demostrar una regla general.\nOlvidar que en una suma como \\(\\sum_{k=3}^{7} a_k\\), el índice empieza en \\(3\\), no necesariamente en \\(1\\)."
+    "text": "Errores comunes\n\n\nUsar el renglón equivocado del triángulo de Pascal: para \\((a+b)^n\\) se usa el renglón \\(n\\), contando desde \\(0\\).\nOlvidar que el desarrollo tiene \\(n+1\\) términos, no \\(n\\) términos.\nMantener fijo un exponente: el exponente de \\(a\\) baja y el de \\(b\\) sube.\nConfundir el índice \\(r\\) con el número del término: cuando \\(r=0\\) se obtiene el primer término.\nAplicar la fórmula a una resta sin considerar el signo. Por ejemplo, \\((a-b)^n\\) se trata como \\((a+(-b))^n\\)."
   },
   {
-    "objectID": "temas/sucesiones-sumatorias.html#ideas-clave",
-    "href": "temas/sucesiones-sumatorias.html#ideas-clave",
-    "title": "Sucesiones y sumatorias",
+    "objectID": "temas/teorema-binomio.html#ideas-clave",
+    "href": "temas/teorema-binomio.html#ideas-clave",
+    "title": "Teorema del Binomio",
     "section": "Ideas clave",
-    "text": "Ideas clave\n\nUna sucesión es una lista ordenada de números y se escribe \\(a_1,a_2,a_3,\\dots\\).\nEl término general \\(a_n\\) describe el valor ubicado en la posición \\(n\\).\nUna regla recursiva necesita condiciones iniciales.\nLa notación sigma resume sumas finitas mediante un índice, límites y un término general.\nLas fórmulas de sumas aritméticas y geométricas ahorran trabajo cuando la estructura de la suma coincide con sus condiciones."
+    "text": "Ideas clave\n\n\nUn binomio tiene dos términos algebraicos.\nEl teorema del binomio permite desarrollar \\((a+b)^n\\) de manera directa.\nLos coeficientes del desarrollo son coeficientes binomiales.\nEl triángulo de Pascal organiza esos coeficientes por renglones.\nEl término general permite encontrar un término específico sin escribir el desarrollo completo."
   },
   {
-    "objectID": "temas/sucesiones-sumatorias.html#referencias",
-    "href": "temas/sucesiones-sumatorias.html#referencias",
-    "title": "Sucesiones y sumatorias",
+    "objectID": "temas/teorema-binomio.html#referencias",
+    "href": "temas/teorema-binomio.html#referencias",
+    "title": "Teorema del Binomio",
     "section": "Referencias",
-    "text": "Referencias\n\nArchivo fuente entregado por el usuario: fragmento en PDF de Stewart, Watson y Redlin, Precálculo: matemáticas para el cálculo (2017), páginas sobre sucesiones, notación de sumatoria, sucesiones aritméticas y sucesiones geométricas."
+    "text": "Referencias\n\nStewart, James; Redlin, Lothar; Watson, Saleem. Precálculo: Matemáticas para el cálculo. Cengage Learning, 2017. Sección 12.6: “El teorema del binomio”."
   }
 ]

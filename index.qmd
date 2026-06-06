@@ -31,4 +31,12 @@ Lenguaje básico para describir listas ordenadas de términos y notación sigma.
 
 Desarrollo de potencias de binomios mediante coeficientes binomiales y el triángulo de Pascal.
 :::
+
+::: {.topic-card .is-available}
+<p class="topic-status">Disponible</p>
+
+### [Trigonometría](temas/trigonometria.qmd)
+
+Medición angular, razones trigonométricas, círculo unitario e identidades básicas.
+:::
 :::
