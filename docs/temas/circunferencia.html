@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Método de demostración para proposiciones definidas sobre los números naturales">
+<meta name="description" content="Centro, radio y ecuaciones principales de la circunferencia en el plano cartesiano.">
 
-<title>Inducción matemática – Precálculo</title>
+<title>Circunferencia – Precálculo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -127,7 +127,7 @@ window.Quarto = {
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../temas/induccion.html" aria-current="page"> 
+    <a class="nav-link" href="../temas/induccion.html"> 
 <span class="menu-text">Inducción matemática</span></a>
   </li>  
   <li class="nav-item">
@@ -147,9 +147,9 @@ window.Quarto = {
 <span class="menu-text">Rectas</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../temas/circunferencia.html">
+    <a class="nav-link active" href="../temas/circunferencia.html" aria-current="page"> 
 <span class="menu-text">Circunferencia</span></a>
-  </li>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -168,18 +168,14 @@ window.Quarto = {
   <ul>
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#idea-central" id="toc-idea-central" class="nav-link" data-scroll-target="#idea-central">Idea central</a></li>
-  <li><a href="#principio-de-inducción-matemática" id="toc-principio-de-inducción-matemática" class="nav-link" data-scroll-target="#principio-de-inducción-matemática">Principio de inducción matemática</a></li>
-  <li><a href="#estructura-de-una-demostración-por-inducción" id="toc-estructura-de-una-demostración-por-inducción" class="nav-link" data-scroll-target="#estructura-de-una-demostración-por-inducción">Estructura de una demostración por inducción</a></li>
-  <li><a href="#visualización-la-cadena-inductiva" id="toc-visualización-la-cadena-inductiva" class="nav-link" data-scroll-target="#visualización-la-cadena-inductiva">Visualización: la cadena inductiva</a></li>
-  <li><a href="#ejemplo-1-suma-de-los-primeros-números-impares" id="toc-ejemplo-1-suma-de-los-primeros-números-impares" class="nav-link" data-scroll-target="#ejemplo-1-suma-de-los-primeros-números-impares">Ejemplo 1: suma de los primeros números impares</a></li>
-  <li><a href="#ejemplo-2-suma-de-los-primeros-números-naturales" id="toc-ejemplo-2-suma-de-los-primeros-números-naturales" class="nav-link" data-scroll-target="#ejemplo-2-suma-de-los-primeros-números-naturales">Ejemplo 2: suma de los primeros números naturales</a></li>
-  <li><a href="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" id="toc-ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" class="nav-link" data-scroll-target="#ejemplo-3-una-desigualdad-desde-cierto-valor-inicial">Ejemplo 3: una desigualdad desde cierto valor inicial</a></li>
+  <li><a href="#definición" id="toc-definición" class="nav-link" data-scroll-target="#definición">Definición</a></li>
+  <li><a href="#ecuación-canónica" id="toc-ecuación-canónica" class="nav-link" data-scroll-target="#ecuación-canónica">Ecuación canónica</a></li>
+  <li><a href="#forma-general-y-completar-cuadrados" id="toc-forma-general-y-completar-cuadrados" class="nav-link" data-scroll-target="#forma-general-y-completar-cuadrados">Forma general y completar cuadrados</a></li>
+  <li><a href="#circunferencia-tangente-a-una-recta" id="toc-circunferencia-tangente-a-una-recta" class="nav-link" data-scroll-target="#circunferencia-tangente-a-una-recta">Circunferencia tangente a una recta</a></li>
+  <li><a href="#ejemplo-mínimo" id="toc-ejemplo-mínimo" class="nav-link" data-scroll-target="#ejemplo-mínimo">Ejemplo mínimo</a></li>
+  <li><a href="#visualización-interactiva" id="toc-visualización-interactiva" class="nav-link" data-scroll-target="#visualización-interactiva">Visualización interactiva</a></li>
   <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
-  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
-  <ul class="collapse">
-  <li><a href="#ejercicios-con-solución" id="toc-ejercicios-con-solución" class="nav-link" data-scroll-target="#ejercicios-con-solución">Ejercicios con solución</a></li>
-  <li><a href="#ejercicios-propuestos" id="toc-ejercicios-propuestos" class="nav-link" data-scroll-target="#ejercicios-propuestos">Ejercicios propuestos</a></li>
-  </ul></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
   <li><a href="#ideas-clave" id="toc-ideas-clave" class="nav-link" data-scroll-target="#ideas-clave">Ideas clave</a></li>
   <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
@@ -190,12 +186,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Inducción matemática</h1>
+<h1 class="title">Circunferencia</h1>
 </div>
 
 <div>
   <div class="description">
-    Método de demostración para proposiciones definidas sobre los números naturales
+    Centro, radio y ecuaciones principales de la circunferencia en el plano cartesiano.
   </div>
 </div>
 
@@ -215,415 +211,137 @@ window.Quarto = {
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
 <div class="concept-box">
-<p>Comprender la inducción matemática como una técnica para demostrar afirmaciones que dependen de un número natural <span class="math inline">\(n\)</span>. La meta es reconocer sus partes, escribirlas con claridad y aplicarlas en fórmulas, divisibilidad y desigualdades.</p>
+<p>Reconocer la circunferencia como lugar geométrico, identificar centro y radio, y distinguir sus ecuaciones principales en el plano cartesiano.</p>
 </div>
 </section>
 <section id="idea-central" class="level2">
 <h2 class="anchored" data-anchor-id="idea-central">Idea central</h2>
-<p>Verificar muchos casos particulares puede sugerir una regularidad, pero no demuestra una afirmación general. Aunque una propiedad funcione para <span class="math inline">\(n=1,2,3,\ldots,1000\)</span>, todavía podría fallar después.</p>
+<p>Una circunferencia reúne todos los puntos del plano que están a una misma distancia de un punto fijo.</p>
 <div class="concept-box">
-<p>En inducción trabajamos con una proposición <span class="math inline">\(P(n)\)</span>, es decir, un enunciado matemático que depende de <span class="math inline">\(n\)</span>. Por ejemplo:</p>
+<p>Si el centro es <span class="math inline">\(C(h,k)\)</span> y el radio es <span class="math inline">\(r&gt;0\)</span>, un punto <span class="math inline">\(P(x,y)\)</span> pertenece a la circunferencia cuando</p>
 <p><span class="math display">\[
-P(n):\quad 1+3+5+\cdots+(2n-1)=n^2.
-\]</span></p>
-<p>La idea es verificar el primer caso y demostrar que cada caso verdadero garantiza el siguiente. Así se justifica toda la cadena.</p>
-</div>
-</section>
-<section id="principio-de-inducción-matemática" class="level2">
-<h2 class="anchored" data-anchor-id="principio-de-inducción-matemática">Principio de inducción matemática</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Principio de inducción matemática">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Principio de inducción matemática
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Sea <span class="math inline">\(P(n)\)</span> una proposición definida para los números naturales.</p>
-<p>Si se cumplen estas dos condiciones:</p>
-<ol type="1">
-<li><span class="math inline">\(P(1)\)</span> es verdadera.</li>
-<li>Para todo <span class="math inline">\(n \in \mathbb{N}\)</span>, si <span class="math inline">\(P(n)\)</span> es verdadera, entonces <span class="math inline">\(P(n+1)\)</span> es verdadera.</li>
-</ol>
-<p>Entonces <span class="math inline">\(P(n)\)</span> es verdadera para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</div>
-</div>
-<div class="warning-box">
-<p>El caso base no siempre empieza en <span class="math inline">\(1\)</span>. Si la afirmación solo se plantea para <span class="math inline">\(n \geq 5\)</span>, se prueba primero <span class="math inline">\(P(5)\)</span> y luego se demuestra que <span class="math inline">\(P(n) \Rightarrow P(n+1)\)</span> para todo <span class="math inline">\(n \geq 5\)</span>.</p>
-</div>
-</section>
-<section id="estructura-de-una-demostración-por-inducción" class="level2">
-<h2 class="anchored" data-anchor-id="estructura-de-una-demostración-por-inducción">Estructura de una demostración por inducción</h2>
-<div class="method-box step-list">
-<ol type="1">
-<li><strong>Definir <span class="math inline">\(P(n)\)</span>:</strong> escribir con precisión qué se desea demostrar.</li>
-<li><strong>Caso base:</strong> verificar el primer valor, por ejemplo <span class="math inline">\(n=1\)</span> o <span class="math inline">\(n=5\)</span>.</li>
-<li><strong>Hipótesis inductiva:</strong> suponer que <span class="math inline">\(P(n)\)</span> es verdadera para un <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
-<li><strong>Paso inductivo:</strong> usar esa hipótesis para demostrar <span class="math inline">\(P(n+1)\)</span>.</li>
-<li><strong>Conclusión:</strong> declarar que, por inducción, <span class="math inline">\(P(n)\)</span> es verdadera en todo el dominio indicado.</li>
-</ol>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Idea importante">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Idea importante
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>En el paso inductivo no se demuestra directamente que <span class="math inline">\(P(n)\)</span> sea verdadera. Se demuestra la implicación:</p>
-<p><span class="math display">\[
-P(n) \Rightarrow P(n+1).
+d(P,C)=r.
 \]</span></p>
 </div>
+</section>
+<section id="definición" class="level2">
+<h2 class="anchored" data-anchor-id="definición">Definición</h2>
+<div class="concept-box">
+<p>La circunferencia de centro <span class="math inline">\(C(h,k)\)</span> y radio <span class="math inline">\(r\)</span> es el conjunto de puntos <span class="math inline">\(P(x,y)\)</span> que cumplen</p>
+<p><span class="math display">\[
+\sqrt{(x-h)^2+(y-k)^2}=r.
+\]</span></p>
 </div>
 </section>
-<section id="visualización-la-cadena-inductiva" class="level2">
-<h2 class="anchored" data-anchor-id="visualización-la-cadena-inductiva">Visualización: la cadena inductiva</h2>
-<div class="induction-chain" data-induction-chain="">
-<div class="induction-chain__principles">
-<div class="induction-chain__principle">
-<p><strong>Caso base</strong></p>
-<p>P(1) inicia la cadena.</p>
+<section id="ecuación-canónica" class="level2">
+<h2 class="anchored" data-anchor-id="ecuación-canónica">Ecuación canónica</h2>
+<div class="formula-grid">
+<div class="formula-card">
+<div class="formula-tag">
+Canónica
 </div>
-<div class="induction-chain__principle">
-<p><strong>Paso inductivo</strong></p>
-<p>Si P(n) es verdadera, entonces P(n+1) también lo es.</p>
+<div class="formula-title">
+Centro y radio
 </div>
+<div class="formula-expression">
+<p><span class="math display">\[
+(x-h)^2+(y-k)^2=r^2
+\]</span></p>
 </div>
-<div class="induction-chain__steps" role="list" aria-label="Cadena de proposiciones desde P(1) hasta P(8)">
-<div class="induction-chain__step is-base" data-chain-step="" role="listitem">
-<p><span class="induction-chain__symbol">P(1)</span> <small>base</small></p>
-</div>
-<div class="induction-chain__step" data-chain-step="" role="listitem">
-<p><span class="induction-chain__symbol">P(2)</span> <small>siguiente</small></p>
-</div>
-<div class="induction-chain__step" data-chain-step="" role="listitem">
-<p><span class="induction-chain__symbol">P(3)</span> <small>siguiente</small></p>
-</div>
-<div class="induction-chain__step" data-chain-step="" role="listitem">
-<p><span class="induction-chain__symbol">P(4)</span> <small>siguiente</small></p>
-</div>
-<div class="induction-chain__step" data-chain-step="" role="listitem">
-<p><span class="induction-chain__symbol">P(5)</span> <small>siguiente</small></p>
-</div>
-<div class="induction-chain__step" data-chain-step="" role="listitem">
-<p><span class="induction-chain__symbol">P(6)</span> <small>siguiente</small></p>
-</div>
-<div class="induction-chain__step" data-chain-step="" role="listitem">
-<p><span class="induction-chain__symbol">P(7)</span> <small>siguiente</small></p>
-</div>
-<div class="induction-chain__step" data-chain-step="" role="listitem">
-<p><span class="induction-chain__symbol">P(8)</span> <small>siguiente</small></p>
+<div class="formula-note">
+<p>El centro es <span class="math inline">\(C(h,k)\)</span> y el radio es <span class="math inline">\(r\)</span>.</p>
 </div>
 </div>
-<div class="induction-chain__controls">
-<button class="btn btn-primary induction-chain__button" type="button" data-chain-start="">
-Activar cadena inductiva
-</button>
-<p class="induction-chain__status" data-chain-status="" aria-live="polite">
-Primero se verifica P(1). Luego el paso inductivo permite avanzar.
-</p>
+<div class="formula-card">
+<div class="formula-tag">
+Origen
+</div>
+<div class="formula-title">
+Centro en <span class="math inline">\((0,0)\)</span>
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+x^2+y^2=r^2
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Caso particular de la ecuación canónica.</p>
 </div>
 </div>
-<script src="../scripts/induccion-cadena.js" defer=""></script>
+</div>
 </section>
-<section id="ejemplo-1-suma-de-los-primeros-números-impares" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo-1-suma-de-los-primeros-números-impares">Ejemplo 1: suma de los primeros números impares</h2>
+<section id="forma-general-y-completar-cuadrados" class="level2">
+<h2 class="anchored" data-anchor-id="forma-general-y-completar-cuadrados">Forma general y completar cuadrados</h2>
+<div class="method-box">
+<p>La forma general se trabajará completando cuadrados para recuperar centro y radio:</p>
+<p><span class="math display">\[
+x^2+y^2+Dx+Ey+F=0.
+\]</span></p>
+<p>Esta sección queda preparada para desarrollar el procedimiento paso a paso.</p>
+</div>
+</section>
+<section id="circunferencia-tangente-a-una-recta" class="level2">
+<h2 class="anchored" data-anchor-id="circunferencia-tangente-a-una-recta">Circunferencia tangente a una recta</h2>
+<div class="concept-box">
+<p>Si una circunferencia es tangente a una recta, la distancia desde el centro a la recta coincide con el radio.</p>
+<p><span class="math display">\[
+d(C,L)=r.
+\]</span></p>
+</div>
+</section>
+<section id="ejemplo-mínimo" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-mínimo">Ejemplo mínimo</h2>
 <div class="example-box">
-<p>Demostremos que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
+<p>La circunferencia</p>
 <p><span class="math display">\[
-1+3+5+\cdots+(2n-1)=n^2.
+(x-2)^2+(y+1)^2=9
 \]</span></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad \sum_{i=1}^{n}(2i-1)=n^2.
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=1\)</span>:</p>
-<p><span class="math display">\[
-1=1^2.
-\]</span></p>
-<p>Luego <span class="math inline">\(P(1)\)</span> es verdadera.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que <span class="math inline">\(P(n)\)</span> es verdadera:</p>
-<p><span class="math display">\[
-1+3+5+\cdots+(2n-1)=n^2.
-\]</span></p>
-<p><strong>Paso inductivo.</strong> Queremos probar <span class="math inline">\(P(n+1)\)</span>:</p>
-<p><span class="math display">\[
-1+3+5+\cdots+(2n-1)+\bigl(2(n+1)-1\bigr)=(n+1)^2.
-\]</span></p>
-<p>Usamos la hipótesis inductiva:</p>
-<p><span class="math display">\[
-\begin{aligned}
-1+3+\cdots+(2n-1)+\bigl(2(n+1)-1\bigr)
-&amp;= n^2+(2n+1)\\
-&amp;= n^2+2n+1\\
-&amp;= (n+1)^2.
-\end{aligned}
-\]</span></p>
-<p><strong>Conclusión.</strong> Por inducción matemática,</p>
-<p><span class="math display">\[
-1+3+5+\cdots+(2n-1)=n^2
-\]</span></p>
-<p>para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>tiene centro <span class="math inline">\(C(2,-1)\)</span> y radio <span class="math inline">\(r=3\)</span>.</p>
 </div>
 </section>
-<section id="ejemplo-2-suma-de-los-primeros-números-naturales" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo-2-suma-de-los-primeros-números-naturales">Ejemplo 2: suma de los primeros números naturales</h2>
-<div class="example-box">
-<p>Demostremos que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-1+2+3+\cdots+n=\frac{n(n+1)}{2}.
-\]</span></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad \sum_{i=1}^{n} i=\frac{n(n+1)}{2}.
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=1\)</span>:</p>
-<p><span class="math display">\[
-1=\frac{1(1+1)}{2}=1.
-\]</span></p>
-<p>Luego <span class="math inline">\(P(1)\)</span> es verdadera.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que <span class="math inline">\(P(n)\)</span> es verdadera:</p>
-<p><span class="math display">\[
-1+2+3+\cdots+n=\frac{n(n+1)}{2}.
-\]</span></p>
-<p><strong>Paso inductivo.</strong> Debemos demostrar <span class="math inline">\(P(n+1)\)</span>:</p>
-<p><span class="math display">\[
-1+2+\cdots+n+(n+1)=\frac{(n+1)(n+2)}{2}.
-\]</span></p>
-<p>Usando la hipótesis inductiva:</p>
-<p><span class="math display">\[
-\begin{aligned}
-1+2+\cdots+n+(n+1)
-&amp;= \frac{n(n+1)}{2}+(n+1)\\
-&amp;= (n+1)\left(\frac{n}{2}+1\right)\\
-&amp;= (n+1)\left(\frac{n+2}{2}\right)\\
-&amp;= \frac{(n+1)(n+2)}{2}.
-\end{aligned}
-\]</span></p>
-<p><strong>Conclusión.</strong> Por inducción,</p>
-<p><span class="math display">\[
-1+2+3+\cdots+n=\frac{n(n+1)}{2}
-\]</span></p>
-<p>para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</div>
-</section>
-<section id="ejemplo-3-una-desigualdad-desde-cierto-valor-inicial" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo-3-una-desigualdad-desde-cierto-valor-inicial">Ejemplo 3: una desigualdad desde cierto valor inicial</h2>
-<div class="example-box">
-<p>Demostremos que</p>
-<p><span class="math display">\[
-4n&lt;2^n
-\]</span></p>
-<p>para todo <span class="math inline">\(n \geq 5\)</span>.</p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad 4n&lt;2^n.
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=5\)</span>:</p>
-<p><span class="math display">\[
-4\cdot 5=20&lt;32=2^5.
-\]</span></p>
-<p>Luego <span class="math inline">\(P(5)\)</span> es verdadera.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que <span class="math inline">\(P(n)\)</span> es verdadera para algún <span class="math inline">\(n\geq 5\)</span>:</p>
-<p><span class="math display">\[
-4n&lt;2^n.
-\]</span></p>
-<p><strong>Paso inductivo.</strong> Queremos demostrar <span class="math inline">\(P(n+1)\)</span>:</p>
-<p><span class="math display">\[
-4(n+1)&lt;2^{n+1}.
-\]</span></p>
-<p>Como <span class="math inline">\(n\geq 5\)</span>, se tiene <span class="math inline">\(4&lt;4n\)</span>. Además, por la hipótesis inductiva, <span class="math inline">\(4n&lt;2^n\)</span>. Por lo tanto, <span class="math inline">\(4&lt;2^n\)</span>. Entonces:</p>
-<p><span class="math display">\[
-\begin{aligned}
-4(n+1)
-&amp;=4n+4\\
-&amp;&lt;2^n+4\\
-&amp;&lt;2^n+2^n\\
-&amp;=2\cdot 2^n\\
-&amp;=2^{n+1}.
-\end{aligned}
-\]</span></p>
-<p><strong>Conclusión.</strong> Por inducción matemática,</p>
-<p><span class="math display">\[
-4n&lt;2^n
-\]</span></p>
-<p>para todo <span class="math inline">\(n\geq 5\)</span>.</p>
+<section id="visualización-interactiva" class="level2">
+<h2 class="anchored" data-anchor-id="visualización-interactiva">Visualización interactiva</h2>
+<div id="circunferencia-interactiva-app" class="sequence-sim">
+
 </div>
 </section>
 <section id="errores-comunes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
-<div class="callout callout-style-default callout-warning callout-titled" title="Antes de cerrar una inducción, revisa esto">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Advertencia</span>Antes de cerrar una inducción, revisa esto
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="warning-box">
 <ul>
-<li>Olvidar el caso base.</li>
-<li>Asumir directamente lo que se quiere demostrar.</li>
-<li>No usar la hipótesis inductiva en el paso inductivo.</li>
-<li>Confundir <span class="math inline">\(P(n)\)</span> con <span class="math inline">\(P(n+1)\)</span>.</li>
-<li>No revisar desde qué valor inicial comienza la afirmación.</li>
+<li>Confundir el radio <span class="math inline">\(r\)</span> con <span class="math inline">\(r^2\)</span> en la ecuación canónica.</li>
+<li>Cambiar los signos del centro al leer <span class="math inline">\((x-h)^2+(y-k)^2\)</span>.</li>
+<li>Completar cuadrados sin agrupar primero los términos en <span class="math inline">\(x\)</span> y en <span class="math inline">\(y\)</span>.</li>
 </ul>
-</div>
 </div>
 </section>
 <section id="ejercicios" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
-<section id="ejercicios-con-solución" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicios-con-solución">Ejercicios con solución</h3>
-<section id="ejercicio-1" class="level4 exercise-box">
-<h4 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h4>
-<p>Demuestra por inducción que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-2+4+6+\cdots+2n=n(n+1).
-\]</span></p>
-<p><strong>Solución.</strong></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad \sum_{i=1}^{n}2i=n(n+1).
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=1\)</span>, <span class="math inline">\(2=1(1+1)=2\)</span>.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que</p>
-<p><span class="math display">\[
-2+4+\cdots+2n=n(n+1).
-\]</span></p>
-<p><strong>Paso inductivo.</strong></p>
-<p><span class="math display">\[
-\begin{aligned}
-2+4+\cdots+2n+2(n+1)
-&amp;=n(n+1)+2(n+1)\\
-&amp;=(n+1)(n+2).
-\end{aligned}
-\]</span></p>
-<p>Esto es <span class="math inline">\(P(n+1)\)</span>, pues</p>
-<p><span class="math display">\[
-(n+1)\bigl((n+1)+1\bigr)=(n+1)(n+2).
-\]</span></p>
-<p>Por inducción, la fórmula es válida para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</section>
-<section id="ejercicio-2" class="level4 exercise-box">
-<h4 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h4>
-<p>Demuestra que <span class="math inline">\(5^n-1\)</span> es divisible por <span class="math inline">\(4\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-<p><strong>Solución.</strong></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad 4 \mid (5^n-1).
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=1\)</span>, <span class="math inline">\(5^1-1=4\)</span>, que es divisible por <span class="math inline">\(4\)</span>.</p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que <span class="math inline">\(4 \mid (5^n-1)\)</span>. Entonces existe un entero <span class="math inline">\(m\)</span> tal que</p>
-<p><span class="math display">\[
-5^n-1=4m.
-\]</span></p>
-<p><strong>Paso inductivo.</strong></p>
-<p><span class="math display">\[
-\begin{aligned}
-5^{n+1}-1
-&amp;=5\cdot 5^n-1\\
-&amp;=5(5^n-1)+4\\
-&amp;=5(4m)+4\\
-&amp;=4(5m+1).
-\end{aligned}
-\]</span></p>
-<p>Por lo tanto, <span class="math inline">\(4 \mid (5^{n+1}-1)\)</span>. Por inducción, <span class="math inline">\(5^n-1\)</span> es divisible por <span class="math inline">\(4\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</section>
-<section id="ejercicio-3" class="level4 exercise-box">
-<h4 class="anchored" data-anchor-id="ejercicio-3">Ejercicio 3</h4>
-<p>Demuestra que, para todo <span class="math inline">\(n\geq 4\)</span>,</p>
-<p><span class="math display">\[
-n^2\leq 2^n.
-\]</span></p>
-<p><strong>Solución.</strong></p>
-<p>Sea</p>
-<p><span class="math display">\[
-P(n):\quad n^2\leq 2^n,\qquad n\geq 4.
-\]</span></p>
-<p><strong>Caso base.</strong> Para <span class="math inline">\(n=4\)</span>:</p>
-<p><span class="math display">\[
-4^2=16=2^4.
-\]</span></p>
-<p><strong>Hipótesis inductiva.</strong> Supongamos que, para algún <span class="math inline">\(n\geq 4\)</span>,</p>
-<p><span class="math display">\[
-n^2\leq 2^n.
-\]</span></p>
-<p><strong>Paso inductivo.</strong> Queremos probar que <span class="math inline">\((n+1)^2\leq 2^{n+1}\)</span>. Como <span class="math inline">\(n\geq 4\)</span>, se cumple <span class="math inline">\((n+1)^2\leq 2n^2\)</span>, pues esta desigualdad equivale a <span class="math inline">\(n^2-2n-1\geq 0\)</span>.</p>
-<p><span class="math display">\[
-(n+1)^2\leq 2n^2.
-\]</span></p>
-<p>Usando la hipótesis inductiva:</p>
-<p><span class="math display">\[
-(n+1)^2\leq 2n^2\leq 2\cdot 2^n=2^{n+1}.
-\]</span></p>
-<p>Por inducción, <span class="math inline">\(n^2\leq 2^n\)</span> para todo <span class="math inline">\(n\geq 4\)</span>.</p>
-</section>
-</section>
-<section id="ejercicios-propuestos" class="level3">
-<h3 class="anchored" data-anchor-id="ejercicios-propuestos">Ejercicios propuestos</h3>
-<section id="ejercicio-4" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-4">Ejercicio 4</h4>
-<p>Demuestra que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-2+5+8+\cdots+(3n-1)=\frac{n(3n+1)}{2}.
-\]</span></p>
-</section>
-<section id="ejercicio-5" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-5">Ejercicio 5</h4>
-<p>Demuestra que <span class="math inline">\(7^n-1\)</span> es divisible por <span class="math inline">\(6\)</span> para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</section>
-<section id="ejercicio-6" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-6">Ejercicio 6</h4>
-<p>Demuestra que, para todo <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
-<p><span class="math display">\[
-1^2+2^2+3^2+\cdots+n^2=\frac{n(n+1)(2n+1)}{6}.
-\]</span></p>
-</section>
-<section id="ejercicio-7" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-7">Ejercicio 7</h4>
-<p>Demuestra que, para todo <span class="math inline">\(n\geq 4\)</span>,</p>
-<p><span class="math display">\[
-3n+1\leq 2^n.
-\]</span></p>
-</section>
-<section id="ejercicio-8" class="level4 proposed-box">
-<h4 class="anchored" data-anchor-id="ejercicio-8">Ejercicio 8</h4>
-<p>Sea la sucesión definida por <span class="math inline">\(a_1=2\)</span> y</p>
-<p><span class="math display">\[
-a_{n+1}=2a_n+1.
-\]</span></p>
-<p>Demuestra que</p>
-<p><span class="math display">\[
-a_n=3\cdot 2^{n-1}-1
-\]</span></p>
-<p>para todo <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</section>
-</section>
+<div class="proposed-box">
+<ol type="1">
+<li>Identifica el centro y el radio de <span class="math inline">\((x+3)^2+(y-4)^2=25\)</span>.</li>
+<li>Escribe la ecuación de la circunferencia con centro <span class="math inline">\(C(-2,1)\)</span> y radio <span class="math inline">\(5\)</span>.</li>
+<li>Prepara la forma general <span class="math inline">\(x^2+y^2-6x+4y-12=0\)</span> para completar cuadrados.</li>
+</ol>
+</div>
 </section>
 <section id="ideas-clave" class="level2">
 <h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
 <div class="concept-box">
 <ul>
-<li>La inducción sirve para demostrar proposiciones <span class="math inline">\(P(n)\)</span> sobre números naturales.</li>
-<li>El caso base inicia la cadena de implicaciones.</li>
-<li>La hipótesis inductiva es una suposición temporal: se usa para probar el siguiente caso.</li>
-<li>El paso inductivo debe demostrar <span class="math inline">\(P(n+1)\)</span>, no repetir <span class="math inline">\(P(n)\)</span>.</li>
-<li>Si la afirmación comienza en <span class="math inline">\(n\geq a\)</span>, el caso base debe ser <span class="math inline">\(P(a)\)</span>.</li>
+<li>La circunferencia se define por distancia fija a un centro.</li>
+<li>La ecuación canónica muestra directamente centro y radio.</li>
+<li>Completar cuadrados permite pasar de forma general a forma canónica.</li>
+<li>La tangencia a una recta se relaciona con la distancia punto-recta.</li>
 </ul>
 </div>
 </section>
 <section id="referencias" class="level2">
 <h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
 <ul>
-<li>Stewart, J., Redlin, L., &amp; Watson, S. (2017). Precálculo: Matemáticas para el cálculo (7.ª ed.; J. León Cárdenas, Trad.). Páginas 873 - 878.</li>
+<li>Taller 7, Álgebra y Geometría (MATE-10), 5 de junio de 2026.</li>
+<li>Ayudantía 13, Álgebra y Geometría (MATE10), 9 de junio de 2026.</li>
+<li>Stewart, J., Redlin, L., &amp; Watson, S. <em>Precálculo: Matemáticas para el cálculo</em>, 7.ª ed., sección 1.9.</li>
 </ul>
 
 

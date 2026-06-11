@@ -47,4 +47,12 @@ Medición angular, razones trigonométricas, círculo unitario e identidades bá
 
 Pendiente, razón de cambio y formas principales de la ecuación de una recta.
 :::
+
+::: {.topic-card .is-available}
+<p class="topic-status">Disponible</p>
+
+### [Circunferencia](temas/circunferencia.qmd)
+
+Centro, radio y ecuaciones principales de la circunferencia en el plano cartesiano.
+:::
 :::

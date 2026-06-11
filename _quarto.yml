@@ -32,6 +32,8 @@ website:
         href: temas/trigonometria.qmd
       - text: "Rectas"
         href: temas/funciones-lineales-recta.qmd
+      - text: "Circunferencia"
+        href: temas/circunferencia.qmd
   page-footer:
     left: "Precálculo"
     right: "Sitio académico generado con Quarto"

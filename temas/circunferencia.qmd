@@ -1,0 +1,137 @@
+---
+title: "Circunferencia"
+description: "Centro, radio y ecuaciones principales de la circunferencia en el plano cartesiano."
+---
+
+## Objetivo
+
+::: {.concept-box}
+Reconocer la circunferencia como lugar geométrico, identificar centro y radio, y distinguir sus ecuaciones principales en el plano cartesiano.
+:::
+
+## Idea central
+
+Una circunferencia reúne todos los puntos del plano que están a una misma distancia de un punto fijo.
+
+::: {.concept-box}
+Si el centro es $C(h,k)$ y el radio es $r>0$, un punto $P(x,y)$ pertenece a la circunferencia cuando
+
+$$
+d(P,C)=r.
+$$
+:::
+
+## Definición
+
+::: {.concept-box}
+La circunferencia de centro $C(h,k)$ y radio $r$ es el conjunto de puntos $P(x,y)$ que cumplen
+
+$$
+\sqrt{(x-h)^2+(y-k)^2}=r.
+$$
+:::
+
+## Ecuación canónica
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Canónica</div>
+<div class="formula-title">Centro y radio</div>
+<div class="formula-expression">
+
+$$
+(x-h)^2+(y-k)^2=r^2
+$$
+
+</div>
+<div class="formula-note">
+El centro es $C(h,k)$ y el radio es $r$.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Origen</div>
+<div class="formula-title">Centro en $(0,0)$</div>
+<div class="formula-expression">
+
+$$
+x^2+y^2=r^2
+$$
+
+</div>
+<div class="formula-note">
+Caso particular de la ecuación canónica.
+</div>
+:::
+
+:::
+
+## Forma general y completar cuadrados
+
+::: {.method-box}
+La forma general se trabajará completando cuadrados para recuperar centro y radio:
+
+$$
+x^2+y^2+Dx+Ey+F=0.
+$$
+
+Esta sección queda preparada para desarrollar el procedimiento paso a paso.
+:::
+
+## Circunferencia tangente a una recta
+
+::: {.concept-box}
+Si una circunferencia es tangente a una recta, la distancia desde el centro a la recta coincide con el radio.
+
+$$
+d(C,L)=r.
+$$
+:::
+
+## Ejemplo mínimo
+
+::: {.example-box}
+La circunferencia
+
+$$
+(x-2)^2+(y+1)^2=9
+$$
+
+tiene centro $C(2,-1)$ y radio $r=3$.
+:::
+
+## Visualización interactiva
+
+<div id="circunferencia-interactiva-app" class="sequence-sim"></div>
+
+## Errores comunes
+
+::: {.warning-box}
+- Confundir el radio $r$ con $r^2$ en la ecuación canónica.
+- Cambiar los signos del centro al leer $(x-h)^2+(y-k)^2$.
+- Completar cuadrados sin agrupar primero los términos en $x$ y en $y$.
+:::
+
+## Ejercicios
+
+::: {.proposed-box}
+1. Identifica el centro y el radio de $(x+3)^2+(y-4)^2=25$.
+2. Escribe la ecuación de la circunferencia con centro $C(-2,1)$ y radio $5$.
+3. Prepara la forma general $x^2+y^2-6x+4y-12=0$ para completar cuadrados.
+:::
+
+## Ideas clave
+
+::: {.concept-box}
+- La circunferencia se define por distancia fija a un centro.
+- La ecuación canónica muestra directamente centro y radio.
+- Completar cuadrados permite pasar de forma general a forma canónica.
+- La tangencia a una recta se relaciona con la distancia punto-recta.
+:::
+
+## Referencias
+
+- Taller 7, Álgebra y Geometría (MATE-10), 5 de junio de 2026.
+- Ayudantía 13, Álgebra y Geometría (MATE10), 9 de junio de 2026.
+- Stewart, J., Redlin, L., & Watson, S. *Precálculo: Matemáticas para el cálculo*, 7.ª ed., sección 1.9.

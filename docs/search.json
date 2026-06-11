@@ -270,7 +270,98 @@
     "href": "index.html#temas",
     "title": "Inicio",
     "section": "Temas",
-    "text": "Temas\n\n\n\nDisponible\n\n\nInducción matemática\nDemostraciones para proposiciones indexadas por números naturales.\n\n\n\n\nDisponible\n\n\nSucesiones y sumatorias\nLenguaje básico para describir listas ordenadas de términos y notación sigma.\n\n\n\n\nDisponible\n\n\nTeorema del Binomio\nDesarrollo de potencias de binomios mediante coeficientes binomiales y el triángulo de Pascal.\n\n\n\n\nDisponible\n\n\nTrigonometría\nMedición angular, razones trigonométricas, círculo unitario e identidades básicas.\n\n\n\n\nDisponible\n\n\nFunciones lineales y ecuación de la recta\nPendiente, razón de cambio y formas principales de la ecuación de una recta."
+    "text": "Temas\n\n\n\nDisponible\n\n\nInducción matemática\nDemostraciones para proposiciones indexadas por números naturales.\n\n\n\n\nDisponible\n\n\nSucesiones y sumatorias\nLenguaje básico para describir listas ordenadas de términos y notación sigma.\n\n\n\n\nDisponible\n\n\nTeorema del Binomio\nDesarrollo de potencias de binomios mediante coeficientes binomiales y el triángulo de Pascal.\n\n\n\n\nDisponible\n\n\nTrigonometría\nMedición angular, razones trigonométricas, círculo unitario e identidades básicas.\n\n\n\n\nDisponible\n\n\nFunciones lineales y ecuación de la recta\nPendiente, razón de cambio y formas principales de la ecuación de una recta.\n\n\n\n\nDisponible\n\n\nCircunferencia\nCentro, radio y ecuaciones principales de la circunferencia en el plano cartesiano."
+  },
+  {
+    "objectID": "temas/circunferencia.html",
+    "href": "temas/circunferencia.html",
+    "title": "Circunferencia",
+    "section": "",
+    "text": "Reconocer la circunferencia como lugar geométrico, identificar centro y radio, y distinguir sus ecuaciones principales en el plano cartesiano."
+  },
+  {
+    "objectID": "temas/circunferencia.html#objetivo",
+    "href": "temas/circunferencia.html#objetivo",
+    "title": "Circunferencia",
+    "section": "",
+    "text": "Reconocer la circunferencia como lugar geométrico, identificar centro y radio, y distinguir sus ecuaciones principales en el plano cartesiano."
+  },
+  {
+    "objectID": "temas/circunferencia.html#idea-central",
+    "href": "temas/circunferencia.html#idea-central",
+    "title": "Circunferencia",
+    "section": "Idea central",
+    "text": "Idea central\nUna circunferencia reúne todos los puntos del plano que están a una misma distancia de un punto fijo.\n\nSi el centro es \\(C(h,k)\\) y el radio es \\(r&gt;0\\), un punto \\(P(x,y)\\) pertenece a la circunferencia cuando\n\\[\nd(P,C)=r.\n\\]"
+  },
+  {
+    "objectID": "temas/circunferencia.html#definición",
+    "href": "temas/circunferencia.html#definición",
+    "title": "Circunferencia",
+    "section": "Definición",
+    "text": "Definición\n\nLa circunferencia de centro \\(C(h,k)\\) y radio \\(r\\) es el conjunto de puntos \\(P(x,y)\\) que cumplen\n\\[\n\\sqrt{(x-h)^2+(y-k)^2}=r.\n\\]"
+  },
+  {
+    "objectID": "temas/circunferencia.html#ecuación-canónica",
+    "href": "temas/circunferencia.html#ecuación-canónica",
+    "title": "Circunferencia",
+    "section": "Ecuación canónica",
+    "text": "Ecuación canónica\n\n\n\nCanónica\n\n\nCentro y radio\n\n\n\\[\n(x-h)^2+(y-k)^2=r^2\n\\]\n\n\nEl centro es \\(C(h,k)\\) y el radio es \\(r\\).\n\n\n\n\nOrigen\n\n\nCentro en \\((0,0)\\)\n\n\n\\[\nx^2+y^2=r^2\n\\]\n\n\nCaso particular de la ecuación canónica."
+  },
+  {
+    "objectID": "temas/circunferencia.html#forma-general-y-completar-cuadrados",
+    "href": "temas/circunferencia.html#forma-general-y-completar-cuadrados",
+    "title": "Circunferencia",
+    "section": "Forma general y completar cuadrados",
+    "text": "Forma general y completar cuadrados\n\nLa forma general se trabajará completando cuadrados para recuperar centro y radio:\n\\[\nx^2+y^2+Dx+Ey+F=0.\n\\]\nEsta sección queda preparada para desarrollar el procedimiento paso a paso."
+  },
+  {
+    "objectID": "temas/circunferencia.html#circunferencia-tangente-a-una-recta",
+    "href": "temas/circunferencia.html#circunferencia-tangente-a-una-recta",
+    "title": "Circunferencia",
+    "section": "Circunferencia tangente a una recta",
+    "text": "Circunferencia tangente a una recta\n\nSi una circunferencia es tangente a una recta, la distancia desde el centro a la recta coincide con el radio.\n\\[\nd(C,L)=r.\n\\]"
+  },
+  {
+    "objectID": "temas/circunferencia.html#ejemplo-mínimo",
+    "href": "temas/circunferencia.html#ejemplo-mínimo",
+    "title": "Circunferencia",
+    "section": "Ejemplo mínimo",
+    "text": "Ejemplo mínimo\n\nLa circunferencia\n\\[\n(x-2)^2+(y+1)^2=9\n\\]\ntiene centro \\(C(2,-1)\\) y radio \\(r=3\\)."
+  },
+  {
+    "objectID": "temas/circunferencia.html#visualización-interactiva",
+    "href": "temas/circunferencia.html#visualización-interactiva",
+    "title": "Circunferencia",
+    "section": "Visualización interactiva",
+    "text": "Visualización interactiva"
+  },
+  {
+    "objectID": "temas/circunferencia.html#errores-comunes",
+    "href": "temas/circunferencia.html#errores-comunes",
+    "title": "Circunferencia",
+    "section": "Errores comunes",
+    "text": "Errores comunes\n\n\nConfundir el radio \\(r\\) con \\(r^2\\) en la ecuación canónica.\nCambiar los signos del centro al leer \\((x-h)^2+(y-k)^2\\).\nCompletar cuadrados sin agrupar primero los términos en \\(x\\) y en \\(y\\)."
+  },
+  {
+    "objectID": "temas/circunferencia.html#ejercicios",
+    "href": "temas/circunferencia.html#ejercicios",
+    "title": "Circunferencia",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\n\nIdentifica el centro y el radio de \\((x+3)^2+(y-4)^2=25\\).\nEscribe la ecuación de la circunferencia con centro \\(C(-2,1)\\) y radio \\(5\\).\nPrepara la forma general \\(x^2+y^2-6x+4y-12=0\\) para completar cuadrados."
+  },
+  {
+    "objectID": "temas/circunferencia.html#ideas-clave",
+    "href": "temas/circunferencia.html#ideas-clave",
+    "title": "Circunferencia",
+    "section": "Ideas clave",
+    "text": "Ideas clave\n\n\nLa circunferencia se define por distancia fija a un centro.\nLa ecuación canónica muestra directamente centro y radio.\nCompletar cuadrados permite pasar de forma general a forma canónica.\nLa tangencia a una recta se relaciona con la distancia punto-recta."
+  },
+  {
+    "objectID": "temas/circunferencia.html#referencias",
+    "href": "temas/circunferencia.html#referencias",
+    "title": "Circunferencia",
+    "section": "Referencias",
+    "text": "Referencias\n\nTaller 7, Álgebra y Geometría (MATE-10), 5 de junio de 2026.\nAyudantía 13, Álgebra y Geometría (MATE10), 9 de junio de 2026.\nStewart, J., Redlin, L., & Watson, S. Precálculo: Matemáticas para el cálculo, 7.ª ed., sección 1.9."
   },
   {
     "objectID": "temas/induccion.html",
