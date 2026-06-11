@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles/custom.css">
 </head>
@@ -186,50 +215,275 @@ ul.task-list li input[type="checkbox"] {
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
 <div class="concept-box">
-<p>Reconocer una parábola, identificar sus elementos principales y escribir su ecuación en formas útiles.</p>
+<p>Reconocer una parábola, identificar sus elementos principales y escribir su ecuación a partir de información algebraica o geométrica.</p>
 </div>
 </section>
 <section id="idea-central" class="level2">
 <h2 class="anchored" data-anchor-id="idea-central">Idea central</h2>
-<p>Una parábola puede estudiarse como función cuadrática o como lugar geométrico definido por foco y directriz.</p>
+<p>Una parábola puede entenderse de dos maneras complementarias:</p>
+<ol type="1">
+<li>como la gráfica de una función cuadrática;</li>
+<li>como el conjunto de puntos que están a la misma distancia de un foco y una directriz.</li>
+</ol>
+<div class="concept-box">
+<p>La forma cuadrática ayuda a estudiar vértices, máximos y mínimos. La forma geométrica ayuda a entender foco, directriz y orientación.</p>
+</div>
 </section>
 <section id="parábola-como-función-cuadrática" class="level2">
 <h2 class="anchored" data-anchor-id="parábola-como-función-cuadrática">Parábola como función cuadrática</h2>
-<p>Contenido breve que se completará en la etapa 8.</p>
+<p>Una función cuadrática tiene la forma</p>
+<p><span class="math display">\[
+y=ax^2+bx+c,
+\qquad a\neq 0.
+\]</span></p>
+<p>Su gráfica es una parábola.</p>
+<p>También puede escribirse en forma de vértice:</p>
+<p><span class="math display">\[
+y=a(x-h)^2+k.
+\]</span></p>
+<p>En esta forma:</p>
+<ul>
+<li><span class="math inline">\((h,k)\)</span> es el vértice;</li>
+<li><span class="math inline">\(x=h\)</span> es el eje de simetría;</li>
+<li>si <span class="math inline">\(a&gt;0\)</span>, la parábola abre hacia arriba;</li>
+<li>si <span class="math inline">\(a&lt;0\)</span>, abre hacia abajo.</li>
+</ul>
+<div class="formula-card">
+<p><span class="formula-tag">Vértice</span></p>
+<div class="formula-title">
+Forma de vértice
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+y=a(x-h)^2+k
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Permite leer directamente el vértice <span class="math inline">\((h,k)\)</span>.</p>
+</div>
+</div>
+<p>Si la parábola está en forma general <span class="math inline">\(y=ax^2+bx+c\)</span>, se puede calcular la coordenada <span class="math inline">\(x\)</span> del vértice con</p>
+<p><span class="math display">\[
+h=-\frac{b}{2a},
+\]</span></p>
+<p>y luego</p>
+<p><span class="math display">\[
+k=f(h).
+\]</span></p>
 </section>
 <section id="parábola-como-lugar-geométrico" class="level2">
 <h2 class="anchored" data-anchor-id="parábola-como-lugar-geométrico">Parábola como lugar geométrico</h2>
-<p>Contenido breve que se completará en la etapa 8.</p>
+<p>Una parábola es el conjunto de puntos del plano que están a la misma distancia de:</p>
+<ul>
+<li>un punto fijo llamado <strong>foco</strong>;</li>
+<li>una recta fija llamada <strong>directriz</strong>.</li>
+</ul>
+<p>El vértice está a mitad de camino entre el foco y la directriz.</p>
 </section>
 <section id="formas-canónicas" class="level2">
 <h2 class="anchored" data-anchor-id="formas-canónicas">Formas canónicas</h2>
-<p>Contenido breve que se completará en la etapa 8.</p>
+<p>Siguiendo la notación de las guías, sea <span class="math inline">\(c&gt;0\)</span> la distancia del vértice al foco.</p>
+<div class="formula-grid">
+<div class="formula-card">
+<p><span class="formula-tag">Derecha</span></p>
+<div class="formula-title">
+Abre hacia la derecha
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+(y-k)^2=4c(x-h)
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Foco <span class="math inline">\((h+c,k)\)</span>, directriz <span class="math inline">\(x=h-c\)</span>.</p>
+</div>
+</div>
+<div class="formula-card">
+<p><span class="formula-tag">Izquierda</span></p>
+<div class="formula-title">
+Abre hacia la izquierda
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+(y-k)^2=-4c(x-h)
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Foco <span class="math inline">\((h-c,k)\)</span>, directriz <span class="math inline">\(x=h+c\)</span>.</p>
+</div>
+</div>
+<div class="formula-card">
+<p><span class="formula-tag">Arriba</span></p>
+<div class="formula-title">
+Abre hacia arriba
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+(x-h)^2=4c(y-k)
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Foco <span class="math inline">\((h,k+c)\)</span>, directriz <span class="math inline">\(y=k-c\)</span>.</p>
+</div>
+</div>
+<div class="formula-card">
+<p><span class="formula-tag">Abajo</span></p>
+<div class="formula-title">
+Abre hacia abajo
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+(x-h)^2=-4c(y-k)
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Foco <span class="math inline">\((h,k-c)\)</span>, directriz <span class="math inline">\(y=k+c\)</span>.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="vértice-foco-y-directriz" class="level2">
 <h2 class="anchored" data-anchor-id="vértice-foco-y-directriz">Vértice, foco y directriz</h2>
-<p>Contenido breve que se completará en la etapa 8.</p>
+<p>Para usar estas formas conviene identificar primero:</p>
+<ol type="1">
+<li>el vértice <span class="math inline">\((h,k)\)</span>;</li>
+<li>la orientación;</li>
+<li>el valor de <span class="math inline">\(c\)</span>;</li>
+<li>el foco;</li>
+<li>la directriz.</li>
+</ol>
+<div class="method-box">
+<p>Si la ecuación viene como función cuadrática, completar cuadrados permite encontrar el vértice y pasar a una forma más interpretable.</p>
+</div>
 </section>
 <section id="ejemplo-mínimo" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo-mínimo">Ejemplo mínimo</h2>
-<p>Contenido breve que se completará en la etapa 8.</p>
+<p>Determinar el vértice de</p>
+<p><span class="math display">\[
+y=x^2-10x+22
+\]</span></p>
+<p>y luego hallar la recta que pasa por <span class="math inline">\(A(2,3)\)</span> y por ese vértice.</p>
+<p>Completamos cuadrados:</p>
+<p><span class="math display">\[
+y-22=x^2-10x.
+\]</span></p>
+<p>Sumamos <span class="math inline">\(25\)</span> a ambos lados:</p>
+<p><span class="math display">\[
+y-22+25=x^2-10x+25.
+\]</span></p>
+<p>Entonces:</p>
+<p><span class="math display">\[
+y+3=(x-5)^2.
+\]</span></p>
+<p>Por lo tanto, el vértice es</p>
+<p><span class="math display">\[
+V=(5,-3).
+\]</span></p>
+<p>Ahora buscamos la recta que pasa por <span class="math inline">\(A(2,3)\)</span> y <span class="math inline">\(V(5,-3)\)</span>. Su pendiente es</p>
+<p><span class="math display">\[
+m=\frac{-3-3}{5-2}=\frac{-6}{3}=-2.
+\]</span></p>
+<p>Usando punto-pendiente con <span class="math inline">\(V(5,-3)\)</span>:</p>
+<p><span class="math display">\[
+y+3=-2(x-5).
+\]</span></p>
+<p>Entonces:</p>
+<p><span class="math display">\[
+y=-2x+7.
+\]</span></p>
+<div class="example-box">
+<p>Completar cuadrados permite identificar el vértice. Luego se puede usar ese vértice como punto para construir una recta.</p>
+</div>
 </section>
 <section id="visualización-interactiva" class="level2">
 <h2 class="anchored" data-anchor-id="visualización-interactiva">Visualización interactiva</h2>
-<div id="parabola-interactiva-app" class="sequence-sim">
+<p>Modifica el vértice, la orientación y el valor de <span class="math inline">\(c\)</span> para observar cómo cambian foco, directriz y ecuación.</p>
+<div id="parabola-interactiva-app">
 
 </div>
 </section>
 <section id="errores-comunes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
-<p>Contenido breve que se completará en la etapa 8.</p>
+<div class="warning-box">
+<p><strong>Confundir el parámetro <span class="math inline">\(a\)</span> con la distancia <span class="math inline">\(c\)</span>.</strong> En <span class="math inline">\(y=a(x-h)^2+k\)</span>, <span class="math inline">\(a\)</span> controla apertura. En las formas con foco y directriz, <span class="math inline">\(c\)</span> es distancia del vértice al foco.</p>
+</div>
+<div class="warning-box">
+<p><strong>Leer mal el vértice.</strong> En <span class="math inline">\(y=(x-5)^2-3\)</span>, el vértice es <span class="math inline">\((5,-3)\)</span>, no <span class="math inline">\((-5,-3)\)</span>.</p>
+</div>
+<div class="warning-box">
+<p><strong>Confundir orientación.</strong> Si el cuadrado está en <span class="math inline">\(x\)</span>, la parábola es vertical. Si el cuadrado está en <span class="math inline">\(y\)</span>, la parábola es horizontal.</p>
+</div>
+<div class="warning-box">
+<p><strong>Olvidar el signo en la ecuación canónica.</strong> El signo indica si abre hacia arriba, abajo, derecha o izquierda.</p>
+</div>
 </section>
 <section id="ejercicios" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
-<p>Contenido breve que se completará en la etapa 8.</p>
+<div class="exercise-box">
+<p><strong>Resuelto.</strong> Suponga que</p>
+<p><span class="math display">\[
+y=-x^2+14x-45
+\]</span></p>
+<p>representa la utilidad al vender <span class="math inline">\(x\)</span> cajas.</p>
+<p>Completamos cuadrados:</p>
+<p><span class="math display">\[
+y+45=-(x^2-14x).
+\]</span></p>
+<p><span class="math display">\[
+y+45-49=-(x^2-14x+49).
+\]</span></p>
+<p><span class="math display">\[
+y-4=-(x-7)^2.
+\]</span></p>
+<p>Por lo tanto, el vértice es</p>
+<p><span class="math display">\[
+V=(7,4).
+\]</span></p>
+<p>Como la parábola abre hacia abajo, la utilidad máxima es</p>
+<p><span class="math display">\[
+4
+\]</span></p>
+<p>y ocurre cuando</p>
+<p><span class="math display">\[
+x=7.
+\]</span></p>
+<p>Para encontrar cuándo la utilidad es cero:</p>
+<p><span class="math display">\[
+-x^2+14x-45=0.
+\]</span></p>
+<p><span class="math display">\[
+x^2-14x+45=0.
+\]</span></p>
+<p><span class="math display">\[
+(x-9)(x-5)=0.
+\]</span></p>
+<p>Entonces la utilidad es cero cuando</p>
+<p><span class="math display">\[
+x=5 \quad \text{o} \quad x=9.
+\]</span></p>
+</div>
+<div class="proposed-box">
+<p><strong>Propuestos.</strong></p>
+<ol type="1">
+<li>Encuentra el vértice de <span class="math inline">\(y=2(x-4)^2-1\)</span>.</li>
+<li>Encuentra el vértice de <span class="math inline">\(y=x^2-6x+5\)</span> completando cuadrados.</li>
+<li>Para <span class="math inline">\((x-2)^2=12(y+1)\)</span>, identifica vértice, foco, directriz y orientación.</li>
+<li>Para <span class="math inline">\((y+1)^2=-8(x-3)\)</span>, identifica vértice, foco, directriz y orientación.</li>
+<li>Hallar la ecuación de una parábola cuyo foco es <span class="math inline">\(P(3,-1)\)</span>, cuya directriz es vertical y cuyo vértice se encuentra sobre <span class="math inline">\(7x+3y-4=0\)</span>. Usa la tabla de orientación como guía.</li>
+</ol>
+</div>
 </section>
 <section id="ideas-clave" class="level2">
 <h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
-<p>Contenido breve que se completará en la etapa 8.</p>
+<div class="concept-box">
+<ul>
+<li>Una parábola puede describirse algebraica o geométricamente.</li>
+<li>La forma <span class="math inline">\(y=a(x-h)^2+k\)</span> muestra el vértice.</li>
+<li>Completar cuadrados permite pasar de forma general a forma de vértice.</li>
+<li>En las formas canónicas con <span class="math inline">\(c&gt;0\)</span>, <span class="math inline">\(c\)</span> mide la distancia del vértice al foco.</li>
+<li>El foco y la directriz determinan la orientación de la parábola.</li>
+</ul>
+</div>
 </section>
 <section id="referencias" class="level2">
 <h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
@@ -239,6 +493,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Taller 7, Álgebra y Geometría (MATE-10), 5 de junio de 2026.</li>
 <li>Stewart, J., Redlin, L., &amp; Watson, S. <em>Precálculo: Matemáticas para el cálculo</em>, 7.ª ed., secciones 3.1 y 11.1.</li>
 </ul>
+<script src="../scripts/parabola-interactiva.js" defer=""></script>
 
 
 </section>

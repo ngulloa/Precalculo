@@ -6,48 +6,340 @@ description: "Vértice, foco, directriz y formas principales de la parábola."
 ## Objetivo
 
 ::: {.concept-box}
-Reconocer una parábola, identificar sus elementos principales y escribir su ecuación en formas útiles.
+Reconocer una parábola, identificar sus elementos principales y escribir su ecuación a partir de información algebraica o geométrica.
 :::
 
 ## Idea central
 
-Una parábola puede estudiarse como función cuadrática o como lugar geométrico definido por foco y directriz.
+Una parábola puede entenderse de dos maneras complementarias:
+
+1. como la gráfica de una función cuadrática;
+2. como el conjunto de puntos que están a la misma distancia de un foco y una directriz.
+
+::: {.concept-box}
+La forma cuadrática ayuda a estudiar vértices, máximos y mínimos. La forma geométrica ayuda a entender foco, directriz y orientación.
+:::
 
 ## Parábola como función cuadrática
 
-Contenido breve que se completará en la etapa 8.
+Una función cuadrática tiene la forma
+
+$$
+y=ax^2+bx+c,
+\qquad a\neq 0.
+$$
+
+Su gráfica es una parábola.
+
+También puede escribirse en forma de vértice:
+
+$$
+y=a(x-h)^2+k.
+$$
+
+En esta forma:
+
+- $(h,k)$ es el vértice;
+- $x=h$ es el eje de simetría;
+- si $a>0$, la parábola abre hacia arriba;
+- si $a<0$, abre hacia abajo.
+
+::: {.formula-card}
+<span class="formula-tag">Vértice</span>
+
+<div class="formula-title">Forma de vértice</div>
+
+<div class="formula-expression">
+
+$$
+y=a(x-h)^2+k
+$$
+
+</div>
+
+<div class="formula-note">
+Permite leer directamente el vértice $(h,k)$.
+</div>
+:::
+
+Si la parábola está en forma general $y=ax^2+bx+c$, se puede calcular la coordenada $x$ del vértice con
+
+$$
+h=-\frac{b}{2a},
+$$
+
+y luego
+
+$$
+k=f(h).
+$$
 
 ## Parábola como lugar geométrico
 
-Contenido breve que se completará en la etapa 8.
+Una parábola es el conjunto de puntos del plano que están a la misma distancia de:
+
+- un punto fijo llamado **foco**;
+- una recta fija llamada **directriz**.
+
+El vértice está a mitad de camino entre el foco y la directriz.
 
 ## Formas canónicas
 
-Contenido breve que se completará en la etapa 8.
+Siguiendo la notación de las guías, sea $c>0$ la distancia del vértice al foco.
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<span class="formula-tag">Derecha</span>
+
+<div class="formula-title">Abre hacia la derecha</div>
+
+<div class="formula-expression">
+
+$$
+(y-k)^2=4c(x-h)
+$$
+
+</div>
+
+<div class="formula-note">
+Foco $(h+c,k)$, directriz $x=h-c$.
+</div>
+:::
+
+::: {.formula-card}
+<span class="formula-tag">Izquierda</span>
+
+<div class="formula-title">Abre hacia la izquierda</div>
+
+<div class="formula-expression">
+
+$$
+(y-k)^2=-4c(x-h)
+$$
+
+</div>
+
+<div class="formula-note">
+Foco $(h-c,k)$, directriz $x=h+c$.
+</div>
+:::
+
+::: {.formula-card}
+<span class="formula-tag">Arriba</span>
+
+<div class="formula-title">Abre hacia arriba</div>
+
+<div class="formula-expression">
+
+$$
+(x-h)^2=4c(y-k)
+$$
+
+</div>
+
+<div class="formula-note">
+Foco $(h,k+c)$, directriz $y=k-c$.
+</div>
+:::
+
+::: {.formula-card}
+<span class="formula-tag">Abajo</span>
+
+<div class="formula-title">Abre hacia abajo</div>
+
+<div class="formula-expression">
+
+$$
+(x-h)^2=-4c(y-k)
+$$
+
+</div>
+
+<div class="formula-note">
+Foco $(h,k-c)$, directriz $y=k+c$.
+</div>
+:::
+
+:::
 
 ## Vértice, foco y directriz
 
-Contenido breve que se completará en la etapa 8.
+Para usar estas formas conviene identificar primero:
+
+1. el vértice $(h,k)$;
+2. la orientación;
+3. el valor de $c$;
+4. el foco;
+5. la directriz.
+
+::: {.method-box}
+Si la ecuación viene como función cuadrática, completar cuadrados permite encontrar el vértice y pasar a una forma más interpretable.
+:::
 
 ## Ejemplo mínimo
 
-Contenido breve que se completará en la etapa 8.
+Determinar el vértice de
+
+$$
+y=x^2-10x+22
+$$
+
+y luego hallar la recta que pasa por $A(2,3)$ y por ese vértice.
+
+Completamos cuadrados:
+
+$$
+y-22=x^2-10x.
+$$
+
+Sumamos $25$ a ambos lados:
+
+$$
+y-22+25=x^2-10x+25.
+$$
+
+Entonces:
+
+$$
+y+3=(x-5)^2.
+$$
+
+Por lo tanto, el vértice es
+
+$$
+V=(5,-3).
+$$
+
+Ahora buscamos la recta que pasa por $A(2,3)$ y $V(5,-3)$. Su pendiente es
+
+$$
+m=\frac{-3-3}{5-2}=\frac{-6}{3}=-2.
+$$
+
+Usando punto-pendiente con $V(5,-3)$:
+
+$$
+y+3=-2(x-5).
+$$
+
+Entonces:
+
+$$
+y=-2x+7.
+$$
+
+::: {.example-box}
+Completar cuadrados permite identificar el vértice. Luego se puede usar ese vértice como punto para construir una recta.
+:::
 
 ## Visualización interactiva
 
-<div id="parabola-interactiva-app" class="sequence-sim"></div>
+Modifica el vértice, la orientación y el valor de $c$ para observar cómo cambian foco, directriz y ecuación.
+
+<div id="parabola-interactiva-app"></div>
 
 ## Errores comunes
 
-Contenido breve que se completará en la etapa 8.
+::: {.warning-box}
+**Confundir el parámetro $a$ con la distancia $c$.** En $y=a(x-h)^2+k$, $a$ controla apertura. En las formas con foco y directriz, $c$ es distancia del vértice al foco.
+:::
+
+::: {.warning-box}
+**Leer mal el vértice.** En $y=(x-5)^2-3$, el vértice es $(5,-3)$, no $(-5,-3)$.
+:::
+
+::: {.warning-box}
+**Confundir orientación.** Si el cuadrado está en $x$, la parábola es vertical. Si el cuadrado está en $y$, la parábola es horizontal.
+:::
+
+::: {.warning-box}
+**Olvidar el signo en la ecuación canónica.** El signo indica si abre hacia arriba, abajo, derecha o izquierda.
+:::
 
 ## Ejercicios
 
-Contenido breve que se completará en la etapa 8.
+::: {.exercise-box}
+**Resuelto.** Suponga que
+
+$$
+y=-x^2+14x-45
+$$
+
+representa la utilidad al vender $x$ cajas.
+
+Completamos cuadrados:
+
+$$
+y+45=-(x^2-14x).
+$$
+
+$$
+y+45-49=-(x^2-14x+49).
+$$
+
+$$
+y-4=-(x-7)^2.
+$$
+
+Por lo tanto, el vértice es
+
+$$
+V=(7,4).
+$$
+
+Como la parábola abre hacia abajo, la utilidad máxima es
+
+$$
+4
+$$
+
+y ocurre cuando
+
+$$
+x=7.
+$$
+
+Para encontrar cuándo la utilidad es cero:
+
+$$
+-x^2+14x-45=0.
+$$
+
+$$
+x^2-14x+45=0.
+$$
+
+$$
+(x-9)(x-5)=0.
+$$
+
+Entonces la utilidad es cero cuando
+
+$$
+x=5 \quad \text{o} \quad x=9.
+$$
+:::
+
+::: {.proposed-box}
+**Propuestos.**
+
+1. Encuentra el vértice de $y=2(x-4)^2-1$.
+2. Encuentra el vértice de $y=x^2-6x+5$ completando cuadrados.
+3. Para $(x-2)^2=12(y+1)$, identifica vértice, foco, directriz y orientación.
+4. Para $(y+1)^2=-8(x-3)$, identifica vértice, foco, directriz y orientación.
+5. Hallar la ecuación de una parábola cuyo foco es $P(3,-1)$, cuya directriz es vertical y cuyo vértice se encuentra sobre $7x+3y-4=0$. Usa la tabla de orientación como guía.
+:::
 
 ## Ideas clave
 
-Contenido breve que se completará en la etapa 8.
+::: {.concept-box}
+- Una parábola puede describirse algebraica o geométricamente.
+- La forma $y=a(x-h)^2+k$ muestra el vértice.
+- Completar cuadrados permite pasar de forma general a forma de vértice.
+- En las formas canónicas con $c>0$, $c$ mide la distancia del vértice al foco.
+- El foco y la directriz determinan la orientación de la parábola.
+:::
 
 ## Referencias
 
@@ -55,3 +347,7 @@ Contenido breve que se completará en la etapa 8.
 - Ayudantía 13, Álgebra y Geometría (MATE10), 9 de junio de 2026.
 - Taller 7, Álgebra y Geometría (MATE-10), 5 de junio de 2026.
 - Stewart, J., Redlin, L., & Watson, S. *Precálculo: Matemáticas para el cálculo*, 7.ª ed., secciones 3.1 y 11.1.
+
+```{=html}
+<script src="../scripts/parabola-interactiva.js" defer></script>
+```

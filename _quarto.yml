@@ -14,6 +14,7 @@ project:
     - scripts/circulo-unitario.js
     - scripts/recta-interactiva.js
     - scripts/circunferencia-interactiva.js
+    - scripts/parabola-interactiva.js
 
 title: "Precálculo"
 
