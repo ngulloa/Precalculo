@@ -12,6 +12,7 @@ project:
     - scripts/sucesion-puntos.js
     - scripts/binomio-pascal.js
     - scripts/circulo-unitario.js
+    - scripts/recta-interactiva.js
 
 title: "Precálculo"
 

@@ -172,84 +172,84 @@
     "href": "temas/funciones-lineales-recta.html",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "",
-    "text": "Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de información gráfica, algebraica o numérica."
+    "text": "Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de datos gráficos, algebraicos o numéricos."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#objetivo",
     "href": "temas/funciones-lineales-recta.html#objetivo",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "",
-    "text": "Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de información gráfica, algebraica o numérica."
+    "text": "Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de datos gráficos, algebraicos o numéricos."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#idea-central",
     "href": "temas/funciones-lineales-recta.html#idea-central",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Idea central",
-    "text": "Idea central\nUna recta representa una relación con cambio constante. Ese cambio se mide mediante la pendiente y permite comparar cuánto varía \\(y\\) cuando cambia \\(x\\)."
+    "text": "Idea central\nUna función lineal describe una relación donde el cambio de \\(y\\) respecto de \\(x\\) es constante. Esa constancia se ve en la gráfica como una recta.\n\nLa pendiente mide cuánto cambia \\(y\\) cuando \\(x\\) aumenta una unidad. Por eso se interpreta como una razón de cambio."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#pendiente-y-razón-de-cambio",
     "href": "temas/funciones-lineales-recta.html#pendiente-y-razón-de-cambio",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Pendiente y razón de cambio",
-    "text": "Pendiente y razón de cambio\nLa pendiente resume la razón de cambio entre dos puntos de una recta. En la etapa siguiente se desarrollará su interpretación gráfica como subida sobre avance.\n\\[\nm=\\frac{y_2-y_1}{x_2-x_1}\n\\]"
+    "text": "Pendiente y razón de cambio\nSi una recta no vertical pasa por dos puntos\n\\[\nA(x_1,y_1), \\qquad B(x_2,y_2),\n\\]\nsu pendiente es\n\\[\nm=\\frac{y_2-y_1}{x_2-x_1}.\n\\]\n\nSi \\(m&gt;0\\), la recta sube de izquierda a derecha.\nSi \\(m&lt;0\\), la recta baja de izquierda a derecha.\nSi \\(m=0\\), la recta es horizontal.\nSi \\(x_2=x_1\\), la recta es vertical y la pendiente no está definida.\n\n\nLa pendiente no es la altura de la recta. Es una razón entre cambio vertical y cambio horizontal."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#formas-de-la-ecuación-de-la-recta",
     "href": "temas/funciones-lineales-recta.html#formas-de-la-ecuación-de-la-recta",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Formas de la ecuación de la recta",
-    "text": "Formas de la ecuación de la recta\nLas formas más usadas dependen de los datos disponibles: punto y pendiente, pendiente e intersección, o forma general.\n\n\n\nPunto-pendiente\n\n\nRecta por un punto\n\n\n\\[\ny-y_1=m(x-x_1)\n\\]\n\n\nSe usa cuando se conoce un punto de la recta y su pendiente.\n\n\n\n\nPendiente-intersección\n\n\nForma explícita\n\n\n\\[\ny=mx+b\n\\]\n\n\n\\(m\\) es la pendiente y \\(b\\) es la intersección con el eje \\(y\\).\n\n\n\n\nGeneral\n\n\nForma implícita\n\n\n\\[\nAx+By+C=0\n\\]\n\n\nEs útil para estudiar distancia de punto a recta y relaciones algebraicas."
+    "text": "Formas de la ecuación de la recta\n\n\n\nPunto-pendiente\n\n\nRecta con punto conocido\n\n\n\\[\ny-y_1=m(x-x_1)\n\\]\n\n\nÚtil cuando se conoce un punto y la pendiente.\n\n\n\n\nPendiente-intersección\n\n\nFunción lineal\n\n\n\\[\ny=mx+b\n\\]\n\n\n\\(m\\) es la pendiente y \\(b\\) es la intersección con el eje \\(y\\).\n\n\n\n\nGeneral\n\n\nForma general\n\n\n\\[\nAx+By+C=0\n\\]\n\n\nÚtil para distancia punto-recta y problemas algebraicos."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#rectas-paralelas-y-perpendiculares",
     "href": "temas/funciones-lineales-recta.html#rectas-paralelas-y-perpendiculares",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Rectas paralelas y perpendiculares",
-    "text": "Rectas paralelas y perpendiculares\nLas rectas paralelas tienen la misma pendiente. Las rectas perpendiculares, cuando sus pendientes están definidas, cumplen que el producto de pendientes es \\(-1\\).\n\\[\nm_1=m_2,\\qquad m_1m_2=-1\n\\]"
+    "text": "Rectas paralelas y perpendiculares\nDos rectas no verticales son paralelas cuando tienen la misma pendiente:\n\\[\nm_1=m_2.\n\\]\nDos rectas no verticales son perpendiculares cuando el producto de sus pendientes es \\(-1\\):\n\\[\nm_1m_2=-1.\n\\]\n\nPara una recta dada en forma general \\(Ax+By+C=0\\), si \\(B\\neq 0\\), se puede despejar \\(y\\) para leer la pendiente."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#distancia-de-un-punto-a-una-recta",
     "href": "temas/funciones-lineales-recta.html#distancia-de-un-punto-a-una-recta",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Distancia de un punto a una recta",
-    "text": "Distancia de un punto a una recta\nPara una recta escrita como \\(Ax+By+C=0\\), la distancia desde el punto \\((x_0,y_0)\\) se calcula con:\n\\[\nd=\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}.\n\\]"
+    "text": "Distancia de un punto a una recta\nSi la recta está escrita como\n\\[\nL: Ax+By+C=0,\n\\]\nla distancia desde el punto \\(P(x_0,y_0)\\) a la recta es\n\\[\nd(P,L)=\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}.\n\\]\nEsta fórmula se usa cuando la recta está en forma general."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#ejemplo-mínimo",
     "href": "temas/funciones-lineales-recta.html#ejemplo-mínimo",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Ejemplo mínimo",
-    "text": "Ejemplo mínimo\n\nSi una recta pasa por \\((1,2)\\) y tiene pendiente \\(3\\), su forma punto-pendiente es\n\\[\ny-2=3(x-1).\n\\]\nEste ejemplo se completará en la etapa 2."
+    "text": "Ejemplo mínimo\nConsideremos la recta\n\\[\nL:2x+3y=7.\n\\]\nPrimero despejamos \\(y\\):\n\\[\n3y=-2x+7\n\\]\n\\[\ny=-\\frac{2}{3}x+\\frac{7}{3}.\n\\]\nPor lo tanto, su pendiente es\n\\[\nm=-\\frac{2}{3}.\n\\]\n\nRecta paralela\nUna recta paralela a \\(L\\) que pasa por \\(P(-1,0)\\) tiene la misma pendiente:\n\\[\ny-0=-\\frac{2}{3}(x-(-1)).\n\\]\nEntonces:\n\\[\ny=-\\frac{2}{3}(x+1).\n\\]\n\n\nRecta perpendicular\nUna recta perpendicular a \\(L\\) tiene pendiente\n\\[\nm_\\perp=\\frac{3}{2},\n\\]\nporque\n\\[\n-\\frac{2}{3}\\cdot \\frac{3}{2}=-1.\n\\]\nSi pasa por \\(P(0,-1)\\), entonces:\n\\[\ny-(-1)=\\frac{3}{2}(x-0),\n\\]\n\\[\ny=\\frac{3}{2}x-1.\n\\]\n\n\nDistancia a un punto\nLa distancia desde \\(P(3,5)\\) a \\(L:2x+3y-7=0\\) es\n\\[\nd(P,L)=\\frac{|2(3)+3(5)-7|}{\\sqrt{2^2+3^2}}\n=\\frac{14}{\\sqrt{13}}.\n\\]\n\nEste ejemplo reúne tres ideas: rectas paralelas conservan pendiente, rectas perpendiculares usan pendiente recíproca opuesta y la forma general permite calcular distancia punto-recta.\n\n\nSi una recta pasa por \\(A(-2,1)\\) y \\(B(4,5)\\), entonces\n\\[\nm=\\frac{5-1}{4-(-2)}=\\frac{2}{3}.\n\\]\nUsando \\(A\\):\n\\[\ny-1=\\frac{2}{3}(x+2).\n\\]"
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#visualización-interactiva",
     "href": "temas/funciones-lineales-recta.html#visualización-interactiva",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Visualización interactiva",
-    "text": "Visualización interactiva\nEn una etapa posterior se agregará una visualización para explorar cómo cambian la pendiente y las formas de la ecuación de una recta."
+    "text": "Visualización interactiva\n\n\n\nUsa los controles para modificar \\(m\\) y \\(b\\) en la recta\n\\[\ny=mx+b.\n\\]\nObserva cómo cambia la inclinación cuando cambia \\(m\\), y cómo la recta se desplaza verticalmente cuando cambia \\(b\\)."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#errores-comunes",
     "href": "temas/funciones-lineales-recta.html#errores-comunes",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Errores comunes",
-    "text": "Errores comunes\n\n\nConfundir la pendiente con la intersección con el eje \\(y\\).\nAplicar la condición \\(m_1m_2=-1\\) sin revisar rectas verticales u horizontales.\nUsar la fórmula de distancia sin escribir antes la recta en forma general."
+    "text": "Errores comunes\n\nConfundir rectas paralelas con perpendiculares. Las paralelas tienen la misma pendiente; las perpendiculares cumplen \\(m_1m_2=-1\\).\n\n\nUsar mal los signos en la forma punto-pendiente. Si el punto es \\((-1,0)\\), entonces \\(x-x_1=x-(-1)=x+1\\).\n\n\nAplicar la fórmula de pendiente a una recta vertical. Si los dos puntos tienen la misma coordenada \\(x\\), el denominador queda cero y la pendiente no está definida."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#ejercicios",
     "href": "temas/funciones-lineales-recta.html#ejercicios",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Ejercicios",
-    "text": "Ejercicios\n\nLos ejercicios de esta sección se completarán en la etapa 2."
+    "text": "Ejercicios\n\nEjercicios con solución\n\nEjercicio 1\nEncuentra la ecuación de la recta que pasa por \\(B(2,-2)\\) y por el punto medio del segmento entre \\(A(-1,3)\\) y \\(C(4,7)\\).\nSolución.\nPrimero calculamos el punto medio:\n\\[\nM=\\left(\\frac{-1+4}{2},\\frac{3+7}{2}\\right)=\\left(\\frac{3}{2},5\\right).\n\\]\nLa pendiente entre \\(B\\) y \\(M\\) es\n\\[\nm=\\frac{5-(-2)}{\\frac{3}{2}-2}\n=\\frac{7}{-\\frac{1}{2}}\n=-14.\n\\]\nUsando punto-pendiente con \\(B(2,-2)\\):\n\\[\ny+2=-14(x-2).\n\\]\n\n\nEjercicio 2\nHalla la recta que pasa por \\(A(2,3)\\) y por el vértice de \\(y=x^2-10x+22\\).\nSolución.\nPara \\(y=x^2-10x+22\\), el vértice tiene coordenada\n\\[\nx_v=-\\frac{-10}{2(1)}=5.\n\\]\nLuego\n\\[\ny_v=5^2-10(5)+22=-3,\n\\]\nasí que \\(V(5,-3)\\). La pendiente entre \\(A\\) y \\(V\\) es\n\\[\nm=\\frac{-3-3}{5-2}=-2.\n\\]\nPor tanto,\n\\[\ny-3=-2(x-2).\n\\]\n\n\n\nEjercicios propuestos\n\n\nPara \\(L:4x-5y+19=0\\), despeja \\(y\\) e identifica la pendiente.\nEncuentra la recta paralela a \\(y=3x-1\\) que pasa por \\((2,5)\\).\nEncuentra la recta perpendicular a \\(y=-\\frac{1}{4}x+2\\) que pasa por \\((0,-3)\\).\nCalcula la distancia desde \\(P(-5,6)\\) a la recta \\(6x+8y+2=0\\).\nEncuentra la ecuación de la recta que pasa por los puntos \\((-3,4)\\) y \\((1,-2)\\)."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#ideas-clave",
     "href": "temas/funciones-lineales-recta.html#ideas-clave",
     "title": "Funciones lineales y ecuación de la recta",
     "section": "Ideas clave",
-    "text": "Ideas clave\n\n\nUna función lineal representa cambio constante.\nLa pendiente mide razón de cambio.\nLa misma recta puede escribirse en distintas formas equivalentes.\nLa forma general permite calcular distancia de punto a recta."
+    "text": "Ideas clave\n\n\nLa pendiente mide razón de cambio.\nLa forma \\(y=mx+b\\) permite leer directamente pendiente e intersección con el eje \\(y\\).\nLa forma punto-pendiente es útil cuando se conoce un punto y la pendiente.\nLas rectas paralelas tienen la misma pendiente.\nLas rectas perpendiculares tienen pendientes cuyo producto es \\(-1\\).\nLa distancia punto-recta se calcula mejor desde la forma general."
   },
   {
     "objectID": "temas/funciones-lineales-recta.html#referencias",

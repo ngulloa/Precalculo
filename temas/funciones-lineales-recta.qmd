@@ -6,30 +6,47 @@ description: "Pendiente, razón de cambio y formas principales de la ecuación d
 ## Objetivo
 
 ::: {.concept-box}
-Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de información gráfica, algebraica o numérica.
+Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de datos gráficos, algebraicos o numéricos.
 :::
 
 ## Idea central
 
-Una recta representa una relación con cambio constante. Ese cambio se mide mediante la pendiente y permite comparar cuánto varía $y$ cuando cambia $x$.
+Una función lineal describe una relación donde el cambio de $y$ respecto de $x$ es constante. Esa constancia se ve en la gráfica como una recta.
+
+::: {.concept-box}
+La pendiente mide cuánto cambia $y$ cuando $x$ aumenta una unidad. Por eso se interpreta como una **razón de cambio**.
+:::
 
 ## Pendiente y razón de cambio
 
-La pendiente resume la razón de cambio entre dos puntos de una recta. En la etapa siguiente se desarrollará su interpretación gráfica como subida sobre avance.
+Si una recta no vertical pasa por dos puntos
 
 $$
-m=\frac{y_2-y_1}{x_2-x_1}
+A(x_1,y_1), \qquad B(x_2,y_2),
 $$
+
+su pendiente es
+
+$$
+m=\frac{y_2-y_1}{x_2-x_1}.
+$$
+
+- Si $m>0$, la recta sube de izquierda a derecha.
+- Si $m<0$, la recta baja de izquierda a derecha.
+- Si $m=0$, la recta es horizontal.
+- Si $x_2=x_1$, la recta es vertical y la pendiente no está definida.
+
+::: {.warning-box}
+La pendiente no es la altura de la recta. Es una razón entre cambio vertical y cambio horizontal.
+:::
 
 ## Formas de la ecuación de la recta
-
-Las formas más usadas dependen de los datos disponibles: punto y pendiente, pendiente e intersección, o forma general.
 
 ::: {.formula-grid}
 
 ::: {.formula-card}
 <div class="formula-tag">Punto-pendiente</div>
-<div class="formula-title">Recta por un punto</div>
+<div class="formula-title">Recta con punto conocido</div>
 <div class="formula-expression">
 
 $$
@@ -38,13 +55,13 @@ $$
 
 </div>
 <div class="formula-note">
-Se usa cuando se conoce un punto de la recta y su pendiente.
+Útil cuando se conoce un punto y la pendiente.
 </div>
 :::
 
 ::: {.formula-card}
 <div class="formula-tag">Pendiente-intersección</div>
-<div class="formula-title">Forma explícita</div>
+<div class="formula-title">Función lineal</div>
 <div class="formula-expression">
 
 $$
@@ -59,7 +76,7 @@ $m$ es la pendiente y $b$ es la intersección con el eje $y$.
 
 ::: {.formula-card}
 <div class="formula-tag">General</div>
-<div class="formula-title">Forma implícita</div>
+<div class="formula-title">Forma general</div>
 <div class="formula-expression">
 
 $$
@@ -68,7 +85,7 @@ $$
 
 </div>
 <div class="formula-note">
-Es útil para estudiar distancia de punto a recta y relaciones algebraicas.
+Útil para distancia punto-recta y problemas algebraicos.
 </div>
 :::
 
@@ -76,62 +93,254 @@ Es útil para estudiar distancia de punto a recta y relaciones algebraicas.
 
 ## Rectas paralelas y perpendiculares
 
-Las rectas paralelas tienen la misma pendiente. Las rectas perpendiculares, cuando sus pendientes están definidas, cumplen que el producto de pendientes es $-1$.
+Dos rectas no verticales son paralelas cuando tienen la misma pendiente:
 
 $$
-m_1=m_2,\qquad m_1m_2=-1
+m_1=m_2.
 $$
+
+Dos rectas no verticales son perpendiculares cuando el producto de sus pendientes es $-1$:
+
+$$
+m_1m_2=-1.
+$$
+
+::: {.method-box}
+Para una recta dada en forma general $Ax+By+C=0$, si $B\neq 0$, se puede despejar $y$ para leer la pendiente.
+:::
 
 ## Distancia de un punto a una recta
 
-Para una recta escrita como $Ax+By+C=0$, la distancia desde el punto $(x_0,y_0)$ se calcula con:
+Si la recta está escrita como
 
 $$
-d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.
+L: Ax+By+C=0,
 $$
+
+la distancia desde el punto $P(x_0,y_0)$ a la recta es
+
+$$
+d(P,L)=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.
+$$
+
+Esta fórmula se usa cuando la recta está en forma general.
 
 ## Ejemplo mínimo
 
+Consideremos la recta
+
+$$
+L:2x+3y=7.
+$$
+
+Primero despejamos $y$:
+
+$$
+3y=-2x+7
+$$
+
+$$
+y=-\frac{2}{3}x+\frac{7}{3}.
+$$
+
+Por lo tanto, su pendiente es
+
+$$
+m=-\frac{2}{3}.
+$$
+
+### Recta paralela
+
+Una recta paralela a $L$ que pasa por $P(-1,0)$ tiene la misma pendiente:
+
+$$
+y-0=-\frac{2}{3}(x-(-1)).
+$$
+
+Entonces:
+
+$$
+y=-\frac{2}{3}(x+1).
+$$
+
+### Recta perpendicular
+
+Una recta perpendicular a $L$ tiene pendiente
+
+$$
+m_\perp=\frac{3}{2},
+$$
+
+porque
+
+$$
+-\frac{2}{3}\cdot \frac{3}{2}=-1.
+$$
+
+Si pasa por $P(0,-1)$, entonces:
+
+$$
+y-(-1)=\frac{3}{2}(x-0),
+$$
+
+$$
+y=\frac{3}{2}x-1.
+$$
+
+### Distancia a un punto
+
+La distancia desde $P(3,5)$ a $L:2x+3y-7=0$ es
+
+$$
+d(P,L)=\frac{|2(3)+3(5)-7|}{\sqrt{2^2+3^2}}
+=\frac{14}{\sqrt{13}}.
+$$
+
 ::: {.example-box}
-Si una recta pasa por $(1,2)$ y tiene pendiente $3$, su forma punto-pendiente es
+Este ejemplo reúne tres ideas: rectas paralelas conservan pendiente, rectas perpendiculares usan pendiente recíproca opuesta y la forma general permite calcular distancia punto-recta.
+:::
+
+::: {.example-box}
+Si una recta pasa por $A(-2,1)$ y $B(4,5)$, entonces
 
 $$
-y-2=3(x-1).
+m=\frac{5-1}{4-(-2)}=\frac{2}{3}.
 $$
 
-Este ejemplo se completará en la etapa 2.
+Usando $A$:
+
+$$
+y-1=\frac{2}{3}(x+2).
+$$
 :::
 
 ## Visualización interactiva
 
-En una etapa posterior se agregará una visualización para explorar cómo cambian la pendiente y las formas de la ecuación de una recta.
+<div id="recta-interactiva-app"></div>
 
-<div id="recta-interactiva-app" class="sequence-sim"></div>
+Usa los controles para modificar $m$ y $b$ en la recta
+
+$$
+y=mx+b.
+$$
+
+Observa cómo cambia la inclinación cuando cambia $m$, y cómo la recta se desplaza verticalmente cuando cambia $b$.
 
 ## Errores comunes
 
 ::: {.warning-box}
-- Confundir la pendiente con la intersección con el eje $y$.
-- Aplicar la condición $m_1m_2=-1$ sin revisar rectas verticales u horizontales.
-- Usar la fórmula de distancia sin escribir antes la recta en forma general.
+**Confundir rectas paralelas con perpendiculares.** Las paralelas tienen la misma pendiente; las perpendiculares cumplen $m_1m_2=-1$.
+:::
+
+::: {.warning-box}
+**Usar mal los signos en la forma punto-pendiente.** Si el punto es $(-1,0)$, entonces $x-x_1=x-(-1)=x+1$.
+:::
+
+::: {.warning-box}
+**Aplicar la fórmula de pendiente a una recta vertical.** Si los dos puntos tienen la misma coordenada $x$, el denominador queda cero y la pendiente no está definida.
 :::
 
 ## Ejercicios
 
+### Ejercicios con solución
+
+::: {.exercise-box}
+#### Ejercicio 1
+
+Encuentra la ecuación de la recta que pasa por $B(2,-2)$ y por el punto medio del segmento entre $A(-1,3)$ y $C(4,7)$.
+
+**Solución.**
+
+Primero calculamos el punto medio:
+
+$$
+M=\left(\frac{-1+4}{2},\frac{3+7}{2}\right)=\left(\frac{3}{2},5\right).
+$$
+
+La pendiente entre $B$ y $M$ es
+
+$$
+m=\frac{5-(-2)}{\frac{3}{2}-2}
+=\frac{7}{-\frac{1}{2}}
+=-14.
+$$
+
+Usando punto-pendiente con $B(2,-2)$:
+
+$$
+y+2=-14(x-2).
+$$
+:::
+
+::: {.exercise-box}
+#### Ejercicio 2
+
+Halla la recta que pasa por $A(2,3)$ y por el vértice de $y=x^2-10x+22$.
+
+**Solución.**
+
+Para $y=x^2-10x+22$, el vértice tiene coordenada
+
+$$
+x_v=-\frac{-10}{2(1)}=5.
+$$
+
+Luego
+
+$$
+y_v=5^2-10(5)+22=-3,
+$$
+
+así que $V(5,-3)$. La pendiente entre $A$ y $V$ es
+
+$$
+m=\frac{-3-3}{5-2}=-2.
+$$
+
+Por tanto,
+
+$$
+y-3=-2(x-2).
+$$
+:::
+
+### Ejercicios propuestos
+
 ::: {.proposed-box}
-Los ejercicios de esta sección se completarán en la etapa 2.
+1. Para $L:4x-5y+19=0$, despeja $y$ e identifica la pendiente.
+2. Encuentra la recta paralela a $y=3x-1$ que pasa por $(2,5)$.
+3. Encuentra la recta perpendicular a $y=-\frac{1}{4}x+2$ que pasa por $(0,-3)$.
+4. Calcula la distancia desde $P(-5,6)$ a la recta $6x+8y+2=0$.
+5. Encuentra la ecuación de la recta que pasa por los puntos $(-3,4)$ y $(1,-2)$.
 :::
 
 ## Ideas clave
 
 ::: {.concept-box}
-- Una función lineal representa cambio constante.
 - La pendiente mide razón de cambio.
-- La misma recta puede escribirse en distintas formas equivalentes.
-- La forma general permite calcular distancia de punto a recta.
+- La forma $y=mx+b$ permite leer directamente pendiente e intersección con el eje $y$.
+- La forma punto-pendiente es útil cuando se conoce un punto y la pendiente.
+- Las rectas paralelas tienen la misma pendiente.
+- Las rectas perpendiculares tienen pendientes cuyo producto es $-1$.
+- La distancia punto-recta se calcula mejor desde la forma general.
 :::
 
 ## Referencias
 
 - Ayudantía 12, Álgebra y Geometría (MATE10), 2 de junio de 2026.
 - Stewart, J., Redlin, L., & Watson, S. *Precálculo: Matemáticas para el cálculo*, 7.ª ed., secciones 1.10 y 2.5.
+
+```{=html}
+<script>
+(() => {
+  const cssHref = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+    .map((link) => link.getAttribute("href") || "")
+    .find((href) => href.endsWith("styles/custom.css"));
+  const basePath = cssHref ? cssHref.replace(/styles\/custom\.css$/, "") : "";
+  const script = document.createElement("script");
+  script.src = `${basePath}scripts/recta-interactiva.js`;
+  script.defer = true;
+  document.body.appendChild(script);
+})();
+</script>
+```

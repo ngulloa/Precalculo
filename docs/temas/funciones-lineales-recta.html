@@ -168,10 +168,19 @@ window.Quarto = {
   <li><a href="#formas-de-la-ecuación-de-la-recta" id="toc-formas-de-la-ecuación-de-la-recta" class="nav-link" data-scroll-target="#formas-de-la-ecuación-de-la-recta">Formas de la ecuación de la recta</a></li>
   <li><a href="#rectas-paralelas-y-perpendiculares" id="toc-rectas-paralelas-y-perpendiculares" class="nav-link" data-scroll-target="#rectas-paralelas-y-perpendiculares">Rectas paralelas y perpendiculares</a></li>
   <li><a href="#distancia-de-un-punto-a-una-recta" id="toc-distancia-de-un-punto-a-una-recta" class="nav-link" data-scroll-target="#distancia-de-un-punto-a-una-recta">Distancia de un punto a una recta</a></li>
-  <li><a href="#ejemplo-mínimo" id="toc-ejemplo-mínimo" class="nav-link" data-scroll-target="#ejemplo-mínimo">Ejemplo mínimo</a></li>
+  <li><a href="#ejemplo-mínimo" id="toc-ejemplo-mínimo" class="nav-link" data-scroll-target="#ejemplo-mínimo">Ejemplo mínimo</a>
+  <ul class="collapse">
+  <li><a href="#recta-paralela" id="toc-recta-paralela" class="nav-link" data-scroll-target="#recta-paralela">Recta paralela</a></li>
+  <li><a href="#recta-perpendicular" id="toc-recta-perpendicular" class="nav-link" data-scroll-target="#recta-perpendicular">Recta perpendicular</a></li>
+  <li><a href="#distancia-a-un-punto" id="toc-distancia-a-un-punto" class="nav-link" data-scroll-target="#distancia-a-un-punto">Distancia a un punto</a></li>
+  </ul></li>
   <li><a href="#visualización-interactiva" id="toc-visualización-interactiva" class="nav-link" data-scroll-target="#visualización-interactiva">Visualización interactiva</a></li>
   <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
-  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a>
+  <ul class="collapse">
+  <li><a href="#ejercicios-con-solución" id="toc-ejercicios-con-solución" class="nav-link" data-scroll-target="#ejercicios-con-solución">Ejercicios con solución</a></li>
+  <li><a href="#ejercicios-propuestos" id="toc-ejercicios-propuestos" class="nav-link" data-scroll-target="#ejercicios-propuestos">Ejercicios propuestos</a></li>
+  </ul></li>
   <li><a href="#ideas-clave" id="toc-ideas-clave" class="nav-link" data-scroll-target="#ideas-clave">Ideas clave</a></li>
   <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
@@ -207,30 +216,45 @@ window.Quarto = {
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
 <div class="concept-box">
-<p>Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de información gráfica, algebraica o numérica.</p>
+<p>Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de datos gráficos, algebraicos o numéricos.</p>
 </div>
 </section>
 <section id="idea-central" class="level2">
 <h2 class="anchored" data-anchor-id="idea-central">Idea central</h2>
-<p>Una recta representa una relación con cambio constante. Ese cambio se mide mediante la pendiente y permite comparar cuánto varía <span class="math inline">\(y\)</span> cuando cambia <span class="math inline">\(x\)</span>.</p>
+<p>Una función lineal describe una relación donde el cambio de <span class="math inline">\(y\)</span> respecto de <span class="math inline">\(x\)</span> es constante. Esa constancia se ve en la gráfica como una recta.</p>
+<div class="concept-box">
+<p>La pendiente mide cuánto cambia <span class="math inline">\(y\)</span> cuando <span class="math inline">\(x\)</span> aumenta una unidad. Por eso se interpreta como una <strong>razón de cambio</strong>.</p>
+</div>
 </section>
 <section id="pendiente-y-razón-de-cambio" class="level2">
 <h2 class="anchored" data-anchor-id="pendiente-y-razón-de-cambio">Pendiente y razón de cambio</h2>
-<p>La pendiente resume la razón de cambio entre dos puntos de una recta. En la etapa siguiente se desarrollará su interpretación gráfica como subida sobre avance.</p>
+<p>Si una recta no vertical pasa por dos puntos</p>
 <p><span class="math display">\[
-m=\frac{y_2-y_1}{x_2-x_1}
+A(x_1,y_1), \qquad B(x_2,y_2),
 \]</span></p>
+<p>su pendiente es</p>
+<p><span class="math display">\[
+m=\frac{y_2-y_1}{x_2-x_1}.
+\]</span></p>
+<ul>
+<li>Si <span class="math inline">\(m&gt;0\)</span>, la recta sube de izquierda a derecha.</li>
+<li>Si <span class="math inline">\(m&lt;0\)</span>, la recta baja de izquierda a derecha.</li>
+<li>Si <span class="math inline">\(m=0\)</span>, la recta es horizontal.</li>
+<li>Si <span class="math inline">\(x_2=x_1\)</span>, la recta es vertical y la pendiente no está definida.</li>
+</ul>
+<div class="warning-box">
+<p>La pendiente no es la altura de la recta. Es una razón entre cambio vertical y cambio horizontal.</p>
+</div>
 </section>
 <section id="formas-de-la-ecuación-de-la-recta" class="level2">
 <h2 class="anchored" data-anchor-id="formas-de-la-ecuación-de-la-recta">Formas de la ecuación de la recta</h2>
-<p>Las formas más usadas dependen de los datos disponibles: punto y pendiente, pendiente e intersección, o forma general.</p>
 <div class="formula-grid">
 <div class="formula-card">
 <div class="formula-tag">
 Punto-pendiente
 </div>
 <div class="formula-title">
-Recta por un punto
+Recta con punto conocido
 </div>
 <div class="formula-expression">
 <p><span class="math display">\[
@@ -238,7 +262,7 @@ y-y_1=m(x-x_1)
 \]</span></p>
 </div>
 <div class="formula-note">
-<p>Se usa cuando se conoce un punto de la recta y su pendiente.</p>
+<p>Útil cuando se conoce un punto y la pendiente.</p>
 </div>
 </div>
 <div class="formula-card">
@@ -246,7 +270,7 @@ y-y_1=m(x-x_1)
 Pendiente-intersección
 </div>
 <div class="formula-title">
-Forma explícita
+Función lineal
 </div>
 <div class="formula-expression">
 <p><span class="math display">\[
@@ -262,7 +286,7 @@ y=mx+b
 General
 </div>
 <div class="formula-title">
-Forma implícita
+Forma general
 </div>
 <div class="formula-expression">
 <p><span class="math display">\[
@@ -270,66 +294,196 @@ Ax+By+C=0
 \]</span></p>
 </div>
 <div class="formula-note">
-<p>Es útil para estudiar distancia de punto a recta y relaciones algebraicas.</p>
+<p>Útil para distancia punto-recta y problemas algebraicos.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="rectas-paralelas-y-perpendiculares" class="level2">
 <h2 class="anchored" data-anchor-id="rectas-paralelas-y-perpendiculares">Rectas paralelas y perpendiculares</h2>
-<p>Las rectas paralelas tienen la misma pendiente. Las rectas perpendiculares, cuando sus pendientes están definidas, cumplen que el producto de pendientes es <span class="math inline">\(-1\)</span>.</p>
+<p>Dos rectas no verticales son paralelas cuando tienen la misma pendiente:</p>
 <p><span class="math display">\[
-m_1=m_2,\qquad m_1m_2=-1
+m_1=m_2.
 \]</span></p>
+<p>Dos rectas no verticales son perpendiculares cuando el producto de sus pendientes es <span class="math inline">\(-1\)</span>:</p>
+<p><span class="math display">\[
+m_1m_2=-1.
+\]</span></p>
+<div class="method-box">
+<p>Para una recta dada en forma general <span class="math inline">\(Ax+By+C=0\)</span>, si <span class="math inline">\(B\neq 0\)</span>, se puede despejar <span class="math inline">\(y\)</span> para leer la pendiente.</p>
+</div>
 </section>
 <section id="distancia-de-un-punto-a-una-recta" class="level2">
 <h2 class="anchored" data-anchor-id="distancia-de-un-punto-a-una-recta">Distancia de un punto a una recta</h2>
-<p>Para una recta escrita como <span class="math inline">\(Ax+By+C=0\)</span>, la distancia desde el punto <span class="math inline">\((x_0,y_0)\)</span> se calcula con:</p>
+<p>Si la recta está escrita como</p>
 <p><span class="math display">\[
-d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.
+L: Ax+By+C=0,
 \]</span></p>
+<p>la distancia desde el punto <span class="math inline">\(P(x_0,y_0)\)</span> a la recta es</p>
+<p><span class="math display">\[
+d(P,L)=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.
+\]</span></p>
+<p>Esta fórmula se usa cuando la recta está en forma general.</p>
 </section>
 <section id="ejemplo-mínimo" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo-mínimo">Ejemplo mínimo</h2>
-<div class="example-box">
-<p>Si una recta pasa por <span class="math inline">\((1,2)\)</span> y tiene pendiente <span class="math inline">\(3\)</span>, su forma punto-pendiente es</p>
+<p>Consideremos la recta</p>
 <p><span class="math display">\[
-y-2=3(x-1).
+L:2x+3y=7.
 \]</span></p>
-<p>Este ejemplo se completará en la etapa 2.</p>
+<p>Primero despejamos <span class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[
+3y=-2x+7
+\]</span></p>
+<p><span class="math display">\[
+y=-\frac{2}{3}x+\frac{7}{3}.
+\]</span></p>
+<p>Por lo tanto, su pendiente es</p>
+<p><span class="math display">\[
+m=-\frac{2}{3}.
+\]</span></p>
+<section id="recta-paralela" class="level3">
+<h3 class="anchored" data-anchor-id="recta-paralela">Recta paralela</h3>
+<p>Una recta paralela a <span class="math inline">\(L\)</span> que pasa por <span class="math inline">\(P(-1,0)\)</span> tiene la misma pendiente:</p>
+<p><span class="math display">\[
+y-0=-\frac{2}{3}(x-(-1)).
+\]</span></p>
+<p>Entonces:</p>
+<p><span class="math display">\[
+y=-\frac{2}{3}(x+1).
+\]</span></p>
+</section>
+<section id="recta-perpendicular" class="level3">
+<h3 class="anchored" data-anchor-id="recta-perpendicular">Recta perpendicular</h3>
+<p>Una recta perpendicular a <span class="math inline">\(L\)</span> tiene pendiente</p>
+<p><span class="math display">\[
+m_\perp=\frac{3}{2},
+\]</span></p>
+<p>porque</p>
+<p><span class="math display">\[
+-\frac{2}{3}\cdot \frac{3}{2}=-1.
+\]</span></p>
+<p>Si pasa por <span class="math inline">\(P(0,-1)\)</span>, entonces:</p>
+<p><span class="math display">\[
+y-(-1)=\frac{3}{2}(x-0),
+\]</span></p>
+<p><span class="math display">\[
+y=\frac{3}{2}x-1.
+\]</span></p>
+</section>
+<section id="distancia-a-un-punto" class="level3">
+<h3 class="anchored" data-anchor-id="distancia-a-un-punto">Distancia a un punto</h3>
+<p>La distancia desde <span class="math inline">\(P(3,5)\)</span> a <span class="math inline">\(L:2x+3y-7=0\)</span> es</p>
+<p><span class="math display">\[
+d(P,L)=\frac{|2(3)+3(5)-7|}{\sqrt{2^2+3^2}}
+=\frac{14}{\sqrt{13}}.
+\]</span></p>
+<div class="example-box">
+<p>Este ejemplo reúne tres ideas: rectas paralelas conservan pendiente, rectas perpendiculares usan pendiente recíproca opuesta y la forma general permite calcular distancia punto-recta.</p>
 </div>
+<div class="example-box">
+<p>Si una recta pasa por <span class="math inline">\(A(-2,1)\)</span> y <span class="math inline">\(B(4,5)\)</span>, entonces</p>
+<p><span class="math display">\[
+m=\frac{5-1}{4-(-2)}=\frac{2}{3}.
+\]</span></p>
+<p>Usando <span class="math inline">\(A\)</span>:</p>
+<p><span class="math display">\[
+y-1=\frac{2}{3}(x+2).
+\]</span></p>
+</div>
+</section>
 </section>
 <section id="visualización-interactiva" class="level2">
 <h2 class="anchored" data-anchor-id="visualización-interactiva">Visualización interactiva</h2>
-<p>En una etapa posterior se agregará una visualización para explorar cómo cambian la pendiente y las formas de la ecuación de una recta.</p>
-<div id="recta-interactiva-app" class="sequence-sim">
+<div id="recta-interactiva-app">
 
 </div>
+<p>Usa los controles para modificar <span class="math inline">\(m\)</span> y <span class="math inline">\(b\)</span> en la recta</p>
+<p><span class="math display">\[
+y=mx+b.
+\]</span></p>
+<p>Observa cómo cambia la inclinación cuando cambia <span class="math inline">\(m\)</span>, y cómo la recta se desplaza verticalmente cuando cambia <span class="math inline">\(b\)</span>.</p>
 </section>
 <section id="errores-comunes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
 <div class="warning-box">
-<ul>
-<li>Confundir la pendiente con la intersección con el eje <span class="math inline">\(y\)</span>.</li>
-<li>Aplicar la condición <span class="math inline">\(m_1m_2=-1\)</span> sin revisar rectas verticales u horizontales.</li>
-<li>Usar la fórmula de distancia sin escribir antes la recta en forma general.</li>
-</ul>
+<p><strong>Confundir rectas paralelas con perpendiculares.</strong> Las paralelas tienen la misma pendiente; las perpendiculares cumplen <span class="math inline">\(m_1m_2=-1\)</span>.</p>
+</div>
+<div class="warning-box">
+<p><strong>Usar mal los signos en la forma punto-pendiente.</strong> Si el punto es <span class="math inline">\((-1,0)\)</span>, entonces <span class="math inline">\(x-x_1=x-(-1)=x+1\)</span>.</p>
+</div>
+<div class="warning-box">
+<p><strong>Aplicar la fórmula de pendiente a una recta vertical.</strong> Si los dos puntos tienen la misma coordenada <span class="math inline">\(x\)</span>, el denominador queda cero y la pendiente no está definida.</p>
 </div>
 </section>
 <section id="ejercicios" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<section id="ejercicios-con-solución" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicios-con-solución">Ejercicios con solución</h3>
+<section id="ejercicio-1" class="level4 exercise-box">
+<h4 class="anchored" data-anchor-id="ejercicio-1">Ejercicio 1</h4>
+<p>Encuentra la ecuación de la recta que pasa por <span class="math inline">\(B(2,-2)\)</span> y por el punto medio del segmento entre <span class="math inline">\(A(-1,3)\)</span> y <span class="math inline">\(C(4,7)\)</span>.</p>
+<p><strong>Solución.</strong></p>
+<p>Primero calculamos el punto medio:</p>
+<p><span class="math display">\[
+M=\left(\frac{-1+4}{2},\frac{3+7}{2}\right)=\left(\frac{3}{2},5\right).
+\]</span></p>
+<p>La pendiente entre <span class="math inline">\(B\)</span> y <span class="math inline">\(M\)</span> es</p>
+<p><span class="math display">\[
+m=\frac{5-(-2)}{\frac{3}{2}-2}
+=\frac{7}{-\frac{1}{2}}
+=-14.
+\]</span></p>
+<p>Usando punto-pendiente con <span class="math inline">\(B(2,-2)\)</span>:</p>
+<p><span class="math display">\[
+y+2=-14(x-2).
+\]</span></p>
+</section>
+<section id="ejercicio-2" class="level4 exercise-box">
+<h4 class="anchored" data-anchor-id="ejercicio-2">Ejercicio 2</h4>
+<p>Halla la recta que pasa por <span class="math inline">\(A(2,3)\)</span> y por el vértice de <span class="math inline">\(y=x^2-10x+22\)</span>.</p>
+<p><strong>Solución.</strong></p>
+<p>Para <span class="math inline">\(y=x^2-10x+22\)</span>, el vértice tiene coordenada</p>
+<p><span class="math display">\[
+x_v=-\frac{-10}{2(1)}=5.
+\]</span></p>
+<p>Luego</p>
+<p><span class="math display">\[
+y_v=5^2-10(5)+22=-3,
+\]</span></p>
+<p>así que <span class="math inline">\(V(5,-3)\)</span>. La pendiente entre <span class="math inline">\(A\)</span> y <span class="math inline">\(V\)</span> es</p>
+<p><span class="math display">\[
+m=\frac{-3-3}{5-2}=-2.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+y-3=-2(x-2).
+\]</span></p>
+</section>
+</section>
+<section id="ejercicios-propuestos" class="level3">
+<h3 class="anchored" data-anchor-id="ejercicios-propuestos">Ejercicios propuestos</h3>
 <div class="proposed-box">
-<p>Los ejercicios de esta sección se completarán en la etapa 2.</p>
+<ol type="1">
+<li>Para <span class="math inline">\(L:4x-5y+19=0\)</span>, despeja <span class="math inline">\(y\)</span> e identifica la pendiente.</li>
+<li>Encuentra la recta paralela a <span class="math inline">\(y=3x-1\)</span> que pasa por <span class="math inline">\((2,5)\)</span>.</li>
+<li>Encuentra la recta perpendicular a <span class="math inline">\(y=-\frac{1}{4}x+2\)</span> que pasa por <span class="math inline">\((0,-3)\)</span>.</li>
+<li>Calcula la distancia desde <span class="math inline">\(P(-5,6)\)</span> a la recta <span class="math inline">\(6x+8y+2=0\)</span>.</li>
+<li>Encuentra la ecuación de la recta que pasa por los puntos <span class="math inline">\((-3,4)\)</span> y <span class="math inline">\((1,-2)\)</span>.</li>
+</ol>
 </div>
+</section>
 </section>
 <section id="ideas-clave" class="level2">
 <h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
 <div class="concept-box">
 <ul>
-<li>Una función lineal representa cambio constante.</li>
 <li>La pendiente mide razón de cambio.</li>
-<li>La misma recta puede escribirse en distintas formas equivalentes.</li>
-<li>La forma general permite calcular distancia de punto a recta.</li>
+<li>La forma <span class="math inline">\(y=mx+b\)</span> permite leer directamente pendiente e intersección con el eje <span class="math inline">\(y\)</span>.</li>
+<li>La forma punto-pendiente es útil cuando se conoce un punto y la pendiente.</li>
+<li>Las rectas paralelas tienen la misma pendiente.</li>
+<li>Las rectas perpendiculares tienen pendientes cuyo producto es <span class="math inline">\(-1\)</span>.</li>
+<li>La distancia punto-recta se calcula mejor desde la forma general.</li>
 </ul>
 </div>
 </section>
@@ -339,6 +493,18 @@ y-2=3(x-1).
 <li>Ayudantía 12, Álgebra y Geometría (MATE10), 2 de junio de 2026.</li>
 <li>Stewart, J., Redlin, L., &amp; Watson, S. <em>Precálculo: Matemáticas para el cálculo</em>, 7.ª ed., secciones 1.10 y 2.5.</li>
 </ul>
+<script>
+(() => {
+  const cssHref = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+    .map((link) => link.getAttribute("href") || "")
+    .find((href) => href.endsWith("styles/custom.css"));
+  const basePath = cssHref ? cssHref.replace(/styles\/custom\.css$/, "") : "";
+  const script = document.createElement("script");
+  script.src = `${basePath}scripts/recta-interactiva.js`;
+  script.defer = true;
+  document.body.appendChild(script);
+})();
+</script>
 
 
 </section>
