@@ -5,39 +5,39 @@ description: "Centro, radio y ecuaciones principales de la circunferencia en el 
 
 ## Objetivo
 
-::: {.concept-box}
-Reconocer la circunferencia como lugar geométrico, identificar centro y radio, y distinguir sus ecuaciones principales en el plano cartesiano.
-:::
+Reconocer una circunferencia en el plano cartesiano, identificar su centro y radio, y usar condiciones geométricas para construir su ecuación.
 
 ## Idea central
 
-Una circunferencia reúne todos los puntos del plano que están a una misma distancia de un punto fijo.
+Una circunferencia es el conjunto de todos los puntos del plano que están a una misma distancia de un punto fijo llamado centro.
 
 ::: {.concept-box}
-Si el centro es $C(h,k)$ y el radio es $r>0$, un punto $P(x,y)$ pertenece a la circunferencia cuando
-
-$$
-d(P,C)=r.
-$$
+Para determinar una circunferencia basta conocer su centro y su radio.
 :::
 
 ## Definición
 
-::: {.concept-box}
-La circunferencia de centro $C(h,k)$ y radio $r$ es el conjunto de puntos $P(x,y)$ que cumplen
+Si el centro es $C=(h,k)$ y el radio es $r>0$, entonces un punto $(x,y)$ pertenece a la circunferencia si su distancia al centro es $r$:
+
+$$
+d((x,y),(h,k))=r.
+$$
+
+Usando la fórmula de distancia:
 
 $$
 \sqrt{(x-h)^2+(y-k)^2}=r.
 $$
-:::
+
+Al elevar al cuadrado se obtiene la ecuación canónica.
 
 ## Ecuación canónica
 
 ::: {.formula-grid}
 
 ::: {.formula-card}
-<div class="formula-tag">Canónica</div>
-<div class="formula-title">Centro y radio</div>
+<div class="formula-tag">Centro-radio</div>
+<div class="formula-title">Centro $(h,k)$, radio $r$</div>
 <div class="formula-expression">
 
 $$
@@ -46,7 +46,7 @@ $$
 
 </div>
 <div class="formula-note">
-El centro es $C(h,k)$ y el radio es $r$.
+Es la forma más directa para leer centro y radio.
 </div>
 :::
 
@@ -61,73 +61,187 @@ $$
 
 </div>
 <div class="formula-note">
-Caso particular de la ecuación canónica.
+Caso particular de la ecuación anterior.
 </div>
 :::
 
 :::
 
+::: {.warning-box}
+En $(x-2)^2+(y+3)^2=16$, el centro es $(2,-3)$ y el radio es $4$. Los signos del centro se leen al revés dentro de los paréntesis.
+:::
+
 ## Forma general y completar cuadrados
 
-::: {.method-box}
-La forma general se trabajará completando cuadrados para recuperar centro y radio:
+Al desarrollar la ecuación canónica puede aparecer una ecuación de la forma
 
 $$
 x^2+y^2+Dx+Ey+F=0.
 $$
 
-Esta sección queda preparada para desarrollar el procedimiento paso a paso.
+Para recuperar el centro y el radio, se agrupan términos en $x$ y en $y$, y luego se completan cuadrados.
+
+::: {.method-box .step-list}
+1. Agrupa los términos: $(x^2+Dx)+(y^2+Ey)=-F$.
+2. Completa cuadrados en cada variable.
+3. Suma a ambos lados los números agregados.
+4. Lee $C(h,k)$ y $r$ desde la forma canónica.
+:::
+
+::: {.example-box}
+Transformemos
+
+$$
+x^2+y^2-6x+2y-6=0.
+$$
+
+Agrupamos y completamos cuadrados:
+
+$$
+(x^2-6x)+(y^2+2y)=6.
+$$
+
+$$
+(x^2-6x+9)+(y^2+2y+1)=6+9+1.
+$$
+
+Luego
+
+$$
+(x-3)^2+(y+1)^2=16.
+$$
+
+Por tanto, el centro es $C(3,-1)$ y el radio es $r=4$.
 :::
 
 ## Circunferencia tangente a una recta
 
-::: {.concept-box}
-Si una circunferencia es tangente a una recta, la distancia desde el centro a la recta coincide con el radio.
+Si una circunferencia es tangente a una recta, entonces el radio que llega al punto de tangencia es perpendicular a esa recta.
+
+En particular, si se conoce el centro $C(h,k)$ y la recta tangente
 
 $$
-d(C,L)=r.
+L:Ax+By+C=0,
+$$
+
+entonces el radio se obtiene con la distancia del centro a la recta:
+
+$$
+r=d(C,L)=\frac{|Ah+Bk+C|}{\sqrt{A^2+B^2}}.
+$$
+
+::: {.example-box}
+Determinemos la circunferencia con centro $C(2,7)$ tangente a
+
+$$
+5x-12y+6=0.
+$$
+
+La ecuación tiene la forma
+
+$$
+(x-2)^2+(y-7)^2=r^2.
+$$
+
+Como hay tangencia,
+
+$$
+r=\frac{|5(2)-12(7)+6|}{\sqrt{5^2+(-12)^2}}
+=\frac{68}{13}.
+$$
+
+Por lo tanto,
+
+$$
+(x-2)^2+(y-7)^2=\left(\frac{68}{13}\right)^2.
 $$
 :::
 
-## Ejemplo mínimo
+## Centro determinado por condiciones
 
-::: {.example-box}
-La circunferencia
+Cuando el centro no se entrega directamente, se traducen las condiciones geométricas a ecuaciones. Por ejemplo, si dos puntos pertenecen a la circunferencia, ambos están a la misma distancia del centro.
+
+::: {.exercise-box}
+Hallar la circunferencia que pasa por $A(-3,0)$ y $B(2,-1)$, sabiendo que su centro está sobre $x+y=2$.
+
+Sea $C(h,k)$ el centro. Como $A$ y $B$ están en la circunferencia:
 
 $$
-(x-2)^2+(y+1)^2=9
+(h+3)^2+k^2=(h-2)^2+(k+1)^2.
 $$
 
-tiene centro $C(2,-1)$ y radio $r=3$.
+Al simplificar:
+
+$$
+10h=2k-4.
+$$
+
+Además, $h+k=2$, así que $k=2-h$. Sustituyendo:
+
+$$
+10h=2(2-h)-4,
+$$
+
+$$
+12h=0.
+$$
+
+Luego $h=0$ y $k=2$. El centro es $C(0,2)$.
+
+Con $A(-3,0)$:
+
+$$
+r=\sqrt{(0+3)^2+(2-0)^2}=\sqrt{13}.
+$$
+
+Por lo tanto,
+
+$$
+x^2+(y-2)^2=13.
+$$
 :::
 
 ## Visualización interactiva
 
-<div id="circunferencia-interactiva-app" class="sequence-sim"></div>
+Modifica el centro y el radio para observar cómo cambia la ecuación
+
+$$
+(x-h)^2+(y-k)^2=r^2.
+$$
+
+<div id="circunferencia-interactiva-app"></div>
+
+```{=html}
+<script src="../scripts/circunferencia-interactiva.js" defer></script>
+```
 
 ## Errores comunes
 
 ::: {.warning-box}
-- Confundir el radio $r$ con $r^2$ en la ecuación canónica.
-- Cambiar los signos del centro al leer $(x-h)^2+(y-k)^2$.
-- Completar cuadrados sin agrupar primero los términos en $x$ y en $y$.
+- Confundir el radio con el radio al cuadrado: en $(x-2)^2+(y+1)^2=25$, el radio es $5$, no $25$.
+- Leer mal los signos del centro: en $(x-2)^2+(y+3)^2=16$, el centro es $(2,-3)$.
+- Completar cuadrados sin equilibrar la ecuación: si se suma un número a un lado, debe sumarse también al otro.
+- Olvidar que la tangencia usa distancia perpendicular desde el centro a la recta.
 :::
 
 ## Ejercicios
 
 ::: {.proposed-box}
-1. Identifica el centro y el radio de $(x+3)^2+(y-4)^2=25$.
-2. Escribe la ecuación de la circunferencia con centro $C(-2,1)$ y radio $5$.
-3. Prepara la forma general $x^2+y^2-6x+4y-12=0$ para completar cuadrados.
+1. Identifica centro y radio en $(x-3)^2+(y+2)^2=16$.
+2. Escribe la ecuación de la circunferencia con centro $(-2,5)$ y radio $4$.
+3. Transforma a forma canónica: $x^2+y^2-6x+2y-6=0$.
+4. Determina la circunferencia con centro $(1,-1)$ tangente a $3x+4y-10=0$.
+5. Decide si $(3,4)$ pertenece a la circunferencia $x^2+y^2=25$.
 :::
 
 ## Ideas clave
 
 ::: {.concept-box}
-- La circunferencia se define por distancia fija a un centro.
-- La ecuación canónica muestra directamente centro y radio.
-- Completar cuadrados permite pasar de forma general a forma canónica.
-- La tangencia a una recta se relaciona con la distancia punto-recta.
+- Una circunferencia se determina por centro y radio.
+- La forma canónica permite leer esos elementos directamente.
+- La forma general suele requerir completar cuadrados.
+- Si una recta es tangente, la distancia del centro a esa recta es el radio.
+- Los signos dentro de los paréntesis deben leerse con cuidado.
 :::
 
 ## Referencias

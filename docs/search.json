@@ -277,84 +277,84 @@
     "href": "temas/circunferencia.html",
     "title": "Circunferencia",
     "section": "",
-    "text": "Reconocer la circunferencia como lugar geométrico, identificar centro y radio, y distinguir sus ecuaciones principales en el plano cartesiano."
+    "text": "Reconocer una circunferencia en el plano cartesiano, identificar su centro y radio, y usar condiciones geométricas para construir su ecuación."
   },
   {
     "objectID": "temas/circunferencia.html#objetivo",
     "href": "temas/circunferencia.html#objetivo",
     "title": "Circunferencia",
     "section": "",
-    "text": "Reconocer la circunferencia como lugar geométrico, identificar centro y radio, y distinguir sus ecuaciones principales en el plano cartesiano."
+    "text": "Reconocer una circunferencia en el plano cartesiano, identificar su centro y radio, y usar condiciones geométricas para construir su ecuación."
   },
   {
     "objectID": "temas/circunferencia.html#idea-central",
     "href": "temas/circunferencia.html#idea-central",
     "title": "Circunferencia",
     "section": "Idea central",
-    "text": "Idea central\nUna circunferencia reúne todos los puntos del plano que están a una misma distancia de un punto fijo.\n\nSi el centro es \\(C(h,k)\\) y el radio es \\(r&gt;0\\), un punto \\(P(x,y)\\) pertenece a la circunferencia cuando\n\\[\nd(P,C)=r.\n\\]"
+    "text": "Idea central\nUna circunferencia es el conjunto de todos los puntos del plano que están a una misma distancia de un punto fijo llamado centro.\n\nPara determinar una circunferencia basta conocer su centro y su radio."
   },
   {
     "objectID": "temas/circunferencia.html#definición",
     "href": "temas/circunferencia.html#definición",
     "title": "Circunferencia",
     "section": "Definición",
-    "text": "Definición\n\nLa circunferencia de centro \\(C(h,k)\\) y radio \\(r\\) es el conjunto de puntos \\(P(x,y)\\) que cumplen\n\\[\n\\sqrt{(x-h)^2+(y-k)^2}=r.\n\\]"
+    "text": "Definición\nSi el centro es \\(C=(h,k)\\) y el radio es \\(r&gt;0\\), entonces un punto \\((x,y)\\) pertenece a la circunferencia si su distancia al centro es \\(r\\):\n\\[\nd((x,y),(h,k))=r.\n\\]\nUsando la fórmula de distancia:\n\\[\n\\sqrt{(x-h)^2+(y-k)^2}=r.\n\\]\nAl elevar al cuadrado se obtiene la ecuación canónica."
   },
   {
     "objectID": "temas/circunferencia.html#ecuación-canónica",
     "href": "temas/circunferencia.html#ecuación-canónica",
     "title": "Circunferencia",
     "section": "Ecuación canónica",
-    "text": "Ecuación canónica\n\n\n\nCanónica\n\n\nCentro y radio\n\n\n\\[\n(x-h)^2+(y-k)^2=r^2\n\\]\n\n\nEl centro es \\(C(h,k)\\) y el radio es \\(r\\).\n\n\n\n\nOrigen\n\n\nCentro en \\((0,0)\\)\n\n\n\\[\nx^2+y^2=r^2\n\\]\n\n\nCaso particular de la ecuación canónica."
+    "text": "Ecuación canónica\n\n\n\nCentro-radio\n\n\nCentro \\((h,k)\\), radio \\(r\\)\n\n\n\\[\n(x-h)^2+(y-k)^2=r^2\n\\]\n\n\nEs la forma más directa para leer centro y radio.\n\n\n\n\nOrigen\n\n\nCentro en \\((0,0)\\)\n\n\n\\[\nx^2+y^2=r^2\n\\]\n\n\nCaso particular de la ecuación anterior.\n\n\n\n\nEn \\((x-2)^2+(y+3)^2=16\\), el centro es \\((2,-3)\\) y el radio es \\(4\\). Los signos del centro se leen al revés dentro de los paréntesis."
   },
   {
     "objectID": "temas/circunferencia.html#forma-general-y-completar-cuadrados",
     "href": "temas/circunferencia.html#forma-general-y-completar-cuadrados",
     "title": "Circunferencia",
     "section": "Forma general y completar cuadrados",
-    "text": "Forma general y completar cuadrados\n\nLa forma general se trabajará completando cuadrados para recuperar centro y radio:\n\\[\nx^2+y^2+Dx+Ey+F=0.\n\\]\nEsta sección queda preparada para desarrollar el procedimiento paso a paso."
+    "text": "Forma general y completar cuadrados\nAl desarrollar la ecuación canónica puede aparecer una ecuación de la forma\n\\[\nx^2+y^2+Dx+Ey+F=0.\n\\]\nPara recuperar el centro y el radio, se agrupan términos en \\(x\\) y en \\(y\\), y luego se completan cuadrados.\n\n\nAgrupa los términos: \\((x^2+Dx)+(y^2+Ey)=-F\\).\nCompleta cuadrados en cada variable.\nSuma a ambos lados los números agregados.\nLee \\(C(h,k)\\) y \\(r\\) desde la forma canónica.\n\n\n\nTransformemos\n\\[\nx^2+y^2-6x+2y-6=0.\n\\]\nAgrupamos y completamos cuadrados:\n\\[\n(x^2-6x)+(y^2+2y)=6.\n\\]\n\\[\n(x^2-6x+9)+(y^2+2y+1)=6+9+1.\n\\]\nLuego\n\\[\n(x-3)^2+(y+1)^2=16.\n\\]\nPor tanto, el centro es \\(C(3,-1)\\) y el radio es \\(r=4\\)."
   },
   {
     "objectID": "temas/circunferencia.html#circunferencia-tangente-a-una-recta",
     "href": "temas/circunferencia.html#circunferencia-tangente-a-una-recta",
     "title": "Circunferencia",
     "section": "Circunferencia tangente a una recta",
-    "text": "Circunferencia tangente a una recta\n\nSi una circunferencia es tangente a una recta, la distancia desde el centro a la recta coincide con el radio.\n\\[\nd(C,L)=r.\n\\]"
+    "text": "Circunferencia tangente a una recta\nSi una circunferencia es tangente a una recta, entonces el radio que llega al punto de tangencia es perpendicular a esa recta.\nEn particular, si se conoce el centro \\(C(h,k)\\) y la recta tangente\n\\[\nL:Ax+By+C=0,\n\\]\nentonces el radio se obtiene con la distancia del centro a la recta:\n\\[\nr=d(C,L)=\\frac{|Ah+Bk+C|}{\\sqrt{A^2+B^2}}.\n\\]\n\nDeterminemos la circunferencia con centro \\(C(2,7)\\) tangente a\n\\[\n5x-12y+6=0.\n\\]\nLa ecuación tiene la forma\n\\[\n(x-2)^2+(y-7)^2=r^2.\n\\]\nComo hay tangencia,\n\\[\nr=\\frac{|5(2)-12(7)+6|}{\\sqrt{5^2+(-12)^2}}\n=\\frac{68}{13}.\n\\]\nPor lo tanto,\n\\[\n(x-2)^2+(y-7)^2=\\left(\\frac{68}{13}\\right)^2.\n\\]"
   },
   {
-    "objectID": "temas/circunferencia.html#ejemplo-mínimo",
-    "href": "temas/circunferencia.html#ejemplo-mínimo",
+    "objectID": "temas/circunferencia.html#centro-determinado-por-condiciones",
+    "href": "temas/circunferencia.html#centro-determinado-por-condiciones",
     "title": "Circunferencia",
-    "section": "Ejemplo mínimo",
-    "text": "Ejemplo mínimo\n\nLa circunferencia\n\\[\n(x-2)^2+(y+1)^2=9\n\\]\ntiene centro \\(C(2,-1)\\) y radio \\(r=3\\)."
+    "section": "Centro determinado por condiciones",
+    "text": "Centro determinado por condiciones\nCuando el centro no se entrega directamente, se traducen las condiciones geométricas a ecuaciones. Por ejemplo, si dos puntos pertenecen a la circunferencia, ambos están a la misma distancia del centro.\n\nHallar la circunferencia que pasa por \\(A(-3,0)\\) y \\(B(2,-1)\\), sabiendo que su centro está sobre \\(x+y=2\\).\nSea \\(C(h,k)\\) el centro. Como \\(A\\) y \\(B\\) están en la circunferencia:\n\\[\n(h+3)^2+k^2=(h-2)^2+(k+1)^2.\n\\]\nAl simplificar:\n\\[\n10h=2k-4.\n\\]\nAdemás, \\(h+k=2\\), así que \\(k=2-h\\). Sustituyendo:\n\\[\n10h=2(2-h)-4,\n\\]\n\\[\n12h=0.\n\\]\nLuego \\(h=0\\) y \\(k=2\\). El centro es \\(C(0,2)\\).\nCon \\(A(-3,0)\\):\n\\[\nr=\\sqrt{(0+3)^2+(2-0)^2}=\\sqrt{13}.\n\\]\nPor lo tanto,\n\\[\nx^2+(y-2)^2=13.\n\\]"
   },
   {
     "objectID": "temas/circunferencia.html#visualización-interactiva",
     "href": "temas/circunferencia.html#visualización-interactiva",
     "title": "Circunferencia",
     "section": "Visualización interactiva",
-    "text": "Visualización interactiva"
+    "text": "Visualización interactiva\nModifica el centro y el radio para observar cómo cambia la ecuación\n\\[\n(x-h)^2+(y-k)^2=r^2.\n\\]"
   },
   {
     "objectID": "temas/circunferencia.html#errores-comunes",
     "href": "temas/circunferencia.html#errores-comunes",
     "title": "Circunferencia",
     "section": "Errores comunes",
-    "text": "Errores comunes\n\n\nConfundir el radio \\(r\\) con \\(r^2\\) en la ecuación canónica.\nCambiar los signos del centro al leer \\((x-h)^2+(y-k)^2\\).\nCompletar cuadrados sin agrupar primero los términos en \\(x\\) y en \\(y\\)."
+    "text": "Errores comunes\n\n\nConfundir el radio con el radio al cuadrado: en \\((x-2)^2+(y+1)^2=25\\), el radio es \\(5\\), no \\(25\\).\nLeer mal los signos del centro: en \\((x-2)^2+(y+3)^2=16\\), el centro es \\((2,-3)\\).\nCompletar cuadrados sin equilibrar la ecuación: si se suma un número a un lado, debe sumarse también al otro.\nOlvidar que la tangencia usa distancia perpendicular desde el centro a la recta."
   },
   {
     "objectID": "temas/circunferencia.html#ejercicios",
     "href": "temas/circunferencia.html#ejercicios",
     "title": "Circunferencia",
     "section": "Ejercicios",
-    "text": "Ejercicios\n\n\nIdentifica el centro y el radio de \\((x+3)^2+(y-4)^2=25\\).\nEscribe la ecuación de la circunferencia con centro \\(C(-2,1)\\) y radio \\(5\\).\nPrepara la forma general \\(x^2+y^2-6x+4y-12=0\\) para completar cuadrados."
+    "text": "Ejercicios\n\n\nIdentifica centro y radio en \\((x-3)^2+(y+2)^2=16\\).\nEscribe la ecuación de la circunferencia con centro \\((-2,5)\\) y radio \\(4\\).\nTransforma a forma canónica: \\(x^2+y^2-6x+2y-6=0\\).\nDetermina la circunferencia con centro \\((1,-1)\\) tangente a \\(3x+4y-10=0\\).\nDecide si \\((3,4)\\) pertenece a la circunferencia \\(x^2+y^2=25\\)."
   },
   {
     "objectID": "temas/circunferencia.html#ideas-clave",
     "href": "temas/circunferencia.html#ideas-clave",
     "title": "Circunferencia",
     "section": "Ideas clave",
-    "text": "Ideas clave\n\n\nLa circunferencia se define por distancia fija a un centro.\nLa ecuación canónica muestra directamente centro y radio.\nCompletar cuadrados permite pasar de forma general a forma canónica.\nLa tangencia a una recta se relaciona con la distancia punto-recta."
+    "text": "Ideas clave\n\n\nUna circunferencia se determina por centro y radio.\nLa forma canónica permite leer esos elementos directamente.\nLa forma general suele requerir completar cuadrados.\nSi una recta es tangente, la distancia del centro a esa recta es el radio.\nLos signos dentro de los paréntesis deben leerse con cuidado."
   },
   {
     "objectID": "temas/circunferencia.html#referencias",

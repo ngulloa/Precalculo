@@ -172,7 +172,7 @@ window.Quarto = {
   <li><a href="#ecuación-canónica" id="toc-ecuación-canónica" class="nav-link" data-scroll-target="#ecuación-canónica">Ecuación canónica</a></li>
   <li><a href="#forma-general-y-completar-cuadrados" id="toc-forma-general-y-completar-cuadrados" class="nav-link" data-scroll-target="#forma-general-y-completar-cuadrados">Forma general y completar cuadrados</a></li>
   <li><a href="#circunferencia-tangente-a-una-recta" id="toc-circunferencia-tangente-a-una-recta" class="nav-link" data-scroll-target="#circunferencia-tangente-a-una-recta">Circunferencia tangente a una recta</a></li>
-  <li><a href="#ejemplo-mínimo" id="toc-ejemplo-mínimo" class="nav-link" data-scroll-target="#ejemplo-mínimo">Ejemplo mínimo</a></li>
+  <li><a href="#centro-determinado-por-condiciones" id="toc-centro-determinado-por-condiciones" class="nav-link" data-scroll-target="#centro-determinado-por-condiciones">Centro determinado por condiciones</a></li>
   <li><a href="#visualización-interactiva" id="toc-visualización-interactiva" class="nav-link" data-scroll-target="#visualización-interactiva">Visualización interactiva</a></li>
   <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
   <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
@@ -210,38 +210,36 @@ window.Quarto = {
 
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<div class="concept-box">
-<p>Reconocer la circunferencia como lugar geométrico, identificar centro y radio, y distinguir sus ecuaciones principales en el plano cartesiano.</p>
-</div>
+<p>Reconocer una circunferencia en el plano cartesiano, identificar su centro y radio, y usar condiciones geométricas para construir su ecuación.</p>
 </section>
 <section id="idea-central" class="level2">
 <h2 class="anchored" data-anchor-id="idea-central">Idea central</h2>
-<p>Una circunferencia reúne todos los puntos del plano que están a una misma distancia de un punto fijo.</p>
+<p>Una circunferencia es el conjunto de todos los puntos del plano que están a una misma distancia de un punto fijo llamado centro.</p>
 <div class="concept-box">
-<p>Si el centro es <span class="math inline">\(C(h,k)\)</span> y el radio es <span class="math inline">\(r&gt;0\)</span>, un punto <span class="math inline">\(P(x,y)\)</span> pertenece a la circunferencia cuando</p>
-<p><span class="math display">\[
-d(P,C)=r.
-\]</span></p>
+<p>Para determinar una circunferencia basta conocer su centro y su radio.</p>
 </div>
 </section>
 <section id="definición" class="level2">
 <h2 class="anchored" data-anchor-id="definición">Definición</h2>
-<div class="concept-box">
-<p>La circunferencia de centro <span class="math inline">\(C(h,k)\)</span> y radio <span class="math inline">\(r\)</span> es el conjunto de puntos <span class="math inline">\(P(x,y)\)</span> que cumplen</p>
+<p>Si el centro es <span class="math inline">\(C=(h,k)\)</span> y el radio es <span class="math inline">\(r&gt;0\)</span>, entonces un punto <span class="math inline">\((x,y)\)</span> pertenece a la circunferencia si su distancia al centro es <span class="math inline">\(r\)</span>:</p>
+<p><span class="math display">\[
+d((x,y),(h,k))=r.
+\]</span></p>
+<p>Usando la fórmula de distancia:</p>
 <p><span class="math display">\[
 \sqrt{(x-h)^2+(y-k)^2}=r.
 \]</span></p>
-</div>
+<p>Al elevar al cuadrado se obtiene la ecuación canónica.</p>
 </section>
 <section id="ecuación-canónica" class="level2">
 <h2 class="anchored" data-anchor-id="ecuación-canónica">Ecuación canónica</h2>
 <div class="formula-grid">
 <div class="formula-card">
 <div class="formula-tag">
-Canónica
+Centro-radio
 </div>
 <div class="formula-title">
-Centro y radio
+Centro <span class="math inline">\((h,k)\)</span>, radio <span class="math inline">\(r\)</span>
 </div>
 <div class="formula-expression">
 <p><span class="math display">\[
@@ -249,7 +247,7 @@ Centro y radio
 \]</span></p>
 </div>
 <div class="formula-note">
-<p>El centro es <span class="math inline">\(C(h,k)\)</span> y el radio es <span class="math inline">\(r\)</span>.</p>
+<p>Es la forma más directa para leer centro y radio.</p>
 </div>
 </div>
 <div class="formula-card">
@@ -265,53 +263,129 @@ x^2+y^2=r^2
 \]</span></p>
 </div>
 <div class="formula-note">
-<p>Caso particular de la ecuación canónica.</p>
+<p>Caso particular de la ecuación anterior.</p>
 </div>
 </div>
+</div>
+<div class="warning-box">
+<p>En <span class="math inline">\((x-2)^2+(y+3)^2=16\)</span>, el centro es <span class="math inline">\((2,-3)\)</span> y el radio es <span class="math inline">\(4\)</span>. Los signos del centro se leen al revés dentro de los paréntesis.</p>
 </div>
 </section>
 <section id="forma-general-y-completar-cuadrados" class="level2">
 <h2 class="anchored" data-anchor-id="forma-general-y-completar-cuadrados">Forma general y completar cuadrados</h2>
-<div class="method-box">
-<p>La forma general se trabajará completando cuadrados para recuperar centro y radio:</p>
+<p>Al desarrollar la ecuación canónica puede aparecer una ecuación de la forma</p>
 <p><span class="math display">\[
 x^2+y^2+Dx+Ey+F=0.
 \]</span></p>
-<p>Esta sección queda preparada para desarrollar el procedimiento paso a paso.</p>
+<p>Para recuperar el centro y el radio, se agrupan términos en <span class="math inline">\(x\)</span> y en <span class="math inline">\(y\)</span>, y luego se completan cuadrados.</p>
+<div class="method-box step-list">
+<ol type="1">
+<li>Agrupa los términos: <span class="math inline">\((x^2+Dx)+(y^2+Ey)=-F\)</span>.</li>
+<li>Completa cuadrados en cada variable.</li>
+<li>Suma a ambos lados los números agregados.</li>
+<li>Lee <span class="math inline">\(C(h,k)\)</span> y <span class="math inline">\(r\)</span> desde la forma canónica.</li>
+</ol>
+</div>
+<div class="example-box">
+<p>Transformemos</p>
+<p><span class="math display">\[
+x^2+y^2-6x+2y-6=0.
+\]</span></p>
+<p>Agrupamos y completamos cuadrados:</p>
+<p><span class="math display">\[
+(x^2-6x)+(y^2+2y)=6.
+\]</span></p>
+<p><span class="math display">\[
+(x^2-6x+9)+(y^2+2y+1)=6+9+1.
+\]</span></p>
+<p>Luego</p>
+<p><span class="math display">\[
+(x-3)^2+(y+1)^2=16.
+\]</span></p>
+<p>Por tanto, el centro es <span class="math inline">\(C(3,-1)\)</span> y el radio es <span class="math inline">\(r=4\)</span>.</p>
 </div>
 </section>
 <section id="circunferencia-tangente-a-una-recta" class="level2">
 <h2 class="anchored" data-anchor-id="circunferencia-tangente-a-una-recta">Circunferencia tangente a una recta</h2>
-<div class="concept-box">
-<p>Si una circunferencia es tangente a una recta, la distancia desde el centro a la recta coincide con el radio.</p>
+<p>Si una circunferencia es tangente a una recta, entonces el radio que llega al punto de tangencia es perpendicular a esa recta.</p>
+<p>En particular, si se conoce el centro <span class="math inline">\(C(h,k)\)</span> y la recta tangente</p>
 <p><span class="math display">\[
-d(C,L)=r.
+L:Ax+By+C=0,
+\]</span></p>
+<p>entonces el radio se obtiene con la distancia del centro a la recta:</p>
+<p><span class="math display">\[
+r=d(C,L)=\frac{|Ah+Bk+C|}{\sqrt{A^2+B^2}}.
+\]</span></p>
+<div class="example-box">
+<p>Determinemos la circunferencia con centro <span class="math inline">\(C(2,7)\)</span> tangente a</p>
+<p><span class="math display">\[
+5x-12y+6=0.
+\]</span></p>
+<p>La ecuación tiene la forma</p>
+<p><span class="math display">\[
+(x-2)^2+(y-7)^2=r^2.
+\]</span></p>
+<p>Como hay tangencia,</p>
+<p><span class="math display">\[
+r=\frac{|5(2)-12(7)+6|}{\sqrt{5^2+(-12)^2}}
+=\frac{68}{13}.
+\]</span></p>
+<p>Por lo tanto,</p>
+<p><span class="math display">\[
+(x-2)^2+(y-7)^2=\left(\frac{68}{13}\right)^2.
 \]</span></p>
 </div>
 </section>
-<section id="ejemplo-mínimo" class="level2">
-<h2 class="anchored" data-anchor-id="ejemplo-mínimo">Ejemplo mínimo</h2>
-<div class="example-box">
-<p>La circunferencia</p>
+<section id="centro-determinado-por-condiciones" class="level2">
+<h2 class="anchored" data-anchor-id="centro-determinado-por-condiciones">Centro determinado por condiciones</h2>
+<p>Cuando el centro no se entrega directamente, se traducen las condiciones geométricas a ecuaciones. Por ejemplo, si dos puntos pertenecen a la circunferencia, ambos están a la misma distancia del centro.</p>
+<div class="exercise-box">
+<p>Hallar la circunferencia que pasa por <span class="math inline">\(A(-3,0)\)</span> y <span class="math inline">\(B(2,-1)\)</span>, sabiendo que su centro está sobre <span class="math inline">\(x+y=2\)</span>.</p>
+<p>Sea <span class="math inline">\(C(h,k)\)</span> el centro. Como <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> están en la circunferencia:</p>
 <p><span class="math display">\[
-(x-2)^2+(y+1)^2=9
+(h+3)^2+k^2=(h-2)^2+(k+1)^2.
 \]</span></p>
-<p>tiene centro <span class="math inline">\(C(2,-1)\)</span> y radio <span class="math inline">\(r=3\)</span>.</p>
+<p>Al simplificar:</p>
+<p><span class="math display">\[
+10h=2k-4.
+\]</span></p>
+<p>Además, <span class="math inline">\(h+k=2\)</span>, así que <span class="math inline">\(k=2-h\)</span>. Sustituyendo:</p>
+<p><span class="math display">\[
+10h=2(2-h)-4,
+\]</span></p>
+<p><span class="math display">\[
+12h=0.
+\]</span></p>
+<p>Luego <span class="math inline">\(h=0\)</span> y <span class="math inline">\(k=2\)</span>. El centro es <span class="math inline">\(C(0,2)\)</span>.</p>
+<p>Con <span class="math inline">\(A(-3,0)\)</span>:</p>
+<p><span class="math display">\[
+r=\sqrt{(0+3)^2+(2-0)^2}=\sqrt{13}.
+\]</span></p>
+<p>Por lo tanto,</p>
+<p><span class="math display">\[
+x^2+(y-2)^2=13.
+\]</span></p>
 </div>
 </section>
 <section id="visualización-interactiva" class="level2">
 <h2 class="anchored" data-anchor-id="visualización-interactiva">Visualización interactiva</h2>
-<div id="circunferencia-interactiva-app" class="sequence-sim">
+<p>Modifica el centro y el radio para observar cómo cambia la ecuación</p>
+<p><span class="math display">\[
+(x-h)^2+(y-k)^2=r^2.
+\]</span></p>
+<div id="circunferencia-interactiva-app">
 
 </div>
+<script src="../scripts/circunferencia-interactiva.js" defer=""></script>
 </section>
 <section id="errores-comunes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
 <div class="warning-box">
 <ul>
-<li>Confundir el radio <span class="math inline">\(r\)</span> con <span class="math inline">\(r^2\)</span> en la ecuación canónica.</li>
-<li>Cambiar los signos del centro al leer <span class="math inline">\((x-h)^2+(y-k)^2\)</span>.</li>
-<li>Completar cuadrados sin agrupar primero los términos en <span class="math inline">\(x\)</span> y en <span class="math inline">\(y\)</span>.</li>
+<li>Confundir el radio con el radio al cuadrado: en <span class="math inline">\((x-2)^2+(y+1)^2=25\)</span>, el radio es <span class="math inline">\(5\)</span>, no <span class="math inline">\(25\)</span>.</li>
+<li>Leer mal los signos del centro: en <span class="math inline">\((x-2)^2+(y+3)^2=16\)</span>, el centro es <span class="math inline">\((2,-3)\)</span>.</li>
+<li>Completar cuadrados sin equilibrar la ecuación: si se suma un número a un lado, debe sumarse también al otro.</li>
+<li>Olvidar que la tangencia usa distancia perpendicular desde el centro a la recta.</li>
 </ul>
 </div>
 </section>
@@ -319,9 +393,11 @@ d(C,L)=r.
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
 <div class="proposed-box">
 <ol type="1">
-<li>Identifica el centro y el radio de <span class="math inline">\((x+3)^2+(y-4)^2=25\)</span>.</li>
-<li>Escribe la ecuación de la circunferencia con centro <span class="math inline">\(C(-2,1)\)</span> y radio <span class="math inline">\(5\)</span>.</li>
-<li>Prepara la forma general <span class="math inline">\(x^2+y^2-6x+4y-12=0\)</span> para completar cuadrados.</li>
+<li>Identifica centro y radio en <span class="math inline">\((x-3)^2+(y+2)^2=16\)</span>.</li>
+<li>Escribe la ecuación de la circunferencia con centro <span class="math inline">\((-2,5)\)</span> y radio <span class="math inline">\(4\)</span>.</li>
+<li>Transforma a forma canónica: <span class="math inline">\(x^2+y^2-6x+2y-6=0\)</span>.</li>
+<li>Determina la circunferencia con centro <span class="math inline">\((1,-1)\)</span> tangente a <span class="math inline">\(3x+4y-10=0\)</span>.</li>
+<li>Decide si <span class="math inline">\((3,4)\)</span> pertenece a la circunferencia <span class="math inline">\(x^2+y^2=25\)</span>.</li>
 </ol>
 </div>
 </section>
@@ -329,10 +405,11 @@ d(C,L)=r.
 <h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
 <div class="concept-box">
 <ul>
-<li>La circunferencia se define por distancia fija a un centro.</li>
-<li>La ecuación canónica muestra directamente centro y radio.</li>
-<li>Completar cuadrados permite pasar de forma general a forma canónica.</li>
-<li>La tangencia a una recta se relaciona con la distancia punto-recta.</li>
+<li>Una circunferencia se determina por centro y radio.</li>
+<li>La forma canónica permite leer esos elementos directamente.</li>
+<li>La forma general suele requerir completar cuadrados.</li>
+<li>Si una recta es tangente, la distancia del centro a esa recta es el radio.</li>
+<li>Los signos dentro de los paréntesis deben leerse con cuidado.</li>
 </ul>
 </div>
 </section>

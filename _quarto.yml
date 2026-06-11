@@ -13,6 +13,7 @@ project:
     - scripts/binomio-pascal.js
     - scripts/circulo-unitario.js
     - scripts/recta-interactiva.js
+    - scripts/circunferencia-interactiva.js
 
 title: "Precálculo"
 
