@@ -35,6 +35,8 @@ website:
         href: temas/funciones-lineales-recta.qmd
       - text: "Circunferencia"
         href: temas/circunferencia.qmd
+      - text: "Parábola"
+        href: temas/parabola.qmd
   page-footer:
     left: "Precálculo"
     right: "Sitio académico generado con Quarto"

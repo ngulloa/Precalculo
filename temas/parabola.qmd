@@ -1,0 +1,57 @@
+---
+title: "Parábola"
+description: "Vértice, foco, directriz y formas principales de la parábola."
+---
+
+## Objetivo
+
+::: {.concept-box}
+Reconocer una parábola, identificar sus elementos principales y escribir su ecuación en formas útiles.
+:::
+
+## Idea central
+
+Una parábola puede estudiarse como función cuadrática o como lugar geométrico definido por foco y directriz.
+
+## Parábola como función cuadrática
+
+Contenido breve que se completará en la etapa 8.
+
+## Parábola como lugar geométrico
+
+Contenido breve que se completará en la etapa 8.
+
+## Formas canónicas
+
+Contenido breve que se completará en la etapa 8.
+
+## Vértice, foco y directriz
+
+Contenido breve que se completará en la etapa 8.
+
+## Ejemplo mínimo
+
+Contenido breve que se completará en la etapa 8.
+
+## Visualización interactiva
+
+<div id="parabola-interactiva-app" class="sequence-sim"></div>
+
+## Errores comunes
+
+Contenido breve que se completará en la etapa 8.
+
+## Ejercicios
+
+Contenido breve que se completará en la etapa 8.
+
+## Ideas clave
+
+Contenido breve que se completará en la etapa 8.
+
+## Referencias
+
+- Ayudantía 12, Álgebra y Geometría (MATE10), 2 de junio de 2026.
+- Ayudantía 13, Álgebra y Geometría (MATE10), 9 de junio de 2026.
+- Taller 7, Álgebra y Geometría (MATE-10), 5 de junio de 2026.
+- Stewart, J., Redlin, L., & Watson, S. *Precálculo: Matemáticas para el cálculo*, 7.ª ed., secciones 3.1 y 11.1.

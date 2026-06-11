@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Centro, radio y ecuaciones principales de la circunferencia en el plano cartesiano.">
+<meta name="description" content="Vértice, foco, directriz y formas principales de la parábola.">
 
-<title>Circunferencia – Precálculo</title>
+<title>Parábola – Precálculo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles/custom.css">
 </head>
@@ -147,11 +118,11 @@ window.Quarto = {
 <span class="menu-text">Rectas</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../temas/circunferencia.html" aria-current="page"> 
+    <a class="nav-link" href="../temas/circunferencia.html"> 
 <span class="menu-text">Circunferencia</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../temas/parabola.html"> 
+    <a class="nav-link active" href="../temas/parabola.html" aria-current="page"> 
 <span class="menu-text">Parábola</span></a>
   </li>  
 </ul>
@@ -172,11 +143,11 @@ window.Quarto = {
   <ul>
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#idea-central" id="toc-idea-central" class="nav-link" data-scroll-target="#idea-central">Idea central</a></li>
-  <li><a href="#definición" id="toc-definición" class="nav-link" data-scroll-target="#definición">Definición</a></li>
-  <li><a href="#ecuación-canónica" id="toc-ecuación-canónica" class="nav-link" data-scroll-target="#ecuación-canónica">Ecuación canónica</a></li>
-  <li><a href="#forma-general-y-completar-cuadrados" id="toc-forma-general-y-completar-cuadrados" class="nav-link" data-scroll-target="#forma-general-y-completar-cuadrados">Forma general y completar cuadrados</a></li>
-  <li><a href="#circunferencia-tangente-a-una-recta" id="toc-circunferencia-tangente-a-una-recta" class="nav-link" data-scroll-target="#circunferencia-tangente-a-una-recta">Circunferencia tangente a una recta</a></li>
-  <li><a href="#centro-determinado-por-condiciones" id="toc-centro-determinado-por-condiciones" class="nav-link" data-scroll-target="#centro-determinado-por-condiciones">Centro determinado por condiciones</a></li>
+  <li><a href="#parábola-como-función-cuadrática" id="toc-parábola-como-función-cuadrática" class="nav-link" data-scroll-target="#parábola-como-función-cuadrática">Parábola como función cuadrática</a></li>
+  <li><a href="#parábola-como-lugar-geométrico" id="toc-parábola-como-lugar-geométrico" class="nav-link" data-scroll-target="#parábola-como-lugar-geométrico">Parábola como lugar geométrico</a></li>
+  <li><a href="#formas-canónicas" id="toc-formas-canónicas" class="nav-link" data-scroll-target="#formas-canónicas">Formas canónicas</a></li>
+  <li><a href="#vértice-foco-y-directriz" id="toc-vértice-foco-y-directriz" class="nav-link" data-scroll-target="#vértice-foco-y-directriz">Vértice, foco y directriz</a></li>
+  <li><a href="#ejemplo-mínimo" id="toc-ejemplo-mínimo" class="nav-link" data-scroll-target="#ejemplo-mínimo">Ejemplo mínimo</a></li>
   <li><a href="#visualización-interactiva" id="toc-visualización-interactiva" class="nav-link" data-scroll-target="#visualización-interactiva">Visualización interactiva</a></li>
   <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
   <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
@@ -190,12 +161,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Circunferencia</h1>
+<h1 class="title">Parábola</h1>
 </div>
 
 <div>
   <div class="description">
-    Centro, radio y ecuaciones principales de la circunferencia en el plano cartesiano.
+    Vértice, foco, directriz y formas principales de la parábola.
   </div>
 </div>
 
@@ -214,223 +185,59 @@ window.Quarto = {
 
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>Reconocer una circunferencia en el plano cartesiano, identificar su centro y radio, y usar condiciones geométricas para construir su ecuación.</p>
+<div class="concept-box">
+<p>Reconocer una parábola, identificar sus elementos principales y escribir su ecuación en formas útiles.</p>
+</div>
 </section>
 <section id="idea-central" class="level2">
 <h2 class="anchored" data-anchor-id="idea-central">Idea central</h2>
-<p>Una circunferencia es el conjunto de todos los puntos del plano que están a una misma distancia de un punto fijo llamado centro.</p>
-<div class="concept-box">
-<p>Para determinar una circunferencia basta conocer su centro y su radio.</p>
-</div>
+<p>Una parábola puede estudiarse como función cuadrática o como lugar geométrico definido por foco y directriz.</p>
 </section>
-<section id="definición" class="level2">
-<h2 class="anchored" data-anchor-id="definición">Definición</h2>
-<p>Si el centro es <span class="math inline">\(C=(h,k)\)</span> y el radio es <span class="math inline">\(r&gt;0\)</span>, entonces un punto <span class="math inline">\((x,y)\)</span> pertenece a la circunferencia si su distancia al centro es <span class="math inline">\(r\)</span>:</p>
-<p><span class="math display">\[
-d((x,y),(h,k))=r.
-\]</span></p>
-<p>Usando la fórmula de distancia:</p>
-<p><span class="math display">\[
-\sqrt{(x-h)^2+(y-k)^2}=r.
-\]</span></p>
-<p>Al elevar al cuadrado se obtiene la ecuación canónica.</p>
+<section id="parábola-como-función-cuadrática" class="level2">
+<h2 class="anchored" data-anchor-id="parábola-como-función-cuadrática">Parábola como función cuadrática</h2>
+<p>Contenido breve que se completará en la etapa 8.</p>
 </section>
-<section id="ecuación-canónica" class="level2">
-<h2 class="anchored" data-anchor-id="ecuación-canónica">Ecuación canónica</h2>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Centro-radio
-</div>
-<div class="formula-title">
-Centro <span class="math inline">\((h,k)\)</span>, radio <span class="math inline">\(r\)</span>
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-(x-h)^2+(y-k)^2=r^2
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Es la forma más directa para leer centro y radio.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Origen
-</div>
-<div class="formula-title">
-Centro en <span class="math inline">\((0,0)\)</span>
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-x^2+y^2=r^2
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Caso particular de la ecuación anterior.</p>
-</div>
-</div>
-</div>
-<div class="warning-box">
-<p>En <span class="math inline">\((x-2)^2+(y+3)^2=16\)</span>, el centro es <span class="math inline">\((2,-3)\)</span> y el radio es <span class="math inline">\(4\)</span>. Los signos del centro se leen al revés dentro de los paréntesis.</p>
-</div>
+<section id="parábola-como-lugar-geométrico" class="level2">
+<h2 class="anchored" data-anchor-id="parábola-como-lugar-geométrico">Parábola como lugar geométrico</h2>
+<p>Contenido breve que se completará en la etapa 8.</p>
 </section>
-<section id="forma-general-y-completar-cuadrados" class="level2">
-<h2 class="anchored" data-anchor-id="forma-general-y-completar-cuadrados">Forma general y completar cuadrados</h2>
-<p>Al desarrollar la ecuación canónica puede aparecer una ecuación de la forma</p>
-<p><span class="math display">\[
-x^2+y^2+Dx+Ey+F=0.
-\]</span></p>
-<p>Para recuperar el centro y el radio, se agrupan términos en <span class="math inline">\(x\)</span> y en <span class="math inline">\(y\)</span>, y luego se completan cuadrados.</p>
-<div class="method-box step-list">
-<ol type="1">
-<li>Agrupa los términos: <span class="math inline">\((x^2+Dx)+(y^2+Ey)=-F\)</span>.</li>
-<li>Completa cuadrados en cada variable.</li>
-<li>Suma a ambos lados los números agregados.</li>
-<li>Lee <span class="math inline">\(C(h,k)\)</span> y <span class="math inline">\(r\)</span> desde la forma canónica.</li>
-</ol>
-</div>
-<div class="example-box">
-<p>Transformemos</p>
-<p><span class="math display">\[
-x^2+y^2-6x+2y-6=0.
-\]</span></p>
-<p>Agrupamos y completamos cuadrados:</p>
-<p><span class="math display">\[
-(x^2-6x)+(y^2+2y)=6.
-\]</span></p>
-<p><span class="math display">\[
-(x^2-6x+9)+(y^2+2y+1)=6+9+1.
-\]</span></p>
-<p>Luego</p>
-<p><span class="math display">\[
-(x-3)^2+(y+1)^2=16.
-\]</span></p>
-<p>Por tanto, el centro es <span class="math inline">\(C(3,-1)\)</span> y el radio es <span class="math inline">\(r=4\)</span>.</p>
-</div>
+<section id="formas-canónicas" class="level2">
+<h2 class="anchored" data-anchor-id="formas-canónicas">Formas canónicas</h2>
+<p>Contenido breve que se completará en la etapa 8.</p>
 </section>
-<section id="circunferencia-tangente-a-una-recta" class="level2">
-<h2 class="anchored" data-anchor-id="circunferencia-tangente-a-una-recta">Circunferencia tangente a una recta</h2>
-<p>Si una circunferencia es tangente a una recta, entonces el radio que llega al punto de tangencia es perpendicular a esa recta.</p>
-<p>Para una recta</p>
-<p><span class="math display">\[
-L:Ax+By+C=0
-\]</span></p>
-<p>y un punto <span class="math inline">\(P=(x_0,y_0)\)</span>, la distancia de <span class="math inline">\(P\)</span> a <span class="math inline">\(L\)</span> es</p>
-<p><span class="math display">\[
-d(P,L)=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.
-\]</span></p>
-<p>En particular, si se conoce el centro <span class="math inline">\(C=(h,k)\)</span> y la recta tangente</p>
-<p><span class="math display">\[
-L:Ax+By+C=0,
-\]</span></p>
-<p>entonces el radio se obtiene con la distancia del centro a la recta:</p>
-<p><span class="math display">\[
-r=d(C,L)=\frac{|Ah+Bk+C|}{\sqrt{A^2+B^2}}.
-\]</span></p>
-<div class="example-box">
-<p>Determinemos la circunferencia con centro <span class="math inline">\(C(2,7)\)</span> tangente a</p>
-<p><span class="math display">\[
-5x-12y+6=0.
-\]</span></p>
-<p>La ecuación tiene la forma</p>
-<p><span class="math display">\[
-(x-2)^2+(y-7)^2=r^2.
-\]</span></p>
-<p>Como hay tangencia,</p>
-<p><span class="math display">\[
-r=\frac{|5(2)-12(7)+6|}{\sqrt{5^2+(-12)^2}}
-=\frac{68}{13}.
-\]</span></p>
-<p>Por lo tanto,</p>
-<p><span class="math display">\[
-(x-2)^2+(y-7)^2=\left(\frac{68}{13}\right)^2.
-\]</span></p>
-</div>
+<section id="vértice-foco-y-directriz" class="level2">
+<h2 class="anchored" data-anchor-id="vértice-foco-y-directriz">Vértice, foco y directriz</h2>
+<p>Contenido breve que se completará en la etapa 8.</p>
 </section>
-<section id="centro-determinado-por-condiciones" class="level2">
-<h2 class="anchored" data-anchor-id="centro-determinado-por-condiciones">Centro determinado por condiciones</h2>
-<p>Cuando el centro no se entrega directamente, se traducen las condiciones geométricas a ecuaciones. Por ejemplo, si dos puntos pertenecen a la circunferencia, ambos están a la misma distancia del centro.</p>
-<div class="exercise-box">
-<p>Hallar la circunferencia que pasa por <span class="math inline">\(A(-3,0)\)</span> y <span class="math inline">\(B(2,-1)\)</span>, sabiendo que su centro está sobre <span class="math inline">\(x+y=2\)</span>.</p>
-<p>Sea <span class="math inline">\(C(h,k)\)</span> el centro. Como <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> están en la circunferencia:</p>
-<p><span class="math display">\[
-(h+3)^2+k^2=(h-2)^2+(k+1)^2.
-\]</span></p>
-<p>Al simplificar:</p>
-<p><span class="math display">\[
-10h=2k-4.
-\]</span></p>
-<p>Además, <span class="math inline">\(h+k=2\)</span>, así que <span class="math inline">\(k=2-h\)</span>. Sustituyendo:</p>
-<p><span class="math display">\[
-10h=2(2-h)-4,
-\]</span></p>
-<p><span class="math display">\[
-12h=0.
-\]</span></p>
-<p>Luego <span class="math inline">\(h=0\)</span> y <span class="math inline">\(k=2\)</span>. El centro es <span class="math inline">\(C(0,2)\)</span>.</p>
-<p>Con <span class="math inline">\(A(-3,0)\)</span>:</p>
-<p><span class="math display">\[
-r=\sqrt{(0+3)^2+(2-0)^2}=\sqrt{13}.
-\]</span></p>
-<p>Por lo tanto,</p>
-<p><span class="math display">\[
-x^2+(y-2)^2=13.
-\]</span></p>
-</div>
+<section id="ejemplo-mínimo" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-mínimo">Ejemplo mínimo</h2>
+<p>Contenido breve que se completará en la etapa 8.</p>
 </section>
 <section id="visualización-interactiva" class="level2">
 <h2 class="anchored" data-anchor-id="visualización-interactiva">Visualización interactiva</h2>
-<p>Modifica el centro y el radio para observar cómo cambia la ecuación</p>
-<p><span class="math display">\[
-(x-h)^2+(y-k)^2=r^2.
-\]</span></p>
-<div id="circunferencia-interactiva-app">
+<div id="parabola-interactiva-app" class="sequence-sim">
 
 </div>
-<script src="../scripts/circunferencia-interactiva.js" defer=""></script>
 </section>
 <section id="errores-comunes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
-<div class="warning-box">
-<ul>
-<li>Confundir el radio con el radio al cuadrado: en <span class="math inline">\((x-2)^2+(y+1)^2=25\)</span>, el radio es <span class="math inline">\(5\)</span>, no <span class="math inline">\(25\)</span>.</li>
-<li>Leer mal los signos del centro: en <span class="math inline">\((x-2)^2+(y+3)^2=16\)</span>, el centro es <span class="math inline">\((2,-3)\)</span>.</li>
-<li>Completar cuadrados sin equilibrar la ecuación: si se suma un número a un lado, debe sumarse también al otro.</li>
-<li>Olvidar que la tangencia usa distancia perpendicular desde el centro a la recta.</li>
-</ul>
-</div>
+<p>Contenido breve que se completará en la etapa 8.</p>
 </section>
 <section id="ejercicios" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
-<div class="proposed-box">
-<ol type="1">
-<li>Identifica centro y radio en <span class="math inline">\((x-3)^2+(y+2)^2=16\)</span>.</li>
-<li>Escribe la ecuación de la circunferencia con centro <span class="math inline">\((-2,5)\)</span> y radio <span class="math inline">\(4\)</span>.</li>
-<li>Transforma a forma canónica: <span class="math inline">\(x^2+y^2-6x+2y-6=0\)</span>.</li>
-<li>Determina la circunferencia con centro <span class="math inline">\((1,-1)\)</span> tangente a <span class="math inline">\(3x+4y-10=0\)</span>.</li>
-<li>Decide si <span class="math inline">\((3,4)\)</span> pertenece a la circunferencia <span class="math inline">\(x^2+y^2=25\)</span>.</li>
-</ol>
-</div>
+<p>Contenido breve que se completará en la etapa 8.</p>
 </section>
 <section id="ideas-clave" class="level2">
 <h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
-<div class="concept-box">
-<ul>
-<li>Una circunferencia se determina por centro y radio.</li>
-<li>La forma canónica permite leer esos elementos directamente.</li>
-<li>La forma general suele requerir completar cuadrados.</li>
-<li>Si una recta es tangente, la distancia del centro a esa recta es el radio.</li>
-<li>Los signos dentro de los paréntesis deben leerse con cuidado.</li>
-</ul>
-</div>
+<p>Contenido breve que se completará en la etapa 8.</p>
 </section>
 <section id="referencias" class="level2">
 <h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
 <ul>
-<li>Taller 7, Álgebra y Geometría (MATE-10), 5 de junio de 2026.</li>
+<li>Ayudantía 12, Álgebra y Geometría (MATE10), 2 de junio de 2026.</li>
 <li>Ayudantía 13, Álgebra y Geometría (MATE10), 9 de junio de 2026.</li>
-<li>Stewart, J., Redlin, L., &amp; Watson, S. <em>Precálculo: Matemáticas para el cálculo</em>, 7.ª ed., sección 1.9.</li>
+<li>Taller 7, Álgebra y Geometría (MATE-10), 5 de junio de 2026.</li>
+<li>Stewart, J., Redlin, L., &amp; Watson, S. <em>Precálculo: Matemáticas para el cálculo</em>, 7.ª ed., secciones 3.1 y 11.1.</li>
 </ul>
 
 

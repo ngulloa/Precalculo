@@ -55,4 +55,12 @@ Pendiente, razón de cambio y formas principales de la ecuación de una recta.
 
 Centro, radio y ecuaciones principales de la circunferencia en el plano cartesiano.
 :::
+
+::: {.topic-card .is-available}
+<p class="topic-status">Disponible</p>
+
+### [Parábola](temas/parabola.qmd)
+
+Vértice, foco, directriz y formas principales de la parábola.
+:::
 :::
