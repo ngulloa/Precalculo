@@ -308,7 +308,7 @@
       "font-weight": "700",
       "text-anchor": "middle",
     });
-    appendText(layer, `subida ${formatNumber(m)}`, {
+    appendText(layer, `cambio y = ${formatNumber(m)}`, {
       x: x1 + 10,
       y: (y0 + y1) / 2 + 4,
       fill: "#a05a00",
@@ -390,8 +390,8 @@
     svg.setAttribute("aria-label", `Gráfico de la recta ${readableEquation}. Pendiente ${slopeText}; intersección con el eje y ${interceptText}; recta ${reading}.`);
     desc.textContent = `Recta ${readableEquation}; pendiente ${slopeText}; intersección con el eje y en ${interceptText}.`;
 
-    if (window.MathJax?.typesetPromise) {
-      window.MathJax.typesetPromise([root]);
+    if (typeof window.MathJax?.typesetPromise === "function") {
+      window.MathJax.typesetPromise([root]).catch(() => {});
     }
   };
 
