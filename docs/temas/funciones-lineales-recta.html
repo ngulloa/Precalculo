@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Notación, fórmulas básicas y lectura intuitiva de sucesiones y sumas finitas">
+<meta name="description" content="Pendiente, razón de cambio y formas principales de la ecuación de una recta.">
 
-<title>Sucesiones y sumatorias – Precálculo</title>
+<title>Funciones lineales y ecuación de la recta – Precálculo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -131,7 +131,7 @@ window.Quarto = {
 <span class="menu-text">Inducción matemática</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../temas/sucesiones-sumatorias.html" aria-current="page"> 
+    <a class="nav-link" href="../temas/sucesiones-sumatorias.html"> 
 <span class="menu-text">Sucesiones y sumatorias</span></a>
   </li>  
   <li class="nav-item">
@@ -143,7 +143,7 @@ window.Quarto = {
 <span class="menu-text">Trigonometría</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../temas/funciones-lineales-recta.html"> 
+    <a class="nav-link active" href="../temas/funciones-lineales-recta.html" aria-current="page"> 
 <span class="menu-text">Rectas</span></a>
   </li>  
 </ul>
@@ -164,18 +164,14 @@ window.Quarto = {
   <ul>
   <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
   <li><a href="#idea-central" id="toc-idea-central" class="nav-link" data-scroll-target="#idea-central">Idea central</a></li>
-  <li><a href="#sucesiones" id="toc-sucesiones" class="nav-link" data-scroll-target="#sucesiones">Sucesiones</a></li>
-  <li><a href="#sumatorias" id="toc-sumatorias" class="nav-link" data-scroll-target="#sumatorias">Sumatorias</a></li>
-  <li><a href="#fórmulas" id="toc-fórmulas" class="nav-link" data-scroll-target="#fórmulas">Fórmulas</a>
-  <ul class="collapse">
-  <li><a href="#sucesiones-1" id="toc-sucesiones-1" class="nav-link" data-scroll-target="#sucesiones-1">Sucesiones</a></li>
-  <li><a href="#progresiones" id="toc-progresiones" class="nav-link" data-scroll-target="#progresiones">Progresiones</a></li>
-  <li><a href="#sumatorias-1" id="toc-sumatorias-1" class="nav-link" data-scroll-target="#sumatorias-1">Sumatorias</a></li>
-  <li><a href="#propiedades" id="toc-propiedades" class="nav-link" data-scroll-target="#propiedades">Propiedades</a></li>
-  <li><a href="#sumas-especiales" id="toc-sumas-especiales" class="nav-link" data-scroll-target="#sumas-especiales">Sumas especiales</a></li>
-  </ul></li>
-  <li><a href="#visualización-términos-que-se-acercan-a-un-valor" id="toc-visualización-términos-que-se-acercan-a-un-valor" class="nav-link" data-scroll-target="#visualización-términos-que-se-acercan-a-un-valor">Visualización: términos que se acercan a un valor</a></li>
+  <li><a href="#pendiente-y-razón-de-cambio" id="toc-pendiente-y-razón-de-cambio" class="nav-link" data-scroll-target="#pendiente-y-razón-de-cambio">Pendiente y razón de cambio</a></li>
+  <li><a href="#formas-de-la-ecuación-de-la-recta" id="toc-formas-de-la-ecuación-de-la-recta" class="nav-link" data-scroll-target="#formas-de-la-ecuación-de-la-recta">Formas de la ecuación de la recta</a></li>
+  <li><a href="#rectas-paralelas-y-perpendiculares" id="toc-rectas-paralelas-y-perpendiculares" class="nav-link" data-scroll-target="#rectas-paralelas-y-perpendiculares">Rectas paralelas y perpendiculares</a></li>
+  <li><a href="#distancia-de-un-punto-a-una-recta" id="toc-distancia-de-un-punto-a-una-recta" class="nav-link" data-scroll-target="#distancia-de-un-punto-a-una-recta">Distancia de un punto a una recta</a></li>
+  <li><a href="#ejemplo-mínimo" id="toc-ejemplo-mínimo" class="nav-link" data-scroll-target="#ejemplo-mínimo">Ejemplo mínimo</a></li>
+  <li><a href="#visualización-interactiva" id="toc-visualización-interactiva" class="nav-link" data-scroll-target="#visualización-interactiva">Visualización interactiva</a></li>
   <li><a href="#errores-comunes" id="toc-errores-comunes" class="nav-link" data-scroll-target="#errores-comunes">Errores comunes</a></li>
+  <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
   <li><a href="#ideas-clave" id="toc-ideas-clave" class="nav-link" data-scroll-target="#ideas-clave">Ideas clave</a></li>
   <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul>
@@ -186,12 +182,12 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sucesiones y sumatorias</h1>
+<h1 class="title">Funciones lineales y ecuación de la recta</h1>
 </div>
 
 <div>
   <div class="description">
-    Notación, fórmulas básicas y lectura intuitiva de sucesiones y sumas finitas
+    Pendiente, razón de cambio y formas principales de la ecuación de una recta.
   </div>
 </div>
 
@@ -210,451 +206,139 @@ window.Quarto = {
 
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>Reconocer sucesiones como listas ordenadas de números, describirlas mediante términos generales o reglas recursivas, y usar la notación sigma para escribir y calcular sumas finitas de manera compacta.</p>
+<div class="concept-box">
+<p>Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de información gráfica, algebraica o numérica.</p>
+</div>
 </section>
 <section id="idea-central" class="level2">
 <h2 class="anchored" data-anchor-id="idea-central">Idea central</h2>
-<p>Una sucesión organiza números por posición: primero, segundo, tercero, y así sucesivamente. Una sumatoria agrega varios términos de una sucesión siguiendo límites definidos. Por eso conviene distinguir siempre entre el término individual <span class="math inline">\(a_n\)</span> y una suma parcial <span class="math inline">\(S_n\)</span>.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Lectura básica">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Lectura básica
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>En una sucesión se mira qué valor ocupa cada posición. En una sumatoria se acumulan varios valores de acuerdo con una regla y un rango de índices.</p>
-</div>
-</div>
+<p>Una recta representa una relación con cambio constante. Ese cambio se mide mediante la pendiente y permite comparar cuánto varía <span class="math inline">\(y\)</span> cuando cambia <span class="math inline">\(x\)</span>.</p>
 </section>
-<section id="sucesiones" class="level2">
-<h2 class="anchored" data-anchor-id="sucesiones">Sucesiones</h2>
-<p>Una sucesión es una función cuyo dominio son los números naturales. En lugar de escribir <span class="math inline">\(a(n)\)</span>, normalmente se escribe <span class="math inline">\(a_n\)</span>, donde <span class="math inline">\(n\)</span> indica la posición del término.</p>
+<section id="pendiente-y-razón-de-cambio" class="level2">
+<h2 class="anchored" data-anchor-id="pendiente-y-razón-de-cambio">Pendiente y razón de cambio</h2>
+<p>La pendiente resume la razón de cambio entre dos puntos de una recta. En la etapa siguiente se desarrollará su interpretación gráfica como subida sobre avance.</p>
 <p><span class="math display">\[
-a_1,\ a_2,\ a_3,\ \dots,\ a_n,\ \dots
+m=\frac{y_2-y_1}{x_2-x_1}
 \]</span></p>
-<p>El símbolo <span class="math inline">\(a_n\)</span> se llama término general o término <span class="math inline">\(n\)</span>-ésimo. Permite calcular el valor de la sucesión en la posición <span class="math inline">\(n\)</span>, cuando existe una regla explícita.</p>
-<div class="example-box">
-<p>Si <span class="math inline">\(a_n=2n\)</span>, entonces los primeros términos son</p>
-<p><span class="math display">\[
-a_1=2,\quad a_2=4,\quad a_3=6,\quad a_4=8.
-\]</span></p>
-<p>El término en la posición 103 es <span class="math inline">\(a_{103}=2(103)=206\)</span>.</p>
-</div>
-<p>Una sucesión puede presentarse de varias formas:</p>
-<ul>
-<li>Por sus primeros términos: <span class="math inline">\(5,10,15,20,\dots\)</span>.</li>
-<li>Por una fórmula explícita: <span class="math inline">\(a_n=5n\)</span>.</li>
-<li>Por una regla recursiva: se entrega uno o más términos iniciales y una regla para obtener los siguientes.</li>
-</ul>
-<div class="example-box">
-<p>La regla recursiva</p>
-<p><span class="math display">\[
-a_1=5,\qquad a_n=a_{n-1}+5\quad (n\ge 2)
-\]</span></p>
-<p>produce la sucesión <span class="math inline">\(5,10,15,20,\dots\)</span>. Para calcular <span class="math inline">\(a_4\)</span>, primero se necesitan los términos anteriores.</p>
-</div>
-<div class="warning-box">
-<p>Ver algunos términos ayuda a proponer una regla, pero no basta para justificar que esa regla sea la única posible. Distintas sucesiones pueden compartir los mismos primeros términos.</p>
-</div>
 </section>
-<section id="sumatorias" class="level2">
-<h2 class="anchored" data-anchor-id="sumatorias">Sumatorias</h2>
-<p>La notación sigma permite escribir una suma finita sin repetir todos sus términos. En la expresión</p>
-<p><span class="math display">\[
-\sum_{k=1}^{n} a_k=a_1+a_2+a_3+\cdots+a_n,
-\]</span></p>
-<p>el símbolo <span class="math inline">\(\sum\)</span> indica que se deben sumar términos. La letra <span class="math inline">\(k\)</span> es el índice de suma; el número inferior indica dónde empieza el índice y el número superior indica dónde termina. La expresión <span class="math inline">\(a_k\)</span> es el término general que se evalúa para cada valor entero de <span class="math inline">\(k\)</span> dentro de esos límites.</p>
-<div class="example-box">
-<p>Al expandir la suma</p>
-<p><span class="math display">\[
-\sum_{k=1}^{5} k^2
-\]</span></p>
-<p>se obtiene</p>
-<p><span class="math display">\[
-1^2+2^2+3^2+4^2+5^2=55.
-\]</span></p>
-</div>
-<p>Las sumas parciales se denotan usualmente por <span class="math inline">\(S_n\)</span>. Para una sucesión <span class="math inline">\(a_1,a_2,a_3,\dots\)</span>, la suma parcial <span class="math inline">\(n\)</span>-ésima es</p>
-<p><span class="math display">\[
-S_n=a_1+a_2+a_3+\cdots+a_n.
-\]</span></p>
-<div class="example-box">
-<p>Si <span class="math inline">\(a_n=\dfrac{1}{2^n}\)</span>, entonces</p>
-<p><span class="math display">\[
-S_1=\frac12,\quad
-S_2=\frac34,\quad
-S_3=\frac78,\quad
-S_4=\frac{15}{16}.
-\]</span></p>
-<p>En general,</p>
-<p><span class="math display">\[
-S_n=1-\frac{1}{2^n}.
-\]</span></p>
-</div>
-</section>
-<section id="fórmulas" class="level2">
-<h2 class="anchored" data-anchor-id="fórmulas">Fórmulas</h2>
-<section id="sucesiones-1" class="level3">
-<h3 class="anchored" data-anchor-id="sucesiones-1">Sucesiones</h3>
+<section id="formas-de-la-ecuación-de-la-recta" class="level2">
+<h2 class="anchored" data-anchor-id="formas-de-la-ecuación-de-la-recta">Formas de la ecuación de la recta</h2>
+<p>Las formas más usadas dependen de los datos disponibles: punto y pendiente, pendiente e intersección, o forma general.</p>
 <div class="formula-grid">
 <div class="formula-card">
 <div class="formula-tag">
-Sucesiones
+Punto-pendiente
 </div>
 <div class="formula-title">
-Término general
+Recta por un punto
 </div>
 <div class="formula-expression">
 <p><span class="math display">\[
-a_n=a(n),\qquad n \in \mathbb{N}
+y-y_1=m(x-x_1)
 \]</span></p>
 </div>
 <div class="formula-note">
-<p>Calcula directamente el término en la posición <span class="math inline">\(n\)</span>.</p>
+<p>Se usa cuando se conoce un punto de la recta y su pendiente.</p>
 </div>
 </div>
 <div class="formula-card">
 <div class="formula-tag">
-Sucesiones
+Pendiente-intersección
 </div>
 <div class="formula-title">
-Regla recursiva
+Forma explícita
 </div>
 <div class="formula-expression">
 <p><span class="math display">\[
-a_1\ \text{dado},\qquad a_n=F(a_{n-1}),\quad n\ge 2
+y=mx+b
 \]</span></p>
 </div>
 <div class="formula-note">
-<p>Requiere condición inicial; para llegar a <span class="math inline">\(a_n\)</span> se calculan términos previos.</p>
+<p><span class="math inline">\(m\)</span> es la pendiente y <span class="math inline">\(b\)</span> es la intersección con el eje <span class="math inline">\(y\)</span>.</p>
+</div>
+</div>
+<div class="formula-card">
+<div class="formula-tag">
+General
+</div>
+<div class="formula-title">
+Forma implícita
+</div>
+<div class="formula-expression">
+<p><span class="math display">\[
+Ax+By+C=0
+\]</span></p>
+</div>
+<div class="formula-note">
+<p>Es útil para estudiar distancia de punto a recta y relaciones algebraicas.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="progresiones" class="level3">
-<h3 class="anchored" data-anchor-id="progresiones">Progresiones</h3>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Término aritmético
-</div>
-<div class="formula-expression">
+<section id="rectas-paralelas-y-perpendiculares" class="level2">
+<h2 class="anchored" data-anchor-id="rectas-paralelas-y-perpendiculares">Rectas paralelas y perpendiculares</h2>
+<p>Las rectas paralelas tienen la misma pendiente. Las rectas perpendiculares, cuando sus pendientes están definidas, cumplen que el producto de pendientes es <span class="math inline">\(-1\)</span>.</p>
 <p><span class="math display">\[
-a_n=a+(n-1)d
+m_1=m_2,\qquad m_1m_2=-1
 \]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(a\)</span> es el primer término y <span class="math inline">\(d\)</span> la diferencia común.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Término geométrico
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-a_n=ar^{\,n-1}
-\]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(a\)</span> es el primer término y <span class="math inline">\(r\)</span> la razón común.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Suma aritmética
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=\frac{n}{2}(a+a_n)
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Suma los primeros <span class="math inline">\(n\)</span> términos de una progresión aritmética.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Suma aritmética con diferencia
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=\frac{n}{2}\,[2a+(n-1)d]
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Úsala cuando conoces <span class="math inline">\(a\)</span>, <span class="math inline">\(d\)</span> y el número de términos.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Progresiones
-</div>
-<div class="formula-title">
-Suma geométrica finita
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=a\,\frac{1-r^n}{1-r},\qquad r\ne 1
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Condición: <span class="math inline">\(r\ne 1\)</span>. Válida para sumas finitas.</p>
-</div>
-</div>
-</div>
 </section>
-<section id="sumatorias-1" class="level3">
-<h3 class="anchored" data-anchor-id="sumatorias-1">Sumatorias</h3>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Sumatorias
-</div>
-<div class="formula-title">
-Notación sigma
-</div>
-<div class="formula-expression">
+<section id="distancia-de-un-punto-a-una-recta" class="level2">
+<h2 class="anchored" data-anchor-id="distancia-de-un-punto-a-una-recta">Distancia de un punto a una recta</h2>
+<p>Para una recta escrita como <span class="math inline">\(Ax+By+C=0\)</span>, la distancia desde el punto <span class="math inline">\((x_0,y_0)\)</span> se calcula con:</p>
 <p><span class="math display">\[
-\sum_{k=1}^{n} a_k=a_1+a_2+\cdots+a_n
+d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.
 \]</span></p>
-</div>
-<div class="formula-note">
-<p>Expande una suma finita desde <span class="math inline">\(k=1\)</span> hasta <span class="math inline">\(k=n\)</span>.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Sumatorias
-</div>
-<div class="formula-title">
-Suma parcial
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-S_n=\sum_{k=1}^{n}a_k
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Acumula los primeros <span class="math inline">\(n\)</span> términos de una sucesión.</p>
-</div>
-</div>
-</div>
 </section>
-<section id="propiedades" class="level3">
-<h3 class="anchored" data-anchor-id="propiedades">Propiedades</h3>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Propiedades
-</div>
-<div class="formula-title">
-Linealidad
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}(ca_k+b_k)
-=c\sum_{k=1}^{n}a_k+\sum_{k=1}^{n}b_k
-\]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(c\)</span> es constante; válida para sumas finitas.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Propiedades
-</div>
-<div class="formula-title">
-Suma de una constante
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}c=nc
-\]</span></p>
-</div>
-<div class="formula-note">
-<p><span class="math inline">\(c\)</span> no depende de <span class="math inline">\(k\)</span>. Si <span class="math inline">\(c=1\)</span>, la suma es <span class="math inline">\(n\)</span>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="sumas-especiales" class="level3">
-<h3 class="anchored" data-anchor-id="sumas-especiales">Sumas especiales</h3>
-<div class="formula-grid">
-<div class="formula-card">
-<div class="formula-tag">
-Sumas especiales
-</div>
-<div class="formula-title">
-Primeros enteros positivos
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}k=\frac{n(n+1)}{2}
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Resume <span class="math inline">\(1+2+3+\cdots+n\)</span>, con <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Sumas especiales
-</div>
-<div class="formula-title">
-Suma de cuadrados
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}k^2=\frac{n(n+1)(2n+1)}{6}
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Útil cuando el término general de la suma es cuadrático.</p>
-</div>
-</div>
-<div class="formula-card">
-<div class="formula-tag">
-Sumas especiales
-</div>
-<div class="formula-title">
-Suma de cubos
-</div>
-<div class="formula-expression">
-<p><span class="math display">\[
-\sum_{k=1}^{n}k^3=\left[\frac{n(n+1)}{2}\right]^2
-\]</span></p>
-</div>
-<div class="formula-note">
-<p>Equivale al cuadrado de la suma de los primeros enteros.</p>
-</div>
-</div>
-</div>
+<section id="ejemplo-mínimo" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-mínimo">Ejemplo mínimo</h2>
 <div class="example-box">
-<p>Los primeros 50 números impares forman una sucesión aritmética con <span class="math inline">\(a=1\)</span>, <span class="math inline">\(d=2\)</span> y <span class="math inline">\(a_{50}=99\)</span>. Por tanto,</p>
+<p>Si una recta pasa por <span class="math inline">\((1,2)\)</span> y tiene pendiente <span class="math inline">\(3\)</span>, su forma punto-pendiente es</p>
 <p><span class="math display">\[
-S_{50}=\frac{50}{2}(1+99)=2500.
+y-2=3(x-1).
 \]</span></p>
-</div>
-<div class="example-box">
-<p>La suma geométrica</p>
-<p><span class="math display">\[
-1+4+16+\cdots+4096
-\]</span></p>
-<p>tiene <span class="math inline">\(a=1\)</span>, <span class="math inline">\(r=4\)</span> y <span class="math inline">\(n=7\)</span>, porque <span class="math inline">\(4096=4^6\)</span>. Así,</p>
-<p><span class="math display">\[
-S_7=1\cdot\frac{1-4^7}{1-4}=5461.
-\]</span></p>
+<p>Este ejemplo se completará en la etapa 2.</p>
 </div>
 </section>
-</section>
-<section id="visualización-términos-que-se-acercan-a-un-valor" class="level2">
-<h2 class="anchored" data-anchor-id="visualización-términos-que-se-acercan-a-un-valor">Visualización: términos que se acercan a un valor</h2>
-<p>Como una sucesión solo está definida para posiciones naturales, su gráfica se representa con puntos aislados. Esto ayuda a observar si los términos se acercan a un valor o si cambian de manera alternada.</p>
-<p>Consideremos</p>
-<p><span class="math display">\[
-a_n=\frac{n}{n+1}.
-\]</span></p>
-<div id="sucesion-puntos-app">
+<section id="visualización-interactiva" class="level2">
+<h2 class="anchored" data-anchor-id="visualización-interactiva">Visualización interactiva</h2>
+<p>En una etapa posterior se agregará una visualización para explorar cómo cambian la pendiente y las formas de la ecuación de una recta.</p>
+<div id="recta-interactiva-app" class="sequence-sim">
 
 </div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;"><span class="math inline">\(n\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(a_n\)</span></th>
-<th style="text-align: right;">Aproximación decimal</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;"><span class="math inline">\(\frac12\)</span></td>
-<td style="text-align: right;">0.500</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;"><span class="math inline">\(\frac23\)</span></td>
-<td style="text-align: right;">0.667</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;"><span class="math inline">\(\frac34\)</span></td>
-<td style="text-align: right;">0.750</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;"><span class="math inline">\(\frac45\)</span></td>
-<td style="text-align: right;">0.800</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5</td>
-<td style="text-align: right;"><span class="math inline">\(\frac56\)</span></td>
-<td style="text-align: right;">0.833</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">10</td>
-<td style="text-align: right;"><span class="math inline">\(\frac{10}{11}\)</span></td>
-<td style="text-align: right;">0.909</td>
-</tr>
-</tbody>
-</table>
-<p>Los valores se aproximan progresivamente a <span class="math inline">\(1\)</span>, aunque ningún término de esta sucesión es exactamente <span class="math inline">\(1\)</span>.</p>
 </section>
 <section id="errores-comunes" class="level2">
 <h2 class="anchored" data-anchor-id="errores-comunes">Errores comunes</h2>
+<div class="warning-box">
 <ul>
-<li>Confundir <span class="math inline">\(a_n\)</span>, que es un término individual, con <span class="math inline">\(S_n\)</span>, que es una suma parcial.</li>
-<li>Tratar el índice de suma como si fuera el resultado de la sumatoria.</li>
-<li>Omitir el límite inferior o superior de una sumatoria.</li>
-<li>Aplicar una fórmula sin revisar sus condiciones, por ejemplo usar la suma geométrica finita sin identificar bien <span class="math inline">\(a\)</span>, <span class="math inline">\(r\)</span> y <span class="math inline">\(n\)</span>.</li>
-<li>Creer que algunos términos iniciales bastan para demostrar una regla general.</li>
-<li>Olvidar que en una suma como <span class="math inline">\(\sum_{k=3}^{7} a_k\)</span>, el índice empieza en <span class="math inline">\(3\)</span>, no necesariamente en <span class="math inline">\(1\)</span>.</li>
+<li>Confundir la pendiente con la intersección con el eje <span class="math inline">\(y\)</span>.</li>
+<li>Aplicar la condición <span class="math inline">\(m_1m_2=-1\)</span> sin revisar rectas verticales u horizontales.</li>
+<li>Usar la fórmula de distancia sin escribir antes la recta en forma general.</li>
 </ul>
+</div>
+</section>
+<section id="ejercicios" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<div class="proposed-box">
+<p>Los ejercicios de esta sección se completarán en la etapa 2.</p>
+</div>
 </section>
 <section id="ideas-clave" class="level2">
 <h2 class="anchored" data-anchor-id="ideas-clave">Ideas clave</h2>
+<div class="concept-box">
 <ul>
-<li>Una sucesión es una lista ordenada de números y se escribe <span class="math inline">\(a_1,a_2,a_3,\dots\)</span>.</li>
-<li>El término general <span class="math inline">\(a_n\)</span> describe el valor ubicado en la posición <span class="math inline">\(n\)</span>.</li>
-<li>Una regla recursiva necesita condiciones iniciales.</li>
-<li>La notación sigma resume sumas finitas mediante un índice, límites y un término general.</li>
-<li>Las fórmulas de sumas aritméticas y geométricas ahorran trabajo cuando la estructura de la suma coincide con sus condiciones.</li>
+<li>Una función lineal representa cambio constante.</li>
+<li>La pendiente mide razón de cambio.</li>
+<li>La misma recta puede escribirse en distintas formas equivalentes.</li>
+<li>La forma general permite calcular distancia de punto a recta.</li>
 </ul>
+</div>
 </section>
 <section id="referencias" class="level2">
 <h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
 <ul>
-<li>Archivo fuente entregado por el usuario: fragmento en PDF de Stewart, Watson y Redlin, <em>Precálculo: matemáticas para el cálculo</em> (2017), páginas sobre sucesiones, notación de sumatoria, sucesiones aritméticas y sucesiones geométricas.</li>
+<li>Ayudantía 12, Álgebra y Geometría (MATE10), 2 de junio de 2026.</li>
+<li>Stewart, J., Redlin, L., &amp; Watson, S. <em>Precálculo: Matemáticas para el cálculo</em>, 7.ª ed., secciones 1.10 y 2.5.</li>
 </ul>
-<script>
-(() => {
-  const cssHref = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
-    .map((link) => link.getAttribute("href") || "")
-    .find((href) => href.endsWith("styles/custom.css"));
-  const basePath = cssHref ? cssHref.replace(/styles\/custom\.css$/, "") : "";
-  const script = document.createElement("script");
-  script.src = `${basePath}scripts/sucesion-puntos.js`;
-  script.defer = true;
-  document.body.appendChild(script);
-})();
-</script>
 
 
 </section>

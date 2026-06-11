@@ -39,4 +39,12 @@ Desarrollo de potencias de binomios mediante coeficientes binomiales y el trián
 
 Medición angular, razones trigonométricas, círculo unitario e identidades básicas.
 :::
+
+::: {.topic-card .is-available}
+<p class="topic-status">Disponible</p>
+
+### [Funciones lineales y ecuación de la recta](temas/funciones-lineales-recta.qmd)
+
+Pendiente, razón de cambio y formas principales de la ecuación de una recta.
+:::
 :::

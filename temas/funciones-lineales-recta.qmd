@@ -1,0 +1,137 @@
+---
+title: "Funciones lineales y ecuación de la recta"
+description: "Pendiente, razón de cambio y formas principales de la ecuación de una recta."
+---
+
+## Objetivo
+
+::: {.concept-box}
+Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de información gráfica, algebraica o numérica.
+:::
+
+## Idea central
+
+Una recta representa una relación con cambio constante. Ese cambio se mide mediante la pendiente y permite comparar cuánto varía $y$ cuando cambia $x$.
+
+## Pendiente y razón de cambio
+
+La pendiente resume la razón de cambio entre dos puntos de una recta. En la etapa siguiente se desarrollará su interpretación gráfica como subida sobre avance.
+
+$$
+m=\frac{y_2-y_1}{x_2-x_1}
+$$
+
+## Formas de la ecuación de la recta
+
+Las formas más usadas dependen de los datos disponibles: punto y pendiente, pendiente e intersección, o forma general.
+
+::: {.formula-grid}
+
+::: {.formula-card}
+<div class="formula-tag">Punto-pendiente</div>
+<div class="formula-title">Recta por un punto</div>
+<div class="formula-expression">
+
+$$
+y-y_1=m(x-x_1)
+$$
+
+</div>
+<div class="formula-note">
+Se usa cuando se conoce un punto de la recta y su pendiente.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">Pendiente-intersección</div>
+<div class="formula-title">Forma explícita</div>
+<div class="formula-expression">
+
+$$
+y=mx+b
+$$
+
+</div>
+<div class="formula-note">
+$m$ es la pendiente y $b$ es la intersección con el eje $y$.
+</div>
+:::
+
+::: {.formula-card}
+<div class="formula-tag">General</div>
+<div class="formula-title">Forma implícita</div>
+<div class="formula-expression">
+
+$$
+Ax+By+C=0
+$$
+
+</div>
+<div class="formula-note">
+Es útil para estudiar distancia de punto a recta y relaciones algebraicas.
+</div>
+:::
+
+:::
+
+## Rectas paralelas y perpendiculares
+
+Las rectas paralelas tienen la misma pendiente. Las rectas perpendiculares, cuando sus pendientes están definidas, cumplen que el producto de pendientes es $-1$.
+
+$$
+m_1=m_2,\qquad m_1m_2=-1
+$$
+
+## Distancia de un punto a una recta
+
+Para una recta escrita como $Ax+By+C=0$, la distancia desde el punto $(x_0,y_0)$ se calcula con:
+
+$$
+d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.
+$$
+
+## Ejemplo mínimo
+
+::: {.example-box}
+Si una recta pasa por $(1,2)$ y tiene pendiente $3$, su forma punto-pendiente es
+
+$$
+y-2=3(x-1).
+$$
+
+Este ejemplo se completará en la etapa 2.
+:::
+
+## Visualización interactiva
+
+En una etapa posterior se agregará una visualización para explorar cómo cambian la pendiente y las formas de la ecuación de una recta.
+
+<div id="recta-interactiva-app" class="sequence-sim"></div>
+
+## Errores comunes
+
+::: {.warning-box}
+- Confundir la pendiente con la intersección con el eje $y$.
+- Aplicar la condición $m_1m_2=-1$ sin revisar rectas verticales u horizontales.
+- Usar la fórmula de distancia sin escribir antes la recta en forma general.
+:::
+
+## Ejercicios
+
+::: {.proposed-box}
+Los ejercicios de esta sección se completarán en la etapa 2.
+:::
+
+## Ideas clave
+
+::: {.concept-box}
+- Una función lineal representa cambio constante.
+- La pendiente mide razón de cambio.
+- La misma recta puede escribirse en distintas formas equivalentes.
+- La forma general permite calcular distancia de punto a recta.
+:::
+
+## Referencias
+
+- Ayudantía 12, Álgebra y Geometría (MATE10), 2 de junio de 2026.
+- Stewart, J., Redlin, L., & Watson, S. *Precálculo: Matemáticas para el cálculo*, 7.ª ed., secciones 1.10 y 2.5.

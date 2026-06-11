@@ -168,6 +168,97 @@
     "text": "Referencias\n\nArchivo fuente entregado por el usuario: fragmento en PDF de Stewart, Watson y Redlin, Precálculo: matemáticas para el cálculo (2017), páginas sobre sucesiones, notación de sumatoria, sucesiones aritméticas y sucesiones geométricas."
   },
   {
+    "objectID": "temas/funciones-lineales-recta.html",
+    "href": "temas/funciones-lineales-recta.html",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "",
+    "text": "Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de información gráfica, algebraica o numérica."
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#objetivo",
+    "href": "temas/funciones-lineales-recta.html#objetivo",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "",
+    "text": "Reconocer una función lineal, interpretar su pendiente y escribir la ecuación de una recta a partir de información gráfica, algebraica o numérica."
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#idea-central",
+    "href": "temas/funciones-lineales-recta.html#idea-central",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Idea central",
+    "text": "Idea central\nUna recta representa una relación con cambio constante. Ese cambio se mide mediante la pendiente y permite comparar cuánto varía \\(y\\) cuando cambia \\(x\\)."
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#pendiente-y-razón-de-cambio",
+    "href": "temas/funciones-lineales-recta.html#pendiente-y-razón-de-cambio",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Pendiente y razón de cambio",
+    "text": "Pendiente y razón de cambio\nLa pendiente resume la razón de cambio entre dos puntos de una recta. En la etapa siguiente se desarrollará su interpretación gráfica como subida sobre avance.\n\\[\nm=\\frac{y_2-y_1}{x_2-x_1}\n\\]"
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#formas-de-la-ecuación-de-la-recta",
+    "href": "temas/funciones-lineales-recta.html#formas-de-la-ecuación-de-la-recta",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Formas de la ecuación de la recta",
+    "text": "Formas de la ecuación de la recta\nLas formas más usadas dependen de los datos disponibles: punto y pendiente, pendiente e intersección, o forma general.\n\n\n\nPunto-pendiente\n\n\nRecta por un punto\n\n\n\\[\ny-y_1=m(x-x_1)\n\\]\n\n\nSe usa cuando se conoce un punto de la recta y su pendiente.\n\n\n\n\nPendiente-intersección\n\n\nForma explícita\n\n\n\\[\ny=mx+b\n\\]\n\n\n\\(m\\) es la pendiente y \\(b\\) es la intersección con el eje \\(y\\).\n\n\n\n\nGeneral\n\n\nForma implícita\n\n\n\\[\nAx+By+C=0\n\\]\n\n\nEs útil para estudiar distancia de punto a recta y relaciones algebraicas."
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#rectas-paralelas-y-perpendiculares",
+    "href": "temas/funciones-lineales-recta.html#rectas-paralelas-y-perpendiculares",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Rectas paralelas y perpendiculares",
+    "text": "Rectas paralelas y perpendiculares\nLas rectas paralelas tienen la misma pendiente. Las rectas perpendiculares, cuando sus pendientes están definidas, cumplen que el producto de pendientes es \\(-1\\).\n\\[\nm_1=m_2,\\qquad m_1m_2=-1\n\\]"
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#distancia-de-un-punto-a-una-recta",
+    "href": "temas/funciones-lineales-recta.html#distancia-de-un-punto-a-una-recta",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Distancia de un punto a una recta",
+    "text": "Distancia de un punto a una recta\nPara una recta escrita como \\(Ax+By+C=0\\), la distancia desde el punto \\((x_0,y_0)\\) se calcula con:\n\\[\nd=\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}.\n\\]"
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#ejemplo-mínimo",
+    "href": "temas/funciones-lineales-recta.html#ejemplo-mínimo",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Ejemplo mínimo",
+    "text": "Ejemplo mínimo\n\nSi una recta pasa por \\((1,2)\\) y tiene pendiente \\(3\\), su forma punto-pendiente es\n\\[\ny-2=3(x-1).\n\\]\nEste ejemplo se completará en la etapa 2."
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#visualización-interactiva",
+    "href": "temas/funciones-lineales-recta.html#visualización-interactiva",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Visualización interactiva",
+    "text": "Visualización interactiva\nEn una etapa posterior se agregará una visualización para explorar cómo cambian la pendiente y las formas de la ecuación de una recta."
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#errores-comunes",
+    "href": "temas/funciones-lineales-recta.html#errores-comunes",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Errores comunes",
+    "text": "Errores comunes\n\n\nConfundir la pendiente con la intersección con el eje \\(y\\).\nAplicar la condición \\(m_1m_2=-1\\) sin revisar rectas verticales u horizontales.\nUsar la fórmula de distancia sin escribir antes la recta en forma general."
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#ejercicios",
+    "href": "temas/funciones-lineales-recta.html#ejercicios",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nLos ejercicios de esta sección se completarán en la etapa 2."
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#ideas-clave",
+    "href": "temas/funciones-lineales-recta.html#ideas-clave",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Ideas clave",
+    "text": "Ideas clave\n\n\nUna función lineal representa cambio constante.\nLa pendiente mide razón de cambio.\nLa misma recta puede escribirse en distintas formas equivalentes.\nLa forma general permite calcular distancia de punto a recta."
+  },
+  {
+    "objectID": "temas/funciones-lineales-recta.html#referencias",
+    "href": "temas/funciones-lineales-recta.html#referencias",
+    "title": "Funciones lineales y ecuación de la recta",
+    "section": "Referencias",
+    "text": "Referencias\n\nAyudantía 12, Álgebra y Geometría (MATE10), 2 de junio de 2026.\nStewart, J., Redlin, L., & Watson, S. Precálculo: Matemáticas para el cálculo, 7.ª ed., secciones 1.10 y 2.5."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Inicio",
@@ -179,7 +270,7 @@
     "href": "index.html#temas",
     "title": "Inicio",
     "section": "Temas",
-    "text": "Temas\n\n\n\nDisponible\n\n\nInducción matemática\nDemostraciones para proposiciones indexadas por números naturales.\n\n\n\n\nDisponible\n\n\nSucesiones y sumatorias\nLenguaje básico para describir listas ordenadas de términos y notación sigma.\n\n\n\n\nDisponible\n\n\nTeorema del Binomio\nDesarrollo de potencias de binomios mediante coeficientes binomiales y el triángulo de Pascal.\n\n\n\n\nDisponible\n\n\nTrigonometría\nMedición angular, razones trigonométricas, círculo unitario e identidades básicas."
+    "text": "Temas\n\n\n\nDisponible\n\n\nInducción matemática\nDemostraciones para proposiciones indexadas por números naturales.\n\n\n\n\nDisponible\n\n\nSucesiones y sumatorias\nLenguaje básico para describir listas ordenadas de términos y notación sigma.\n\n\n\n\nDisponible\n\n\nTeorema del Binomio\nDesarrollo de potencias de binomios mediante coeficientes binomiales y el triángulo de Pascal.\n\n\n\n\nDisponible\n\n\nTrigonometría\nMedición angular, razones trigonométricas, círculo unitario e identidades básicas.\n\n\n\n\nDisponible\n\n\nFunciones lineales y ecuación de la recta\nPendiente, razón de cambio y formas principales de la ecuación de una recta."
   },
   {
     "objectID": "temas/induccion.html",
